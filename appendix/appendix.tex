@@ -1,0 +1,123 @@
+% - - - - - - - - - - Appendices - - - - - - - - - - - - - -
+%
+%
+%- - - - - - - -  Grassmann numbers  - - - - - - - - - -
+%
+%
+%
+\section{Grassmann Numbers}
+\input{grassmann_alg}
+%
+%
+% - - - - - - -  AdS spacetime - - - - - - - - - - - - -
+%
+%
+%
+\section[$AdS_{5}\times S^{5}$ spacetime]{$\mathitbf{AdS_{5}\times S^{5}}$ spacetime}
+The $AdS_{5}\times S^{5}$ space is in the central focus of the gauge/gravity duality and should be concerned more deeply. It is a direct product of five dimensional Anti-de Sitter ($AdS$) space and a five dimensional compact sphere. Both are maximally symmetric spaces and therefore inherit the isometry groups $SO(2,4)$ in case of $AdS_{5}$ and respectively $SO(6)$ for $S^{5}$ \cite{Ammon:2015wua}. This is an important fact for the $AdS/CFT$ correspondence since the direct product of these groups has the same amount of degrees of freedom as the superconformal group $SO(2,4)\times SO(6) = SU(2,2\vert 4)$ as the undelying symmetry group of $\mathcal{N}=4$ super \names{Yang-Mills} theory in four dimensional \names{Minkowski} space.
+%
+%
+\subsection[$AdS_{5}$ space]{$\mathitbf{AdS_{5}}$ space}\label{AdS5}
+Since the construction of a sphere is rather simple, we focus on the Anti-de Sitter space. $AdS_{5}$ is a hyperboloid with constant negative curvature, that can be embedded in six dimensional \names{Minkowski} spacetime $X = (X^{0},X^{1},\ldots,X^{5}) \in \mathbb{R}^{4,2}$, with metric $\tilde{\eta} = {\rm diag}(-,+,+,+,+,-)$, so that
+\begin{equation}
+\dd s^{2} = -\left(\dd X^{0}\right)^{2} + \left(\dd X^{1}\right)^{2} + \cdots + \left(\dd X^{4}\right)^{2} - \left(\dd X^{5}\right)^{2} = \tilde{\eta}_{MN} \dd X^{M}\dd X^{N},
+\end{equation}
+where $M,N \in {0,\ldots,5}$. $AdS_{5}$ is then given by the hypersurface
+\begin{equation}
+\tilde{\eta}_{MN}X^{M}X^{N} = -\left(X^{0}\right)^{2} + \left(X^{1}\right)^{2} + \cdots + \left(X^{4}\right)^{2} - \left(X^{5}\right)^{2} = -R^{2},
+\label{hyperbol}
+\end{equation}
+where $R$ is the radius of curvature of the $AdS_{5}$ space. For large $X^{M}$ the hyperboloid approaches the light-cone of the \names{Minkowski} space $\mathbb{R}^{4,2}$, given by
+\begin{equation}
+\tilde{\eta}_{MN}X^{M}X^{N} = 0.
+\label{M_l_c}
+\end{equation}
+We therefore can define the `boundary' $\del AdS_{5}$ of Anti-de Sitter space by the set of all lines on the light-cone (\ref{M_l_c}) originating from $0 \in \mathbb{R}^{4,2}$. For a point $X \neq 0$ in $AdS_{5}$ close to the boundary and therefore satisfying (\ref{M_l_c}) we can define $(u,v)$ by
+\begin{equation}
+u = X^{5}+X^{4}, \qquad v = X^{5}-X^{4},
+\end{equation}
+so we can rewrite (\ref{M_l_c}) as
+\begin{equation}
+uv = \eta_{\mu \nu} X^{\mu}X^{\nu},
+\end{equation}
+with $\mu,\nu \in {0,1,2,3}$ and $\left(\eta_{\mu \nu}\right) = {\rm diag}(-,+,+,+).$ Whenever $v \neq 0$ we can rescale the coordinates to set $v = 1$ and solve for $u$. Therefore one is left with a four dimensional \names{Minkowski} space $\mathbb{R}^{3,1}$. Points with $v=0$ are ``points at infinity'' added to four dimensional \names{Minkowski} space. This makes $\del AdS_{5}$ a conformal compactification of four dimensional \names{Minkowski} space. According to Maldacena \cite{maldacena1} the correspondence between a $\mathcal{N}=4$ theory an $\mathbb{R}^{3,1}$ and Type IIB on $AdS_{5}\times S^{5}$ therefore expresses a string theory on $AdS_{5}\times S^{5}$ in terms of a theory on the boundary and thus is referred to as ``holographic'' \cite{Witten:1998qj}.
+%
+%
+\subsection{Poincaré patch}\label{p_patch}
+Let us now introduce a parametrisation of the hyperboloid (\ref{hyperbol}) by the following coordinates $x^{\mu} \in \mathbb{R}$, for $\mu \in {0,1,2,3}$ and $z \in \mathbb{R}_{+}$. The parametrisation in these coordinates is given by
+\begin{align}
+X^{0} &= \frac{z}{2} \left( 1+ \frac{1}{z^{2}}\left( x_{\mu}x^{\mu} + R^{2}\right) \right), \notag \\
+X^{i} &= \frac{R}{z}x^{i},\quad i\in {1,2,3}, \\
+X^{4} &= \frac{z}{2} \left( 1 + \frac{1}{z^{2}} \left(x_{\mu}x^{\mu} -R^{2} \right) \right), \notag \\
+X^{5} &= \frac{R}{z}x^{0}, \notag
+\end{align}
+with $x_{\mu}x^{\mu}=\eta_{\mu\nu}x^{\mu}x^{\nu}$ and $\left(\eta_{\mu \nu}\right) = {\rm diag}(-,+,+,+)$. These local coordinates are called \names{Poincaré} patch. The metric of $AdS_{5}$ in the \names{Poincaré} patch reads
+\begin{equation}
+\dd s^{2} = \frac{R^{2}}{z^{2}}\left(\dd z^{2} + \eta_{\mu \nu} \dd x^{\mu} \dd x^{\nu} \right).
+\end{equation}
+%
+%
+%- - - - - - - - - Discrete Fourier Transform - - - - - - - - - -
+%
+%
+%
+\section{Discrete Fourier Transform}
+To perform a Fourier transform on the lattice one needs to discretize it to deal with a finite sequence of $N$ complex numbers $x_{0},x_{1},\ldots,x_{N-1}$. We define the discrete Fourier transform $X_{k}$ to be a vector in the base of roots of unit with components $x_{n}$ as follows:
+\begin{equation}
+X_{k}=\dfrac{1}{\sqrt{N}} \sum\limits_{n=0}^{N-1} x_{n} \, e ^{-2\pi  i kn /N} \qquad  k \in \mathbb{Z}.
+\label{FT}
+\end{equation}
+We can limit the domain of $k$ to a finite set, because the exponential is periodic in $k$. In the following we want to stick to the domain $k \in \left[ -\tfrac{N}{2}+1,\ldots,\tfrac{N}{2} \right]$ and restrict us to even $N$. The inverse transform can be defined to be
+%
+\begin{equation}
+ x_{n}= \dfrac{1}{\sqrt{N}} \sum\limits_{k=-N/2+1}^{N/2} X_{k} \, e ^{2 \pi  i nk /N},
+ \label{invFT}
+ \end{equation}
+ where due to periodicy $n$ is in the domain $\left[0,\ldots,N-1\right]$ like defined in the beginning. If we now insert (\ref{FT}) into (\ref{invFT}) we end up with
+\begin{align}
+x_{n} &=\dfrac{1}{N}\sum\limits_{k=-N/2+1}^{N/2} \left( \sum\limits_{m=0}^{N-1} x_{m}  e ^{-2\pi  i km /N} \right)  e ^{2\pi  i kn /N} \\
+%
+%
+&= \dfrac{1}{N} \sum\limits_{k',m=0}^{N-1} x_{m}  e ^{2\pi  i k'(n-m) /N},
+\end{align}
+where we shifted the summation for $k'$ to be in the same domain as $m$. This is now only equal to $x_{n}$ if the following important relation holds true
+%
+%
+\begin{equation}
+\dfrac{1}{N} \sum\limits_{k'=0}^{N-1}  e ^{2\pi  i k'(n-m) /N} = \delta_{m,n}.
+\end{equation}
+We can prove this easily. For $n=m$ this is trivial and for $n\neq m$ we make use of the geometric series
+\begin{equation}
+\sum\limits_{k'=0}^{N-1} \left( e ^{2\pi i  c/N }\right)^{k'} = \dfrac{1- e ^{2\pi i  c}}{1- e ^{2\pi i  c/N }} = 0, \qquad  \vert c\vert = \vert n-m \vert \in [1,\ldots,N-1].
+\end{equation}
+%
+%
+Now we want to apply the Fourier transform on the two dimensional lattice used throughout this thesis. We defined the lattice to be
+\begin{equation}
+\mathit{\Lambda}=\left\lbrace  n=\left(n_{0},n_{1}\right) \vert n_{0}=1,\ldots,N_{0}\,; \; n_{1}=1,\ldots,N_{1} \right\rbrace,
+\end{equation}
+with $N_{0}=T$ and $N_{1}=L$. Therefore the total number of lattice points is given by
+\begin{equation}
+\vert \mathit{\Lambda}\vert \equiv TL.
+\end{equation}
+Following \cite{gattringer2009quantum} we now want to calculate the discrete Fourier transform $\tilde{f}(p)$ of a function $f(n)$. Here for $f(n)$ we impose toroidal boundary conditions
+\begin{equation}
+f(n+\hat{\imath}N_{i})= e ^{2\pi i \theta_{i}}f(n),
+\end{equation}
+where $\hat{\imath}$ is a unit vector in the $i$-direction and $\theta_{i}=0$ corresponds to periodic and $\theta_{i}=1/2$ to anti-periodic boundary conditions. The discrete momentum space corresponding to these boundary conditions is given by
+\begin{equation}
+\mathit{\widetilde{\Lambda\,}}= \left\lbrace p=(p_{0},p_{1}) \vert\, p_{i}=\dfrac{2\pi}{aN_{i}}(k_{i}+\theta_{i}) ,\, k_{i}=-\dfrac{N_{i}}{2}+1,\ldots,\dfrac{N_{i}}{2} \right\rbrace.
+\end{equation}
+With (\ref{FT}) and (\ref{invFT}) we can express the the Fourier transform as
+\begin{equation}
+\tilde{f}(p)=\dfrac{1}{\sqrt{\vert\mathit{\Lambda}\vert}} \sum\limits_{n\in \mathit{\Lambda}} f(n)\,  e ^{- i  p\cdot na}
+\end{equation}
+and for the inverse transform we find
+\begin{equation}
+f(n) = \dfrac{1}{\sqrt{\vert\mathit{\Lambda}\vert}} \sum\limits_{p\in \widetilde{\mathit{\Lambda}\,}} \tilde{f}(p)\,  e ^{ i p\cdot na}.
+\end{equation}
+Here again the important relations hold
+\begin{align}
+\dfrac{1}{\vert\mathit{\Lambda}\vert} \sum\limits_{n\in \mathit{\Lambda}} \text{exp}( i (p-p')\cdot na) &=\delta(p-p') \equiv \delta_{k_{0},k'_{0}}\delta_{k_{1},k'_{1}} \\
+\dfrac{1}{\vert\mathit{\Lambda}\vert} \sum\limits_{p\in  \widetilde{\mathit{\Lambda}\,}} \text{exp}( i p\cdot (n-n')a) &=\delta(n-n') \equiv \delta_{n_{0},n'_{0}}\delta_{n_{1},n'_{1}}.
+\end{align}

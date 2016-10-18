@@ -1,0 +1,172 @@
+\subsection{Grassmann Algebra}
+When we start considering a QFT including fermions, we have to conclude that our canonical quantisation rules for bosons no longer apply. Instead of a commutation relation
+\begin{equation}
+\left[ \phi(x),\Pi(y)\right] = i \hbar \delta(x-y)
+\end{equation}
+for bosonic fields, one has to introduce anticommutation relations for fermionic ones \cite{Cartier:2002zp}
+\begin{equation}
+\left\lbrace \psi(x),\pi(y) \right\rbrace = i \hbar \delta(x-y),
+\end{equation}
+which in the classical limit $\hbar \rightarrow 0$ is leading to objects that behave like anticommuting numbers
+\begin{equation}
+\psi\pi = -\pi\psi,
+\end{equation}
+which seems rather strange at first. But the concept of anticommuting numbers, so called Grassmann variables, has proved quite useful in the path integral framework to represent the algebra of fermionic position and momentum observables as operators on a space of functions. In the following we want to define these objects and study their properties.\\[1cm]
+%
+%
+We can identify Grassmann numbers with elements of the exterior algebra $\Lambda^{1}(V)$ over a vector space $V$ over a field $K$. According to the dimension of $V$ the algebra has a finite collection of generators $\xi_{1},\ldots,\xi_{N}$ with $N=\text{dim}V \geq 1$ or infinitely many, if the vector space is infinite dimensional. With the exterior product there exists an associative connection on the algebra, which is linear in scalar multiplication and satisfies
+\begin{equation}
+\xi_{i}\wedge \xi_{i} =0.
+\label{wedge_zero}
+\end{equation}
+Thereby follows the demanded anticommutativity for the fermionic Grassmann variables
+\begin{equation}
+\xi_{i}\wedge\xi_{j} = - \xi_{j}\wedge\xi_{i}.
+\end{equation}
+In general we can write the exterior algebra as a direct sum of subalgebras
+\begin{equation}
+\Lambda(V)=\bigoplus_{m=0}^{N} \Lambda^{m}(V),
+\end{equation}
+where $\Lambda^{m}(V)$ is the quotient algebra of the tensor algebra $T^{m}(V)$ and the two-sided ideal $I^{m}(V)$ and $\Lambda^{0}(V)=K$. For an $a \in \Lambda^{k}(V)$ and $b \in \Lambda^{l}(V)$ we have a graded commutative exterior product
+\begin{equation}
+a\wedge b = (-1)^{kl} b\wedge a.
+\end{equation}
+Therefore if we have an $a=\xi_{i}\wedge\xi_{j}$ and $b=\xi_{m}\wedge\xi_{n}$, then we get
+\begin{equation}
+a \wedge b = b \wedge a
+\end{equation}
+and $a$ and $b$ behave like bosonic quantities. The highest alternating tensor one can create is
+\begin{equation}
+\xi_{1}\wedge\xi_{2}\wedge \ldots\wedge \xi_{N} \in \Lambda^{N}(V),
+\end{equation}
+and with (\ref{wedge_zero}) it applies for all higher tensor spaces that $\Lambda^{k}(V)=0,\; \forall\; k>N$. From now on we want to abbreviate the wedge notation simply by
+\begin{equation}
+\xi_{i}\xi_{j} \equiv \xi_{i}\wedge\xi_{j}.
+\end{equation}
+So any analytic function of some real quantities $x_{i} \in \mathbb{R}$ and grassmanian generators $\xi_{j} \in \Lambda(V)$ can be represented by finitely many terms
+\begin{equation}
+f(x_{1},\ldots,x_{n},\xi_{1},\ldots,\xi_{N}) = f_{0} + f_{1}\;\xi_{1} +\ldots+ f_{12}\;\xi_{1}\xi_{2} +\ldots+ f_{1\ldots N}\; \xi_{1}\cdots\xi_{N},
+\end{equation}
+where the coefficients are functions of the real quantities. In scope of this thesis we have to deal with vectors of four complex Grassmann variables and adapt our notation to the one used in \cite{Giombi:2009gd}
+\begin{equation}
+\eta_{i} =\frac{1}{\sqrt{2}} \left(\xi\R_{i} +i\,\xi\I_{i}\right),\qquad \text{with} \quad \xi\R_{i},\xi\I_{i} \in \Lambda^{1}(V), \quad i=(1,\ldots,4).
+\end{equation}
+We now define the Grassmann variables with an upper index as the complex conjugate of the ones with lower index $\eta^{i}\equiv \left(\eta_{i}\right)^{\dagger} = \left(\eta_{i}\right)^{\ast}$. Complex conjugation of two real Grassmann numbers is defined to include a change of position
+\begin{equation}
+\left(\xi_{1}\xi_{2}\right)^{\ast}\equiv \xi_{2}^{\ast}\xi_{1}^{\ast} = -\xi_{1}\xi_{2}.
+\end{equation}
+They therefore behave like a formally purely imaginary quantity, whereas
+\begin{equation}
+\left(i\xi_{1}\xi_{2}\right)^{\ast} = i\xi_{1}\xi_{2}
+\end{equation}
+behaves like a formally real quantity.
+%
+%
+\\[2cm]
+%
+%
+%
+%    GRASSMANN ANALYSIS
+%
+%
+%
+%
+\subsection{Grassmann Analysis}
+Now we want to see how we can differentiate and integrate Grassmann variables. We define the derivative to be
+\begin{equation}
+\dfrac{\del \xi_{m}}{\del\xi_{n}}\equiv\delta_{m n} .
+\end{equation}
+Following \cite{Cartier:2002zp} and \cite{Berezin} we define the product rule to satisfy
+\begin{align}
+\dfrac{\del }{\del\xi_{n}} \left(\xi_{m_{1}}\xi_{m_{2}}\cdots \xi_{m_{r}}\right) &\equiv \delta_{m_{1} n}\,\xi_{m_{2}}\cdots\xi_{m_{r}}-\delta_{m_{2} n}\,\xi_{m_{1}} \xi_{m_{3}}\cdots \xi_{m_{r}} +\cdots  \notag \\
+&\quad + (-1)^{r-1} \delta_{m_{r} n}\,\xi_{m_{1}}\cdots \xi_{m_{r}}.
+\end{align}
+The tangent vectors are also elements of the exterior algebra and satisfy the same anticommutation rules
+\begin{equation}
+\frac{\del }{\del \xi_{i}} \frac{\del }{\del\xi_{j}} = - \frac{\del }{\del \xi_{j}} \frac{\del }{\del\xi_{i}}.
+\end{equation}
+%
+%
+So if we perform a coordinate transformation $\xi_{i}=M_{ij}\,\theta_{j}$, an $n$-form is transforming according to the alternating properties of forms like
+\begin{equation}
+\frac{\del }{\del \xi_{1}}\cdots\frac{\del }{\del \xi_{n}} = \mathrm{det}\left(M^{-1}\right) \frac{\del }{\del \theta_{1}}\cdots \frac{\del }{\del \theta_{n}},
+\label{coord_trafo}
+\end{equation}
+where the matrix $M$ is associated with the Jacobian
+\begin{equation}
+M_{ij}=\frac{\del \xi_{i}}{\del\theta_{j}}.
+\end{equation}
+For an integral $\mathcal{I}[f]$ of a function $f(\xi)$ it holds true that
+\begin{equation}
+\dfrac{\del}{\del \xi}\mathcal{I}[f] =0,
+\end{equation}
+since the integral is independent of the integration variable. With (\ref{wedge_zero}) it is also true that
+\begin{equation}
+\dfrac{\del}{\del \xi}\dfrac{\del}{\del \xi}=0
+\end{equation}
+and therefore one can identify the integration on Grassmann numbers with the differentiation up to some normalization constant $C$
+\begin{equation}
+\mathcal{I}[f]=\int \dd\xi\; f(\xi) = C\frac{\del }{\del\xi}f(\xi).
+\end{equation}
+So we end up with the following integration rules, if we define $C\equiv 1$:
+\begin{equation}
+\int \dd\xi\; \xi = \frac{\del }{\del\xi}\xi =1,\qquad \int \dd\xi\; 1 = \frac{\del }{\del\xi}1 =0.
+\end{equation}
+We now want to perform an integration over the complex Grassmann variables $\eta$ and $\eta^{\dagger}$. Therefore we want to investigate an integration over the function
+\begin{equation}
+e ^{-a\eta\eta^{\dagger}}.
+\end{equation}
+With
+\begin{equation}
+\eta\eta^{\dagger} = \frac{1}{2}\left(\xi\dR+i\,\xi\dI\right)\left(\xi\dR-i\, \xi\dI\right) = -i\,\xi\dR\xi\dI
+\end{equation}
+and (\ref{coord_trafo}) we can transform the integral using that the determinant of the Jacobian is $\mathrm{det}\,J=i$ and find
+\begin{align}
+\int \dd\eta\dd\eta^{\dagger}\;e ^{-a\eta\eta^{\dagger}} &= i\int \dd\xi\dR \dd\xi\dI\; e ^{ia\xi\dR\xi\dI}\notag \\
+%
+%
+&=i\int\dd\xi\dR\dd\xi\dI\, \left( 1+ i\,a\xi\dR\xi\dI \right) \\
+%
+%
+&=a \int\dd\xi\dR\dd\xi\dI \;\xi\dI\xi\dR = a \notag
+\end{align}
+We get the same result by integrating over two real Grassmann variables $\xi_{1}$ and $\xi_{2}$
+\begin{equation}
+\int \dd\xi_{1}\dd\xi_{2}\; e ^{-a\xi_{1}\xi_{2}}=a.
+\end{equation}
+By rewriting it with help of the antisymmetric matrix
+\begin{equation}
+A=\left(\begin{array}{cc}
+0 & a \\
+-a & 0
+\end{array} \right)
+\end{equation}
+we get
+\begin{equation}
+\int \dd\xi_{1}\dd\xi_{2}\; e ^{-\frac{1}{2}\xi_{i}A_{ij}\xi_{j}} = \mathrm{Pf}\left(A\right),
+\end{equation}
+where $\mathrm{Pf}\left(A\right)$ is the Pfaffian of $A$, which is defined as the square root of the determinant of $A$. This relation holds true for an even number of arbitrary many Grassmann generators. Its is therefore possible to integrate out Grassmann variables and be left with calculating a determinant which comes in quite essential when dealing with Grassmann integrals numerically.\\[2cm]
+%
+%
+%
+%
+% HUBBARD-STRATONOVICH TRAFO
+%
+%
+%
+%
+\subsection{Hubbard-Stratonovich Transformation}
+We have now seen how to deal with bilinear exponentials. But in many cases one also has to deal with higher forms than bilinears. In principle one can expand any function into finitely many terms, like we have seen earlier, and then perform the integration rules, which is but rather ugly and proved not very efficient in numerical simulations. But there is a method to transform an exponential with 4-forms into one with bilinears, by performing an integration over additional bosonic auxiliary field. This is called a Hubbard-Stratonovich transformation. Assuming that we have a finite number of complex Grassmann variables $\eta_{i}$, we can see that the object $\eta^{2}\equiv \eta^{i}\eta_{i}$ transforms like a formally real quantity
+\begin{equation}
+\left(\eta^{i}\eta_{i}\right)^{\ast}=\left(\eta_{i}\right)^{\ast}\left(\eta^{i}\right)^{\ast} =\eta^{i}\eta_{i}.
+\end{equation}
+Therefore $\left(\eta^{2}\right)^{2}$ is a formally positive real value and we can apply the identity
+\begin{equation}
+e ^{\frac{(\eta^{2})^{2}}{4a}}=\sqrt{\frac{a}{\pi}} \int\dd\phi\;e ^{-a\phi^{2}+\eta^{2}\phi},
+\label{HST_pos}
+\end{equation}
+which one can proof simply by square addition and performing a Gaussian integral. If we see this identity in the context of the path integral  framework, we can say, that a new bosonic auxiliary field $\phi$ is introduced for the specific space time point, where the integration took place. Since we can do this transformation at every space time point, this leads to a whole path integral  over $\phi$. Now we also have to be aware of what happens if the exponent on the left side of (\ref{HST_pos}) is negative
+\begin{equation}
+e ^{-\frac{(\eta^{2})^{2}}{4a}}=e ^{\frac{(i\eta^{2})^{2}}{4a}}=\sqrt{\frac{a}{\pi}} \int\dd\phi\; e ^{-a\phi^{2}+i\eta^{2}\phi}.
+\end{equation}
+We can see that this introduces an imaginary term in the exponent and therefore a high oscillatory function in the integral. Analytically this term would not bother us, but since we want to perform a numerical calculation something like this might turn out to be a problem. And in fact, like we will see later on, this will lead us to a so called sign problem.

@@ -1,0 +1,165 @@
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german,english]{babel} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{subfig}
+\usepackage[left=4cm,right=3.5cm,top=2.5cm,bottom=3.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{babelbib}
+\usepackage{bm}
+\usepackage{upgreek}
+\usepackage[nottoc]{tocbibind}
+\usepackage{tikz}
+\usepackage{dsfont}
+%\usepackage{mathabx}
+\usepackage[toc,page]{appendix}
+%erweiterungen
+\usepackage{titlesec,titletoc}	
+%\usepackage{scrtime}
+\usepackage{textcomp}
+\usepackage{upgreek}
+\usepackage{framed, color} 
+\usepackage[colorlinks=false,hidelinks]{hyperref}
+\usepackage{tcolorbox}
+
+\usepackage{ifthen}
+
+\usepackage[labeled,resetlabels]{multibib}	%%meherere literaturverzeichnisse
+
+% declare new math alphabets for special bolt and italic fonts
+\DeclareMathAlphabet{\mathcalbf}{OMS}{cmsy}{b}{n}
+\DeclareMathAlphabet{\mathitbf}{OT1}{cmss}{bx}{it}
+
+%change name displayed as appendix title
+\renewcommand{\appendixpagename}{\sffamily \bfseries \huge Appendix}
+
+\graphicspath{{/Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/}}
+
+
+
+
+
+
+
+
+%layout einstellungen
+
+%equation nummerierungsformat
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}} 
+\numberwithin{equation}{section}
+
+
+%caption-formatierung
+
+\numberwithin{figure}{section}	%abbildungszähler
+\numberwithin{table}{section}	%tabellenzähler
+
+%sidecap formatierung (ergänzung zur figure und table umgebung)
+\usepackage[outercaption]{sidecap}
+
+\usepackage[margin=0pt,font=small,labelformat=simple,labelfont=bf,labelsep=space, justification=justified, hypcap]{caption}
+%\captionsetup[figure]{name=Figure}
+%\captionsetup[table]{name=Table}
+%\captionsetup[table]{position=above}
+%zur positionuierung einer SC caption
+\makeatletter
+\newenvironment{SCtopfig}{\SC@float[t]{figure}}{\endSC@float}
+\makeatother
+
+
+
+
+
+
+%header einstellungen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO]{\slshape \nouppercase{\rightmark}}
+\fancyhead[LE]{\slshape \nouppercase{\leftmark}}
+
+\fancyfoot{}
+\fancyfoot[CE,CO]{\thepage}
+
+
+
+
+%Einstellung serifenlose überschriften
+\titleformat*{\section}{\sffamily \bfseries \Large}
+\titleformat*{\subsection}{\sffamily \bfseries \large}
+\titleformat*{\subsubsection}{\sffamily \bfseries \normalsize}
+
+
+
+
+
+
+
+
+
+%%EIGENDEFINITIONEN
+
+\definecolor{grey}{rgb}{0.925,0.925,0.925}
+\newcommand{\ueberschrift}[1]{\vspace{2mm}{\sffamily\normalsize\bfseries {#1} \vspace{2mm}}}
+\newcommand{\ergebnis}[1]{\vspace{2mm}
+\fcolorbox{black}{grey}{\parbox{\columnwidth}{
+\begin{equation}
+{#1}
+\end{equation}
+}}\vspace{2mm}}
+\newcommand{\abs}[1]{\ensuremath{\left\vert#1\right\vert}}
+%differential d
+\newcommand{\dd}{\ensuremath{\text{d}}}
+%differential del
+\newcommand{\del}{\ensuremath{\partial}}
+%index real part
+\newcommand{\R}{\ensuremath{^{\text{R}}}}
+\newcommand{\dR}{\ensuremath{_{\text{R}}}}
+%index imag part
+\newcommand{\I}{\ensuremath{^{\text{I}}}}
+\newcommand{\dI}{\ensuremath{_{\text{I}}}}
+
+% AdS_5 x S^5
+\newcommand{\AdSS}{\ensuremath{AdS_{5}\times S^{5}}}
+
+
+
+% definition of names to be written in a specific font
+\newcommand{\names}[1]{\textsc{#1}}
+
+% Pfaffian
+\newcommand{\pf}{\ensuremath{\text{Pf}\,}}
+
+%backward vector arrow
+\makeatletter
+\DeclareRobustCommand{\cev}[1]{%
+  \mathpalette\do@cev{#1}%
+}
+\newcommand{\do@cev}[2]{%
+  \fix@cev{#1}{+}%
+  \reflectbox{$\m@th#1\vec{\reflectbox{$\fix@cev{#1}{-}\m@th#1#2\fix@cev{#1}{+}$}}$}%
+  \fix@cev{#1}{-}%
+}
+\newcommand{\fix@cev}[2]{%
+  \ifx#1\displaystyle
+    \mkern#23mu
+  \else
+    \ifx#1\textstyle
+      \mkern#23mu
+    \else
+      \ifx#1\scriptstyle
+        \mkern#22mu
+      \else
+        \mkern#22mu
+      \fi
+    \fi
+  \fi
+}
+\makeatother
+
+
+\title{Geodäten im Gravitationsfeld geladener Staubwolken}
+\author{Philipp Töpfer}

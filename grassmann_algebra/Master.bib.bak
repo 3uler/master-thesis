@@ -1,0 +1,85 @@
+@Article{maldacena1,
+title={The Large N Limit of Superconformal field
+theories and supergravity},
+author = {J Maldacena},
+journal = {Adv. Theor. Math. Phys.},
+year = {1998},
+volume = {2},
+pages = {231-252},
+eprint = "9711200",
+archivePrefix  = "arXiv",
+primaryClass   = "hep-th",
+SLACcitation   = "%%CITATION = ARXIV:1603.04478;%%",
+language={english}
+}
+
+@Article{maldacena2,
+title={Wilson loops in large N field theories},
+author = {J Maldacena},
+journal = {Phys. Rev. Lett.},
+year = {1998},
+volume = {80},
+pages = {4859},
+eprint = "9803002",
+archivePrefix  = "arXiv",
+primaryClass   = "hep-th",
+language={english}
+}
+
+@article{Bergner:2016sbv,
+      author         = "Bergner, Georg and Catterall, Simon",
+      title          = "{Supersymmetry on the lattice}",
+      year           = "2016",
+      eprint         = "1603.04478",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-lat",
+      SLACcitation   = "%%CITATION = ARXIV:1603.04478;%%"
+}
+
+@article{Catterall_physrept,
+      author         = "Catterall, Simon and Kaplan, David B. and Unsal, Mithat",
+      title          = "{Exact lattice supersymmetry}",
+      journal        = "Phys. Rept.",
+      volume         = "484",
+      year           = "2009",
+      pages          = "71-130",
+      doi            = "10.1016/j.physrep.2009.09.001",
+      eprint         = "0903.4881",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-lat",
+      reportNumber   = "INT-PUB-09-014, SLAC-PUB-13567, SU-4252-887",
+      SLACcitation   = "%%CITATION = ARXIV:0903.4881;%%"
+}
+
+@article{Roiban,
+      author         = "McKeown, R.W. and Roiban, R.",
+      title          = "{The quantum $AdS_5 \times S^5$ superstring at finite
+                        coupling}",
+      year           = "2013",
+      eprint         = "1308.4875",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-th",
+      SLACcitation   = "%%CITATION = ARXIV:1308.4875;%%",
+}
+
+@article{Cartier:2002zp,
+      author         = "Cartier, Pierre and DeWitt-Morette, Cecile and Ihl,
+                        Matthias and Saemann, Christian",
+      title          = "{Supermanifolds: Application to supersymmetry}",
+      year           = "2002",
+      eprint         = "math-ph/0202026",
+      archivePrefix  = "arXiv",
+      primaryClass   = "math-ph",
+      SLACcitation   = "%%CITATION = MATH-PH/0202026;%%"
+}
+
+@book{Berezin,
+   title =     {Introduction to Superanalysis},
+   author =    {Berezin,Felix Alexandrovich and Kirillov (eds.),A. A.},
+   publisher = {Springer Netherlands},
+   isbn =      {9789027716682,9027716684},
+   year =      {1987},
+   series =    {Mathematical Physics and Applied Mathematics 9},
+   edition =   {1},
+   volume =    {},
+}
