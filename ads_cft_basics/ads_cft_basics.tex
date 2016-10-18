@@ -218,17 +218,18 @@ As mentioned in the previous section we can address the scaling function by cons
 %
 \begin{equation}
 \langle \mathcal{W}_{\rm cusp} \rangle = \int \mathcal{D}\delta X\, \mathcal{D}\delta \mathit{\Psi}\; e^{-S_{\rm cusp}[X_{\rm cl} + \delta X,\delta \mathit{\Psi}]} = e^{-\frac{f(\lambda)}{2}\frac{V_{2}}{4}}.
+\label{eq: W_S_cusp}
 \end{equation}
 %
 %
 Hereby $S_{\rm cusp}$ refers to the action expanded around the null-cusp solution $X_{\rm cl}$ and $\mathit{\Psi}_{\rm cl} = 0$, whereas $\mathit{\Psi}$ is an abbreviated notation for the fermionic quantities and $\delta X$ and $\delta\mathit{\Psi}$ are fluctuation fields. In the following we want to sketch shortly how to derive the action $S_{\rm cusp}$. We will be using the $\AdSS$ metric in the \names{Poincaré} patch $(\mu = 0,\ldots,3; \; M=1,\ldots,6)$
 %
 %
-\begin{align}
+\begin{gather}
 \dd s^{2} = z^{-2}\left( \dd x^{\mu}\dd x_{\mu} + \dd z^{M} \dd z^{M} \right) = z^{-2} \left(\dd x^{\mu}\dd x_{\mu} + \dd z^{2}\right) + \dd u^{M}\dd u^{M}, \\
 x^{\mu}x_{\mu} = x^{+}x^{-} + x^{*}x, \quad x^{\pm} = x^{3}\pm x^{0}, \quad  x = x^{1} +ix^{2}, \\
 z^{M} = zu^{M}, \quad  u^{M}u^{M} = 1, \quad  z=\left(z^{M}z^{M}\right)^{\frac{1}{2}} \equiv e^{\phi}. \label{S5_restrict}
-\end{align}
+\end{gather}
 %
 %
 Here $x^{\mu},z$ are the local coordinates in the \names{Poincaré} patch of $AdS_{5}$ (see Appendix \ref{p_patch}) and $u^{M}\in \mathbb{R}^{6}$ are euclidean coordinates restricted to the $S^{5}$ sphere by (\ref{S5_restrict}). In this case $AdS_{5}$ and $S^{5}$ have the same constant curvature radius $R=1$. Starting point is the action from \cite{Metsaev:1998it}, which is a covariant $\kappa$-symmetric superstring action for a Type IIB superstring on $\AdSS$ background. It is a 2d $\sigma$-model on the coset superspace $\frac{SU(2,2\vert 4)}{SO(4,1)\times SO(5)}$. Fixing $\kappa$-symmetry $\Gamma^{+}\vartheta^{I}=0$ with $(I=1,2)$ on the two 10d \names{Majorana-Weyl} GS spinors $\vartheta^{M}$  and choosing the conformally analogue gauge on the 2d metric
@@ -251,18 +252,85 @@ which can be imposed as an additional constraint to fix the 2d  diffeomorphism i
 %
 %
 \begin{align}
-S &= g \int \dd \tau \int \dd \sigma \, \mathcal{L}, \quad g\equiv \frac{\sqrt{\lambda}}{4\pi}, \notag \\
+S &= g \int \dd \tau \int \dd \sigma \, \mathcal{L}, \qquad g\equiv \frac{\sqrt{\lambda}}{4\pi},  \\
 %
-\mathcal{L} &= \dot{x}^{*}\dot{x} + \left( \dot{z}^{M} + ip^{+}z^{-2}z^{N}\eta_{i} {\left(\rho^{MN}\right)^{i}}_{j} \eta^{j}\right)^{2} \notag \\
+\mathcal{L} &= \dot{x}^{*}\dot{x} + \left( \dot{z}^{M} + ip^{+}z^{-2}z^{N}\eta_{i} {\left(\rho^{MN}\right)^{i}}_{j} \eta^{j}\right)^{2} +ip^{+}\left( \theta^{i}\dot{\theta}_{i} + \eta^{i}\dot{\eta}_{i} +\theta_{i}\dot{\theta}^{i} + \eta_{i}\dot{\eta}^{i}\right) \notag \\
 %
-&\quad+ip^{+}\left( \theta^{i}\dot{\theta}_{i} + \eta^{i}\dot{\eta}_{i} +\theta_{i}\dot{\theta}^{i} + \eta_{i}\dot{\eta}^{i}\right) \notag \\
+&\quad -(p^{+})^{2}z^{-2}\left(\eta^{2}\right)^{2} -z^{-4}\left(x'^{*}x' +z'^{M}z'^{M}\right) \notag \\
 %
-&\quad -(p^{+})^{2}z^{-2}\left(\eta^{2}\right)^{2} -z^{-4}\left(x'^{*}x' +z'^{M}z'^{M}\right) \\
-%
-&\quad -2 \bigg[ p^{+}z^{-3}\eta^{i} \rho^{M}_{ij} z^{M} \left( \theta'^{j} -iz^{-1}\eta^{j}x'\right) \notag \\
-%
-&\quad \qquad + \left. p^{+}z^{-3}\eta^{i}\left(\rho^{\dagger}_{M}\right)^{ij}z^{M} \left(\theta'^{j}+iz^{-1}\eta^{j}x'^{*}\right) \right]. \notag
+&\quad -2 \bigg[ p^{+}z^{-3}\eta^{i} \rho^{M}_{ij} z^{M} \left( \theta'^{j} -iz^{-1}\eta^{j}x'\right) +  p^{+}z^{-3}\eta_{i}\left(\rho^{\dagger}_{M}\right)^{ij}z^{M} \left(\theta'_{j}+iz^{-1}\eta_{j}x'^{*}\right) \bigg], \notag
 \end{align}
 %
 %
-The six $4 \times 4$ matrices $\rho^{M}$ and their properties are stated in Appendix {\huge\bf insert section}. We also introduced the fields $\eta_{i}, \theta_{i}\; (i=1,\ldots,4)$ which  are complex \names{Grassmann} variables with $\eta^{i}\equiv (\eta_{i})^{\dagger}, \theta^{i}\equiv (\theta_{i})^{\dagger}$.  They are the remnants of the original two 10d \names{Majorana-Weyl} GS spinors and transform in the fundamental representation of $SU(4)$. We will also refer to them as fermions due to their \names{Grassmann}-odd properties. The action is at most quartic in the fermions and the factors of $p^{+}$ can be absorbed by a rescaling of the selfsame and therefore we can set $p^{+}=1$.
+where we defined $\eta^{2}\equiv \eta^{i}\eta_{i}$. The six $4 \times 4$ matrices $\rho^{M}$ and their properties are stated in Appendix {\huge\bf insert section}. We also introduced the fields $\eta_{i}, \theta_{i}\; {(i=1,\ldots,4)}$ which  are complex \names{Grassmann} variables with ${\eta^{i}\equiv (\eta_{i})^{\dagger}},{ \theta^{i}\equiv (\theta_{i})^{\dagger}}$.  They are the remnants of the original two 10d \names{Majorana-Weyl} GS spinors and transform in the fundamental representation of $SU(4)$. We will also refer to them as fermions due to their \names{Grassmann}-odd properties. The action is at most quartic in the fermions and the factors of $p^{+}$ can be absorbed by a rescaling of the selfsame and therefore we can set $p^{+}=1$. To get a real-valued \names{Boltzmann} factor $e^{-S_{\rm E}}$ in the path integral we perform a \names{Wick} rotation ${\tau \to -i\tau}$, ${p^{+}\to ip^{+}}$ and after setting $p^{+}=1$ we obtain the euclidean action 
+%
+%
+\begin{align}
+S_{\rm E} &= g \int \dd\tau \int \dd\sigma \, \mathcal{L}_{\rm E},  \\
+%
+\mathcal{L}_{\rm E} &=\dot{x}^{*}\dot{x} + \left( \dot{z}^{M} + iz^{-2}z^{N}\eta_{i} {\left(\rho^{MN}\right)^{i}}_{j} \eta^{j}\right)^{2} +i\left( \theta^{i}\dot{\theta}_{i} + \eta^{i}\dot{\eta}_{i} +\theta_{i}\dot{\theta}^{i} + \eta_{i}\dot{\eta}^{i}\right) \notag \\
+%
+&\quad -z^{-2}\left(\eta^{2}\right)^{2} +z^{-4}\left(x'^{*}x' +z'^{M}z'^{M}\right) \notag \\
+%
+&\quad +2i \bigg[ z^{-3}\eta^{i} \rho^{M}_{ij} z^{M} \left( \theta'^{j} -iz^{-1}\eta^{j}x'\right) + z^{-3}\eta_{i}\left(\rho^{\dagger}_{M}\right)^{ij}z^{M} \left(\theta'_{j}+iz^{-1}\eta_{j}x'^{*}\right) \bigg], \notag
+\end{align}
+%
+%
+As mentioned, this euclidean superstring action has the simple classical solution of a null-cusp, given by
+%
+%
+\begin{align}
+x^{+}&=\tau, \quad x^{-}=-\frac{1}{2\sigma}, \quad x^{1}=x^{2}=0, \quad z=\sqrt{-2x^{+}x^{-}}=\sqrt{\frac{\tau}{\sigma}},\label{eq: null_cusp} \\
+\tau,\sigma &\in (0,\infty). \notag
+\end{align}
+%
+%
+For $z\to 0$ we approach the AdS boundary and therefore the regime of $\mathcal{N}=4$ SYM. The curve proceeding at the boundary can be parametrised by
+%
+%
+\begin{align}
+\mathcal{C}_{\rm cusp}\quad :\quad (-\infty,\infty) \quad &\longrightarrow \quad \mathbb{R}^{4,1} \notag \\
+%
+s\qquad \; &\longrightarrow  \quad x^{1}=x^{2}=0, \\
+&\qquad \quad x^{+}=\left\lbrace 
+\begin{matrix}
+-s\quad s<0, \\ 
+0\quad {\rm else,}
+\end{matrix} \right. \notag \\
+&\qquad \quad x^{-}=\left\lbrace 
+\begin{matrix}
+\;\;\, s\quad s>0, \\ 
+0\quad {\rm else.}
+\end{matrix} \right. \notag
+\end{align}
+%
+%
+To arrive at the form of (\ref{eq: W_S_cusp}) with a fluctuation action $S_{\rm cusp}$, we need to expand $S_{\rm E}$ around the null-cusp background (\ref{eq: null_cusp}). We therefore choose the field fluctuations to be
+%
+%
+\begin{equation}
+x=\sqrt{\frac{\tau}{\sigma}}\tilde{x}, \quad z^{M}=\sqrt{\frac{\tau}{\sigma}}\tilde{z}^{M}, \quad \theta_{i}=\frac{1}{\sqrt{\sigma}}\tilde{\theta}_{i}, \quad \eta_{i} = \frac{1}{\sqrt{\sigma}}\tilde{\eta}_{i}.
+\end{equation}
+%
+%
+With a transition to the new worldsheet coordinates ${(\tau,\sigma)\to (t,s)=(\ln\tau , \ln \sigma)}$ the fluctuation action has no direct $t$ or $s$ dependence
+%
+%
+\begin{align}
+S_{\rm cusp} &= g \int \dd t \int \dd s \, \mathcal{L}_{\rm cusp}  \\
+%
+%
+\mathcal{L}_{\rm cusp} &= \left\vert \del_{t}\tilde{x} + \tfrac{1}{2}\tilde{x} \right\vert^{2} + \frac{1}{\tilde{z}^{4}}\left\vert \del_{s}\tilde{x} - \tfrac{1}{2}\tilde{x} \right\vert^{2} + \left( \del_{t}\tilde{z}^{M} + \frac{1}{2}\tilde{z}^{M} + \frac{i}{\tilde{z}^{2}}\tilde{z}_{N}\tilde{\eta}_{i} {\left(\rho^{MN}\right)^{i}}_{j} \tilde{\eta}^{j}\right)^{2} \notag \\
+%
+%
+&\quad +\frac{1}{\tilde{z}^{4}}\left( \del_{s}\tilde{z}^{M} - \tfrac{1}{2} \tilde{z}^{M}\right)^{2} + i \left( \tilde{\theta}^{i}\del_{t}\tilde{\theta}_{i} + \tilde{\eta}^{i}\del_{t}\tilde{\eta}_{i} + \tilde{\theta}_{i}\del_{t}\tilde{\theta}^{i} + \tilde{\eta}_{i}\del_{t}\tilde{\eta}^{i}\right) - \frac{1}{\tilde{z}^{2}}\left(\tilde{\eta}^{2}\right)^{2} \notag \\
+%
+%
+&\quad + \frac{2i}{\tilde{z}^{3}}\tilde{z}^{M}\tilde{\eta}^{i} \left(\rho^{M}\right)_{ij} \left( \del_{s}\tilde{\theta}^{j} - \frac{1}{2}\tilde{\theta}^{j} - \frac{i}{\tilde{z}} \tilde{\eta}^{j} \left(\del_{s}\tilde{x}- \tfrac{1}{2}\tilde{x}\right)\right) \notag \\
+%
+%
+&\quad + \frac{2i}{\tilde{z}^{3}}\tilde{z}^{M}\tilde{\eta}_{i}\left(\rho_{M}^{\dagger}\right)^{ij} \left( \del_{s}\tilde{\theta}_{j} - \frac{1}{2} \tilde{\theta}_{j} + \frac{i}{\tilde{z}}\tilde{\eta}_{j} + \frac{i}{\tilde{z}} \tilde{\eta}^{j} \left(\del_{s}\tilde{x}- \tfrac{1}{2}\tilde{x}\right)^{*} \right). \notag
+\end{align}
+%
+%
+In the following we will drop the tilde notation for convenience. We also want to remark that there has been no truncation applied and this is still the full fluctuation action and therefore perfectly valid for a further application on non-perturbative calculations.
