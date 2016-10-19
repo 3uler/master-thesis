@@ -57,6 +57,103 @@ with $x_{\mu}x^{\mu}=\eta_{\mu\nu}x^{\mu}x^{\nu}$ and $\left(\eta_{\mu \nu}\righ
 \end{equation}
 %
 %
+%
+%- - - - - - - - - rho matrix conventions - - - - - - - - - - - - -
+%
+%
+%
+\section{SO(6) matrices}
+The matrices $\rho^{M}_{ij}$ appearing in the action (\ref{eq: cusp_action}) are the off-diagonal blocks of $SO(6)$ \names{Dirac} matrices $\gamma^{M}$ in chiral representation\footnote{The upper or lower placement of the index $M$ on the block matrices has no meaning and is only changed for the purpose of readability.}
+%
+%
+\begin{equation}
+\gamma^{M} \equiv \begin{pmatrix}
+0 & \rho_{M}^{\dagger} \\ 
+\rho^{M} & 0
+\end{pmatrix} 
+= \begin{pmatrix}
+0 & (\rho^{M})^{ij} \\ 
+(\rho^{M})_{ij} & 0
+\end{pmatrix} .
+\end{equation}
+%
+%
+The $\rho^{M}_{ij}$ shall all skew symmetric and we define the ones with the upper indices to satisfy $(\rho^{M})^{ij}\equiv (\rho^{M}_{ij})^{\dagger}$. We can therefore state the following properties
+%
+%
+\begin{equation}
+\rho^{M}_{ij}= - \rho^{M}_{ji}, \qquad  (\rho^{M})^{ij} = - (\rho ^{M}_{ij})^{*},
+\end{equation}
+%
+%
+and we chose to use the following representation
+%
+%
+\begin{align}
+\rho^{1}_{ij} &= \begin{pmatrix}
+0 & 1 & 0 & 0 \\ 
+-1 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 1 \\ 
+0 & 0 & -1 & 0
+\end{pmatrix} , &
+%
+\rho^{2}_{ij} &= \begin{pmatrix}
+0 & i & 0 & 0 \\ 
+-i & 0 & 0 & 0 \\ 
+0 & 0 & 0 & -i \\ 
+0 & 0 & i & 0
+\end{pmatrix} , &
+%
+\rho^{3}_{ij} &= \begin{pmatrix}
+0 & 0 & 0 & 1 \\ 
+0 & 0 & 1 & 0 \\ 
+0 & -1 & 0 & 0 \\ 
+-1 & 0 & 0 & 0
+\end{pmatrix} , \notag\\[0.6cm]
+%
+%
+%
+\rho^{4}_{ij} &= \begin{pmatrix}
+0 & 0 & 0 & -i \\ 
+0 & 0 & i & 0 \\ 
+0 & -i & 0 & 0 \\ 
+i & 0 & 0 & 0
+\end{pmatrix} , &
+%
+\rho^{5}_{ij} &= \begin{pmatrix}
+0 & 0 & i & 0 \\ 
+0 & 0 & 0 & i \\ 
+-i & 0 & 0 & 0 \\ 
+0 & -i & 0 & 0
+\end{pmatrix} , &
+%
+\rho^{6}_{ij} &= \begin{pmatrix}
+0 & 0 & 1 & 0 \\ 
+0 & 0 & 0 & -1 \\ 
+-1 & 0 & 0 & 0 \\ 
+0 & 1 & 0 & 0
+\end{pmatrix} . \raisetag{-6pt}
+\end{align}
+%
+%
+From the \names{Clifford} algebra of the \names{Dirac} matrices $\lbrace \gamma^{M}, \gamma^{N}\rbrace = 2\delta^{MN}\mathds{1}_{8}$ we can derive the relation
+%
+%
+\begin{equation}
+(\rho^{M})^{il} (\rho^{N})_{lj} + (\rho^{N})^{il}(\rho^{M})_{lj} = 2\delta^{MN}\delta^{i}_{j}.
+\end{equation}
+%
+%
+The generators of the $SO(6)$ can be built by
+%
+%
+\begin{equation}
+{\left(\rho^{MN}\right)^{i}}_{j} = \frac{1}{2} \left[ \left(\rho^{M}\right)^{il} \left(\rho^{N}\right)_{lj} - \left(\rho^{N}\right)^{il} \left(\rho^{M}\right)_{lj} \right].
+\end{equation}
+%
+%
+%
+%
 %- - - - - - - - - Discrete Fourier Transform - - - - - - - - - -
 %
 %

@@ -33,12 +33,13 @@ Cambridge Univ. Pr. (2015),
 Cambridge, UK.
 
 \bibitem{maldacena1}
-J.~Maldacena,
-\textit{``The Large N Limit of Superconformal field theories and
-  supergravity''},
-\textsf{Adv.~Theor.~Math.~Phys.~2,~231~(1998)},
-\texttt{\arxivref{9711200}{arXiv:9711200}}.
-%%CITATION = ARXIV:1603.04478;%%
+J.~M.~Maldacena,
+\textit{``{The Large N limit of superconformal field theories and
+  supergravity}''},
+\textsf{\doiref{10.1023/A:1026654312961}{Int.~J.~Theor.~Phys.~38,~1113~(1999)}},
+\texttt{\arxivref{hep-th/9711200}{hep-th/9711200}},
+[Adv. Theor. Math. Phys.2,231(1998)].
+%%CITATION = HEP-TH/9711200;%%
 
 \bibitem{Witten:1998qj}
 E.~Witten,
