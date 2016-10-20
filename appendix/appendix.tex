@@ -18,7 +18,7 @@ The $AdS_{5}\times S^{5}$ space is in the central focus of the gauge/gravity dua
 %
 %
 \subsection[$AdS_{5}$ space]{$\mathitbf{AdS_{5}}$ space}\label{AdS5}
-Since the construction of a sphere is rather simple, we focus on the Anti-de Sitter space. $AdS_{5}$ is a hyperboloid with constant negative curvature, that can be embedded in six dimensional \names{Minkowski} spacetime $X = (X^{0},X^{1},\ldots,X^{5}) \in \mathbb{R}^{4,2}$, with metric $\tilde{\eta} = {\rm diag}(-,+,+,+,+,-)$, so that
+Since the construction of a sphere is rather simple, we focus on the Anti-de Sitter space. $AdS_{5}$ is a hyperboloid with constant negative curvature, that can be embedded in six dimensional \names{Minkowski} spacetime $X = (X^{0},X^{1},\ldots,X^{5}) \in \mathbb{R}^{4,2}$, with metric ${\tilde{\eta} = {\rm diag}(-,+,+,+,+,-)}$, so that
 \begin{equation}
 \dd s^{2} = -\left(\dd X^{0}\right)^{2} + \left(\dd X^{1}\right)^{2} + \cdots + \left(\dd X^{4}\right)^{2} - \left(\dd X^{5}\right)^{2} = \tilde{\eta}_{MN} \dd X^{M}\dd X^{N},
 \end{equation}
@@ -40,7 +40,7 @@ so we can rewrite (\ref{M_l_c}) as
 \begin{equation}
 uv = \eta_{\mu \nu} X^{\mu}X^{\nu},
 \end{equation}
-with $\mu,\nu \in {0,1,2,3}$ and $\left(\eta_{\mu \nu}\right) = {\rm diag}(-,+,+,+).$ Whenever $v \neq 0$ we can rescale the coordinates to set $v = 1$ and solve for $u$. Therefore one is left with a four dimensional \names{Minkowski} space $\mathbb{R}^{3,1}$. Points with $v=0$ are ``points at infinity'' added to four dimensional \names{Minkowski} space. This makes $\del AdS_{5}$ a conformal compactification of four dimensional \names{Minkowski} space. According to Maldacena \cite{maldacena1} the correspondence between a $\mathcal{N}=4$ theory an $\mathbb{R}^{3,1}$ and Type IIB on $AdS_{5}\times S^{5}$ therefore expresses a string theory on $AdS_{5}\times S^{5}$ in terms of a theory on the boundary and thus is referred to as ``holographic'' \cite{Witten:1998qj}.
+with $\mu,\nu \in {0,1,2,3}$ and $\left(\eta_{\mu \nu}\right) = {\rm diag}(-,+,+,+).$ Whenever $v \neq 0$ we can rescale the coordinates to set $v = 1$ and solve for $u$. Therefore one is left with a four dimensional \names{Minkowski} space $\mathbb{R}^{3,1}$. Points with $v=0$ are ``points at infinity'' added to four dimensional \names{Minkowski} space. This makes $\del AdS_{5}$ a conformal compactification of four dimensional \names{Minkowski} space. According to Maldacena \cite{maldacena1} the correspondence between a $\mathcal{N}=4$ theory on $\mathbb{R}^{3,1}$ and Type IIB on $AdS_{5}\times S^{5}$ therefore expresses a string theory on $AdS_{5}\times S^{5}$ in terms of a theory on the boundary and thus is referred to as ``holographic'' \cite{Witten:1998qj}.
 %
 %
 \subsection{Poincaré patch}\label{p_patch}
@@ -57,12 +57,23 @@ with $x_{\mu}x^{\mu}=\eta_{\mu\nu}x^{\mu}x^{\nu}$ and $\left(\eta_{\mu \nu}\righ
 \end{equation}
 %
 %
+For the whole $\AdSS$ space in \names{Poincaré} patch we find 
+%
+%
+\begin{equation}
+\dd s^{2} = \frac{R^{2}}{z^{2}}\left(\dd z^{2} + \eta_{\mu \nu} \dd x^{\mu} \dd x^{\nu} \right) + \dd u^{I}\dd u^{I},
+\end{equation}
+%
+%
+where $u^{I}$ $(I=1,\ldots,6)$ are coordinates on $S^{5}$ that satisfy $u^{I}u^{I}=R^{2}$. For $z\to 0$ we approach the boundary of $\AdSS$ and we can see from the metric that the contribution of the sphere becomes neglectable close to the boundary. If we include the infinite regime as $\del (\AdSS)$ where $z=0$ we can convince ourselves that the metric is conformally equivalent to 4d \names{Minkowski} space.
+%
+%
 %
 %- - - - - - - - - rho matrix conventions - - - - - - - - - - - - -
 %
 %
 %
-\section{SO(6) matrices}
+\section{SO(6) matrices} \label{sec: SO6}
 The matrices $\rho^{M}_{ij}$ appearing in the action (\ref{eq: cusp_action}) are the off-diagonal blocks of $SO(6)$ \names{Dirac} matrices $\gamma^{M}$ in chiral representation\footnote{The upper or lower placement of the index $M$ on the block matrices has no meaning and is only changed for the purpose of readability.}
 %
 %

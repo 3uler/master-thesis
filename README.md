@@ -2,7 +2,7 @@
 |        MASTER THESIS        |
  ----------------------------
 
-Discretization of the Green-Schwarz superstring in 
+Discretization of the Green-Schwarz superstring on 
 light-cone gauge in a lattice
 
 

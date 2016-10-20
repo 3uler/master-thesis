@@ -262,7 +262,7 @@ S &= g \int \dd \tau \int \dd \sigma \, \mathcal{L}, \qquad g\equiv \frac{\sqrt{
 \end{align}
 %
 %
-where we defined $\eta^{2}\equiv \eta^{i}\eta_{i}$. The six $4 \times 4$ matrices $\rho^{M}$ and their properties are stated in Appendix {\huge\bf insert section}. We also introduced the fields $\eta_{i}, \theta_{i}\; {(i=1,\ldots,4)}$ which  are complex \names{Grassmann} variables with ${\eta^{i}\equiv (\eta_{i})^{\dagger}},{ \theta^{i}\equiv (\theta_{i})^{\dagger}}$. They are the remnants of the original two 10d \names{Majorana-Weyl} GS spinors and transform in the fundamental representation of $SU(4)$. We will also refer to them as fermions due to their \names{Grassmann}-odd properties. The action is at most quartic in the fermions and the factors of $p^{+}$ can be absorbed by a rescaling of the selfsame and therefore we can set $p^{+}=1$. To get a real-valued \names{Boltzmann} factor $e^{-S_{\rm E}}$ in the path integral we perform a \names{Wick} rotation ${\tau \to -i\tau}$, ${p^{+}\to ip^{+}}$ and after setting $p^{+}=1$ we obtain the euclidean action 
+where we defined $\eta^{2}\equiv \eta^{i}\eta_{i}$. The six $4 \times 4$ matrices $\rho^{M}$ and their properties are stated in Appendix \ref{sec: SO6}. We also introduced the fields $\eta_{i}, \theta_{i}\; {(i=1,\ldots,4)}$ which  are complex \names{Grassmann} variables with ${\eta^{i}\equiv (\eta_{i})^{\dagger}},{ \theta^{i}\equiv (\theta_{i})^{\dagger}}$. They are the remnants of the original two 10d \names{Majorana-Weyl} GS spinors and transform in the fundamental representation of $SU(4)$. We will also refer to them as fermions due to their \names{Grassmann}-odd properties. The action is at most quartic in the fermions and the factors of $p^{+}$ can be absorbed by a rescaling of the selfsame and therefore we can set $p^{+}=1$. To get a real-valued \names{Boltzmann} factor $e^{-S_{\rm E}}$ in the path integral we perform a \names{Wick} rotation ${\tau \to -i\tau}$, ${p^{+}\to ip^{+}}$ and after setting $p^{+}=1$ we obtain the euclidean action 
 %
 %
 \begin{align}
@@ -334,3 +334,38 @@ S_{\rm cusp} &= g \int \dd t \int \dd s \, \mathcal{L}_{\rm cusp} \label{eq: cus
 %
 %
 In the following we will drop the tilde notation for convenience. We also want to remark that there has been no truncation applied and this is still the full fluctuation action and therefore perfectly valid for a further application on non-perturbative calculations.
+%
+%
+%
+%
+%
+% - - - - - - - - -  Symmetries of the action - - - - - - - - - - - 
+%
+%
+%
+%
+\subsection{Symmetries of the fluctuation action}
+In \cite{Metsaev:2000yu} it was presented, that the general $\kappa$-symmetry light-cone fixed action possesses several symmetries. Two fundamental ones, which are also inherited by the fluctuation action (\ref{eq: cusp_action}) in its gauge fixed status, are global symmetries.
+%
+\begin{itemize}
+\item At first a $U(1)\sim SO(2)$ symmetry which rotates the $x$ and $x^{*}$ coordinate fields orthogonal to the other $AdS_{5}$ coordinates, which therefore does not affect the classical solution. In order for the action to be invariant, also the fermions need to be shifted with the following transformations and the infinitesimal parameter $\epsilon$
+%
+%
+\begin{align*}
+\delta x &= e^{i\epsilon}\; x, &  \delta\eta_{i}&= e^{i\frac{\epsilon}{2}}\; \eta_{i}, &  \delta\theta_{i} &= e^{-i\frac{\epsilon}{2}}\; \theta_{i},\\
+\delta x^{*} &= e^{-i\epsilon}\; x^{*}, &  \delta\eta^{i}&= e^{-i\frac{\epsilon}{2}}\; \eta^{i}, &  \delta\theta^{i} &= e^{i\frac{\epsilon}{2}}\; \theta^{i}.
+\end{align*}
+%
+%
+\item The other symmetry is an $SU(4)\sim SO(6)$, which concerns the $z^{M}$ fields and is inherited after gauge fixing due to the $S^{5}$ structure. By introducing an infinitesimal $SU(4)$ rotation ${\epsilon^{i}}_{j}$ the global symmetry transformations are given by
+%
+%
+\begin{gather*}
+\delta z^{M} = -\frac{1}{2} {\epsilon^{i}}_{j} {(\rho^{MN})^{j}}_{i} z^{N} \\
+\delta \theta^{i} = {\epsilon^{i}}_{j} \theta ^{j}, \quad \delta \theta_{i} = - \theta_{j} {\epsilon^{i}}_{j}, \quad  
+\delta \eta ^{i} = {\epsilon^{i}}_{j} \eta^{i}, \quad  \delta \eta_{i}= - \eta_{i} {\epsilon^{i}}_{j}.
+\end{gather*}
+%
+%
+Hereby one can see that the $z^{M}$ transform in the vector representation and the $\lbrace \eta^{i},\theta^{i}\rbrace$ and $\lbrace \eta_{i},\theta_{i}\rbrace$ in the fundamental and anti-fundamental representation of $SU(4)$, respectively.
+\end{itemize}
