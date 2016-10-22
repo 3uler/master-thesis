@@ -1,27 +1,29 @@
-\BOOKMARK [1][-]{section.1}{Preliminaries}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{AdS/CFT correspondence}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Wilson loops}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{Wilson loops in N =4 Super Yang-Mills theory}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{Cusp anomalous dimension}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.5}{The Green-Schwarz superstring action in AdS light-cone gauge}{section.1}% 6
-\BOOKMARK [2][-]{subsection.1.6}{Symmetries of the fluctuation action}{section.1}% 7
-\BOOKMARK [1][-]{section.2}{Lattice Basics}{}% 8
-\BOOKMARK [2][-]{subsection.2.1}{Discretizing the Lattice}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.2}{Bosons and Fermions on the Lattice}{section.2}% 10
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Bosonic Propagator}{subsection.2.2}% 11
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Fermionic Propagator and the Doubling Problem}{subsection.2.2}% 12
-\BOOKMARK [2][-]{subsection.2.3}{Monte Carlo Methods}{section.2}% 13
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Monte Carlo Integration}{subsection.2.3}% 14
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Importance Sampling and Markov Chains}{subsection.2.3}% 15
-\BOOKMARK [3][-]{subsubsection.2.3.3}{Fermions on the Lattice and the Hybrid Monte Carlo Algorithm}{subsection.2.3}% 16
-\BOOKMARK [1][-]{section*.4}{Appendices}{}% 17
-\BOOKMARK [1][-]{Appendix.a.A}{Grassmann Numbers}{}% 18
-\BOOKMARK [2][-]{subsection.a.A.1}{Grassmann Algebra}{Appendix.a.A}% 19
-\BOOKMARK [2][-]{subsection.a.A.2}{Grassmann Analysis}{Appendix.a.A}% 20
-\BOOKMARK [2][-]{subsection.a.A.3}{Hubbard-Stratonovich Transformation}{Appendix.a.A}% 21
-\BOOKMARK [1][-]{Appendix.a.B}{AdS5S5 spacetime}{}% 22
-\BOOKMARK [2][-]{subsection.a.B.1}{AdS5 space}{Appendix.a.B}% 23
-\BOOKMARK [2][-]{subsection.a.B.2}{Poincar\351 patch}{Appendix.a.B}% 24
-\BOOKMARK [1][-]{Appendix.a.C}{SO\(6\) matrices}{}% 25
-\BOOKMARK [1][-]{Appendix.a.D}{Discrete Fourier Transform}{}% 26
-\BOOKMARK [1][-]{equation.a.D.14}{References}{}% 27
+\BOOKMARK [1][-]{section.1}{Lattice Basics}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Discretizing the Lattice}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Bosons and Fermions on the Lattice}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Bosonic Propagator}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Fermionic Propagator and the Doubling Problem}{subsection.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.3}{Monte Carlo Methods}{section.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Monte Carlo Integration}{subsection.1.3}% 7
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Importance Sampling and Markov Chains}{subsection.1.3}% 8
+\BOOKMARK [3][-]{subsubsection.1.3.3}{Fermions on the Lattice and the Hybrid Monte Carlo Algorithm}{subsection.1.3}% 9
+\BOOKMARK [1][-]{section.2}{Preliminaries}{}% 10
+\BOOKMARK [2][-]{subsection.2.1}{AdS/CFT correspondence}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.2}{Wilson loops}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.3}{Wilson loops in N =4 Super Yang-Mills theory}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.4}{Cusp anomalous dimension}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.5}{The Green-Schwarz superstring action in AdS light-cone gauge}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.6}{Symmetries of the fluctuation action}{section.2}% 16
+\BOOKMARK [1][-]{section.3}{Towards the lattice simulation}{}% 17
+\BOOKMARK [2][-]{subsection.3.1}{Linearization of fermionic contributions}{section.3}% 18
+\BOOKMARK [1][-]{section*.4}{Appendices}{}% 19
+\BOOKMARK [1][-]{Appendix.a.A}{Grassmann Numbers}{}% 20
+\BOOKMARK [2][-]{subsection.a.A.1}{Grassmann Algebra}{Appendix.a.A}% 21
+\BOOKMARK [2][-]{subsection.a.A.2}{Grassmann Analysis}{Appendix.a.A}% 22
+\BOOKMARK [2][-]{subsection.a.A.3}{Hubbard-Stratonovich Transformation}{Appendix.a.A}% 23
+\BOOKMARK [1][-]{Appendix.a.B}{AdS5S5 spacetime}{}% 24
+\BOOKMARK [2][-]{subsection.a.B.1}{AdS5 space}{Appendix.a.B}% 25
+\BOOKMARK [2][-]{subsection.a.B.2}{Poincar\351 patch}{Appendix.a.B}% 26
+\BOOKMARK [1][-]{Appendix.a.C}{SO\(6\) matrices}{}% 27
+\BOOKMARK [1][-]{Appendix.a.D}{Discrete Fourier Transform}{}% 28
+\BOOKMARK [1][-]{equation.a.D.14}{References}{}% 29

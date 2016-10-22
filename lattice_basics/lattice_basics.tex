@@ -366,6 +366,7 @@ This condition is called detailed balance and is used by most algorithms generat
 %- - - - - - - - - - - - - - - - - - - - - - - -
 %          
 \subsubsection{Fermions on the Lattice and the Hybrid Monte Carlo Algorithm}
+\label{sec: hmc_alg}
 %
 %
 There are many possible algorithms to generate field configurations. The choice is depending on the structure of the problem at hand. For the here presented case the algorithm of choice is called rational hybrid Monte Carlo (RHCM). The basic reason to use this algorithm is the presence of fermions in a specific manner. It is in general complicated to deal with fermions in numerical simulations due to the anti commuting properties of \names{Grassmann} variables. An efficient procedure is to integrate out fermions via \names{Grassmann} integration, presented in Appendix \ref{sec: grassmann_analysis}, which results in our case in the Pfaffian of a fermionic operator $M[\phi]$ depending on the bosonic fields $\phi$. We now want to include the Pfaffian as a probability weight factor in the process of generating \names{Markov} chain configurations. To act as a probability weight factor, $\text{Pf}\,M$ must be real and nonnegative. If we consider this to be the case for the moment, we can therefore write

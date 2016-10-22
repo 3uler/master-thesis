@@ -1,0 +1,32 @@
+\section{Towards the lattice simulation}
+With the current status of the action (\ref{eq: cusp_action}) we could almost start to discretize the operators and fields, at least for the bosonic part this would not be a problem. For the fermions however this is not so straight forward. In order to include the fermionic contribution into the weight factor of the path integral like explained in section \ref{sec: hmc_alg} one needs to integrate out the \names{Grassmann} variables to result into a \names{Pfaffian} or determinant of a fermionic operator. As presented in Appendix \ref{sec: grassmann_analysis} this is only possible if the fermions appearing are of quadratic order. But in the fluctuation action (\ref{eq: cusp_action}) also quartic contributions of fermions appear, which have to be linearized with help of a \names{Hubbard-Statonovich} transformation.\footnote{See Appendix \ref{sec: grassmann_analysis} for details}
+%
+%
+%
+% - - - - - - - - -  linearization of the action  - - - - - - - - - - - -
+%
+%
+%
+\subsection{Linearization of fermionic contributions}
+The only quartic interactions are coming from the $\eta$ fields and we can write this part of the action as
+%
+%
+\begin{equation}
+S^{\rm F}_{\rm quart} [\eta_{i},\eta^{i}] = g \int \dd t \dd s \, \left[-\frac{1}{z^{2}}\left(\eta^{2}\right)^{2} + \left(\frac{i}{z^{2}}z_{N}
+\eta_{i}{\left(\rho^{MN}\right)^{i}}_{j}\eta^{j}\right)^{2} \right].
+\end{equation}
+%
+%
+In the path integral representation the euclidean action contributes within an exponential $e^{-S_{\rm E}}$. By performing a naive \names{Hubbard-Statonovich} transformation to this exponential we can reduce the four-fermion contributions to quadratic \names{Yukawa} terms whereas we have to introduce 7 bosonic real auxiliary fields $\phi$ and $\phi^{N}$
+%
+%
+\begin{align}
+\exp \bigg\lbrace -g \int \dd t \dd s \, \bigg[-\tfrac{1}{z^{2}} \big(\eta^{2}\big)^{2} + \Big(\tfrac{i}{z^{2}}z_{N}
+& \eta_{i}{\big(\rho^{MN}\big)^{i}}_{j}\eta^{j}\Big)^{2} \bigg] \bigg\rbrace \\
+%
+%
+\sim \int \mathcal{D}\phi \mathcal{D}\mathcal{\phi^{M}}\; \exp\bigg\lbrace -g \int \dd t \dd s \, \bigg[ &\tfrac{1}{2}\phi^{2} + \tfrac{\sqrt{2}}{z}\phi\eta^{2} +\tfrac{1}{2} (\phi^{M})^{2} \notag \\
+ &- i\tfrac{\sqrt{2}}{z^{4}} \phi_{M} \left( i\eta_{i}{(\rho^{MN})^{i}}_{j}\eta^{j}\right) z_{N} \bigg] \bigg\rbrace. \notag
+\end{align}
+%
+%
