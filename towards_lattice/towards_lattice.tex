@@ -8,12 +8,14 @@ With the current status of the action (\ref{eq: cusp_action}) we could almost st
 %
 %
 \subsection{Linearization of fermionic contributions}
+\subsubsection{Naive approach and sign problem}
 The only quartic interactions are coming from the $\eta$ fields and we can write this part of the action as
 %
 %
 \begin{equation}
-S^{\rm F}_{\rm quart} [\eta_{i},\eta^{i}] = g \int \dd t \dd s \, \left[-\frac{1}{z^{2}}\left(\eta^{2}\right)^{2} + \left(\frac{i}{z^{2}}z_{N}
+S^{\rm F}_{4} [\eta_{i},\eta^{i}] = g \int \dd t \dd s \, \left[-\frac{1}{z^{2}}\left(\eta^{2}\right)^{2} + \left(\frac{i}{z^{2}}z_{N}
 \eta_{i}{\left(\rho^{MN}\right)^{i}}_{j}\eta^{j}\right)^{2} \right].
+\label{eqq: S_4}
 \end{equation}
 %
 %
@@ -30,3 +32,102 @@ In the path integral representation the euclidean action contributes within an e
 \end{align}
 %
 %
+Here we can notice that the second term appears to be complex, since the $SO(6)$ matrix in parenthesis is hermitian (with respect to the indices $M,N$)
+%
+%
+\begin{equation}
+\left( i \,\eta_{i} {\left(\rho^{MN}\right)^{i}}_{j}\eta^{j}\right)^{\dagger} = i\, \eta_{j} {\left(\rho^{MN}\right)^{j}}_{i}\eta^{i},
+\end{equation}
+%
+%
+where we have used (\ref{eq: SO6_id}). As discussed in section \ref{sec: sign_prob} this complex phase in the weight function is potentially leading to a non treatable sign problem. We therefore chose to make a field redefinition that circumvents the appearance of a complex phase during the HS transformation. 
+%
+%
+%
+% - - - - alternative field def - - - - - 
+%
+%
+%
+\subsubsection{Alternative field redefinition}
+By using the identities for the $SO(6)$ matrices stated in Appendix \ref{sec: SO6} we can rewrite the second term in the \names{Laggrangian} of (\ref{eqq: S_4}) as
+%
+%
+\begin{equation}
+\left(i\, \eta_i {(\rho^{MN})^i}_j n^N \eta^j\right)^2=-3 (\eta^2)^2+2\eta_i (\rho^N)^{ik} n_N \eta_k \eta^j (\rho^L)_{jl} n_L \eta^l,
+\end{equation}
+%
+%
+where we defined $n^{N}=\tfrac{z^{N}}{z}$. This leads to the \names{Lagrangian}
+%
+%
+\begin{equation}
+\mathcal{L}_4=\frac{1}{z^2}\left(- 4\, (\eta^2)^2+2\left|\eta_i (\rho^N)^{ik} n_N \eta_k\right|^2\right).
+\end{equation}
+%
+%
+In order to circumvent the sign problem the second term needs to be negative. To achieve this we define new fields\footnote{Where we actually set ${\Sigma_i}^j=\eta_i \eta^j$, then defined ${\Sigma^{i}}_{j}\equiv({\Sigma_i}^{j})^{*}={\Sigma_{j}}^{i}$ to emphasize the notation $\Sigma_i^j$ and equivalent for $\tilde{\Sigma}$.}
+%
+%
+\begin{equation}
+\Sigma_i^j=\eta_i \eta^j \qquad \tilde{\Sigma}_j^i=(\rho^N)^{ik}n_N (\rho^L)_{jl}n_L \eta_k \eta^l.
+\end{equation}
+%
+%
+with this new definitions it is simple to check that
+%
+%
+\begin{align}
+ \Sigma^j_{i}\Sigma^i_j&=-(\eta^2)^2 & \tilde\Sigma^j_{i} \tilde\Sigma^i_j&=-(\eta^2)^2 & \Sigma^i_j \tilde\Sigma^j_i&=-\left|\eta_i (\rho^N)^{ik} n_N \eta_k\right|^2.
+\end{align}
+%
+%
+With this we now define
+%
+%
+\begin{equation}
+{\Sigma_{\pm}}_i^j=\Sigma_i^j\pm \tilde \Sigma_i^j
+\end{equation}
+%
+%
+and find
+%
+%
+\begin{equation}
+ {\Sigma_{\pm}}_i^j{\Sigma_{\pm}}_j^i=-2(\eta^2)^2 \mp 2\left|\eta_i (\rho^N)^{ik} n_N \eta_k\right|^2.
+\end{equation}
+%
+%
+We can now substitute the new fields into the \names{Lagrangian} and obtain
+%
+%
+\begin{equation}
+\mathcal{L}_4=\frac{1}{z^2}\left(- 4\, (\eta^2)^2 \mp 2(\eta^2)^2 \mp {\Sigma_{\pm}}_i^j{\Sigma_{\pm}}_j^i \right)\,,
+\end{equation}
+%
+%
+where we only need to select the right sign in the field definition to overcome the sign problem, which is leading to
+%
+%
+\begin{equation}
+\mathcal{L}_4= \frac{1}{z^2}\left(- 6\, (\eta^2)^2 - {\Sigma_{+}}_i^j{\Sigma_{+}}_j^i \right)\,.
+\end{equation}
+%
+%
+If we now perform a HS transformation there will be no complex phase. The HS transformation yields
+%
+%
+\begin{equation}
+ -\frac{6}{z^2}(\eta^2)^2\to \frac{12}{z} \eta^2 \phi +6\phi^2,
+\end{equation}
+%
+%
+where a single bosonic field was introduced like in the naive case. And further
+%
+%
+\begin{equation}
+-\frac{1}{z^{2}}{\Sigma_{+}}^{i}_{j}{\Sigma_{+}}^{j}_{i} \rightarrow \frac{2}{z}{\Sigma_{+}}^{i}_{j}\phi^{j}_{i} + \phi^{i}_{j}\phi^{j}_{i}
+\qquad \text{with} \qquad \left(\phi^{i}_{j}\right)^{\ast} = \phi^{j}_{i}\;,
+\end{equation}
+%
+%
+Here the collection of fields $\phi^{i}_{j}$ can be thought of as a complex hermitian matrix with 16 real free parameters. After reinserting the old fields for $\Sigma_{+}$ we can conclude

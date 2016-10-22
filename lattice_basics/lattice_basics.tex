@@ -386,7 +386,7 @@ In general one could have to deal with an arbitrary fraction $\alpha$ in the exp
 \end{equation}
 %
 %
-Since there is an invasion included, the operator in the exponent is highly nonlocal in the bosonic fields $\phi$. So even a small change in the fields could cause a large difference in the weight factor. One therefore needs an algorithm that ensures that the generated configurations are part of the contributing regime of the weight factor. In a case like that it proved efficient to use a hybrid Monte Carlo (HMC) algorithm when $\alpha=1$, which uses \names{Hamiltonian} dynamics trajectories along some fictitious time to generate new configurations. For non-integer $\alpha$ one can use a rational approximation of $\left(MM^{\dagger}\right)^{-\alpha}$. Combined with the HMC this is called the rational hybrid Monte Carlo (RHMC) algorithm.\\
+Since there is an inversion included, the operator in the exponent is highly nonlocal in the bosonic fields $\phi$. So even a small change in the fields could cause a large difference in the weight factor. One therefore needs an algorithm that ensures that the generated configurations are part of the contributing regime of the weight factor. In a case like that it proved efficient to use a hybrid Monte Carlo (HMC) algorithm when $\alpha=1$, which uses \names{Hamiltonian} dynamics trajectories along some fictitious time to generate new configurations. For non-integer $\alpha$ one can use a rational approximation of $\left(MM^{\dagger}\right)^{-\alpha}$. Combined with the HMC this is called the rational hybrid Monte Carlo (RHMC) algorithm.\\
 %
 At this point we want to introduce the HMC algorithm which has been proposed in \cite{hmc}. A more detailed explanation is presented in \cite{gattringer2009quantum,montvay_lattice} which serves as a guideline for the following. The HMC is referred to as hybrid because it combines a molecular dynamic (MD) evolution with random noise patterns to simulate quantum fluctuations, an additional \names{Metropolis} acceptance step lets it result into an exact MC algorithm. The field update is  separated into two phases. Pseudofermions are updated first with an exact heat bath, while the bosons are kept constant. Therefore, a configuration $\xi$ is generated from a \names{Gaussian} distribution $P(\xi) \sim e^{-\xi^{\dagger}\xi}$ and we set $\eta = M\xi$.\\
 In the second phase a molecular dynamic evolution is used to update the bosonic fields while the pseudofermions are kept constant.  We can  therefore think of the effective action $S_{\rm eff}[\phi]= S_{\rm B}[\phi] + \eta^{\dagger}(MM^{\dagger})^{-1}\eta$ as only dependent on the bosonic fields $\phi$. Now for each field $\phi_{i}$ a conjugate momentum $\pi_{i}$ is introduced and we expand the path integral with $\int \mathcal{D}\pi\, \exp(-1/2 \;\pi^{2})$ to obtain
@@ -485,3 +485,22 @@ Here we used $\phi_{i}^{(j)}\equiv \phi_{i}(j\epsilon)$ and the driving forces a
 \begin{equation}
 F_{i}[\phi] = \frac{\del }{\del \phi_{i}}\left[ S_{\rm B}\left[\phi\right] + \eta^{\dagger}\left(MM^{\dagger}\right)^{-1}\eta \right]\,.
 \end{equation}
+%
+%
+%
+%
+% - - - - - - - - - -   sign problem  - - - - - - - - - -
+%
+%
+%
+%
+\subsubsection{Numerical sign problems}\label{sec: sign_prob}
+As discussed previously we want to calculate expectation values of observables $O(\phi)$, depending on bosonic fields $\phi$, which are distributed according to a certain probability weight function $\rho(\phi)$
+%
+%
+\begin{equation}
+\left\langle O \right\rangle_{\rho} = \frac{\int \mathcal{D}\phi\; O(\phi)\rho(\phi)}{\int \mathcal{D}\phi\; \rho(\phi)}.
+\end{equation}
+%
+%
+The feasibility of calculations like that via Monte Carlo methods is only guaranteed if the weight function $\rho(\phi)$ is non-negative. In the process of dealing with fermions it is sometimes necessary to introduce bosonic auxiliary fields by a \names{Hubbard-Stratonovich} (HS)  transformation\footnote{See Appendix \ref{sec: HS_trafo} for futher details on the HS transformation.}, which might lead to a complex phase in the weight function. For fluctuations of this phase that are very close to the purely real spectrum, this can be corrected by a reweighting procedure. If nonetheless the phase is distributed on the whole complex spectrum where the reweighting tends to fail, then one is talking of a \textit{sign problem}. There are several approaches to fix this issue but none of them works as a general method to cure the sign problem.

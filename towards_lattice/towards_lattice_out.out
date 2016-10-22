@@ -1,2 +1,4 @@
 \BOOKMARK [1][-]{section.1}{Towards the lattice simulation}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Linearization of fermionic contributions}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Naive approach and sign problem}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Alternative field redefinition}{subsection.1.1}% 4

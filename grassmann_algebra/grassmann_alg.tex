@@ -132,7 +132,7 @@ and (\ref{coord_trafo}) we can transform the integral using that the determinant
 \end{align}
 We get the same result by integrating over two real Grassmann variables $\xi_{1}$ and $\xi_{2}$
 \begin{equation}
-\int \dd\xi_{1}\dd\xi_{2}\; e ^{-a\xi_{1}\xi_{2}}=-a.
+\int \dd\xi_{1}\dd\xi_{2}\; e ^{-a\xi_{1}\xi_{2}}=a.
 \end{equation}
 By rewriting it with help of the antisymmetric matrix
 \begin{equation}
@@ -143,7 +143,7 @@ A=\left(\begin{array}{cc}
 \end{equation}
 we get
 \begin{equation}
-\int \dd\xi_{1}\dd\xi_{2}\; e ^{-\frac{1}{2}\xi_{i}A_{ij}\xi_{j}} = -\mathrm{Pf}\left(A\right),
+\int \dd\xi_{1}\dd\xi_{2}\; e ^{-\frac{1}{2}\xi_{i}A_{ij}\xi_{j}} = \mathrm{Pf}\left(A\right),
 \end{equation}
 where $\mathrm{Pf}\left(A\right)$ is the Pfaffian of $A$, which is defined by the factorisation of the determinant in the following way
 %
@@ -161,7 +161,7 @@ This relation holds true for an even number of arbitrary many Grassmann generato
 %
 %
 %
-\subsection{Hubbard-Stratonovich Transformation}
+\subsection{Hubbard-Stratonovich Transformation} \label{sec: HS_trafo}
 We have now seen how to deal with bilinear exponentials. But in many cases one also has to deal with higher forms than bilinears. In principle one can expand any function into finitely many terms, like we have seen earlier, and then perform the integration rules, which is but rather ugly and proved not very efficient in numerical simulations. But there is a method to transform an exponential with 4-forms into one with bilinears, by performing an integration over additional bosonic auxiliary fields. This is called a Hubbard-Stratonovich transformation. Assuming that we have a finite number of complex Grassmann variables $\eta_{i}$, we can see that the object $\eta^{2}\equiv \eta^{i}\eta_{i}$ transforms like a formally real quantity
 \begin{equation}
 \left(\eta^{i}\eta_{i}\right)^{\ast}=\left(\eta_{i}\right)^{\ast}\left(\eta^{i}\right)^{\ast} =\eta^{i}\eta_{i}.
@@ -175,4 +175,4 @@ which one can proof simply by square addition and performing a Gaussian integral
 \begin{equation}
 e ^{-\frac{(\eta^{2})^{2}}{4a}}=e ^{\frac{(i\eta^{2})^{2}}{4a}}=\sqrt{\frac{a}{\pi}} \int\dd\phi\; e ^{-a\phi^{2}+i\eta^{2}\phi}.
 \end{equation}
-We can see that this introduces an imaginary term in the exponent and therefore a high oscillatory function in the integral. Analytically this term would not bother us, but since we want to perform a numerical calculation something like this might turn out to be a problem. And in fact, like we will see later on, this will lead us to a so called sign problem.
+We can see that this introduces an imaginary term in the exponent and therefore a high oscillatory function in the integral. Analytically this term would not bother us, but since we want to perform a numerical calculation something like this often results into a numerical sign problem, discussed in section \ref{sec: sign_prob}.
