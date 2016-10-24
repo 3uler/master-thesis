@@ -118,6 +118,7 @@ If we now perform a HS transformation there will be no complex phase. The HS tra
 %
 \begin{equation}
  -\frac{6}{z^2}(\eta^2)^2\to \frac{12}{z} \eta^2 \phi +6\phi^2,
+ \label{eq: HS_phi}
 \end{equation}
 %
 %
@@ -130,4 +131,112 @@ where a single bosonic field was introduced like in the naive case. And further
 \end{equation}
 %
 %
-Here the collection of fields $\phi^{i}_{j}$ can be thought of as a complex hermitian matrix with 16 real free parameters. After reinserting the old fields for $\Sigma_{+}$ we can conclude
+Here the collection of fields $\phi^{i}_{j}$ can be thought of as a complex hermitian matrix with 16 real free parameters. We find it convenient to rescale the field $\phi \to \phi / \sqrt{6}$, to get rid of the pre factor of 6 in (\ref{eq: HS_phi}). After reinserting the old fields for $\Sigma_{+}$ we can conclude that
+%
+%
+\begin{equation}
+ \mathcal{L}_4\to \frac{12}{z} \eta^2 \phi +\phi^2+\frac{2}{z}\eta_j \phi^j_i \eta^i +\frac{2}{z} (\rho^N)^{ik}n_N \eta_k\phi^j_i  (\rho^L)_{jl}n_L  \eta^l+\phi^i_j \phi^j_i\,. 
+\end{equation}
+%
+%
+So now we can write the full \names{Lagrangian} as 
+%
+%
+\begin{align}
+\mathcal{L}_{\rm cusp} &=  {\left\vert \partial_t {x} + {\frac{m}{2}}{x} \right\vert}^2 + \frac{1}{{ z}^4}{\left\vert \partial_s {x} -\frac{m}{2}{x} \right\vert}^2 + \left(\partial_t {z}^M + \frac{m}{2}{z}^M \right)^2 \\ &\quad+ \frac{1}{{ z}^4} \left(\partial_s {z}^M -\frac{m}{2}{z}^M\right)^2 
++ \phi^2 + {\rm Tr} \left( \tilde{\phi}\, \tilde{\phi}^{\dagger} \right) + \mathit{\Psi}^T \mathcal{O}_{\rm F} \mathit{\Psi} \,. \notag
+\end{align}
+%
+%
+Hereby we defined the fermionic vector $\mathit{\Psi}\equiv (\theta^{i},\theta_{i},\eta^{i},\eta_{i})$ as well as the auxiliary matrix ${\tilde{\phi}= (\tilde{\phi}_{ij}) \equiv \phi^{i}_{j}}$. We used partial integration and the properties of the \names{Grassmann} numbers and $SO(6)$ matrices to write the fermionic contribution in a matrix-vector notation. The $16\times 16$ fermionic operator is hereby represented as $4\times 4$ block matrix
+%
+%
+\begingroup
+\everymath{\footnotesize}
+%\normalsize
+\begin{flalign} \label{OF}
+\!\!\!\!\!\!\!\!
+\mathcal{O}_{\rm F} & =\begin{pmatrix}
+0 & i \mathds{1}_{4}\partial_{t} & -i\rho^{M}\left(\partial_{s}+\frac{m}{2}\right)\frac{{z}^{M}}{{z}^{3}} & 0\\
+i \mathds{1}_{4}\partial_{t} & 0 & 0 & -i\rho_{M}^{\dagger}\left(\partial_{s}+\frac{m}{2}\right)\frac{{z}^{M}}{{z}^{3}}\\
+i\frac{{z}^{M}}{{z}^{3}}\rho^{M}\left(\partial_{s}-\frac{m}{2}\right) & 0 & 2\frac{{z}^{M}}{{z}^{4}}\rho^{M}\left(\partial_{s}{x}-m\frac{{x}}{2}\right) & i \mathds{1}_{4}\partial_{t}-A^{T}\\
+0 & i\frac{{z}^{M}}{{z}^{3}}\rho_{M}^{\dagger}\left(\partial_{s}-\frac{m}{2}\right) & i \mathds{1}_{4}\partial_{t}+A & -2\frac{{z}^{M}}{{z}^{4}}\rho_{M}^{\dagger}\left(\partial_{s}{x}^\ast-m\frac{{x}}{2}^\ast\right)
+\end{pmatrix}~,
+\raisetag{-8pt}
+\end{flalign}
+\endgroup
+%
+%
+where
+%
+%
+\begin{equation}
+A=-\frac{\sqrt{6}}{z}\phi \mathds{1}_{4} + \frac{1}{z}\tilde{\phi}+\frac{1}{z^{3}}\rho^\ast_{N}\tilde{\phi}^{T}\rho^{L}z^{N}z^{L}+\mathrm{i}\frac{z^{N}}{z^2}\rho^{MN}\partial_{t}z^{M}.
+\end{equation}
+%
+%
+The auxiliary matrix $\tilde{\phi}$ is constructed from 16 real auxiliary fields $\phi_{I}\; (I=1,\ldots,16)$ in the following way
+%
+%
+\begin{equation}
+\tilde{\phi} = \frac{1}{\sqrt{2}}
+\begin{pmatrix}
+\sqrt{2}\phi_{13} & \phi_{1}+i\phi_{2} & \phi_{3}+i\phi_{4} & \phi_{5}+i\phi_{6} \\ 
+\phi_{1}-i\phi_{2} & \sqrt{2}\phi_{14} & \phi_{7}+i\phi_{8} & \phi_{9}+i\phi_{10} \\ 
+\phi_{3}-i\phi_{4} & \phi_{7}-i\phi_{8} & \sqrt{2}\phi_{15} & \phi_{11}+i\phi_{12} \\ 
+\phi_{5}-i\phi_{6} & \phi_{9}-i\phi_{10} & \phi_{11}-i\phi_{12} & \sqrt{2}\phi_{16}
+\end{pmatrix} ,
+\end{equation}
+%
+%
+so that we have the simple expression for
+%
+%
+\begin{equation}
+{\rm Tr}\left(\tilde{\phi}\, \tilde{\phi}^{\dagger}\right) = \sum\limits_{I=1}^{16} (\phi_{I})^{2} \equiv (\phi_{I})^{2}\,.
+\end{equation}
+%
+%
+%
+%
+%
+% - - - - - - - - pseudofermions - - - - - - - - - - -
+%
+%
+%
+%
+%
+\subsubsection{Pseudofermionic weight function}
+Now since we have linearised fermionic contributions to quadratic order, we are able to integrate over the \names{Grassmann} fields in the partition function
+%
+%
+\begin{equation}
+Z = \int \mathcal{D}x\,\mathcal{D}x^{*}\,\mathcal{D}z^{N}\,\mathcal{D}\phi\,\mathcal{D}\phi_{I}\,\mathcal{D}\mathit{\Psi}\; e^{-S}\,,
+\end{equation}
+%
+%
+where we will split $S = S_{\rm B} + S_{\rm F}$ into its bosonic ($S_{\rm B}$) and fermionic ($S_{\rm F}$) contributions with
+%
+%
+\begin{align}
+S_{\rm B} &= \int \dd t\dd s\; {\left\vert \partial_t {x} + {\frac{m}{2}}{x} \right\vert}^2 + \frac{1}{{ z}^4}{\left\vert \partial_s {x} -\frac{m}{2}{x} \right\vert}^2 + \left(\partial_t {z}^M + \frac{m}{2}{z}^M \right)^2 \notag \\ 
+&\qquad\qquad+ \frac{1}{{ z}^4} \left(\partial_s {z}^M -\frac{m}{2}{z}^M\right)^2 + \phi^2 + (\phi_{I})^{2}\,,  \\[0.5cm]
+S_{\rm F} &=  \int \dd t\dd s\; \mathit{\Psi}^T \mathcal{O}_{\rm F} \mathit{\Psi}\,. \notag 
+\end{align}
+%
+%
+As motivated in section \ref{sec: grassmann_analysis} the \names{Grassmann} integral over $\mathit{\Psi}$ will result in a \names{Pfaffian} ${\rm Pf}\,\mathcal{O}_{\rm F}$. To include the \names{Pfaffian} into the weight function we have to rewrite it in terms of pseudofermions $\xi$ as emphasized in section \ref{sec: hmc_alg}. To legitimately apply this procedure we need the \names{Pfaffian} to be real and non-negative. By our alternative approach to linearization we made sure to exclude any potential phase ambiguities. All terms in the action $S_{\rm F}$ are real and therefore also the \names{Pfaffian} turns out to be a real quantity. So the only problem that we might have to face is if the \names{Pfaffian} is negative. We would need to be able to write the \names{Pfaffian} as a perfect square of another quantity to show that it is real for all configurations. We could not show this to be the case analytically (except for some special cases) but there are some hints that point out for this to be legitimate to assume. First of all it can be observed numerically that the \names{Pfaffian} is always positive at least for large values of $g$ and second also the eigenvalue spectrum of the fermion matrix suggests this, but we will postpone this argument to a later point when we have discretized the operator $\mathcal{O}_{\rm F}$. For now we will assume a positive \names{Pfaffian} for all situations and make this more legitimate by keeping track of it during simulations. For this reason, we proceed as in \cite{Roiban} and introduce pseudofermions $\xi$ via
+%
+%
+\begin{equation}
+\int \mathcal{D}\mathit{\Psi}\; e^{-S_{\rm F}} = {\rm Pf}\,\mathcal{O}_{\rm F} =\left( \det \mathcal{O}_{\rm F}\,\mathcal{O}_{\rm F}^{\dagger} \right)^{\frac{1}{4}} = \int \mathcal{D}\xi\,\mathcal{D}\xi^{\dagger}\; e^{-S_{\xi}}\,,
+\end{equation}
+%
+%
+where
+%
+%
+\begin{equation}
+S_{\xi} = \int \dd t\dd s \; \xi^{\dagger} \left(\mathcal{O}_{\rm F}\,\mathcal{O}_{\rm F}^{\dagger} \right)^{-\frac{1}{4}} \xi \,,
+\end{equation}
+and $\xi$ is a collection of 16 complex bosonic scalar fields.

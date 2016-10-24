@@ -136,6 +136,12 @@ R.~R.~Metsaev and A.~A.~Tseytlin,
 \texttt{\arxivref{hep-th/9805028}{hep-th/9805028}}.
 %%CITATION = HEP-TH/9805028;%%
 
+\bibitem{Roiban}
+R.~McKeown and R.~Roiban,
+\textit{``{The quantum $AdS_5 \times S^5$ superstring at finite coupling}''},
+\texttt{\arxivref{1308.4875}{arXiv:1308.4875}}.
+%%CITATION = ARXIV:1308.4875;%%
+
 \bibitem{Cartier:2002zp}
 P.~Cartier, C.~DeWitt-Morette, M.~Ihl and C.~Saemann,
 \textit{``{Supermanifolds: Application to supersymmetry}''},
@@ -154,5 +160,12 @@ E.~Witten,
 \textsf{Adv.~Theor.~Math.~Phys.~2,~253~(1998)},
 \texttt{\arxivref{hep-th/9802150}{hep-th/9802150}}.
 %%CITATION = HEP-TH/9802150;%%
+
+\bibitem{Bayona:2005nq}
+C.~A.~Bayona and N.~R.~F.~Braga,
+\textit{``{Anti-de Sitter boundary in Poincare coordinates}''},
+\textsf{\doiref{10.1007/s10714-007-0446-y}{Gen.~Rel.~Grav.~39,~1367~(2007)}},
+\texttt{\arxivref{hep-th/0512182}{hep-th/0512182}}.
+%%CITATION = HEP-TH/0512182;%%
 
 \end{thebibliography}
