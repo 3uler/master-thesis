@@ -285,7 +285,27 @@ x^{+}&=\tau, \quad x^{-}=-\frac{1}{2\sigma}, \quad x^{1}=x^{2}=0, \quad z=\sqrt{
 \end{align}
 %
 %
-For $z\to 0$ we approach the AdS boundary and therefore the regime of $\mathcal{N}=4$ SYM. The curve proceeding at the boundary can be parametrised by
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.7\textwidth]{cusp_worldsheet_vec.png}};
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+\node [anchor=west] at (0.32,0.35) {$\mathcal{C}$};
+\node [anchor=west] at (0.63,0.75) {$\widetilde{\Sigma}$};
+\node [anchor=west] at (0.39,0.8) {$z$};
+\node [anchor=west] at (0.22,0.62) {$x^{+}$};
+\node [anchor=west] at (0.9,0.45) {$x^{-}$};
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+\end{scope}
+\end{tikzpicture}
+\caption{Visualisation of the string worldsheet in the $AdS_{3}$ subspace (which is orthogonal to the coordinates $x,x^{*}$). For $z\to 0$ the embedding of the string worldsheet $\widetilde{\Sigma}$ is bounded by a cusped contour $\mathcal{C}$ closed at infinity.\label{fig: cusp_worldsheet}}
+\end{center}
+\end{figure}
+%
+%
+For $z\to 0$ we approach the AdS boundary and therefore the regime of $\mathcal{N}=4$ SYM (see also \autoref{fig: cusp_worldsheet} for a visualization for the cusped contour). The curve proceeding at the boundary can be parametrised by
 %
 %
 \begin{align}
