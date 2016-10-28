@@ -198,6 +198,7 @@ Further relations and identities are
 %
 %
 \section{Discrete Fourier Transform}
+\label{app: disc_ft}
 To perform a Fourier transform on the lattice one needs to discretize it to deal with a finite sequence of $N$ complex numbers $x_{0},x_{1},\ldots,x_{N-1}$. We define the discrete Fourier transform $X_{k}$ to be a vector in the base of roots of unit with components $x_{n}$ as follows:
 \begin{equation}
 X_{k}=\dfrac{1}{\sqrt{N}} \sum\limits_{n=0}^{N-1} x_{n} \, e ^{-2\pi  i kn /N} \qquad  k \in \mathbb{Z}.
@@ -239,6 +240,7 @@ with $N_{0}=T$ and $N_{1}=L$. Therefore the total number of lattice points is gi
 Following \cite{gattringer2009quantum} we now want to calculate the discrete Fourier transform $\tilde{f}(p)$ of a function $f(n)$. Here for $f(n)$ we impose toroidal boundary conditions
 \begin{equation}
 f(n+\hat{\imath}N_{i})= e ^{2\pi i \theta_{i}}f(n),
+\label{eq: boundary_cond}
 \end{equation}
 where $\hat{\imath}$ is a unit vector in the $i$-direction and $\theta_{i}=0$ corresponds to periodic and $\theta_{i}=1/2$ to anti-periodic boundary conditions. The discrete momentum space corresponding to these boundary conditions is given by
 \begin{equation}

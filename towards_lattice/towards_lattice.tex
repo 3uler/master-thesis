@@ -1,4 +1,5 @@
 \section{Towards the lattice simulation}
+\label{sec: towards_lat}
 With the current status of the action (\ref{eq: cusp_action}) we could almost start to discretize the operators and fields, at least for the bosonic part this would not be a problem. For the fermions however this is not so straight forward. In order to include the fermionic contribution into the weight factor of the path integral like explained in section \ref{sec: hmc_alg} one needs to integrate out the \names{Grassmann} variables to result into a \names{Pfaffian} or determinant of a fermionic operator. As presented in Appendix \ref{sec: grassmann_analysis} this is only possible if the fermions appearing are of quadratic order. But in the fluctuation action (\ref{eq: cusp_action}) also quartic contributions of fermions appear, which have to be linearized with help of a \names{Hubbard-Statonovich} transformation.\footnote{See Appendix \ref{sec: grassmann_analysis} for details}
 %
 %
@@ -127,7 +128,7 @@ where a single bosonic field was introduced like in the naive case. And further
 %
 \begin{equation}
 -\frac{1}{z^{2}}{\Sigma_{+}}^{i}_{j}{\Sigma_{+}}^{j}_{i} \rightarrow \frac{2}{z}{\Sigma_{+}}^{i}_{j}\phi^{j}_{i} + \phi^{i}_{j}\phi^{j}_{i}
-\qquad \text{with} \qquad \left(\phi^{i}_{j}\right)^{\ast} = \phi^{j}_{i}\;,
+\qquad \text{with} \qquad \left(\phi^{i}_{j}\right)^{\ast} = \phi^{j}_{i}\;.
 \end{equation}
 %
 %
@@ -219,9 +220,9 @@ where we will split $S = S_{\rm B} + S_{\rm F}$ into its bosonic ($S_{\rm B}$) a
 %
 %
 \begin{align}
-S_{\rm B} &= \int \dd t\dd s\; {\left\vert \partial_t {x} + {\frac{m}{2}}{x} \right\vert}^2 + \frac{1}{{ z}^4}{\left\vert \partial_s {x} -\frac{m}{2}{x} \right\vert}^2 + \left(\partial_t {z}^M + \frac{m}{2}{z}^M \right)^2 \notag \\ 
-&\qquad\qquad+ \frac{1}{{ z}^4} \left(\partial_s {z}^M -\frac{m}{2}{z}^M\right)^2 + \phi^2 + (\phi_{I})^{2}\,,  \\[0.5cm]
-S_{\rm F} &=  \int \dd t\dd s\; \mathit{\Psi}^T \mathcal{O}_{\rm F} \mathit{\Psi}\,. \notag 
+S_{\rm B} &= g\,\int \dd t\dd s\; {\left\vert \partial_t {x} + {\frac{m}{2}}{x} \right\vert}^2 + \frac{1}{{ z}^4}{\left\vert \partial_s {x} -\frac{m}{2}{x} \right\vert}^2 + \left(\partial_t {z}^M + \frac{m}{2}{z}^M \right)^2 \notag \\ 
+&\qquad\qquad+ \frac{1}{{ z}^4} \left(\partial_s {z}^M -\frac{m}{2}{z}^M\right)^2 + \phi^2 + (\phi_{I})^{2}\,, \label{eq: bos_act} \\[0.5cm]
+S_{\rm F} &=  g\,\int \dd t\dd s\; \mathit{\Psi}^T \mathcal{O}_{\rm F} \mathit{\Psi}\,. \notag 
 \end{align}
 %
 %
@@ -237,6 +238,43 @@ where
 %
 %
 \begin{equation}
-S_{\xi} = \int \dd t\dd s \; \xi^{\dagger} \left(\mathcal{O}_{\rm F}\,\mathcal{O}_{\rm F}^{\dagger} \right)^{-\frac{1}{4}} \xi \,,
+S_{\xi} = g\,\int \dd t\dd s \; \xi^{\dagger} \left(\mathcal{O}_{\rm F}\,\mathcal{O}_{\rm F}^{\dagger} \right)^{-\frac{1}{4}} \xi \,,
 \end{equation}
-and $\xi$ is a collection of 16 complex bosonic scalar fields.
+and $\xi$ is a collection of 16 complex bosonic scalar fields. But before we can go any further we need to discretize the action with help of the methods introduced in \autoref{sec: disc_lat}. 
+%
+%
+%
+%
+%
+% - - - - - - - - - - -  Discretization  - - - - - - - - - - - - 
+%
+%
+%
+%
+%
+\subsection{Discretizing the action}
+In the previous steps we have constructed a \names{Lagrangian} fitting to our problem and modified terms to be able to apply a RHMC algorithm. To proceed with this task we need a discretized version of the bosonic action and the fermionic operator $\mathcal{O}_{\rm F}$. For the bosonic term this is quite easy. First we need to do a dimensional analysis of the fields in the action. In the simulation we can only deal with dimensionless fields. Since the action also needs to be dimensionless we can see that the fields $x,x^{*}$ and $z^{M}$ are dimensionless as preferred but the auxiliary fields are of dimension $[\phi]=1/[a]$. We therefore do a redefinition of the discretized fields
+%
+%
+\begin{align}
+a\phi(n) &\to \phi(n), & a\phi_{I}(n) &\to \phi_{I}(n)
+\end{align}
+%
+%
+in order to have dimensionless quantities as well. We can now write the discretized version of the bosonic action in (\ref{eq: bos_act}) as
+%
+%
+\begin{align}
+\hat{S}_{\rm B} &= g\, \sum\limits_{n\in\mathit{\Lambda}} \Bigg[ \left\vert x(n+\hat{0}) + \left(\tfrac{M}{2}-1\right) x(n) \right\vert^{2} 
++ \frac{1}{[z(n)]^{4}} \left\vert x(n+\hat{1}) - \left(\tfrac{M}{2}+1\right) x(n) \right\vert^{2} \notag\\
+%
+%
+&\qquad\qquad + \sum\limits_{M=1}^{6} \bigg\lbrace \left(z^{M}(n+\hat{0}) + \left(\tfrac{M}{2} -1\right)z^{M}(n) \right)^{2} \\
+%
+%
+&\qquad\qquad\qquad\qquad + \frac{1}{[z(n)]^{4}} \left( z^{M}(n+\hat{1}) -\left(\tfrac{M}{2}+1\right) z^{M}(n) \right)^{2} \bigg\rbrace \notag \\
+&\qquad\qquad +\phi^{2}(n) + \sum\limits_{I=1}^{16}\left[\phi_{I}(n)\right]^{2} \Bigg], \notag
+\end{align}
+%
+%
+where we applied a simple forward derivative to the $x,x^{*}$ and $z^{M}$ fields and introduced the dimensionless lattice mass parameter $M=ma$.
