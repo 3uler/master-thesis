@@ -190,12 +190,14 @@ The correspondence (\ref{W_Z}) now tells us that it is possible to access the sc
 %
 \begin{equation}
 \langle \mathcal{W}[\mathcal{C_{\rm cusp}}] \rangle = e^{-\frac{f(\lambda)}{2}\frac{V_{2}}{4}}.
+\label{eq: W_exp_f}
 \end{equation}
 Semiclassical calculations with such vacua allowed to compute the scaling function up to two loops at strong coupling (see e.g. \cite{Giombi:2009gd})
 %
 %
 \begin{equation}
 f(g) = 4g - \frac{3\ln 2}{\pi} - \frac{K}{4\pi^{2}g} + \mathcal{O}(g^{-2}), \quad g\equiv \frac{\sqrt{\lambda}}{4\pi},
+\label{eq: scaling_fct}
 \end{equation}
 %
 %
@@ -379,21 +381,81 @@ In \cite{Metsaev:2000yu} it was presented, that the general $\kappa$-symmetry li
 \item At first a $U(1)\sim SO(2)$ symmetry which rotates the $x$ and $x^{*}$ coordinate fields orthogonal to the other $AdS_{5}$ coordinates, which therefore does not affect the classical solution. In order for the action to be invariant, also the fermions need to be shifted with the following transformations and the infinitesimal parameter $\epsilon$
 %
 %
-\begin{align*}
-\delta x &= e^{i\epsilon}\; x, &  \delta\eta_{i}&= e^{i\frac{\epsilon}{2}}\; \eta_{i}, &  \delta\theta_{i} &= e^{-i\frac{\epsilon}{2}}\; \theta_{i},\\
-\delta x^{*} &= e^{-i\epsilon}\; x^{*}, &  \delta\eta^{i}&= e^{-i\frac{\epsilon}{2}}\; \eta^{i}, &  \delta\theta^{i} &= e^{i\frac{\epsilon}{2}}\; \theta^{i}.
-\end{align*}
+\begin{equation}
+\begin{alignedat}{9}
+\delta x &= e^{i\epsilon}\; x, \qquad&  \delta\eta_{i}&= e^{i\frac{\epsilon}{2}}\; \eta_{i}, \qquad&  \delta\theta_{i} &= e^{-i\frac{\epsilon}{2}}\; \theta_{i},\\
+\delta x^{*} &= e^{-i\epsilon}\; x^{*}, &  \delta\eta^{i}&= e^{-i\frac{\epsilon}{2}}\; \eta^{i}, &  \delta\theta^{i} &= e^{i\frac{\epsilon}{2}}\; \theta^{i}. 
+\label{eq: U1_sym}
+\end{alignedat}
+\end{equation}
 %
 %
 \item The other symmetry is an $SU(4)\sim SO(6)$, which concerns the $z^{M}$ fields and is inherited after gauge fixing due to the $S^{5}$ structure. By introducing an infinitesimal $SU(4)$ rotation ${\epsilon^{i}}_{j}$ the global symmetry transformations are given by
 %
 %
-\begin{gather*}
-\delta z^{M} = -\frac{1}{2} {\epsilon^{i}}_{j} {(\rho^{MN})^{j}}_{i} z^{N} \\
-\delta \theta^{i} = {\epsilon^{i}}_{j} \theta ^{j}, \quad \delta \theta_{i} = - \theta_{j} {\epsilon^{i}}_{j}, \quad  
-\delta \eta ^{i} = {\epsilon^{i}}_{j} \eta^{i}, \quad  \delta \eta_{i}= - \eta_{i} {\epsilon^{i}}_{j}.
-\end{gather*}
+\begin{equation}
+\begin{alignedat}{9}
+\delta z^{M} &= -\frac{1}{2} {\epsilon^{i}}_{j} {(\rho^{MN})^{j}}_{i} z^{N}   \\
+\delta \theta^{i} = {\epsilon^{i}}_{j} \theta ^{j}, \quad \delta \theta_{i} = -& \theta_{j} {\epsilon^{i}}_{j}, \quad  
+\delta \eta ^{i} = {\epsilon^{i}}_{j} \eta^{i}, \quad  \delta \eta_{i}= - \eta_{i} {\epsilon^{i}}_{j}. 
+\end{alignedat}
+\end{equation}
 %
 %
 Hereby one can see that the $z^{M}$ transform in the vector representation and the $\lbrace \eta^{i},\theta^{i}\rbrace$ and $\lbrace \eta_{i},\theta_{i}\rbrace$ in the fundamental and anti-fundamental representation of $SU(4)$, respectively.
 \end{itemize}
+%
+%
+%
+%
+% - - - - - - - - -   perturbative 1-loop free energy
+%
+%
+%
+%
+%
+\subsection{Perturbative 1-loop free energy}
+Here we want to point out a quick check that fluctuations around the previously derived vacuum lead to the correct solution of (\ref{eq: scaling_fct}). We therefore want to reproduce the constant $\frac{3\ln 2}{\pi}$ term in $f(g)$. We know from (\ref{eq: W_exp_f}) that we can write
+%
+%
+\begin{equation}
+Z_{\rm string} = e^{-\frac{1}{8}f(\lambda)V_{2}} \equiv e^{-\Gamma(\lambda)}, \quad V_{2}=\int \dd t \int \dd s,
+\end{equation}
+%
+%
+where we define 
+%
+%
+\begin{equation}
+\Gamma = \Gamma^{(0)} + \Gamma^{(1)}+\Gamma^{(2)}+\cdots = \frac{1}{8}f(\lambda)V_{2}.
+\end{equation}
+%
+%
+Thereby $\Gamma^{(0)}=S_{\rm E}[X_{\rm cl},\mathit{\Psi}=0]$ is the value of the classical action on the solution and $\Gamma^{(1)},\Gamma^{(2)},\ldots$ are quantum corrections. The scaling function can be expanded in the following way
+%
+%
+\begin{equation}
+f(g) = g \left[ a_{0} + \frac{a_{1}}{g} + \frac{a_{2}}{g^{2}} + \cdots \right].
+\end{equation}
+%
+%
+In \cite{Giombi:2009gd} the 1-loop fluctuation coefficient $a_{1}$ has bee calculated via $\Gamma^{(1)}=-\ln Z^{(1)}$, where $Z^{(1)}$ is the exponential of the truncated fluctuation action that has only quadratic field contributions. The \names{Lagrangian} can therefore be written as a matrix-vector product with fermionic and bosonic matrix operators $\hat{D}_{\rm F}$ and $\hat{D}_{\rm B}$. The 1-loop approximation of the path integral can therefore be written as\footnote{With $\text{Det}\,\hat{O}$ we hereby mean the full infinite dimensional determinant in the sense of
+\begin{equation*}
+\ln \text{Det}\,\hat{O} = \text{Tr}\,\ln \hat{O} = \int \dd^{d}s \langle s\vert \text{tr}\,\ln\hat{O} \vert s \rangle
+=\int \dd^{d}s \ln[\det O(s) ] ,
+\end{equation*}
+where tr and det refer to the regular trace and determinant if $\hat{O}$ is a matrix of operators and here $\vert s \rangle$ is an eigenbase of the operator $\hat{O}$.} (with $p^{2} = (p_{0})^{2}+(p_{1})^{2}$)
+%
+%
+\begin{align}
+\Gamma^{(1)} &= \frac{1}{2} \ln \frac{\text{Det}\, \hat{D}_{\rm B}}{\text{Det}\,\hat{D}_{\rm F}}
+=  \frac{V_{2}}{2} \int \frac{\dd^{2}p}{(2\pi)^{2}} \; \ln \left[\frac{\det D_{\rm B}(p)}{\det D_{\rm F}(p)} \right]
+\label{eq: 1_loop}      \\
+%
+%
+&= \frac{V_{2}}{2} \int \frac{\dd^{2}p}{(2\pi)^{2}} \; \ln \left[ \frac{\left(p^{2} +m^{2}\right) \left( p^{2} +\frac{m^{2}}{2}\right)^{2} \left(p^{2}\right)^{5}}{\left( p^{2} + \frac{m^{2}}{4}\right)^{8}} \right]
+=-\frac{3 \ln 2}{\pi} \frac{V_{2}}{8}m^{2},   \notag
+\end{align}
+%
+%
+leading to the correct 1-loop coefficient for $f(g)$ with $m=1$.

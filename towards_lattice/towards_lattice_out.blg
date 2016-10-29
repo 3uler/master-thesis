@@ -2,48 +2,46 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: towards_lattice_out.aux
 The style file: nb.bst
-I found no \citation commands---while reading file towards_lattice_out.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Master.bib
-You've used 0 entries,
+You've used 1 entry,
             1217 wiz_defined-function locations,
-            320 strings with 2270 characters,
-and the built_in function-call counts, 28 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 3
+            327 strings with 2417 characters,
+and the built_in function-call counts, 326 in all, are:
+= -- 25
+> -- 8
+< -- 21
++ -- 22
+- -- 2
+* -- 14
+:= -- 52
 add.period$ -- 0
-call.type$ -- 0
+call.type$ -- 1
 change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
+chr.to.int$ -- 4
+cite$ -- 1
 duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+empty$ -- 18
+format.name$ -- 2
+if$ -- 54
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 10
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 1
+missing$ -- 6
+newline$ -- 16
+num.names$ -- 1
+pop$ -- 1
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 30
 stack$ -- 0
-substring$ -- 0
+substring$ -- 22
 swap$ -- 0
-text.length$ -- 0
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 9
-(There was 1 error message)
+while$ -- 3
+width$ -- 2
+write$ -- 17

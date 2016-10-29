@@ -253,7 +253,16 @@ and $\xi$ is a collection of 16 complex bosonic scalar fields. But before we can
 %
 %
 \subsection{Discretizing the action}
-In the previous steps we have constructed a \names{Lagrangian} fitting to our problem and modified terms to be able to apply a RHMC algorithm. To proceed with this task we need a discretized version of the bosonic action and the fermionic operator $\mathcal{O}_{\rm F}$. For the bosonic term this is quite easy. First we need to do a dimensional analysis of the fields in the action. In the simulation we can only deal with dimensionless fields. Since the action also needs to be dimensionless we can see that the fields $x,x^{*}$ and $z^{M}$ are dimensionless as preferred but the auxiliary fields are of dimension $[\phi]=1/[a]$. We therefore do a redefinition of the discretized fields
+In the previous steps we have constructed a \names{Lagrangian} fitting to our problem and modified terms to be able to apply a RHMC algorithm. To proceed with this task we need a discretized version of the bosonic action and the fermionic operator $\mathcal{O}_{\rm F}$. 
+%
+%
+%
+% - - - - -  discretized bosnic action - - - - - - - -
+%
+%
+%
+\subsubsection{Bosonic action}
+For the bosonic term this is quite easy. First we need to do a dimensional analysis of the fields in the action. In the simulation we can only deal with dimensionless fields. Since the action also needs to be dimensionless we can see that the fields $x,x^{*}$ and $z^{M}$ are dimensionless as preferred but the auxiliary fields are of dimension $[\phi]=1/[a]$. We therefore do a redefinition of the discretized fields
 %
 %
 \begin{align}
@@ -278,3 +287,125 @@ in order to have dimensionless quantities as well. We can now write the discreti
 %
 %
 where we applied a simple forward derivative to the $x,x^{*}$ and $z^{M}$ fields and introduced the dimensionless lattice mass parameter $M=ma$.
+%
+%
+%
+% - - - - - - - - - -  fermionic operator   - - - - - 
+%
+%
+%
+%
+%
+\subsubsection{Wilson term and fermionic operator}
+Before discretizing the fermionic operator we have to think about the doubling problem arising through naively discretized first derivatives, discussed in \autoref{sec: ferm_doubling}. The free fermionic operator (evaluated in the bosonic vakuum) represented in a momentum basis reads
+%
+%
+\begingroup
+\everymath{\footnotesize}
+\begin{flalign}
+\!\!\!
+K_{\rm F} &= 
+\begin{pmatrix}
+0 & -p_{0}\mathds{1}_{4} & \left(p_{1}-i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 \\ 
+-p_{0}\mathds{1}_{4} & 0 & 0 & \left(p_{1}-i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} \\ 
+-\left(p_{1}+i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 & 0 & -p_{0}\mathds{1}_{4} \\ 
+0 & -\left(p_{1}+i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} & -p_{0}\mathds{1}_{4} & 0
+\end{pmatrix} ,
+\raisetag{-8pt}
+\end{flalign}
+\endgroup
+%
+%
+and has determinant
+%
+%
+\begin{equation}
+\det K_{\rm F} = \left( p_{0}^{2} + p_{1}^{2} + \frac{m^{2}}{4} \right)^{8}.
+\label{eq: det_K_F}
+\end{equation}
+%
+%
+The fermionic propagators are proportional to the inverse of dynamic operators. It is therefore reasonable that the naive discretization (like in (\ref{eq: naive_first_dev}))
+%
+%
+\begin{equation}
+p_{i} \to \mathring{p}_{i} \equiv \frac{1}{a}\sin (p_{i}a)
+\end{equation}
+%
+%
+will give rise to doublers. For this reason we would like to introduce a \names{Wilson}-like term that cancels the additional poles in the fermionic propagator. It should obey the following conditions:
+%
+%
+\begin{itemize}
+\item preserve the maximal amount of symmetries and relevant matrix properties,
+%
+\item give the correct continuum limit for $a \to 0$,
+%
+\item should not give rise to a complex phase.
+\end{itemize}
+%
+%
+We saw from (\ref{eq: U1_sym}) that fermions transform according to a specific charge $q$ under $U(1)$ transformations
+\begin{equation}
+\psi \to e^{iq\alpha} \psi.
+\end{equation}
+%
+%
+Therefore all the components of $\mathcal{O}_{\rm F}$ in (\ref{OF}) that are zero are necessary to preserve the $U(1)$ symmetry so that only fields with complementary charges can couple. The structure of the other components is determined by the $SO(6)$ symmetry for which reason there is only a small margin in applying a \names{Wilson} term that obeys all the symmetries. In fact it was not possible to construct such an operator that also preserves relevant matrix properties like skew- and $\Gamma_{5}$-symmetry and also leads to the correct perturbative 1-loop coefficient in (\ref{eq: scaling_fct}). \\
+We therefore chose to explicitly break the $U(1)$ symmetry and introduce a \names{Wilson}-like operator on the diagonal blocks of $\mathcal{O}_{\rm F}$. In terms of the free fermion operator in momentum space this takes the form
+%
+%
+\begingroup
+\everymath{\footnotesize}
+\begin{flalign}
+\!\!\!
+\hat{K}_{\rm F} &= 
+\begin{pmatrix}
+W_{+} & -\mathring{p}_{0}\mathds{1}_{4} & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 \\ 
+-\mathring{p}_{0}\mathds{1}_{4} & -W_{+}^{\dagger} & 0 & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} \\ 
+-\left(\mathring{p}_{1}+i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 & W_{-} & -\mathring{p}_{0}\mathds{1}_{4} \\ 
+0 & -\left(\mathring{p}_{1}+i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} & -\mathring{p}_{0}\mathds{1}_{4} & -W_{-}^{\dagger}
+\end{pmatrix} ,
+\raisetag{-8pt}
+\end{flalign}
+\endgroup
+%
+%
+where
+%
+%
+\begin{equation}
+W_{\pm} = \frac{ra}{2} \left( \hat{p}_{0}^{2} \pm i \hat{p}_{1}^{2} \right) \rho^{M}u^{M}, \qquad \vert r \vert =1,
+\end{equation}
+%
+%
+and similar to (\ref{eq: wilson_op})
+%
+%
+\begin{equation}
+\hat{p}_{i} \equiv \frac{2}{a} \sin \frac{p_{i}a}{2}\,.
+\end{equation}
+%
+%
+This leads to the analogue expression of (\ref{eq: det_K_F})
+%
+%
+\begin{equation}
+\det \hat{K}_{\rm F} = \left( \mathring{p}_{0}^{2} + \mathring{p}_{1}^{2} +\frac{r^{2}a^{2}}{4}\left( \hat{p}_{0}^{4}+\hat{p}_{1}^{4} \right) + \frac{m^{2}}{4} \right)^{8}\,.
+\end{equation}
+%
+%
+If we substitute this into the denominator of (\ref{eq: 1_loop}) and apply the replacement $p_{i}^{2} \to \hat{p}_{i}^{2}$ in the numerator, the discretized equivalent of the 1-loop free energy can be defined by 
+%
+%
+\begin{equation}
+\Gamma^{(1)}_{\rm LAT} = -\ln Z^{(1)}_{\rm LAT} = \mathcal{I}(a).
+\end{equation}
+%
+%
+With $r=1$ and momentum integration over the first \names{Brillouine} zone this results in
+%
+%
+\begin{equation}
+\mathcal{I}(a)=
+\end{equation}

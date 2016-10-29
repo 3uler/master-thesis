@@ -187,6 +187,7 @@ This is precisely what we expected for the euclidean propagator in the continuum
 %
 %
 \subsubsection{Fermionic Propagator and the Doubling Problem}
+\label{sec: ferm_doubling}
 In the case of fermions the equations of motion in 4-dimensional QFT are given by the Dirac equation, which as a linearisation of the \names{Klein-Gordon} equation and only contains first derivatives. To not explicitly break existing symmetries, we have to go with the symmetric derivative in this case. We can now follow the exact same steps as for the bosonic case to investigate the continuum limit of a \names{Dirac} like operator in our 2-dimensional space time. As mentioned we start from the symmetric derivative
 \begin{equation}
 \widehat{\del}_{i}(m,n) \equiv \dfrac{\delta_{m,n+\hat{\imath}}-\delta_{m,n-\hat{\imath}}}{2a}
@@ -200,6 +201,7 @@ and proceed with the \names{Fourier} transform
 here we are left with the following differential operator in momentum space
 \begin{equation}
 \widetilde{\del_{i}}(p) \equiv \dfrac{\mathrm{i}}{a} \sin (p_{i}a).
+\label{eq: naive_first_dev}
 \end{equation}
 To construct an euclidean \names{Dirac} like operator in two dimensions we use the first two \names{Pauli} matrices\footnote{\[\gamma_{0}=\sigma_{1}=\left( \begin{array}{cc}
 0 & 1 \\ 
@@ -231,6 +233,7 @@ Here again the propagator has the correct naive continuum limit but this time we
 %
 \begin{equation}
 W(p)\equiv -\mathds{1}\dfrac{a}{2} \sum\limits_{i=0}^{1} {\widetilde{\del}_i}^{\,2}(p) = \mathds{1}\dfrac{1}{a}\sum\limits_{i=0}^{1}\left( 1- \cos(p_{i}a)\right).
+\label{eq: wilson_op}
 \end{equation}
 Since the \names{Laplace} operator is of order $\mathcal{O}(a^{0})$, we see that the \names{Wilson} term vanishes in the continuum limit. It also vanishes for $p_{i}=0$ and gives therefore no contribution to the physical pole of the theory. If we now invert the new \names{Dirac-Wilson} operator
 \begin{equation}

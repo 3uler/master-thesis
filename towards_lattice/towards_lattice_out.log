@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  27 OCT 2016 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  29 OCT 2016 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1476,39 +1476,221 @@ Overfull \hbox (29.63899pt too wide) in paragraph at lines 167--167
 [3]
 
 LaTeX Warning: Reference `sec: grassmann_analysis' on page 4 undefined on input
- line 230.
+ line 229.
 
 
-LaTeX Warning: Reference `sec: hmc_alg' on page 4 undefined on input line 230.
+LaTeX Warning: Reference `sec: hmc_alg' on page 4 undefined on input line 229.
 
 
-LaTeX Warning: Citation `Roiban' on page 4 undefined on input line 230.
-
-
-LaTeX Warning: Reference `sec: disc_lat' on page 4 undefined on input line 244.
+LaTeX Warning: Reference `sec: disc_lat' on page 4 undefined on input line 243.
 
 
 [4]
-
-LaTeX Warning: Reference `eq: bos_act' on page 5 undefined on input line 265.
-
-
-Overfull \hbox (12.49242pt too wide) in paragraph at lines 278--278
+Overfull \hbox (12.49242pt too wide) in paragraph at lines 286--286
 [] 
  []
 
-) [5] (./towards_lattice_out.bbl
 
-LaTeX Warning: Empty `thebibliography' environment on input line 10.
+LaTeX Warning: Reference `sec: ferm_doubling' on page 5 undefined on input line
+ 300.
 
-) [6]
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+5.
+
+
+Overfull \hbox (15.53348pt too wide) in paragraph at lines 315--315
+[] 
+ []
+
+
+LaTeX Warning: Reference `eq: naive_first_dev' on page 5 undefined on input lin
+e 328.
+
+) [5] (./towards_lattice_out.bbl) [6]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 13.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 13.
  (./towards_lattice_out.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 13.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 13.
 Package rerunfilecheck Info: File `towards_lattice_out.out' has not changed.
-(rerunfilecheck)             Checksum: 116963C39F87551CBBD81F3E8BC568BE;544.
+(rerunfilecheck)             Checksum: F3C17457E2B5975FE3E3FF6BA0424B22;700.
 
 
 LaTeX Warning: There were undefined references.
@@ -1516,11 +1698,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 13.
  ) 
 Here is how much of TeX's memory you used:
- 21614 strings out of 493089
- 397847 string characters out of 6134842
- 488049 words of memory out of 5000000
- 24617 multiletter control sequences out of 15000+600000
- 22018 words of font info for 83 fonts, out of 8000000 for 9000
+ 21638 strings out of 493089
+ 398233 string characters out of 6134842
+ 488205 words of memory out of 5000000
+ 24634 multiletter control sequences out of 15000+600000
+ 25080 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,16n,73p,1652b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1544,14 +1726,16 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/doublestroke/dsrom12.pfb>
-Output written on towards_lattice_out.pdf (6 pages, 251393 bytes).
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/doublestroke/dsrom12.pfb>
+Output written on towards_lattice_out.pdf (6 pages, 280394 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
