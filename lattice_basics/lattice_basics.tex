@@ -1,4 +1,4 @@
-In this section we want to present the basic concepts of lattice field theory, which has developed to a highly sophisticated research area in the last decades especially in the regime of QCD. This approach to field theory is not only of major concern for performing numerical calculations. It also provides a natural attempt to regularization, which makes it also an interesting topic for theorists in the field of gauge theories.
+In this section we want to present the basic concepts of lattice field theory, which has developed to a highly sophisticated research area in the last decades especially in the regime of QCD. This approach to field theory is not only of major concern for performing numerical calculations. It even provides a natural attempt to regularization, which makes it also an interesting topic for theorists in the field of gauge theories.
 \subsection{Discretizing the Lattice}
 \label{sec: disc_lat}
 A computer is not able to deal with continuous variables, since already a continuous real interval can contain an infinite amount of points, but a computer only has limited memory. We therefore need to limit the amount of points that we consider to make calculations. Since all the target space coordinates\footnote{which represent the fields in our two-dimensional QFT} depend on the worldsheet coordinates $\tau$ and $\sigma$, it seems natural to discretize the worldsheet map. We therefore introduce a lattice spacing $a$ and the lattice size in spacial direction $L$ and in time direction $T$. Following the remarks in \cite{gattringer2009quantum} we define the two-dimensional lattice $\mathit{\Lambda}$ to be
@@ -59,7 +59,7 @@ Now we can define a forward derivative as the finite difference
 \begin{equation}
 \dfrac{f(x+\epsilon)-f(x)}{\epsilon} = f'(x) + \mathcal{O}(\epsilon)
 \end{equation}
-and the same way also a backward derivative by using the $f(x-\epsilon)$ term. Combining both leads to the symmetric derivative with an error of higher order in $\epsilon$.
+and in the same way also a backward derivative by using the $f(x-\epsilon)$ term. Combining both leads to the symmetric derivative with an error of higher order in $\epsilon$.
 \begin{equation}
 \dfrac{f(x-\epsilon)-f(x+\epsilon)}{2 \epsilon} = f'(x) + \mathcal{O}(\epsilon^{2}).
 \end{equation}
@@ -72,10 +72,10 @@ It is more convenient to use the symmetric derivative, because the error introdu
 %
 %
 \begin{equation}
-\del_{i} \mathit{\Phi}(\sigma_{j}) = \widehat{\del }_{i}\mathit{\Phi}(n) + \mathcal{O}(a^{2}) \equiv \dfrac{\mathit{\Phi}(n-\hat{\imath})-\mathit{\Phi}(n+\hat{\imath})}{2a} + \mathcal{O}(a^{2}), 
+\del_{i} \mathit{\Phi}(\tau,\sigma) = \widehat{\del }_{i}\mathit{\Phi}(n) + \mathcal{O}(a^{2}) \equiv \dfrac{\mathit{\Phi}(n-\hat{\imath})-\mathit{\Phi}(n+\hat{\imath})}{2a} + \mathcal{O}(a^{2}), 
 \end{equation}
 \begin{equation}
-\text{with} \qquad \del_{i}\mathit{\Phi}(\sigma_{j}) \equiv \dfrac{\del \mathit{\Phi}(\sigma_{j})}{\del \sigma_{i}}, \qquad \sigma_{i}=(\tau,\sigma), \qquad i=0,1
+\text{with} \qquad \del_{i}\mathit{\Phi}(\tau,\sigma) \equiv \dfrac{\del \mathit{\Phi}(\tau,\sigma)}{\del \sigma_{i}}, \qquad \sigma_{i}=(\tau,\sigma), \qquad i=0,1
 \end{equation}
 and where $\hat{\imath}$ is the unit vector in $i$-direction. For the integration over the worldsheet coordinates we replace the integral by a finite sum over all lattice points
 \begin{equation}
@@ -83,11 +83,11 @@ and where $\hat{\imath}$ is the unit vector in $i$-direction. For the integratio
 \end{equation}
 %
 %
-For a better visualization it is more convenient to use an abbreviated vector and matrix notation. In the following we will denote $\phi \equiv \phi_{i}(n)$ as a vector of fields which do each depend on the lattice coordinates $n$. The same is true for a matrix $M\equiv M_{ij}(m,n)$. A shorter expression of a matrix vector product is therefore
+For a better visualization it is more convenient to use an abbreviated notation. In the following we will denote $\phi \equiv \phi(n)$ as a field which depends on the lattice coordinates $n$. The same is true for an operator $M\equiv M(m,n)$. A shorter expression of a matrix-vector like product is therefore
 %
 %
 \begin{equation}
-\phi^{T}M \psi \equiv \sum\limits_{i,j} \sum\limits_{m,n \in \mathit{\Lambda}} \phi_{i}(m) M_{ij}(m,n) \psi_{j}(n)\, .
+\phi^{T}M \psi \equiv \sum\limits_{m,n \in \mathit{\Lambda}} \phi(m) M(m,n) \psi(n)\, .
 \end{equation}
 %
 %
@@ -95,7 +95,7 @@ To implement the previous relation on a computer as an actual matrix-vector prod
 %
 %
 \begin{equation}
-l (n)= L(n_{0}-1) + n_{1} \qquad \text{with} \qquad  l=(1,\ldots,V),\quad V=LT,
+l (n)= L(n_{0}-1) + n_{1} \qquad \text{with} \qquad  l=1,\ldots,V,\quad V=LT,
 \end{equation}
 %
 %
@@ -107,7 +107,7 @@ l_{\pm\hat{\imath}} = \text{nb}\,(l,\pm\hat{\imath}).
 \end{equation}
 %
 %
-We now want to define a symmetric derivative without lattice spacing for the lexicographic notation by
+We now want to define a symmetric finite difference without the factor $1/a$ for the lexicographic notation by
 %
 %
 \begin{equation}
@@ -119,17 +119,17 @@ We can therefore write $\bar{\Delta}_{i}$ as a $V\times V$ matrix
 %
 %
 \begin{equation}
-\left(\bar{\Delta}_{i}\right)_{lp} = \frac{\delta_{l,p_{+\hat{\imath}}} - \delta_{l,p_{-\hat{\imath}}}}{2}.
+\left(\bar{\Delta}_{i}\right)_{lp} = \frac{\delta_{l_{+\hat{\imath}},p} - \delta_{l_{-\hat{\imath}},p}}{2}.
 \end{equation}
 %
 %
 For other than periodic boundary conditions some of the signs have to be flipped according to the relation (\ref{eq: boundary_cond}). 
-In the same way we can again define forward and backward derivatives by
+In the same way we can again define forward and backward finite differences by
 %
 %
 \begin{align}
-\left(\Delta_{i}\right)_{lp} &= \delta_{l,p_{+\hat{\imath}}}-\delta_{l,p},  &   
-\left(\Delta^{*}_{i}\right)_{lp} &= \delta_{l,p}-\delta_{l,p_{-\hat{\imath}}}.
+\left(\Delta_{i}\right)_{lp} &= \delta_{l_{+\hat{\imath}},p}-\delta_{l,p},  &   
+\left(\Delta^{*}_{i}\right)_{lp} &= \delta_{l,p}-\delta_{l_{-\hat{\imath}},p}.
 \end{align}
 We will come back to this notation in \autoref{sec: towards_lat}. For now on we will presume using the grid notation for the further studies.
 %
@@ -147,20 +147,20 @@ We will come back to this notation in \autoref{sec: towards_lat}. For now on we 
 %
 \subsection{Bosons and Fermions on the Lattice}
 \subsubsection{Bosonic Propagator}
-In the examined theory bosons and fermions are both scalar fields of either real, or complex \names{Grassmann} type. The equations of motion of bosons are given by the \names{Klein-Gordon} equation, which contains only second derivatives. To discretize the second derivative we define the corresponding finite difference operator simply by applying a forward derivative and a backward derivative
+In the examined theory bosons and fermions are both scalar fields of either real, or complex \names{Grassmann} type. The equations of motion of bosons are given by the \names{Klein-Gordon} equation, which contains only second derivatives. To discretize the second derivative we define the corresponding finite difference operator simply by applying a forward and a backward finite difference
 \begin{align}
 {\widehat{\del}_i}^{\,2}\mathit{\Phi}(n) = \cev{\del}_{i}\vec{\del}_{i}\mathit{\Phi}(n) = \dfrac{\mathit{\Phi}(n+\hat{\imath})-2\mathit{\Phi}(n)+\mathit{\Phi}(n-\hat{\imath})}{a^{2}}.
 \label{second deriv}
 \end{align}
 In a Lagrangian we would find the differential operator enclosed by the fields, for instance like
 \begin{equation}
-\mathit{\Phi}(n){\widehat{\del}_i}^{\,2}\mathit{\Phi}(n) = \sum\limits_{m \in \mathit{\Lambda}} \mathit{\Phi}(n) {\widehat{\del}_i}^{\,2}(n,m) \mathit{\Phi}(m),
+\mathit{\Phi}(n)\left({\widehat{\del}_i}^{\,2}\mathit{\Phi}\right)(n) = \sum\limits_{m \in \mathit{\Lambda}} \mathit{\Phi}(n) {\widehat{\del}_i}^{\,2}(n,m) \mathit{\Phi}(m),
 \end{equation}
 where we use (\ref{second deriv}) to define
 \begin{equation}
 {\widehat{\del}_i}^{\,2}(n,m) \equiv	\dfrac{\delta_{m,n+\hat{\imath}}-2\delta_{m,n}+\delta_{m,n-\hat{\imath}}}{a^{2}}.
 \end{equation}
-To investigate the behaviour of bosons under the discretization we are interested in the propagator, which is the inverse of the differential operator in momentum space. We therefore perform a discrete \names{Fourier} transorm, that is discussed in Appendix \ref{app: disc_ft}. Both indices $m$ and $n$ transform independently and in order to perform a unitary similarity transformation the second index is \names{Fourier} transformed using the complex conjugated phase \cite{gattringer2009quantum}
+To investigate the behaviour of bosons under the discretization we are interested in the propagator, which is the inverse of the differential operator in momentum space. We therefore perform a discrete \names{Fourier} transorm, which is discussed in Appendix \ref{app: disc_ft}. Both indices $m$ and $n$ transform independently and in order to perform a unitary similarity transformation the second index is \names{Fourier} transformed using the complex conjugated phase \cite{gattringer2009quantum}
 \begin{align}
 {\widetilde{\del}_i}^{\,2}(p,q) &= \dfrac{1}{\vert \mathit{\Lambda}\vert} \sum\limits_{m,n \in \mathit{\Lambda}} \mathrm{e}^{-\mathrm{i}q\cdot na} \, {\widehat{\del}_i}^{\,2}(n,m) \, \mathrm{e}^{\mathrm{i}p\cdot ma} \notag \\
 &= \dfrac{1}{\vert \mathit{\Lambda}\vert}\sum\limits_{n \in \mathit{\Lambda}} \mathrm{e}^{-\mathrm{i}(q-p)\cdot na} \dfrac{1}{a^{2}} \left[ \mathrm{e}^{\mathrm{i}p_{i} a} -2 +\mathrm{e}^{-\mathrm{i}p_{i}a} \right] \\
@@ -188,7 +188,7 @@ This is precisely what we expected for the euclidean propagator in the continuum
 %
 \subsubsection{Fermionic Propagator and the Doubling Problem}
 \label{sec: ferm_doubling}
-In the case of fermions the equations of motion in 4-dimensional QFT are given by the Dirac equation, which as a linearisation of the \names{Klein-Gordon} equation and only contains first derivatives. To not explicitly break existing symmetries, we have to go with the symmetric derivative in this case. We can now follow the exact same steps as for the bosonic case to investigate the continuum limit of a \names{Dirac} like operator in our 2-dimensional space time. As mentioned we start from the symmetric derivative
+In the case of fermions the equations of motion in 4-dimensional QFT are given by the Dirac equation, which is a linearisation of the \names{Klein-Gordon} equation and only contains first derivatives. To not explicitly break existing symmetries, we have to go with the symmetric derivative in this case. We can now follow the exact same steps as for the bosonic case to investigate the continuum limit of a \names{Dirac} like operator in our 2-dimensional space time. As mentioned we start from the symmetric finite difference
 \begin{equation}
 \widehat{\del}_{i}(m,n) \equiv \dfrac{\delta_{m,n+\hat{\imath}}-\delta_{m,n-\hat{\imath}}}{2a}
 \end{equation}
@@ -223,7 +223,7 @@ Once more we want to study the continuum limit of the propagator for the massles
 \begin{equation}
 \left.\widetilde{D}_{D}^{-1}(p)\right\vert_{m=0} =  \dfrac{- \tfrac{\mathrm{i}}{a}\sum_{i=0}^{1} \gamma_{i} \sin (p_{i}a)}{ a^{-2}\sum_{i=0}^{1} \sin^2 (p_{i}a)  } \xrightarrow{a \rightarrow 0} \dfrac{-\mathrm{i} \sum_{i=0}^{1} \gamma_{i} p_{i} }{p^2}.
 \end{equation}
-Here again the propagator has the correct naive continuum limit but this time we face another problem. Since again $p_{i}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. It therefore seems in the numerical simulation that there are in this case three additional fermions, which emerge only from the method of discretization and are  non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who then introduced a possible solution.  He suggested to subtract the discretized \names{Laplace} operator times half the lattice spacing \cite{montvay_lattice}, which is known as a \names{Wilson} term, that we can express in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
+Here again the propagator has the correct naive continuum limit but this time we face another problem. Since again $p_{i}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. It therefore seems in the numerical simulation that there are in this case three additional fermions, which emerge only from the method of discretization and are  non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who then introduced a possible solution.  He suggested to add a term proportional to the discretized \names{Laplace} operator\cite{montvay_lattice}, which is known as a \names{Wilson} term. We can express it in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
 \begin{align*}
 \cos(2x)&=\cos^{2}(x) -\sin^{2}(x) \\
 \Leftrightarrow\quad \sin^{2}(x) &= \tfrac{1}{2}\left(1-\cos(2x)\right)
@@ -261,7 +261,7 @@ Now after we know how to discretize differential operators and act with them on 
 \left\langle O \right\rangle = \dfrac{1}{Z} \int \mathcal{D} \mathit{\phi}\, O(\mathit{\phi})\exp\left(-S\left[\mathit{\phi}\right]\right),
 \label{PI_continuum}
 \end{equation}
-where $S$ is the euclidean action dependant on the collection of fields $\phi$ and $Z$ is the partition function
+where $S$ is the euclidean action depending on the collection of fields $\phi$ and $Z$ is the partition function
 \begin{equation}
 Z =  \int \mathcal{D} \mathit{\phi}\, \exp\left(-S\left[\mathit{\phi}\right]\right).
 \end{equation}
@@ -269,7 +269,7 @@ In fact there is no rigorous mathematical definition for the path integral in th
 \begin{equation}
 \mathcal{D} \mathit{\phi} = \prod\limits_{n \in \mathit{\Lambda}} \dd \phi(n).
 \end{equation}
-This means, that for every lattice point a multidimensional integral needs to be calculated. Even for small lattices this task becomes tortuous and soon even supercomputers would not be able to do that calculation in reasonable time. Out of this reason other methods of calculation have been considered. The most favoured one is a statistical method going under the name of Monte Carlo simulation. With this type of calculation it is possible to obtain good statistical approximations of high-dimensional integrals in reasonable time. At this point we want to study some details of the Monte Carlo methods used in scope of this thesis.
+This means, that for every lattice point a multidimensional integral needs to be calculated. Even for small lattices this task becomes tortuous and soon even supercomputers would not be able to do that calculation in reasonable time. Out of this reason other methods of calculation have been considered. The most favoured one is a statistical method going under the name of Monte Carlo simulation. With this type of calculation it is possible to obtain good statistical approximations of high-dimensional integrals in reasonable time. At this point we want to study some details of the Monte Carlo methods used in the scope of this thesis.
 %
 %
 \subsubsection{Monte Carlo Integration}
