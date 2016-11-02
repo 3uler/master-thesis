@@ -7,6 +7,11 @@
 \small
 \parskip 0pt
 
+\bibitem{montvay_lattice}
+I.~Montvay and G.~Münster,
+\textit{``Quantum fields on a lattice''},
+Cambridge University Press (1994).
+
 \bibitem{Roiban}
 R.~McKeown and R.~Roiban,
 \textit{``{The quantum $AdS_5 \times S^5$ superstring at finite coupling}''},

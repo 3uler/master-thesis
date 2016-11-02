@@ -4,36 +4,36 @@ The top-level auxiliary file: towards_lattice_out.aux
 The style file: nb.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Master.bib
-You've used 1 entry,
+You've used 2 entries,
             1217 wiz_defined-function locations,
-            327 strings with 2417 characters,
-and the built_in function-call counts, 326 in all, are:
-= -- 25
-> -- 8
+            333 strings with 2569 characters,
+and the built_in function-call counts, 452 in all, are:
+= -- 30
+> -- 15
 < -- 21
-+ -- 22
-- -- 2
-* -- 14
-:= -- 52
++ -- 25
+- -- 4
+* -- 24
+:= -- 73
 add.period$ -- 0
-call.type$ -- 1
+call.type$ -- 2
 change.case$ -- 0
 chr.to.int$ -- 4
-cite$ -- 1
+cite$ -- 2
 duplicate$ -- 0
-empty$ -- 18
-format.name$ -- 2
-if$ -- 54
+empty$ -- 34
+format.name$ -- 4
+if$ -- 83
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 6
-newline$ -- 16
-num.names$ -- 1
+int.to.str$ -- 2
+missing$ -- 10
+newline$ -- 21
+num.names$ -- 2
 pop$ -- 1
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 30
+skip$ -- 39
 stack$ -- 0
 substring$ -- 22
 swap$ -- 0
@@ -42,6 +42,6 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 3
-width$ -- 2
-write$ -- 17
+while$ -- 4
+width$ -- 3
+write$ -- 24

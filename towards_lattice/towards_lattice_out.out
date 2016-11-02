@@ -2,8 +2,10 @@
 \BOOKMARK [2][-]{subsection.1.1}{Linearization of fermionic contributions}{section.1}% 2
 \BOOKMARK [3][-]{subsubsection.1.1.1}{Naive approach and sign problem}{subsection.1.1}% 3
 \BOOKMARK [3][-]{subsubsection.1.1.2}{Alternative field redefinition}{subsection.1.1}% 4
-\BOOKMARK [3][-]{subsubsection.1.1.3}{Pseudofermionic weight function}{subsection.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.2}{Discretizing the action}{section.1}% 6
-\BOOKMARK [3][-]{subsubsection.1.2.1}{Bosonic action}{subsection.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.3}{Wilson term and fermionic operator}{section.1}% 8
-\BOOKMARK [1][-]{equation.1.28}{References}{}% 9
+\BOOKMARK [3][-]{subsubsection.1.1.3}{Matrix properties}{subsection.1.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.1.4}{Pseudofermionic weight function}{subsection.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.2}{Discretizing the action}{section.1}% 7
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Bosonic action}{subsection.1.2}% 8
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Wilson term}{subsection.1.2}% 9
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Fermionic operator}{subsection.1.2}% 10
+\BOOKMARK [1][-]{equation.1.51}{References}{}% 11

@@ -285,7 +285,7 @@ and thereby follows that $\det\mathcal{O}_{\rm F} \in \mathbb{R}$. For the \name
 \end{equation}
 %
 %
-Therefore we want to examine the spectrum of $\mathcal{O}_{\rm F}$. Assuming that $\lambda$ an eigenvalue of $\mathcal{O}_{\rm F}$ and $P(\lambda)$ is the characteristic polynomial we can prove
+Therefore we want to examine the spectrum of $\mathcal{O}_{\rm F}$. Assuming that $\lambda$ is an eigenvalue of $\mathcal{O}_{\rm F}$ and $P(\lambda)$ is the characteristic polynomial we can prove
 %
 %
 \begin{align}
@@ -312,7 +312,7 @@ and therefore
 \end{equation}
 %
 %
-where $N=\vert \mathit{\Lambda}\vert /4$. Since the eigenvalues should behave like continuous functions along a HMC trajectory it should not be possible for the \names{Pfaffian} to change its sign. So if one chooses a starting configuration with positive \names{Pfaffian} it should remain nonnegative during the whole simulation and the \names{Pfaffian} should be a valid probability distribution. Yet it is not quite clears what happens if there are also purely real or imaginary eigenvalues appearing. If they come in the same kind of quartets then there should not be a problem, otherwise the behaviour is not fully understood yet.
+where $N=\vert \mathit{\Lambda}\vert /4$. Since the eigenvalues should behave like continuous functions along a HMC trajectory it should not be possible for the \names{Pfaffian} to change its sign throughout a trajectory. So if one chooses a starting configuration with positive \names{Pfaffian} it should remain nonnegative during the whole simulation and the \names{Pfaffian} should be a valid probability distribution. Yet it is not quite clear what happens if there are also purely real or imaginary eigenvalues appearing. If they come in the same kind of quartets then there should not be a problem, otherwise the behaviour is not fully understood yet.
 %
 %
 %
@@ -413,7 +413,7 @@ where we applied a simple forward derivative to the $x,x^{*}$ and $z^{M}$ fields
 %
 %
 %
-\subsubsection{Wilson term and fermionic operator}
+\subsubsection{Wilson term}
 Before discretizing the fermionic operator we have to think about the doubling problem arising through naively discretized first derivatives, discussed in \autoref{sec: ferm_doubling}. The free fermionic operator (evaluated in the bosonic vacuum) represented in a momentum basis reads
 %
 %
@@ -517,21 +517,18 @@ If we substitute this into the denominator of (\ref{eq: 1_loop}) and apply the r
 With $r=1$ and rescaled momentum integration over the first \names{Brillouine} zone this results in
 %
 %
-\begin{equation}
-\begin{alignedat}{1}
-\mathcal{I}(a) = \frac{V_{2}}{2a^{2}} &\int\limits_{-\pi}^{\pi} \frac{\dd^{2}p}{(2\pi)^{2}} \Bigg\lbrace 5\ln \bigg[ 4 \Big(\sin^{2}\frac{p_{0}}{2} + \sin^{2}\frac{p_{1}}{2}\Big)\bigg] \\
+\begin{align}
+\mathcal{I}(a) = \frac{V_{2}}{2a^{2}} &\int\limits_{-\pi}^{\pi} \frac{\dd^{2}p}{(2\pi)^{2}} \Bigg\lbrace 5\ln \bigg[ 4 \Big(\sin^{2}\frac{p_{0}}{2} + \sin^{2}\frac{p_{1}}{2}\Big)\bigg] \notag \\
 %
 %
-&+2\ln \bigg[ 4 \Big(\sin^{2}\frac{p_{0}}{2} + \sin^{2}\frac{p_{1}}{2} + \frac{M^{2}}{8} \Big)\bigg] \\
+&+2\ln \bigg[ 4 \Big(\sin^{2}\frac{p_{0}}{2} + \sin^{2}\frac{p_{1}}{2} + \frac{M^{2}}{8} \Big)\bigg] \label{eq: I_a} \\
 %
 %
-&+\ln \bigg[ 4 \Big(\sin^{2}\frac{p_{0}}{2} + \sin^{2}\frac{p_{1}}{2} + \frac{M^{2}}{4} \Big)\bigg]  \\
+&+\ln \bigg[ 4 \Big(\sin^{2}\frac{p_{0}}{2} + \sin^{2}\frac{p_{1}}{2} + \frac{M^{2}}{4} \Big)\bigg]  \notag\\
 %
 %
-&-8 \ln\bigg[ 4 \sin^{4}\frac{p_{0}}{2} +\sin^{2} p_{0} + 4\sin^{4}\frac{p_{1}}{2} + \sin^{2} p_{1} + \frac{M^{2}}{4}\bigg] \Bigg\rbrace.
-\label{eq: I_a}
-\end{alignedat}
-\end{equation}
+&-8 \ln\bigg[ 4 \sin^{4}\frac{p_{0}}{2} +\sin^{2} p_{0} + 4\sin^{4}\frac{p_{1}}{2} + \sin^{2} p_{1} + \frac{M^{2}}{4}\bigg] \Bigg\rbrace. \notag
+\end{align}\\[0.2cm]
 %
 %
 For a consistent discretization this should lead to the same result as (\ref{eq: 1_loop}) in the $a \to 0$ limit. And indeed a numerical integration of (\ref{eq: I_a}) yields
@@ -570,3 +567,67 @@ W_{\pm} = \frac{ra}{2z^{2}}\left(\hat{p}_{0}^{2} \pm i\hat{p}_{1}^{2}\right)\rho
 %
 %
 where an additional $1/z$ factor is present for the purpose of improved stability during simulations. From (\ref{eq: G5_herm_mat}) one can see that the added \names{Wilson} term respects the $\Gamma_{5}$-hermiticity and skew-symmetry which ensures the determinant to be real and positive.
+%
+%
+%
+%
+%
+% - - - - - - - - - - - -  discretizing the fermionic operator   - - - - - - - - - - - - -
+%
+%
+%
+%
+%
+\subsubsection{Fermionic operator}
+By knowing the structure of the \names{Wilson} term we can finally discretize the fermionic operator and write it in terms of a single matrix by using the lexicographic index notation introduced in \autoref{sec: disc_lat}. The discretized fermion matrix $\hat{\mathcal{O}}_{\rm F}$ is of size $16V\times 16V$ and we are going to subdivide it into 4 by 4 blocks of size $4V\times 4V$ as
+%
+%
+\begin{equation}
+\left(\hat{\mathcal{O}}_{\rm F}\right)_{16V\times 16V} = 
+\left(
+\begin{array}{c|c|c|c}
+O_{4V\times 4V} & \cdots & \cdots & \cdots \\ \hline
+\vdots & \ddots & \qquad & \qquad \\ \hline
+\vdots & \qquad & \ddots & \qquad \\ \hline
+\vdots & \qquad & \qquad & \ddots
+\end{array} 
+\right).
+\end{equation}
+%
+%
+To build the block matrices we assume that for every lattice index $l,p=0,\ldots,(V-1)$ we have a $4\times 4$ matrix with indices $i,j=1,\ldots,4$ and emphasize the structure 
+%
+%
+\begin{equation}
+O_{4\times 4}(V\times V) \longleftrightarrow O_{ij}(l,p).
+\end{equation}
+%
+%
+One can map this to a $4V\times 4V$ matrix with global indices like
+%
+%
+\begin{equation}
+O_{4V\times 4V} \longleftrightarrow O_{AB}, \qquad A=4l+i,\quad B=4p+j.
+\end{equation}
+%
+%
+The discretized fermion matrix is now given by
+%
+%
+\begingroup
+\everymath{\footnotesize}
+\begin{flalign}
+\!
+\hat{\mathcal{O}}_{\rm F} = 
+\begin{pmatrix}
+\hat{W}_{+} & i\bar{\Delta}^{A}_{0} & -i\left(\vec{\Delta}^{Z}_{1} + \tfrac{M}{2}\bar{Z}\right) & 0 \\ 
+i\bar{\Delta}^{A}_{0} & -\hat{W}_{+}^{\dagger} & 0 & -i\left(\vec{\Delta}^{Z^{\dagger}}_{1} + \tfrac{M}{2}\bar{Z}^{\dagger}\right)  \\ 
+i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!\! 2\left(\bar{\Delta}^{x}_{1}-\tfrac{M}{2}\bar{Z}^{x}\right)+\hat{W}_{-} & i\bar{\Delta}^{A}_{0} -\hat{A}^{\rm T} \\ 
+0 & i\left(\cev{\Delta}^{Z^{\dagger}}_{1} - \tfrac{M}{2}\bar{Z}^{\dagger}\right) & i\bar{\Delta}^{A}_{0} +\hat{A} & \!\!\!\!\! 2\left(\bar{\Delta}^{x^{*}}_{1}-\tfrac{M}{2}\bar{Z}^{x^{*}}\right)-\hat{W}_{-}^{\dagger}
+\end{pmatrix} ,
+\raisetag{-8pt}
+\end{flalign}
+\endgroup
+%
+%
+where we refer the reader to Appendix \textbf{\LARGE INSERT SEC} for a detailed derivation of the single terms.

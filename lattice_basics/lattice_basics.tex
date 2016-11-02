@@ -1,9 +1,9 @@
 In this section we want to present the basic concepts of lattice field theory, which has developed to a highly sophisticated research area in the last decades especially in the regime of QCD. This approach to field theory is not only of major concern for performing numerical calculations. It even provides a natural attempt to regularization, which makes it also an interesting topic for theorists in the field of gauge theories.
 \subsection{Discretizing the Lattice}
 \label{sec: disc_lat}
-A computer is not able to deal with continuous variables, since already a continuous real interval can contain an infinite amount of points, but a computer only has limited memory. We therefore need to limit the amount of points that we consider to make calculations. Since all the target space coordinates\footnote{which represent the fields in our two-dimensional QFT} depend on the worldsheet coordinates $\tau$ and $\sigma$, it seems natural to discretize the worldsheet map. We therefore introduce a lattice spacing $a$ and the lattice size in spacial direction $L$ and in time direction $T$. Following the remarks in \cite{gattringer2009quantum} we define the two-dimensional lattice $\mathit{\Lambda}$ to be
+A computer is not able to deal with continuous variables, since already a continuous real interval can contain an infinite amount of points, but a computer only has limited memory. Hence we need to limit the amount of points that we consider to make calculations. Since all the target space coordinates\footnote{which represent the fields in our two-dimensional QFT} depend on the worldsheet coordinates $\tau$ and $\sigma$, it seems natural to discretize the worldsheet map. We therefore introduce a lattice spacing $a$ and the lattice size in spacial direction $L$ and in time direction $T$. Following the remarks in \cite{gattringer2009quantum} we define the two-dimensional lattice $\mathit{\Lambda}$ to be
 \begin{equation}
-\mathit{\Lambda} = \left\lbrace \left(n_{0},n_{1}\right) \vert n_{0}=1,2,\ldots,T \; ; \;  n_{1}=1,2,\ldots,L \right\rbrace.
+\mathit{\Lambda} = \left\lbrace \left(n_{0},n_{1}\right) \vert n_{0}=0,1,\ldots,(T-1) \; ; \;  n_{1}=0,1,\ldots,(L-1) \right\rbrace.
 \end{equation}
 With that we can express the worldsheet coordinates with the lattice coordinates
 \begin{equation}
@@ -59,11 +59,11 @@ Now we can define a forward derivative as the finite difference
 \begin{equation}
 \dfrac{f(x+\epsilon)-f(x)}{\epsilon} = f'(x) + \mathcal{O}(\epsilon)
 \end{equation}
-and in the same way also a backward derivative by using the $f(x-\epsilon)$ term. Combining both leads to the symmetric derivative with an error of higher order in $\epsilon$.
+and in the same way also a backward derivative by using the $f(x-\epsilon)$ term. Combining both leads to the symmetric derivative with an error of higher order in $\epsilon$
 \begin{equation}
 \dfrac{f(x-\epsilon)-f(x+\epsilon)}{2 \epsilon} = f'(x) + \mathcal{O}(\epsilon^{2}).
 \end{equation}
-It is more convenient to use the symmetric derivative, because the error introduced by the finite lattice spacing is therefore reduced by one order.  By adding additional terms of $f(x\pm 2 \epsilon)$ it is possible to get a finite difference derivative, which is exact up to an order of $\mathcal{O}(\epsilon^{3})$ and so on. Depending on the demanded accuracy one is able to regulate the introduced error via this method. With $\epsilon$ being our lattice spacing $a$ we find the derivative of our fields at $n=\left(n_{0}, n_{1} \right)$ to be\footnote{\noindent With $\widehat{\del }_{i}$ beeing the symmetric derivative in $i$-direction. We also define the forward and backward derivative respectively by
+It is more convenient to use the symmetric finite difference, because the error introduced by the finite lattice spacing is hereby reduced by one order.  By adding additional terms of $f(x\pm 2 \epsilon)$ it is possible to get a finite difference derivative which is exact up to an order of $\mathcal{O}(\epsilon^{3})$ and so on. Depending on the demanded accuracy one is able to regulate the introduced error via this method. With $\epsilon$ being our lattice spacing $a$ we find the derivative of our fields at $n=\left(n_{0}, n_{1} \right)$ to be\footnote{\noindent With $\widehat{\del }_{i}$ beeing the symmetric derivative in $i$-direction. We also define the forward and backward derivative respectively by
 \begin{equation*}
 \vec{\del}_{i}\mathit{\Phi}(n)=\dfrac{\mathit{\Phi}(n+\hat{\imath})-\mathit{\Phi}(n)}{a} \quad \text{and} \quad 
 \cev{\del}_{i}\mathit{\Phi}(n)=\dfrac{\mathit{\Phi}(n)-\mathit{\Phi}(n-\hat{\imath})}{a}.
@@ -83,7 +83,7 @@ and where $\hat{\imath}$ is the unit vector in $i$-direction. For the integratio
 \end{equation}
 %
 %
-For a better visualization it is more convenient to use an abbreviated notation. In the following we will denote $\phi \equiv \phi(n)$ as a field which depends on the lattice coordinates $n$. The same is true for an operator $M\equiv M(m,n)$. A shorter expression of a matrix-vector like product is therefore
+For a better visualization it is more convenient to use an abbreviated notation. In the following we will denote $\phi \equiv \phi(n)$ as a field which depends on the lattice coordinates $n$. The same is true for an operator $M\equiv M(m,n)$. A shorter expression of a matrix-vector like product is given by
 %
 %
 \begin{equation}
@@ -95,7 +95,7 @@ To implement the previous relation on a computer as an actual matrix-vector prod
 %
 %
 \begin{equation}
-l (n)= L(n_{0}-1) + n_{1} \qquad \text{with} \qquad  l=1,\ldots,V,\quad V=LT,
+l (n)= Ln_{0} + n_{1} \qquad \text{with} \qquad  l=0,1,\ldots,(V-1),\quad V=LT,
 \end{equation}
 %
 %
@@ -115,7 +115,7 @@ We now want to define a symmetric finite difference without the factor $1/a$ for
 \end{equation}
 %
 %
-We can therefore write $\bar{\Delta}_{i}$ as a $V\times V$ matrix
+In consequence we can write $\bar{\Delta}_{i}$ as a $V\times V$ matrix
 %
 %
 \begin{equation}
@@ -124,7 +124,7 @@ We can therefore write $\bar{\Delta}_{i}$ as a $V\times V$ matrix
 %
 %
 For other than periodic boundary conditions some of the signs have to be flipped according to the relation (\ref{eq: boundary_cond}). 
-In the same way we can again define forward and backward finite differences by
+In the same way we can define forward and backward finite differences by
 %
 %
 \begin{align}
@@ -154,13 +154,13 @@ In the examined theory bosons and fermions are both scalar fields of either real
 \end{align}
 In a Lagrangian we would find the differential operator enclosed by the fields, for instance like
 \begin{equation}
-\mathit{\Phi}(n)\left({\widehat{\del}_i}^{\,2}\mathit{\Phi}\right)(n) = \sum\limits_{m \in \mathit{\Lambda}} \mathit{\Phi}(n) {\widehat{\del}_i}^{\,2}(n,m) \mathit{\Phi}(m),
+\mathit{\Phi}(n)\big({\widehat{\del}_i}^{\,2}\mathit{\Phi}\big)(n) = \sum\limits_{m \in \mathit{\Lambda}} \mathit{\Phi}(n) {\widehat{\del}_i}^{\,2}(n,m) \mathit{\Phi}(m),
 \end{equation}
 where we use (\ref{second deriv}) to define
 \begin{equation}
 {\widehat{\del}_i}^{\,2}(n,m) \equiv	\dfrac{\delta_{m,n+\hat{\imath}}-2\delta_{m,n}+\delta_{m,n-\hat{\imath}}}{a^{2}}.
 \end{equation}
-To investigate the behaviour of bosons under the discretization we are interested in the propagator, which is the inverse of the differential operator in momentum space. We therefore perform a discrete \names{Fourier} transorm, which is discussed in Appendix \ref{app: disc_ft}. Both indices $m$ and $n$ transform independently and in order to perform a unitary similarity transformation the second index is \names{Fourier} transformed using the complex conjugated phase \cite{gattringer2009quantum}
+To investigate the behaviour of bosons under the discretization we are interested in the propagator, which is the inverse of the differential operator in momentum space. We therefore perform a discrete \names{Fourier} transform, which is discussed in Appendix \ref{app: disc_ft}. Both indices $m$ and $n$ transform independently and in order to perform a unitary similarity transformation the second index is \names{Fourier} transformed using the complex conjugated phase \cite{gattringer2009quantum}
 \begin{align}
 {\widetilde{\del}_i}^{\,2}(p,q) &= \dfrac{1}{\vert \mathit{\Lambda}\vert} \sum\limits_{m,n \in \mathit{\Lambda}} \mathrm{e}^{-\mathrm{i}q\cdot na} \, {\widehat{\del}_i}^{\,2}(n,m) \, \mathrm{e}^{\mathrm{i}p\cdot ma} \notag \\
 &= \dfrac{1}{\vert \mathit{\Lambda}\vert}\sum\limits_{n \in \mathit{\Lambda}} \mathrm{e}^{-\mathrm{i}(q-p)\cdot na} \dfrac{1}{a^{2}} \left[ \mathrm{e}^{\mathrm{i}p_{i} a} -2 +\mathrm{e}^{-\mathrm{i}p_{i}a} \right] \\
@@ -171,7 +171,7 @@ To investigate the behaviour of bosons under the discretization we are intereste
  {\widetilde{\del}_i}^{\,2}(p) \equiv -\dfrac{4}{a^2}\sin^{2}\left(\dfrac{p_{i}a}{2}\right).
  \label{momentum laplace}
  \end{equation}
- The euclidean \names{Klein-Gordon} operator $\widetilde{D}(p)$ in momentum space with particle mass $m$ is therefore
+ The euclidean \names{Klein-Gordon} operator $\widetilde{D}(p)$ in momentum space with particle mass $m$ reads
  \begin{equation}
  \widetilde{D}(p) = m^2 + \sum\limits_{i=0}^{1} {\widetilde{\del}_i}^{\,2}(p) .
  \end{equation}
@@ -188,7 +188,7 @@ This is precisely what we expected for the euclidean propagator in the continuum
 %
 \subsubsection{Fermionic Propagator and the Doubling Problem}
 \label{sec: ferm_doubling}
-In the case of fermions the equations of motion in 4-dimensional QFT are given by the Dirac equation, which is a linearisation of the \names{Klein-Gordon} equation and only contains first derivatives. To not explicitly break existing symmetries, we have to go with the symmetric derivative in this case. We can now follow the exact same steps as for the bosonic case to investigate the continuum limit of a \names{Dirac} like operator in our 2-dimensional space time. As mentioned we start from the symmetric finite difference
+In the case of fermions the equations of motion in 4-dimensional QFT are given by the Dirac equation, which is a linearisation of the \names{Klein-Gordon} equation and only contains first derivatives. To not explicitly break existing symmetries, we have to go with the symmetric derivative in this case. Now we can follow the exact same steps as for the bosonic case to investigate the continuum limit of a \names{Dirac} like operator in our 2-dimensional space time. As mentioned we start from the symmetric finite difference
 \begin{equation}
 \widehat{\del}_{i}(m,n) \equiv \dfrac{\delta_{m,n+\hat{\imath}}-\delta_{m,n-\hat{\imath}}}{2a}
 \end{equation}
@@ -213,7 +213,7 @@ To construct an euclidean \names{Dirac} like operator in two dimensions we use t
 %
 %
 \begin{equation}
-\widetilde{D}_{D}(p)=  m\mathds{1} + \sum\limits_{i=0}^{1} \gamma_{i}\, \widetilde{\del_{i}}(p)  =m\mathds{1} + \dfrac{\mathrm{i}}{a}\sum\limits_{i=0}^{1} \gamma_{i} \sin (p_{i}a)
+\widetilde{D}_{D}(p)=  m\mathds{1} + \sum\limits_{i=0}^{1} \gamma_{i}\, \widetilde{\del_{i}}(p)  =m\mathds{1} + \dfrac{\mathrm{i}}{a}\sum\limits_{i=0}^{1} \gamma_{i} \sin (p_{i}a)\,.
 \end{equation}
 The inverse propagator follows from the properties of the \names{Pauli} matrices to be
 \begin{equation}
@@ -223,7 +223,7 @@ Once more we want to study the continuum limit of the propagator for the massles
 \begin{equation}
 \left.\widetilde{D}_{D}^{-1}(p)\right\vert_{m=0} =  \dfrac{- \tfrac{\mathrm{i}}{a}\sum_{i=0}^{1} \gamma_{i} \sin (p_{i}a)}{ a^{-2}\sum_{i=0}^{1} \sin^2 (p_{i}a)  } \xrightarrow{a \rightarrow 0} \dfrac{-\mathrm{i} \sum_{i=0}^{1} \gamma_{i} p_{i} }{p^2}.
 \end{equation}
-Here again the propagator has the correct naive continuum limit but this time we face another problem. Since again $p_{i}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. It therefore seems in the numerical simulation that there are in this case three additional fermions, which emerge only from the method of discretization and are  non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who then introduced a possible solution.  He suggested to add a term proportional to the discretized \names{Laplace} operator\cite{montvay_lattice}, which is known as a \names{Wilson} term. We can express it in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
+Here again the propagator has the correct naive continuum limit but this time we face another problem. Since again $p_{i}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. As a result in the numerical simulation it seems that there are in this case three additional fermions, which emerge only from the method of discretization and are  non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who introduced a possible solution.  He suggested to add a term proportional to the discretized \names{Laplace} operator\cite{montvay_lattice}, which is known as a \names{Wilson} term. We can express it in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
 \begin{align*}
 \cos(2x)&=\cos^{2}(x) -\sin^{2}(x) \\
 \Leftrightarrow\quad \sin^{2}(x) &= \tfrac{1}{2}\left(1-\cos(2x)\right)
@@ -235,7 +235,7 @@ Here again the propagator has the correct naive continuum limit but this time we
 W(p)\equiv -\mathds{1}\dfrac{a}{2} \sum\limits_{i=0}^{1} {\widetilde{\del}_i}^{\,2}(p) = \mathds{1}\dfrac{1}{a}\sum\limits_{i=0}^{1}\left( 1- \cos(p_{i}a)\right).
 \label{eq: wilson_op}
 \end{equation}
-Since the \names{Laplace} operator is of order $\mathcal{O}(a^{0})$, we see that the \names{Wilson} term vanishes in the continuum limit. It also vanishes for $p_{i}=0$ and gives therefore no contribution to the physical pole of the theory. If we now invert the new \names{Dirac-Wilson} operator
+Since the \names{Laplace} operator is of order $\mathcal{O}(a^{0})$, we see that the \names{Wilson} term vanishes in the continuum limit. It also vanishes for $p_{i}=0$ and therefore gives no contribution to the physical pole of the theory. If we now invert the new \names{Dirac-Wilson} operator
 \begin{equation}
 \widetilde{D}_{W}(p) \equiv \widetilde{D}_{D}(p) + W(p),
 \end{equation}
@@ -243,7 +243,7 @@ we find the new massless momentum space propagator
 \begin{equation}
 \left. \widetilde{D}_{W}^{-1}\right\vert_{m=0} = \dfrac{\mathds{1}\tfrac{1}{a}\sum_{i=0}^{1}\left( 1- \cos(p_{i}a)\right) - \tfrac{\mathrm{i}}{a}\sum_{i=0}^{1}\gamma_{i} \sin(p_{i}a) }{\left(\tfrac{1}{a}\sum_{i=0}^{1}\left( 1- \cos(p_{i}a)\right)\right)^{2} + \tfrac{1}{a^2}\sum_{i=0}^{1}\sin^2(p_{i}a) }.
 \end{equation}
-Here we can convince ourselves, that there are no more additional poles in the domain of $p_{i}$, since for the points where $p_{i}=\pi/a$ the denominator does not vanish like before. Actually for these points the \names{Wilson}-term behaves like an additional mass term that is growing infinitely in the continuum limit and therefore decouples from the theory.
+Here we can convince ourselves, that there are no more additional poles in the domain of $p_{i}$, since for the points where $p_{i}=\pi/a$ the denominator does not vanish like before. Actually for these points the \names{Wilson}-term behaves like an additional mass term that is growing infinitely in the continuum limit and consequently decouples from the theory.
 %
 %
 %
@@ -256,7 +256,7 @@ Here we can convince ourselves, that there are no more additional poles in the d
 %
 %
 \subsection{Monte Carlo Methods}
-Now after we know how to discretize differential operators and act with them on bosonic and fermionic quantities, we are able to build a discretized Lagrangian as well. But what we really need is a method to perform the calculation of observables in the path integral formalism. In QFT in the continuum we calculate the expectation value of an observable $O$ via \cite{peskin}
+Now after we know, how to discretize differential operators and act with them on bosonic and fermionic quantities, we are able to build a discretized Lagrangian as well. But what we really need is a method to perform the calculation of observables in the path integral formalism. In QFT in the continuum we calculate the expectation value of an observable $O$ via \cite{peskin}
 \begin{equation}
 \left\langle O \right\rangle = \dfrac{1}{Z} \int \mathcal{D} \mathit{\phi}\, O(\mathit{\phi})\exp\left(-S\left[\mathit{\phi}\right]\right),
 \label{PI_continuum}
@@ -292,7 +292,7 @@ H(x,y)=\left\lbrace \begin{array}{l}
 0\quad \text{else}.
 \end{array} \right.
 \end{equation}
-Analytically we know that $I$ corresponds to the area of the unit circle and therefore has the value $I=\pi$. With the volume being $V=4$ we can find an estimate
+Analytically we know that $I$ corresponds to the area of the unit circle and has the value $I=\pi$. With the volume being $V=4$ we can find an estimate
 \begin{equation}
 \pi \approx \dfrac{4}{N} \sum\limits^{N}_{i=1}H(\overline{x}_{i}).
 \end{equation}
@@ -382,7 +382,7 @@ where $x(y)=P^{-1}(y)$. So if we generate uniformly distributed random numbers $
 %
 For this to be true $P(x)$ needs to be strongly increasing and globally invertible. Extended to the higher-dimensional problem of path integrals this demand is met very unlikely, as said before.
 
-To circumvent this issue one uses a statistical model called \names{Markov} chain to obtain configurations, that are distributed according to the \names{Boltzmann} factor of the path integral. The idea is to start from an arbitrary configuration and generate a new one from the previous configuration via a pseudo random number generation process. Thereby new configurations are generated in a stochastic sequence that eventually follows an equilibrium distribution $P(\mathit{\phi})$ \cite{gattringer2009quantum}. The configurations in the chain can be numbered by an index, the so called Monte Carlo time
+To circumvent this issue one uses a statistical model called \names{Markov} chain to obtain configurations that are distributed according to the \names{Boltzmann} factor of the path integral. The idea is to start from an arbitrary configuration and generate a new one from the previous configuration via a pseudo random number generation process. Thereby new configurations are generated in a stochastic sequence that eventually follows an equilibrium distribution $P(\mathit{\phi})$ \cite{gattringer2009quantum}. The configurations in the chain can be numbered by an index, the so called Monte Carlo time
 %
 %
 \begin{equation}
@@ -400,7 +400,7 @@ A \names{Markov} process is characterized by a conditional transition probabilit
 \end{equation}
 %
 %
-An important restriction is that the process must not get stuck at any configuration. It must always be possible to move between two specified configurations within a finite Monte Carlo time. This can be realised if the transition probability is strictly positive between all states, which is called strong ergodicity. Furthermore the probability to move to $\mathit{\phi}'$ from any other state must be the same as to leave $\mathit{\phi}'$ to any other state which can be condensed to the following balance equation
+An important restriction is that the process must not get stuck at any configuration. It must always be possible to move between two specified configurations within a finite Monte Carlo time. This can be realised if the transition probability is strictly positive between all states which is called strong ergodicity. Furthermore the probability to move to $\mathit{\phi}'$ from any other state must be the same as to leave $\mathit{\phi}'$ to any other state which can be condensed to the following balance equation
 %
 %
 \begin{equation}
@@ -408,7 +408,7 @@ An important restriction is that the process must not get stuck at any configura
 \end{equation}
 %
 %
-A special solution to this equation is obtained if one assumes that the equation holds for every term of the sum
+A special solution to this equation will be obtained if one assumes that the equation holds for every term of the sum
 %
 %
 \begin{equation}
@@ -427,7 +427,7 @@ This condition is called detailed balance and is used by most algorithms generat
 \label{sec: hmc_alg}
 %
 %
-There are many possible algorithms to generate field configurations. The choice is depending on the structure of the problem at hand. For the here presented case the algorithm of choice is called rational hybrid Monte Carlo (RHCM). The basic reason to use this algorithm is the presence of fermions in a specific manner. It is in general complicated to deal with fermions in numerical simulations due to the anti commuting properties of \names{Grassmann} variables. An efficient procedure is to integrate out fermions via \names{Grassmann} integration, presented in Appendix \ref{sec: grassmann_analysis}, which results in our case in the Pfaffian of a fermionic operator $M[\phi]$ depending on the bosonic fields $\phi$. We now want to include the Pfaffian as a probability weight factor in the process of generating \names{Markov} chain configurations. To act as a probability weight factor, $\text{Pf}\,M$ must be real and nonnegative. If we consider this to be the case for the moment, we can therefore write
+There are many possible algorithms to generate field configurations. The choice is depending on the structure of the problem at hand. For the here presented case the algorithm of choice is called rational hybrid Monte Carlo (RHCM). The basic reason to use this algorithm is the presence of fermions in a specific manner. It is in general complicated to deal with fermions in numerical simulations due to the anti commuting properties of \names{Grassmann} variables. An efficient procedure is to integrate out fermions via \names{Grassmann} integration, presented in Appendix \ref{sec: grassmann_analysis}, which results in our case in the Pfaffian of a fermionic operator $M[\phi]$ depending on the bosonic fields $\phi$. We now want to include the Pfaffian as a probability weight factor in the process of generating \names{Markov} chain configurations. To act as a probability weight factor, $\text{Pf}\,M$ must be real and nonnegative. If we consider this to be the case for the moment, we can write
 %
 %
 \begin{equation}
@@ -444,10 +444,10 @@ In general one could have to deal with an arbitrary fraction $\alpha$ in the exp
 \end{equation}
 %
 %
-Since there is an inversion included, the operator in the exponent is highly nonlocal in the bosonic fields $\phi$. So even a small change in the fields could cause a large difference in the weight factor. One therefore needs an algorithm that ensures that the generated configurations are part of the contributing regime of the weight factor. In a case like that it proved efficient to use a hybrid Monte Carlo (HMC) algorithm when $\alpha=1$, which uses \names{Hamiltonian} dynamics trajectories along some fictitious time to generate new configurations. For non-integer $\alpha$ one can use a rational approximation of $\left(MM^{\dagger}\right)^{-\alpha}$. Combined with the HMC this is called the rational hybrid Monte Carlo (RHMC) algorithm.\\
+Since there is an inversion included, the operator in the exponent is highly nonlocal in the bosonic fields $\phi$. So even a small change in the fields could cause a large difference in the weight factor. Ergo one needs an algorithm that ensures that the generated configurations are part of the contributing regime of the weight factor. In a case like that it proved efficient to use a hybrid Monte Carlo (HMC) algorithm when $\alpha=1$, which uses \names{Hamiltonian} dynamics trajectories along some fictitious time to generate new configurations. For non-integer $\alpha$ one can use a rational approximation of $\left(MM^{\dagger}\right)^{-\alpha}$. Combined with the HMC this is called the rational hybrid Monte Carlo (RHMC) algorithm.\\
 %
 At this point we want to introduce the HMC algorithm which has been proposed in \cite{hmc}. A more detailed explanation is presented in \cite{gattringer2009quantum,montvay_lattice} which serves as a guideline for the following. The HMC is referred to as hybrid because it combines a molecular dynamic (MD) evolution with random noise patterns to simulate quantum fluctuations, an additional \names{Metropolis} acceptance step lets it result into an exact MC algorithm. The field update is  separated into two phases. Pseudofermions are updated first with an exact heat bath, while the bosons are kept constant. Therefore, a configuration $\xi$ is generated from a \names{Gaussian} distribution $P(\xi) \sim e^{-\xi^{\dagger}\xi}$ and we set $\eta = M\xi$.\\
-In the second phase a molecular dynamic evolution is used to update the bosonic fields while the pseudofermions are kept constant.  We can  therefore think of the effective action $S_{\rm eff}[\phi]= S_{\rm B}[\phi] + \eta^{\dagger}(MM^{\dagger})^{-1}\eta$ as only dependent on the bosonic fields $\phi$. Now for each field $\phi_{i}$ a conjugate momentum $\pi_{i}$ is introduced and we expand the path integral with $\int \mathcal{D}\pi\, \exp(-1/2 \;\pi^{2})$ to obtain
+In the second phase a molecular dynamic evolution is used to update the bosonic fields while the pseudofermions are kept constant.  We can now think of the effective action $S_{\rm eff}[\phi]= S_{\rm B}[\phi] + \eta^{\dagger}(MM^{\dagger})^{-1}\eta$ as only dependent on the bosonic fields $\phi$. Now for each field $\phi_{i}$ a conjugate momentum $\pi_{i}$ is introduced and we expand the path integral with $\int \mathcal{D}\pi\, \exp(-1/2 \;\pi^{2})$ to obtain
 %
 %
 \begin{equation}
@@ -471,7 +471,7 @@ The evolution of the fields follows according to the classical equations of moti
 \end{align}
 %
 %
-A numerical implementation of (\ref{ham_eom}) introduces a discrete step size $\epsilon \equiv \delta	\tau$ and errors of order $\mathcal{O}(\epsilon^{2})$. An additional \names{Metropolis} acceptance step can correct these errors. First the momenta $\pi$ are randomly generated from a \names{Gaussian} distribution $P_{\rm G}(\pi)=\exp(-1/2\,\pi^{2})$. Then a numerical integration scheme is used to change the configuration $\lbrace \phi,\pi \rbrace$ along a discretized trajectory in phase space to the new point $\lbrace \phi',\pi' \rbrace$. The transition probability $T_{\rm MD}(\phi',\pi' \vert \phi,\pi)$ of the MD evolution depends on the integration scheme. The latter needs to be reversible and area preserving for the algorithm to obey detailed balance. Therefore, a \textit{leapfrog integration} scheme  is used. For one trajectory the fields $\phi$ are evolved in $n$ steps of length $\epsilon$. The momenta start with half a step of length $\epsilon / 2$, then $(n-1)$ full steps are performed and again a half-step. The first half-step is given by
+A numerical implementation of (\ref{ham_eom}) introduces a discrete step size $\epsilon \equiv \delta	\tau$ and errors of order $\mathcal{O}(\epsilon^{2})$. An additional \names{Metropolis} acceptance step can correct these errors. First the momenta $\pi$ are randomly generated from a \names{Gaussian} distribution $P_{\rm G}(\pi)=\exp(-1/2\,\pi^{2})$. Then a numerical integration scheme is used to change the configuration $\lbrace \phi,\pi \rbrace$ along a discretized trajectory in phase space to the new point $\lbrace \phi',\pi' \rbrace$. The transition probability $T_{\rm MD}(\phi',\pi' \vert \phi,\pi)$ of the MD evolution depends on the integration scheme. The latter needs to be reversible and area preserving for the algorithm to obey detailed balance. Thus, a \textit{leapfrog integration} scheme  is used. For one trajectory the fields $\phi$ are evolved in $n$ steps of length $\epsilon$. The momenta start with half a step of length $\epsilon / 2$, then $(n-1)$ full steps are performed and again a half-step. The first half-step is given by
 %
 %
 \begin{align}
@@ -497,7 +497,15 @@ With the last half-step we arrive at the final momentum
 \end{equation}
 %
 %
-With an additional \names{Metropolis} acceptance step $T_{\rm A}(\phi',\pi' \vert \phi,\pi) = \min(1,\exp(H[\phi,\pi]-H[\phi',\pi'])$ the total transition probability to move from $\phi$ to $\phi'$ is given by
+With an additional \names{Metropolis} acceptance step 
+%
+%
+\begin{equation}
+T_{\rm A}(\phi',\pi' \vert \phi,\pi) = \min(1, \exp ( H[\phi,\pi] - H[\phi',\pi'] )
+\end{equation}
+%
+%
+the total transition probability to move from $\phi$ to $\phi'$ is given by
 %
 %
 \begin{equation}
@@ -553,7 +561,7 @@ F_{i}[\phi] = \frac{\del }{\del \phi_{i}}\left[ S_{\rm B}\left[\phi\right] + \et
 %
 %
 \subsubsection{Numerical sign problems}\label{sec: sign_prob}
-As discussed previously we want to calculate expectation values of observables $O(\phi)$, depending on bosonic fields $\phi$, which are distributed according to a certain probability weight function $\rho(\phi)$
+As discussed previously we want to calculate expectation values of observables $O(\phi)$, depending on bosonic fields $\phi$ which are distributed according to a certain probability weight function $\rho(\phi)$
 %
 %
 \begin{equation}
@@ -561,4 +569,4 @@ As discussed previously we want to calculate expectation values of observables $
 \end{equation}
 %
 %
-The feasibility of calculations like that via Monte Carlo methods is only guaranteed if the weight function $\rho(\phi)$ is non-negative. In the process of dealing with fermions it is sometimes necessary to introduce bosonic auxiliary fields by a \names{Hubbard-Stratonovich} (HS)  transformation\footnote{See Appendix \ref{sec: HS_trafo} for futher details on the HS transformation.}, which might lead to a complex phase in the weight function. For fluctuations of this phase that are very close to the purely real spectrum, this can be corrected by a reweighting procedure. If nonetheless the phase is distributed on the whole complex spectrum where the reweighting tends to fail, then one is talking of a \textit{sign problem}. There are several approaches to fix this issue but none of them works as a general method to cure the sign problem.
+The feasibility of calculations like that via Monte Carlo methods is only guaranteed if the weight function $\rho(\phi)$ is non-negative. In the process of dealing with fermions it is sometimes necessary to introduce bosonic auxiliary fields by a \names{Hubbard-Stratonovich} (HS)  transformation\footnote{See Appendix \ref{sec: HS_trafo} for futher details on the HS transformation.} which might lead to a complex phase in the weight function. For fluctuations of this phase that are very close to the purely real spectrum, this can be corrected by a reweighting procedure. If nonetheless the phase is distributed on the whole complex spectrum where the reweighting tends to fail, then one is talking of a \textit{sign problem}. There are several approaches to fix this issue but none of them works as a general method to cure the sign problem.
