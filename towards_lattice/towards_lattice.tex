@@ -579,6 +579,7 @@ where an additional $1/z$ factor is present for the purpose of improved stabilit
 %
 %
 \subsubsection{Fermionic operator}
+\label{sec: ferm_op}
 By knowing the structure of the \names{Wilson} term we can finally discretize the fermionic operator and write it in terms of a single matrix by using the lexicographic index notation introduced in \autoref{sec: disc_lat}. The discretized fermion matrix $\hat{\mathcal{O}}_{\rm F}$ is of size $16V\times 16V$ and we are going to subdivide it into 4 by 4 blocks of size $4V\times 4V$ as
 %
 %
@@ -620,14 +621,15 @@ The discretized fermion matrix is now given by
 \!
 \hat{\mathcal{O}}_{\rm F} = 
 \begin{pmatrix}
-\hat{W}_{+} & i\bar{\Delta}^{A}_{0} & -i\left(\vec{\Delta}^{Z}_{1} + \tfrac{M}{2}\bar{Z}\right) & 0 \\ 
-i\bar{\Delta}^{A}_{0} & -\hat{W}_{+}^{\dagger} & 0 & -i\left(\vec{\Delta}^{Z^{\dagger}}_{1} + \tfrac{M}{2}\bar{Z}^{\dagger}\right)  \\ 
-i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!\! 2\left(\bar{\Delta}^{x}_{1}-\tfrac{M}{2}\bar{Z}^{x}\right)+\hat{W}_{-} & i\bar{\Delta}^{A}_{0} -\hat{A}^{\rm T} \\ 
-0 & i\left(\cev{\Delta}^{Z^{\dagger}}_{1} - \tfrac{M}{2}\bar{Z}^{\dagger}\right) & i\bar{\Delta}^{A}_{0} +\hat{A} & \!\!\!\!\! 2\left(\bar{\Delta}^{x^{*}}_{1}-\tfrac{M}{2}\bar{Z}^{x^{*}}\right)-\hat{W}_{-}^{\dagger}
+\hat{W}_{+} & i\bar{\Delta}^{\rm A}_{0} & -i\left(\vec{\Delta}^{Z}_{1} + \tfrac{M}{2}\bar{Z}\right) & 0 \\ 
+i\bar{\Delta}^{\rm A}_{0} & -\hat{W}_{+}^{\dagger} & 0 & -i\left(\vec{\Delta}^{Z^{\dagger}}_{1} + \tfrac{M}{2}\bar{Z}^{\dagger}\right)  \\ 
+i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!\! 2\left(\bar{\Delta}^{x}_{1}-\tfrac{M}{2}\bar{Z}^{x}\right)+\hat{W}_{-} & i\bar{\Delta}^{\rm A}_{0} -\hat{A}^{\rm T} \\ 
+0 & i\left(\cev{\Delta}^{Z^{\dagger}}_{1} - \tfrac{M}{2}\bar{Z}^{\dagger}\right) & i\bar{\Delta}^{\rm A}_{0} +\hat{A} & \!\!\!\!\! 2\left(\bar{\Delta}^{x^{*}}_{1}-\tfrac{M}{2}\bar{Z}^{x^{*}}\right)-\hat{W}_{-}^{\dagger}
 \end{pmatrix} ,
 \raisetag{-8pt}
+\label{eq: disc_OF}
 \end{flalign}
 \endgroup
 %
 %
-where we refer the reader to Appendix \textbf{\LARGE INSERT SEC} for a detailed derivation of the single terms.
+where we refer the reader to Appendix \ref{app: disc_ferm} for a detailed derivation of the single terms.

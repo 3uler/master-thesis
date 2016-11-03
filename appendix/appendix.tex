@@ -259,3 +259,93 @@ Here again the important relations hold
 \dfrac{1}{\vert\mathit{\Lambda}\vert} \sum\limits_{n\in \mathit{\Lambda}} \text{exp}( i (p-p')\cdot na) &=\delta(p-p') \equiv \delta_{k_{0},k'_{0}}\delta_{k_{1},k'_{1}} \\
 \dfrac{1}{\vert\mathit{\Lambda}\vert} \sum\limits_{p\in  \widetilde{\mathit{\Lambda}\,}} \text{exp}( i p\cdot (n-n')a) &=\delta(n-n') \equiv \delta_{n_{0},n'_{0}}\delta_{n_{1},n'_{1}}.
 \end{align}
+%
+%
+%
+%
+%
+%
+% - - - -  -- - - - - - - - -   discretized fermion matrix  - - - - - - - - - - - - - - - -
+%
+%
+%
+%
+%
+\section{Discretized fermion matrix}
+\label{app: disc_ferm}
+Here we want to present the details leading to the discretized version (\ref{eq: disc_OF}) of the operator $\mathcal{O}_{\rm F}$. As emphasized in section \ref{sec: ferm_op} $\hat{\mathcal{O}}_{\rm F}$ is a $16V\times 16V$ matrix and we will continue to use the notation introduced there to write subdivided blocks of size $4V\times 4V$ to result in
+%
+%
+\begingroup
+\everymath{\footnotesize}
+\begin{flalign}
+\!
+\hat{\mathcal{O}}_{\rm F} = 
+\begin{pmatrix}
+\hat{W}_{+} & i\bar{\Delta}^{\rm A}_{0} & -i\left(\vec{\Delta}^{Z}_{1} + \tfrac{M}{2}\bar{Z}\right) & 0 \\ 
+i\bar{\Delta}^{\rm A}_{0} & -\hat{W}_{+}^{\dagger} & 0 & -i\left(\vec{\Delta}^{Z^{\dagger}}_{1} + \tfrac{M}{2}\bar{Z}^{\dagger}\right)  \\ 
+i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!\! 2\left(\bar{\Delta}^{x}_{1}-\tfrac{M}{2}\bar{Z}^{x}\right)+\hat{W}_{-} & i\bar{\Delta}^{\rm A}_{0} -\hat{A}^{\rm T} \\ 
+0 & i\left(\cev{\Delta}^{Z^{\dagger}}_{1} - \tfrac{M}{2}\bar{Z}^{\dagger}\right) & i\bar{\Delta}^{\rm A}_{0} +\hat{A} & \!\!\!\!\! 2\left(\bar{\Delta}^{x^{*}}_{1}-\tfrac{M}{2}\bar{Z}^{x^{*}}\right)-\hat{W}_{-}^{\dagger}
+\end{pmatrix} .
+\raisetag{-8pt}
+\end{flalign}
+\endgroup
+%
+%
+First of all we should mention that the operator $\mathcal{O}_{\rm F}$ was of dimension $[a]^{-1}$ which has been absorbed into the fermionic fields to make them dimensionless. Therefore $\hat{\mathcal{O}}_{\rm F}$ is dimensionless as well, as are now all the bosonic and fermionic fields. Further $\hat{\mathcal{O}}_{\rm F}$ needs to be anti-symmetric which is why all the discretized derivatives need to be symmetric finite differences. As it is standard in lattice QCD to use anti-periodic boundary conditions in the temporal direction for the fermions \cite{montvay_lattice}, we will apply those here as well. For the spacial direction periodic boundary conditions shall be used. So starting from block $(1,2)$ we make the transition
+%
+%
+\begin{equation}
+i \del_{t}\mathds{1}_{4} \longrightarrow i \bar{\Delta}^{\rm A}_{0},
+\end{equation}
+%
+%
+where we defined
+%
+%
+\begin{align}
+\bar{\Delta}^{\rm A}_{0} &\equiv \bar{\Delta}^{\rm a}_{0} \otimes \mathds{1}_{4}, &
+\bar{\Delta}^{\rm a}_{0} &\equiv \left(\bar{\Delta}^{\rm a}_{0}\right)(l,p) = \frac{1}{2}\left( \delta_{l_{+\hat{1}},p}^{\rm a}-\delta_{l_{-\hat{1}},p}^{\rm a}\right).
+\end{align}
+%
+%
+Thereby the superscripts \textit{A, a} refer to the property of the finite differences to respect anti-periodic boundary conditions, whereas \textit{p} will refer to periodic ones. In the next block $(1,3)$ we have
+%
+%
+\begin{equation}
+-i \rho^{M}\left(\del_{s} +\tfrac{m}{2}\right) \frac{z^{M}}{z^{3}} \longrightarrow -i \left( \vec{\Delta}_{1}^{Z} +\tfrac{M}{2} \bar{Z}\right).
+\end{equation}
+%
+%
+Since $z^{M}/z^{3}$ is on the right, the derivative will also act on this term which we will have to consider in the discretization. Thus we introduce the definitions
+%
+%
+\begin{gather}
+Z \equiv Z_{ij}(l) = \rho_{ij}^{M} \frac{z^{M}(l)}{z^{3}(l)}, \qquad \bar{Z} \equiv \bar{Z}_{ij}(l,p) = \delta_{l,p} Z_{ij}(l), \\
+\vec{\Delta}_{1}^{Z} \equiv \left(\vec{\Delta}_{1}^{Z}\right)_{ij}(l,p) = \frac{1}{2} \left[ \delta_{l_{+\hat{1}},p}^{\rm p}Z_{ij}(l_{+\hat{1}})-\delta_{l_{-\hat{1}},p}^{\rm p} Z_{ij}(l_{-\hat{1}})\right].
+\end{gather}
+%
+%
+The right arrow shall indicate that $Z$ is on the right and respected by the derivative. In block $(3,1)$ we also have the same operator with arrow to the left which indicates that the derivative will not act on $Z$
+%
+%
+\begin{equation}
+\cev{\Delta}_{1}^{Z} \equiv \left(\cev{\Delta}_{1}^{Z}\right)_{ij}(l,p) = \frac{1}{2} \left[ \delta_{l_{+\hat{1}},p}^{\rm p}-\delta_{l_{-\hat{1}},p}^{\rm p}\right] Z_{ij}(l) .
+\end{equation}
+%
+%
+In block $(3,3)$ we observe
+%
+%
+\begin{equation}
+2\frac{z^{M}}{z^{4}}\rho^{M}\left(\del_{s}x-\tfrac{m}{2}x\right) \longrightarrow  2\left( \bar{\Delta}_{1}^{x}-\tfrac{M}{2}\bar{Z}^{x} \right),
+\end{equation}
+%
+%
+where
+%
+%
+\begin{gather}
+\bar{Z}^{x} \equiv \bar{Z}^{x}_{ij}(l,p) = \delta_{l,p}\frac{Z_{ij}(l)}{z(l)}x(l), \\
+\bar{\Delta}_{1}^{x} \equiv \left(\bar{\Delta}_{1}^{x}\right)_{ij}(l,p) = \frac{1}{2} \frac{Z_{ij}(l)}{z(l)} \left[ \delta_{l_{+\hat{1}},p}^{\rm p}x(l_{+\hat{1}})-\delta_{l_{-\hat{1}},p}^{\rm p} x(l_{-\hat{1}})\right].
+\end{gather}
