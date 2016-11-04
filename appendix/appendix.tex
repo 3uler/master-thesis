@@ -349,3 +349,47 @@ where
 \bar{Z}^{x} \equiv \bar{Z}^{x}_{ij}(l,p) = \delta_{l,p}\frac{Z_{ij}(l)}{z(l)}x(l), \\
 \bar{\Delta}_{1}^{x} \equiv \left(\bar{\Delta}_{1}^{x}\right)_{ij}(l,p) = \frac{1}{2} \frac{Z_{ij}(l)}{z(l)} \left[ \delta_{l_{+\hat{1}},p}^{\rm p}x(l_{+\hat{1}})-\delta_{l_{-\hat{1}},p}^{\rm p} x(l_{-\hat{1}})\right].
 \end{gather}
+%
+%
+The discretized version of $A$ is given by
+%
+%
+\begin{align}
+\hat{A}_{ij}(l,p) = &-\delta_{ij}\delta_{lp}\frac{\sqrt{6}}{z(l)}\phi(l) + \delta_{lp}\frac{\widetilde{\phi}_{ij}(l)}{z(l)} \notag \\
+%
+&+i \frac{z^{N}(l)}{z(l)} \big(\rho^{MN}\big)_{ij} \left( \delta^{\rm p}_{l_{+\hat{1}},p} z^{M}(l_{+\hat{1}}) - \delta^{\rm p}_{l_{-\hat{1}},p} Z^{M}(l_{-\hat{1}})\right) \\
+%
+&+ \frac{1}{z^{3}(l)} \big(\rho^{*}_{N}\big)_{ik} \widetilde{\phi}_{sk}(l) \big(\rho^{L}\big)_{sj} z^{N}(l)z^{L}(l) \delta_{lp}. \notag
+\end{align}
+%
+%
+For the other variations of the finite differences one simply substitutes $Z^{\dagger}$ or $x^{*}$ in the associated expressions to derive $\vec{\Delta}^{Z^{\dagger}}_{1}$ and $\bar{\Delta}^{x^{*}}_{1}$. Since $\hat{\mathcal{O}}_{\rm F}$ is anti-symmetric we need to meet the condition that $\vec{\Delta}^{Z}_{1}=-\big( \cev{\Delta}^{Z}_{1} \big)^{\rm T}$ which is easy to check. The same property is needed for corresponding \names{Wilson} term. One can define it to consist of two parts $\hat{W}^{(1)}_{\pm}$ and $\hat{W}^{(2)}_{\pm}$ which obey $\hat{W}^{(1)}_{\pm} = -\left( \hat{W}^{(2)}_{\pm} \right)^{\rm T}$ and vice versa. The resulting \names{Wilson} term
+%
+%
+\begin{equation}
+\hat{W}_{\pm} = \frac{1}{2}\left( \hat{W}^{(1)}_{\pm} + \hat{W}^{(2)}_{\pm} \right)
+\end{equation}
+%
+%
+is therefore skew-symmetric $\big(\hat{W}_{\pm}\big)^{\rm T} = -\hat{W}_{\pm}$ which is necessary since it is sitting on the diagonal blocks of $\hat{\mathcal{O}}_{\rm F}$. The single terms are constructed in the following way
+%
+%
+\begin{align}
+\hat{W}^{(1)}_{\pm} &= \frac{r}{2} \left[ \vec{\Lambda}^{Z}_{0} \pm i \vec{\Lambda}^{Z}_{1}\right] , &
+\hat{W}^{(2)}_{\pm} &= \frac{r}{2} \left[ \cev{\Lambda}^{Z}_{0} \pm i \cev{\Lambda}^{Z}_{1}\right]
+\end{align}
+%
+%
+with 
+%
+%
+\begin{align}
+Z^{z} &\equiv Z^{z}_{ij}(l) = Z_{ij}(l)z(l) \notag \\
+\vec{\Lambda}^{Z}_{\alpha} &\equiv \big(\vec{\Lambda}^{Z}_{\alpha}\big)_{ij}(l,p) = 2\delta_{l,p}Z^{z}(l) - \delta_{l_{+\hat{\alpha}},p}Z^{z}(l_{+\hat{\alpha}}) - \delta_{l_{-\hat{\alpha}},p}Z^{z}(l_{-\hat{\alpha}}) \\
+%
+%
+\cev{\Lambda}^{Z}_{\alpha} &\equiv \big(\cev{\Lambda}^{Z}_{\alpha}\big)_{ij}(l,p) = \left( 2 \delta_{l,p} -\delta_{l_{+\hat{\alpha}},p} - \delta_{l_{-\hat{\alpha}},p} \right) Z^{z}(l), \notag
+\end{align}
+%
+%
+where again the temporal finite differences need to respect anti-periodic and the spacial ones periodic boundary conditions. The actual implementation nonetheless is slightly different. There we constructed $\hat{W}_{\pm}$ to have its upper triangular matrix equal to $\hat{W}_{\pm}^{(1)}$ and the lower triangular matrix equal to $\hat{W}_{\pm}^{(2)}$ which in the end is leading to the same result.

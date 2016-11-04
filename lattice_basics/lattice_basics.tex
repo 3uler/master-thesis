@@ -63,21 +63,21 @@ and in the same way also a backward derivative by using the $f(x-\epsilon)$ term
 \begin{equation}
 \dfrac{f(x-\epsilon)-f(x+\epsilon)}{2 \epsilon} = f'(x) + \mathcal{O}(\epsilon^{2}).
 \end{equation}
-It is more convenient to use the symmetric finite difference, because the error introduced by the finite lattice spacing is hereby reduced by one order.  By adding additional terms of $f(x\pm 2 \epsilon)$ it is possible to get a finite difference derivative which is exact up to an order of $\mathcal{O}(\epsilon^{3})$ and so on. Depending on the demanded accuracy one is able to regulate the introduced error via this method. With $\epsilon$ being our lattice spacing $a$ we find the derivative of our fields at $n=\left(n_{0}, n_{1} \right)$ to be\footnote{\noindent With $\widehat{\del }_{i}$ beeing the symmetric derivative in $i$-direction. We also define the forward and backward derivative respectively by
+It is more convenient to use the symmetric finite difference, because the error introduced by the finite lattice spacing is hereby reduced by one order.  By adding additional terms of $f(x\pm 2 \epsilon)$ it is possible to get a finite difference derivative which is exact up to an order of $\mathcal{O}(\epsilon^{3})$ and so on. Depending on the demanded accuracy one is able to regulate the introduced error via this method. With $\epsilon$ being our lattice spacing $a$ we find the derivative of our fields at $n=\left(n_{0}, n_{1} \right)$ to be\footnote{\noindent With $\widehat{\del }_{\alpha}$ beeing the symmetric finite difference in $\alpha$-direction. We also define the forward and backward finite difference respectively by
 \begin{equation*}
-\vec{\del}_{i}\mathit{\Phi}(n)=\dfrac{\mathit{\Phi}(n+\hat{\imath})-\mathit{\Phi}(n)}{a} \quad \text{and} \quad 
-\cev{\del}_{i}\mathit{\Phi}(n)=\dfrac{\mathit{\Phi}(n)-\mathit{\Phi}(n-\hat{\imath})}{a}.
+\vec{\del}_{\alpha}\mathit{\Phi}(n)=\dfrac{\mathit{\Phi}(n+\hat{\alpha})-\mathit{\Phi}(n)}{a} \quad \text{and} \quad 
+\cev{\del}_{\alpha}\mathit{\Phi}(n)=\dfrac{\mathit{\Phi}(n)-\mathit{\Phi}(n-\hat{\alpha})}{a}.
 \end{equation*}
 }
 %
 %
 \begin{equation}
-\del_{i} \mathit{\Phi}(\tau,\sigma) = \widehat{\del }_{i}\mathit{\Phi}(n) + \mathcal{O}(a^{2}) \equiv \dfrac{\mathit{\Phi}(n-\hat{\imath})-\mathit{\Phi}(n+\hat{\imath})}{2a} + \mathcal{O}(a^{2}), 
+\del_{\alpha} \mathit{\Phi}(\tau,\sigma) = \widehat{\del }_{\alpha}\mathit{\Phi}(n) + \mathcal{O}(a^{2}) \equiv \dfrac{\mathit{\Phi}(n-\hat{\alpha})-\mathit{\Phi}(n+\hat{\alpha})}{2a} + \mathcal{O}(a^{2}), 
 \end{equation}
 \begin{equation}
-\text{with} \qquad \del_{i}\mathit{\Phi}(\tau,\sigma) \equiv \dfrac{\del \mathit{\Phi}(\tau,\sigma)}{\del \sigma_{i}}, \qquad \sigma_{i}=(\tau,\sigma), \qquad i=0,1
+\text{with} \qquad \del_{\alpha}\mathit{\Phi}(\tau,\sigma) \equiv \dfrac{\del \mathit{\Phi}(\tau,\sigma)}{\del \sigma_{\alpha}}, \qquad \sigma_{\alpha}=(\tau,\sigma), \qquad \alpha=0,1
 \end{equation}
-and where $\hat{\imath}$ is the unit vector in $i$-direction. For the integration over the worldsheet coordinates we replace the integral by a finite sum over all lattice points
+and where $\hat{\alpha}$ is the unit vector in $\alpha$-direction. For the integration over the worldsheet coordinates we replace the integral by a finite sum over all lattice points
 \begin{equation}
 \int \dd\tau \dd\sigma \longrightarrow a^{2}\sum\limits_{n \in \mathit{\Lambda}}.
 \end{equation}
@@ -99,11 +99,11 @@ l (n)= Ln_{0} + n_{1} \qquad \text{with} \qquad  l=0,1,\ldots,(V-1),\quad V=LT,
 \end{equation}
 %
 %
-so that the according fields $\phi_{l(n)}\equiv \phi(n)$ are actual vectors. For the finite differences derivatives we also need  to know the neighboring relations. So if we want to move on the grid in direction $\pm \hat{\imath}$, which lexicographic index corresponds to this movement? These relations are implemented into a \textit{next neighbor} function (nb) which also takes into account the boundary conditions (toroidal in our case) and returns the corresponding vector index
+so that the according fields $\phi_{l(n)}\equiv \phi(n)$ are actual vectors. For the finite differences derivatives we also need  to know the neighboring relations. So if we want to move on the grid in direction $\pm \hat{\alpha}$, which lexicographic index corresponds to this movement? These relations are implemented into a \textit{next neighbor} function (nb) which also takes into account the boundary conditions (toroidal in our case) and returns the corresponding vector index
 %
 %
 \begin{equation}
-l_{\pm\hat{\imath}} = \text{nb}\,(l,\pm\hat{\imath}).
+l_{\pm\hat{\alpha}} = \text{nb}\,(l,\pm\hat{\alpha}).
 \end{equation}
 %
 %
@@ -111,15 +111,15 @@ We now want to define a symmetric finite difference without the factor $1/a$ for
 %
 %
 \begin{equation}
-\bar{\Delta}_{i} \phi_{l} \equiv \frac{1}{2}\left(\phi_{l_{+\hat{\imath}}}-\phi_{l_{-\hat{\imath}}}\right).
+\bar{\Delta}_{\alpha} \phi_{l} \equiv \frac{1}{2}\left(\phi_{l_{+\hat{\alpha}}}-\phi_{l_{-\hat{\alpha}}}\right).
 \end{equation}
 %
 %
-In consequence we can write $\bar{\Delta}_{i}$ as a $V\times V$ matrix
+In consequence we can write $\bar{\Delta}_{\alpha}$ as a $V\times V$ matrix
 %
 %
 \begin{equation}
-\left(\bar{\Delta}_{i}\right)_{lp} = \frac{\delta_{l_{+\hat{\imath}},p} - \delta_{l_{-\hat{\imath}},p}}{2}.
+\left(\bar{\Delta}_{\alpha}\right)_{lp} = \frac{\delta_{l_{+\hat{\alpha}},p} - \delta_{l_{-\hat{\alpha}},p}}{2}.
 \end{equation}
 %
 %
@@ -128,8 +128,8 @@ In the same way we can define forward and backward finite differences by
 %
 %
 \begin{align}
-\left(\Delta_{i}\right)_{lp} &= \delta_{l_{+\hat{\imath}},p}-\delta_{l,p},  &   
-\left(\Delta^{*}_{i}\right)_{lp} &= \delta_{l,p}-\delta_{l_{-\hat{\imath}},p}.
+\left(\Delta_{\alpha}\right)_{lp} &= \delta_{l_{+\hat{\alpha}},p}-\delta_{l,p},  &   
+\left(\Delta^{*}_{\alpha}\right)_{lp} &= \delta_{l,p}-\delta_{l_{-\hat{\alpha}},p}.
 \end{align}
 We will come back to this notation in \autoref{sec: towards_lat}. For now on we will presume using the grid notation for the further studies.
 %
@@ -149,37 +149,37 @@ We will come back to this notation in \autoref{sec: towards_lat}. For now on we 
 \subsubsection{Bosonic Propagator}
 In the examined theory bosons and fermions are both scalar fields of either real, or complex \names{Grassmann} type. The equations of motion of bosons are given by the \names{Klein-Gordon} equation, which contains only second derivatives. To discretize the second derivative we define the corresponding finite difference operator simply by applying a forward and a backward finite difference
 \begin{align}
-{\widehat{\del}_i}^{\,2}\mathit{\Phi}(n) = \cev{\del}_{i}\vec{\del}_{i}\mathit{\Phi}(n) = \dfrac{\mathit{\Phi}(n+\hat{\imath})-2\mathit{\Phi}(n)+\mathit{\Phi}(n-\hat{\imath})}{a^{2}}.
+{\widehat{\del}_\alpha}^{\,2}\mathit{\Phi}(n) = \cev{\del}_{\alpha}\vec{\del}_{\alpha}\mathit{\Phi}(n) = \dfrac{\mathit{\Phi}(n+\hat{\alpha})-2\mathit{\Phi}(n)+\mathit{\Phi}(n-\hat{\alpha})}{a^{2}}.
 \label{second deriv}
 \end{align}
 In a Lagrangian we would find the differential operator enclosed by the fields, for instance like
 \begin{equation}
-\mathit{\Phi}(n)\big({\widehat{\del}_i}^{\,2}\mathit{\Phi}\big)(n) = \sum\limits_{m \in \mathit{\Lambda}} \mathit{\Phi}(n) {\widehat{\del}_i}^{\,2}(n,m) \mathit{\Phi}(m),
+\mathit{\Phi}(n)\big({\widehat{\del}_\alpha}^{\,2}\mathit{\Phi}\big)(n) = \sum\limits_{m \in \mathit{\Lambda}} \mathit{\Phi}(n) {\widehat{\del}_\alpha}^{\,2}(n,m) \mathit{\Phi}(m),
 \end{equation}
 where we use (\ref{second deriv}) to define
 \begin{equation}
-{\widehat{\del}_i}^{\,2}(n,m) \equiv	\dfrac{\delta_{m,n+\hat{\imath}}-2\delta_{m,n}+\delta_{m,n-\hat{\imath}}}{a^{2}}.
+{\widehat{\del}_\alpha}^{\,2}(n,m) \equiv	\dfrac{\delta_{m,n+\hat{\alpha}}-2\delta_{m,n}+\delta_{m,n-\hat{\alpha}}}{a^{2}}.
 \end{equation}
 To investigate the behaviour of bosons under the discretization we are interested in the propagator, which is the inverse of the differential operator in momentum space. We therefore perform a discrete \names{Fourier} transform, which is discussed in Appendix \ref{app: disc_ft}. Both indices $m$ and $n$ transform independently and in order to perform a unitary similarity transformation the second index is \names{Fourier} transformed using the complex conjugated phase \cite{gattringer2009quantum}
 \begin{align}
-{\widetilde{\del}_i}^{\,2}(p,q) &= \dfrac{1}{\vert \mathit{\Lambda}\vert} \sum\limits_{m,n \in \mathit{\Lambda}} \mathrm{e}^{-\mathrm{i}q\cdot na} \, {\widehat{\del}_i}^{\,2}(n,m) \, \mathrm{e}^{\mathrm{i}p\cdot ma} \notag \\
-&= \dfrac{1}{\vert \mathit{\Lambda}\vert}\sum\limits_{n \in \mathit{\Lambda}} \mathrm{e}^{-\mathrm{i}(q-p)\cdot na} \dfrac{1}{a^{2}} \left[ \mathrm{e}^{\mathrm{i}p_{i} a} -2 +\mathrm{e}^{-\mathrm{i}p_{i}a} \right] \\
-&= \delta(p-q) \, {\widetilde{\del}_i}^{\,2}(p), \notag 
+{\widetilde{\del}_\alpha}^{\,2}(p,q) &= \dfrac{1}{\vert \mathit{\Lambda}\vert} \sum\limits_{m,n \in \mathit{\Lambda}} \mathrm{e}^{-iq\cdot na} \, {\widehat{\del}_\alpha}^{\,2}(n,m) \, \mathrm{e}^{i p\cdot ma} \notag \\
+&= \dfrac{1}{\vert \mathit{\Lambda}\vert}\sum\limits_{n \in \mathit{\Lambda}} \mathrm{e}^{-i (q-p)\cdot na} \dfrac{1}{a^{2}} \left[ \mathrm{e}^{i p_{\alpha} a} -2 +\mathrm{e}^{-i p_{\alpha}a} \right] \\
+&= \delta(p-q) \, {\widetilde{\del}_\alpha}^{\,2}(p), \notag 
 \end{align}
  where the \names{Fourier} transform of the second derivative is defined by
  \begin{equation}
- {\widetilde{\del}_i}^{\,2}(p) \equiv -\dfrac{4}{a^2}\sin^{2}\left(\dfrac{p_{i}a}{2}\right).
+ {\widetilde{\del}_\alpha}^{\,2}(p) \equiv -\dfrac{4}{a^2}\sin^{2}\left(\dfrac{p_{\alpha}a}{2}\right).
  \label{momentum laplace}
  \end{equation}
  The euclidean \names{Klein-Gordon} operator $\widetilde{D}(p)$ in momentum space with particle mass $m$ reads
  \begin{equation}
- \widetilde{D}(p) = m^2 + \sum\limits_{i=0}^{1} {\widetilde{\del}_i}^{\,2}(p) .
+ \widetilde{D}(p) = m^2 + \sum\limits_{\alpha=0}^{1} {\widetilde{\del}_\alpha}^{\,2}(p) .
  \end{equation}
 And so we find the propagator simply by inverting the previous relation. Of special interest is the massless case, where we want to investigate the continuum limit
 \begin{equation}
-\left.\widetilde{D}^{-1}(p)\right\vert_{m=0}=\dfrac{1}{-\dfrac{4}{a^2} \sum\limits_{i=0}^{1} \sin^{2}\left(\dfrac{p_{i}a}{2}\right) } \xrightarrow{a \rightarrow 0} -\dfrac{1}{p^2}.
+\left.\widetilde{D}^{-1}(p)\right\vert_{m=0}=\dfrac{1}{-\dfrac{4}{a^2} \sum\limits_{\alpha=0}^{1} \sin^{2}\left(\dfrac{p_{\alpha}a}{2}\right) } \xrightarrow{a \rightarrow 0} -\dfrac{1}{p^2}.
 \end{equation}
-This is precisely what we expected for the euclidean propagator in the continuum. Since we have $p_{i}\in \left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there are no additional poles within the sine function other than the physical one at $p=(0,0)$.
+This is precisely what we expected for the euclidean propagator in the continuum. Since we have $p_{\alpha}\in \left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there are no additional poles within the sine function other than the physical one at $p=(0,0)$.
 %
 %
 %
@@ -190,40 +190,40 @@ This is precisely what we expected for the euclidean propagator in the continuum
 \label{sec: ferm_doubling}
 In the case of fermions the equations of motion in 4-dimensional QFT are given by the Dirac equation, which is a linearisation of the \names{Klein-Gordon} equation and only contains first derivatives. To not explicitly break existing symmetries, we have to go with the symmetric derivative in this case. Now we can follow the exact same steps as for the bosonic case to investigate the continuum limit of a \names{Dirac} like operator in our 2-dimensional space time. As mentioned we start from the symmetric finite difference
 \begin{equation}
-\widehat{\del}_{i}(m,n) \equiv \dfrac{\delta_{m,n+\hat{\imath}}-\delta_{m,n-\hat{\imath}}}{2a}
+\widehat{\del}_{\alpha}(m,n) \equiv \dfrac{\delta_{m,n+\hat{\alpha}}-\delta_{m,n-\hat{\alpha}}}{2a}
 \end{equation}
 and proceed with the \names{Fourier} transform
 \begin{align}
-\widetilde{\del_{i}}(p,q) &= \dfrac{1}{\vert \mathit{\Lambda}\vert} \sum\limits_{m,n \in \mathit{\Lambda}} \mathrm{e}^{-\mathrm{i}q\cdot na} \, {\widehat{\del}_i}(n,m) \, \mathrm{e}^{\mathrm{i}p\cdot ma} \\
-&= \dfrac{1}{\vert \mathit{\Lambda}\vert}\sum\limits_{n \in \mathit{\Lambda}} \mathrm{e}^{-\mathrm{i}(q-p)\cdot na} \left[ \dfrac{\mathrm{e}^{\mathrm{i}p_{i}a}-\mathrm{e}^{-\mathrm{i}p_{i}a}}{2a} \right] \\
-&= \delta(p-q)\, \widetilde{\del_{i}}(p),
+\widetilde{\del}_{\alpha}(p,q) &= \dfrac{1}{\vert \mathit{\Lambda}\vert} \sum\limits_{m,n \in \mathit{\Lambda}} \mathrm{e}^{-i q\cdot na} \, {\widehat{\del}_\alpha}(n,m) \, \mathrm{e}^{i p\cdot ma} \\
+&= \dfrac{1}{\vert \mathit{\Lambda}\vert}\sum\limits_{n \in \mathit{\Lambda}} \mathrm{e}^{- i (q-p)\cdot na} \left[ \dfrac{\mathrm{e}^{i p_{\alpha}a}-\mathrm{e}^{- i p_{\alpha}a}}{2a} \right] \\
+&= \delta(p-q)\, \widetilde{\del}_{\alpha}(p),
 \end{align}
 here we are left with the following differential operator in momentum space
 \begin{equation}
-\widetilde{\del_{i}}(p) \equiv \dfrac{\mathrm{i}}{a} \sin (p_{i}a).
+\widetilde{\del}_{\alpha}(p) \equiv \dfrac{i}{a} \sin (p_{\alpha}a).
 \label{eq: naive_first_dev}
 \end{equation}
 To construct an euclidean \names{Dirac} like operator in two dimensions we use the first two \names{Pauli} matrices\footnote{\[\gamma_{0}=\sigma_{1}=\left( \begin{array}{cc}
 0 & 1 \\ 
 1 & 0
 \end{array}  \right) \qquad \gamma_{1}=\sigma_{2}=\left( \begin{array}{cc}
-0 & -\mathrm{i} \\ 
-\mathrm{i} & 0
+0 & -i \\ 
+i & 0
 \end{array}  \right) \]}
 %
 %
 \begin{equation}
-\widetilde{D}_{D}(p)=  m\mathds{1} + \sum\limits_{i=0}^{1} \gamma_{i}\, \widetilde{\del_{i}}(p)  =m\mathds{1} + \dfrac{\mathrm{i}}{a}\sum\limits_{i=0}^{1} \gamma_{i} \sin (p_{i}a)\,.
+\widetilde{D}_{D}(p)=  m\mathds{1} + \sum\limits_{\alpha=0}^{1} \gamma_{\alpha}\, \widetilde{\del}_{\alpha}(p)  =m\mathds{1} + \dfrac{i}{a}\sum\limits_{\alpha=0}^{1} \gamma_{\alpha} \sin (p_{\alpha}a)\,.
 \end{equation}
 The inverse propagator follows from the properties of the \names{Pauli} matrices to be
 \begin{equation}
-\widetilde{D}_{D}^{-1}(p) = \dfrac{m\mathds{1} - \tfrac{\mathrm{i}}{a}\sum_{i=0}^{1} \gamma_{i} \sin (p_{i}a)}{ m^2 + a^{-2}\sum_{i=0}^{1} \sin^2 (p_{i}a)  }.
+\widetilde{D}_{D}^{-1}(p) = \dfrac{m\mathds{1} - \tfrac{i}{a}\sum_{\alpha=0}^{1} \gamma_{\alpha} \sin (p_{\alpha}a)}{ m^2 + a^{-2}\sum_{\alpha=0}^{1} \sin^2 (p_{\alpha}a)  }.
 \end{equation}
 Once more we want to study the continuum limit of the propagator for the massless case and find by setting $m=0$
 \begin{equation}
-\left.\widetilde{D}_{D}^{-1}(p)\right\vert_{m=0} =  \dfrac{- \tfrac{\mathrm{i}}{a}\sum_{i=0}^{1} \gamma_{i} \sin (p_{i}a)}{ a^{-2}\sum_{i=0}^{1} \sin^2 (p_{i}a)  } \xrightarrow{a \rightarrow 0} \dfrac{-\mathrm{i} \sum_{i=0}^{1} \gamma_{i} p_{i} }{p^2}.
+\left.\widetilde{D}_{D}^{-1}(p)\right\vert_{m=0} =  \dfrac{- \tfrac{i}{a}\sum_{\alpha=0}^{1} \gamma_{\alpha} \sin (p_{\alpha}a)}{ a^{-2}\sum_{\alpha=0}^{1} \sin^2 (p_{\alpha}a)  } \xrightarrow{a \rightarrow 0} \dfrac{-i \sum_{\alpha=0}^{1} \gamma_{\alpha} p_{\alpha} }{p^2}.
 \end{equation}
-Here again the propagator has the correct naive continuum limit but this time we face another problem. Since again $p_{i}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. As a result in the numerical simulation it seems that there are in this case three additional fermions, which emerge only from the method of discretization and are  non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who introduced a possible solution.  He suggested to add a term proportional to the discretized \names{Laplace} operator\cite{montvay_lattice}, which is known as a \names{Wilson} term. We can express it in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
+Here again the propagator has the correct naive continuum limit but this time we face another problem. Since again $p_{\alpha}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. As a result in the numerical simulation it seems that there are in this case three additional fermions, which emerge only from the method of discretization and are  non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who introduced a possible solution.  He suggested to add a term proportional to the discretized \names{Laplace} operator\cite{montvay_lattice}, which is known as a \names{Wilson} term. We can express it in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
 \begin{align*}
 \cos(2x)&=\cos^{2}(x) -\sin^{2}(x) \\
 \Leftrightarrow\quad \sin^{2}(x) &= \tfrac{1}{2}\left(1-\cos(2x)\right)
@@ -232,18 +232,18 @@ Here again the propagator has the correct naive continuum limit but this time we
 %
 %
 \begin{equation}
-W(p)\equiv -\mathds{1}\dfrac{a}{2} \sum\limits_{i=0}^{1} {\widetilde{\del}_i}^{\,2}(p) = \mathds{1}\dfrac{1}{a}\sum\limits_{i=0}^{1}\left( 1- \cos(p_{i}a)\right).
+W(p)\equiv -\mathds{1}\dfrac{a}{2} \sum\limits_{\alpha=0}^{1} {\widetilde{\del}_\alpha}^{\,2}(p) = \mathds{1}\dfrac{1}{a}\sum\limits_{\alpha=0}^{1}\left( 1- \cos(p_{\alpha}a)\right).
 \label{eq: wilson_op}
 \end{equation}
-Since the \names{Laplace} operator is of order $\mathcal{O}(a^{0})$, we see that the \names{Wilson} term vanishes in the continuum limit. It also vanishes for $p_{i}=0$ and therefore gives no contribution to the physical pole of the theory. If we now invert the new \names{Dirac-Wilson} operator
+Since the \names{Laplace} operator is of order $\mathcal{O}(a^{0})$, we see that the \names{Wilson} term vanishes in the continuum limit. It also vanishes for $p_{\alpha}=0$ and therefore gives no contribution to the physical pole of the theory. If we now invert the new \names{Dirac-Wilson} operator
 \begin{equation}
 \widetilde{D}_{W}(p) \equiv \widetilde{D}_{D}(p) + W(p),
 \end{equation}
 we find the new massless momentum space propagator
 \begin{equation}
-\left. \widetilde{D}_{W}^{-1}\right\vert_{m=0} = \dfrac{\mathds{1}\tfrac{1}{a}\sum_{i=0}^{1}\left( 1- \cos(p_{i}a)\right) - \tfrac{\mathrm{i}}{a}\sum_{i=0}^{1}\gamma_{i} \sin(p_{i}a) }{\left(\tfrac{1}{a}\sum_{i=0}^{1}\left( 1- \cos(p_{i}a)\right)\right)^{2} + \tfrac{1}{a^2}\sum_{i=0}^{1}\sin^2(p_{i}a) }.
+\left. \widetilde{D}_{W}^{-1}\right\vert_{m=0} = \dfrac{\mathds{1}\tfrac{1}{a}\sum_{\alpha=0}^{1}\left( 1- \cos(p_{\alpha}a)\right) - \tfrac{i}{a}\sum_{\alpha=0}^{1}\gamma_{\alpha} \sin(p_{\alpha}a) }{\left(\tfrac{1}{a}\sum_{\alpha=0}^{1}\left( 1- \cos(p_{\alpha}a)\right)\right)^{2} + \tfrac{1}{a^2}\sum_{\alpha=0}^{1}\sin^2(p_{\alpha}a) }.
 \end{equation}
-Here we can convince ourselves, that there are no more additional poles in the domain of $p_{i}$, since for the points where $p_{i}=\pi/a$ the denominator does not vanish like before. Actually for these points the \names{Wilson}-term behaves like an additional mass term that is growing infinitely in the continuum limit and consequently decouples from the theory.
+Here we can convince ourselves, that there are no more additional poles in the domain of $p_{\alpha}$, since for the points where $p_{\alpha}=\pi/a$ the denominator does not vanish like before. Actually for these points the \names{Wilson}-term behaves like an additional mass term that is growing infinitely in the continuum limit and consequently decouples from the theory.
 %
 %
 %

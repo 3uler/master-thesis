@@ -2,28 +2,28 @@
 \subsection{AdS/CFT correspondence}
 %
 %
-One of the most exciting discoveries in theoretical physics in the last decades was probably made by Maldacena in 1997 \cite{maldacena1}. His famous conjecture , now widely known as $AdS/CFT$ correspondence attracted many scientists to contribute their work to this field of study.\\
-What makes this conjecture so promising, is that it relates a quantum field theory (QFT) in flat spacetime with a string theory. The latter one is also a promising candidate for a theory of quantum gravity. Unifying gravity with the other fundamental forces condensed in the Standard Model would be one of the next big milestones in physics. By studying the predictions of the $AdS/CFT$ correspondence scientists hope to get one step closer to this fundamental aim. The $AdS/CFT$ correspondence is some sort of strong-weak coupling duality. It can relate a strong coupled field theory to its dual, a weakly curved gravity theory. The conjecture links two theories, that are very different in their physical interpretation but states, that they are mathematically equivalent.\\
-The $AdS$ part refers to a gravity theory on asymptotically Anti-de Sitter spacetime, in particular a Type IIB superstring theory on $AdS_{5}\times S^{5}$. $CFT$ stands for conformal field theory and refers in this sense to a $\mathcal{N}=4$ Super \names{Yang-Mills} theory in $3+1$ dimensions. The correspondence states in its strongest from \cite{Ammon:2015wua}
+Among the most exciting breakthroughs in theoretical physics in the last decades there certainly is the famous conjecture made by Maldacena in 1997 \cite{maldacena1}, now widely known as $AdS/CFT$ correspondence which attracted many scientists to contribute their work to this field of study.\\
+What makes this conjecture so promising is that it relates a quantum field theory (QFT) of gauge fields in flat spacetime with a string theory. The latter one is also a promising candidate for a theory of quantum gravity. Unifying gravity with the other fundamental forces condensed in the Standard Model would be one of the next big milestones in physics. By studying the predictions of the $AdS/CFT$ correspondence scientists hope to get one step closer to this fundamental aim. The $AdS/CFT$ correspondence is some sort of strong-weak coupling duality. It can relate a strong coupled field theory to its dual, a weakly curved gravity theory. The conjecture links two theories, very different in their physical content and interpretation, stating that they are mathematically equivalent.
+The $AdS$ part refers to a gravity theory on asymptotically Anti-de Sitter spacetime,  $CFT$ stands for conformal field theory. In its primary form \cite{Ammon:2015wua}, the correspondence states that \\[0.2cm]
 %
-%
-%
-\begin{tcolorbox}[colback=white!95!black, colframe=white!90!black]
-\begin{center}
-\textbf{$\mathcalbf{N}\bm{=}\mathbf{4}$ Super \names{Yang-Mills} theory}\\
-with gauge group $SU(N)$ and \names{Yang-Mills} coupling constant $g_{\rm YM}$
-\end{center}
-\end{tcolorbox}
-%
-\begin{equation*}
-\uparrow \qquad \textit{dynamically equivalent to} \qquad \downarrow
-\end{equation*}\hspace{1mm}
 %
 %
 \begin{tcolorbox}[colback=white!95!black, colframe=white!90!black]
 \begin{center}
 \textbf{Type IIB superstring theory} \\
-with string length $l_{\rm s}=\sqrt{\alpha'}$ and coupling constant $g_{\rm s}$ on $AdS_{5}\times S^{5}$ with radius of curvature $R$ and $N$ units of $F_{(5)}$ flux on $S^{5}$.
+with string length $l_{\rm s}=\sqrt{\alpha'}$ and coupling constant $g_{\rm s}$ on $AdS_{5}\times S^{5}$ with radius of curvature $R$ and $N$ units of $F_{(5)}$ flux on $S^{5}$
+\end{center}
+\end{tcolorbox}
+%
+\begin{equation*}
+\uparrow \qquad \textit{is dynamically equivalent to} \qquad \downarrow
+\end{equation*}\hspace{1mm}
+%
+%
+\begin{tcolorbox}[colback=white!95!black, colframe=white!90!black]
+\begin{center}
+\textbf{$\mathcalbf{N}\bm{=}\mathbf{4}$ Super \names{Yang-Mills} theory}\\
+with gauge group $SU(N)$ and \names{Yang-Mills} coupling constant $g_{\rm YM}$.
 \end{center}
 \end{tcolorbox}
 %
@@ -33,12 +33,19 @@ with string length $l_{\rm s}=\sqrt{\alpha'}$ and coupling constant $g_{\rm s}$ 
 %
 \begin{tcolorbox}[colback=white!95!black, colframe=white!90!black]
 \begin{equation}
-g_{\rm YM}^{2} = 2 \pi g_{\rm s} \quad {\rm and} \quad 2\lambda \equiv 2g_{\rm YM}^{2}N = R^{4}/\alpha'^{2}\,.
+\frac{4\pi \lambda}{N} =  g_{\rm s} \quad {\rm and} \quad \lambda \equiv g_{\rm YM}^{2}N = \frac{R^{4}}{\alpha'^{2}}\,.
 \end{equation}
 \end{tcolorbox}
 %
 %
-In the second equation we defined the \names{'t Hooft} coupling $\lambda$. String theory is yet best understood in the perturbative regime of weak coupling, why it is convenient to restrict the coupling on the string theory side to $g_{\rm s}\ll 1$, while keeping $R/\sqrt{\alpha'}$ constant. The $AdS$ side therefore reduces to classical string theory and no higher loop orders have to be taken into account. The quantity $R^{2}/\alpha'$ is kept constant. As well as $g_{\rm s}$ also the coupling on the $CFT$ side needs to satisfy $g_{\rm YM} \ll 1$ while $g_{\rm YM}^{2}N$ is kept finite. We therefore have to take the large $N$ limit $N \to \infty$ which is also known as the \names{'t Hooft} limit where the corresponding coupling $\lambda$ is fixed. This corresponds to the planar limit of the gauge theory. We are now left with $\lambda$ as the free parameter of the theory. In the so called weak form of $AdS/CFT$ one refers to the limit of large $\lambda$ and therefore $\alpha/R^{2}\to 0$. This results in large curvature $R$ and vanishing string length $l_{\rm s}$ which gives rise to the point particle limit of Type IIB superstring theory in form of Type IIB supergravity. So for large $\lambda$ one is in the perturbative regime of string theory, whereas the gauge theory side is perturbatively accessible for $\lambda \ll 1$. We want to investigate the $AdS/CFT$ correspondence numerically from the string theory side and therefore know solutions for large $\lambda$ from perturbation theory. Now we can make use of the previously stated relation by going to smaller couplings where we leave the perturbative regime of string theory but enter the selfsame for the gauge theory side. This means that when we do numerical simulations for small couplings in string theory, then we still might be able to compare these results with predicted solutions of the perturbative regime of gauge theory. 
+In the second equation we defined the \names{'t Hooft} coupling $\lambda$. String theory is yet best understood in the perturbative regime, therefore it is convenient to restrict the coupling on the string theory side to $g_{\rm s}\ll 1$, while keeping $R/\sqrt{\alpha'}$ constant. The $AdS$ side reduces then, at leading order in $g_{\rm s}$ to classical string theory. The quantity $R^{2}/\alpha'$ is kept constant.  Also the coupling on the $CFT$ side is conveniently taken to be small, $g_{\rm YM} \ll 1$, while $g_{\rm YM}^{2}N$ is kept finite. We therefore have to take the large $N$ limit $N \to \infty$ with $\lambda$ fixed, which is also known as the \names{'t Hooft} limit. This corresponds to the planar limit of the gauge theory. We are then left with $\lambda$ as the free parameter of the $AdS/CFT$ system. In the limit of large $\lambda$, and therefore $\alpha'/R^{2}\to 0$ or large curvature $R$, the string does not feel the effect of the interaction created by the (now weakly curved) background. So for large $\lambda$ one is in the perturbative regime of string theory, whereas the gauge theory side is perturbatively accessible for $\lambda \ll 1$.
+%
+% We want to investigate the $AdS/CFT$ correspondence numerically from the string theory side and therefore know solutions for large $\lambda$ from perturbation theory. Now we can make use of the previously stated relation by going to smaller couplings where we leave the perturbative regime of string theory but enter the selfsame for the gauge theory side. This means that when we do numerical simulations for small couplings in string theory, then we still might be able to compare these results with predicted solutions of the perturbative regime of gauge theory. 
+%
+The fact that the perturbative (accessible) regimes of both models do not overlap - which is referred to as a weak-strong coupling duality - is on one side very fascinating, as it allows the exploration of the strong coupling regime of a theory via the study of the much simpler dual model.
+On the other side, it makes highly non-trivial any dynamical and direct check of the $AdS/CFT$ correspondence. In this thesis we address the problem of realizing such direct checks numerically within the string worldsheet model. In the latter, we control the large $\lambda$ regime where we know analytical solutions. The lattice, numerical approach will allow us to leave the perturbative regime and go to smaller $\lambda$, where 
+comparison with the solutions of  perturbative gauge theory is - once the difficulties peculiar to this approach are tamed - possible. 
+In fact, in the case under study we can also attempt a comparison between string and gauge theory at finite values of $\lambda$, where together with the $AdS/CFT$ hypothesis another powerful conjecture - the integrability of the underlying system -  is available with its predictions.
 %
 %
 %
@@ -52,7 +59,7 @@ In the second equation we defined the \names{'t Hooft} coupling $\lambda$. Strin
 %
 \subsection{Wilson loops}
 %
-An important class of observables in gauge theories are non-local gauge invariant operators called \names{Wilson} loops. These operator are evaluated along a given closed path $\mathcal{C}$. For specific cusped paths one can (in a certain limit) extract a function called cusp anomaly function from the \names{Wilson} loop. Now $AdS/CFT$ correspondence tells us, that a certain minimal surface of a string world sheet corresponds to that same Wilson loop. We therefore can extract information about the cusp anomaly function also from the string theory side. To make this remark more explicit, we first want to review some more details about \names{Wilson} loops.\\
+An important class of observables in gauge theories are non-local gauge invariant operators called \names{Wilson} loops. These operators are evaluated along a given closed path $\mathcal{C}$. For specific cusped paths one can (in a certain limit) extract a function, called cusp anomaly, from the \names{Wilson} loop. According to $AdS/CFT$ the minimal surface of a string ending on a certain path gives (in a certain regime) the value of the corresponding \names{Wilson} loop. We therefore can extract information about the cusp anomaly function also from the string theory side. To make this remark more explicit, we first want to review some more details about \names{Wilson} loops.\\
 For pure \names{Yang-Mills} theory with the gauge group $SU(N)$ the \names{Wilson} loop $W[\mathcal{C}]$ is a path-ordered exponential of a gauge field $A_{\mu}$ along a closed contour $\mathcal{C}$, which in the fundamental representation is defined by
 %
 %
@@ -76,8 +83,8 @@ A\left(x\left(s_{2}\right)\right) A\left(x\left(s_{1}\right)\right) \quad {\rm f
 %
 %
 %
-\subsection[Wilson loops in $\mathcal{N} =4$ Super Yang-Mills theory]{Wilson loops in $\mathcalbf{N} \mathbf{=4}$ Super Yang-Mills theory}
-Since the action of four-dimensional $\mathcal{N}=4$ SYM can be derived via dimensional reduction from $\mathcal{N}=1$ SYM in ten dimensions \cite{BRINK197777} one can construct a \names{Wilson} loop in the ten dimensional gauge theory. By using the field theory content of the four-dimensional theory $A_{\mu}$ and $x^{\mu}$ and six additional scalar fields of $SU(N)$ the so called \names{Maldacena-Wilson} loop, which was proposed in \cite{maldacena2}, can be written as
+\subsection{Wilson loops in $AdS/CFT$}
+Since the action of four-dimensional $\mathcal{N}=4$ SYM can be derived via dimensional reduction from $\mathcal{N}=1$ SYM in ten dimensions \cite{BRINK197777} one can construct a \names{Wilson} loop there, starting from its definition in the ten dimensional gauge theory. By using the field theory content of the four-dimensional theory $A_{\mu}$ and $x^{\mu}$ and six additional scalar fields of $SU(N)$ the so called \names{Maldacena-Wilson} loop proposed in \cite{maldacena2} can be written as
 %
 %
 \begin{equation}
@@ -86,7 +93,7 @@ Since the action of four-dimensional $\mathcal{N}=4$ SYM can be derived via dime
 \end{equation}
 %
 %
-Here $I=1,\ldots,6$ and $n^{I}$ might be considered coordinates in $S^{5}$, which satisfy $\delta_{IK}n^{I}n^{K}=1$. The curve described by $n^{I}(s)$ in the five-sphere must not necessarily be closed. \\
+Here $I=1,\ldots,6$ and $n^{I}$ might be considered coordinates in $S^{5}$, satisfying $\delta_{IK}n^{I}n^{K}=1$. The curve described by $n^{I}(s)$ in the five-sphere must not necessarily be closed. \\
 %
 %
 In the context of $AdS/CFT$ the \names{Maldacena-Wilson} loop also has a corresponding string theory description, which was first proposed in \cite{maldacena2}. Thus the expectation value of the \names{Maldacena-Wilson} loop operator is given by a string partition function
@@ -98,7 +105,7 @@ In the context of $AdS/CFT$ the \names{Maldacena-Wilson} loop also has a corresp
 \end{equation}
 %
 %
-which is a path integral obeying sufficient boundary conditions
+which is a path integral obeying suitable boundary conditions
 %
 %
 \begin{equation}
@@ -107,7 +114,7 @@ Z_{\rm string}[\mathcal{C}] = \int\limits_{\del X^{\mu}=\mathcal{C}} \mathcal{D}
 \end{equation}
 %
 %
-Here $S_{\rm string}$ is the action of the fundamental string in $AdS_{5}\times S^{5}$, $h_{\alpha\beta}$ a 2d metric and ${X^{M}=(X^{\mu},X^{3+I})}$ ${(M=0,\ldots,9;\, \mu=0,\ldots,3; \; I=1,\ldots,6)}$ are the embedding functions in the string target space, depending on the worldsheet coordinates $(\tau,\sigma)\in \Sigma$ and $\Sigma$ representing a map of the string worldsheet. By defining $\widetilde{X}^{I}=X^{3+I}$ and therefore $X^{M}=(X^{\mu},\widetilde{X}^{I})$ the partition function (\ref{Z_string}) needs to meet the following boundary conditions
+Here $S_{\rm string}$ is the action of the fundamental string in $AdS_{5}\times S^{5}$, $h_{\alpha\beta}$ a 2d metric and ${X^{M}=(X^{\mu},X^{3+I})}$ ${(M=0,\ldots,9;\, \mu=0,\ldots,3; \; I=1,\ldots,6)}$ are the embedding functions in the string target space, depending on the worldsheet coordinates $(\tau,\sigma)\in \Sigma$ where $\Sigma$ representing a map of the string worldsheet. By defining $\widetilde{X}^{I}=X^{3+I}$ and therefore $X^{M}=(X^{\mu},\widetilde{X}^{I})$ the partition function (\ref{Z_string}) needs to meet the following boundary conditions
 %
 %
 \begin{equation}
@@ -115,7 +122,7 @@ Here $S_{\rm string}$ is the action of the fundamental string in $AdS_{5}\times 
 \end{equation}
 %
 %
-where $x^{\mu}(s)$ parametrises the curve $\mathcal{C}$. One can show that the conformal boundary of $AdS_{5}\times S^{5}$ is 4d \names{Minkowski} space\footnote{At the conformal boundary the five-sphere appears to have zero extent. See (\ref{AdS5}) for details on the conformal mapping of $AdS_{5}$ to flat 4d \names{Minkowski} space.}. Therefore one can say that the embedding of the string worldsheet is bounded by the curve $\mathcal{C}$, see \autoref{Wilson_worldsheet}. In the large \names{'t Hooft} coupling limit (\ref{Z_string}) can be evaluated with a saddle point approximation and results in the exponential of a minimal surface $\mathcal{A}_{\rm min}(\mathcal{C})$ bounded by $\mathcal{C}$
+where $x^{\mu}(s)$ parametrises the curve $\mathcal{C}$. One can show that the conformal boundary of $AdS_{5}\times S^{5}$ is 4d \names{Minkowski} space\footnote{At the conformal boundary the five-sphere appears to have zero extent. See (\ref{AdS5}) for details on the conformal mapping of $AdS_{5}$ to flat 4d \names{Minkowski} space.}. Therefore one can say that the embedding of the string worldsheet is bounded by the curve $\mathcal{C}$, see \autoref{Wilson_worldsheet}. In the large \names{'t Hooft} coupling limit $\lambda \gg 1$, the path integral (\ref{Z_string}) can be evaluated with a saddle point approximation and results in the exponential of a minimal surface $\mathcal{A}_{\rm min}(\mathcal{C})$ bounded by $\mathcal{C}$
 %
 %
 \begin{equation}
@@ -149,26 +156,26 @@ where $x^{\mu}(s)$ parametrises the curve $\mathcal{C}$. One can show that the c
 %
 %
 %
-\subsection{Cusp anomalous dimension}
+\subsection[The cusp anomalous dimension of $\mathcal{N}=4$ SYM]{The cusp anomalous dimension of $\mathcalbf{N} \mathbf{=4}$ SYM}
 %
 %
-To approach $AdS/CFT$ in a numerical study it is important to observe a quantity that is widely known in different ranges of the \names{'t Hooft} coupling $\lambda$, so it may act as a guideline in discretizing the theory. One such quantity is the cusp anomaly function or scaling function. It was first studied as the anomalous dimension of twist two operators in $\mathcal{N}=4$ SYM
-%
-%
-\begin{equation}
-\mathcal{O}_{\lbrace \mu_{1}\cdots\mu_{S}\rbrace} = {\rm Tr}\, \phi^{I} \nabla_{\lbrace\mu_{1}} \cdots \nabla_{\mu_{S}\rbrace} \phi^{I}\,,
-\end{equation}
-%
-%
-where $\phi^{I}$ are again the scalar fields of SYM. The conformal dimension of such operators is $\Delta_{S} = S +2 + \gamma_{S}(\lambda)$ with $\gamma_{S}$ being the anomalous dimension and $\gamma_{S} \sim \ln S$ for $S \to \infty$. In \cite{Gubser:2002tv} it was proposed that this conformal dimension corresponds to the energy of macroscopic rotating strings in the picture of supergravity for large $S$
+To approach a numerical study of $AdS/CFT$ it is important to consider an observable quantity that is widely known in different ranges of the \names{'t Hooft} coupling $\lambda$, so its study may act as a guideline in discretizing the theory. One such quantity is the cusp anomaly function (or scaling function). It was first studied as the anomalous dimension of twist two operators in $\mathcal{N}\geq4$ SYM
 %
 %
 \begin{equation}
-E \simeq S + \frac{\sqrt{g_{\rm s}N}}{\pi} \ln S , \quad  (S \to \infty)\,.
+\mathcal{O}_{\lbrace \mu_{1}\cdots\mu_{S}\rbrace} = {\rm Tr}\, \phi \nabla_{\lbrace\mu_{1}} \cdots \nabla_{\mu_{S}\rbrace} \phi\,,
 \end{equation}
 %
 %
-In \cite{Korchemsky:1992xv}, it has been observed that $\gamma_{S}(\lambda)$ for large $S$ is related to the anomalous dimension of cusped \names{Maldacena-Wilson} loops. The expectation value of such a \names{Wilson} loop diverges if parts of it are light-like, thus it has to be regulated by introducing IR and UV cutoffs $L$ and $\epsilon$
+where $\phi$ is a scalar field of SYM and $\nabla_{\mu}$ is the covariant derivative with the indices $\lbrace \mu_{1} \cdots \mu_{S}\rbrace$ being symmetrized. The conformal dimension of such operators is $\Delta_{S} = S +2 + \gamma_{S}(\lambda)$ with $\gamma_{S}$ being the anomalous dimension and $\gamma_{S} \sim \ln S$ for $S \to \infty$. In \cite{Gubser:2002tv} it was proposed that this conformal dimension corresponds to the energy of strings rotating in $AdS$, that for large $S$ (and in the large $\lambda$ regime) reads.
+%
+%
+\begin{equation}
+E \simeq S + \frac{\sqrt{\lambda}}{\pi} \ln S , \quad  (S \to \infty)\,.
+\end{equation}
+%
+%
+In \cite{Kruczenski:2002fb}, using previous knowlede in the context of QCD \cite{Korchemsky:1992xv}, it has been observed that $\gamma_{S}(\lambda)$ for large $S$ is related to the anomalous dimension of cusped \names{Maldacena-Wilson} loops. The expectation value of such a \names{Wilson} loop diverges if parts of it are light-like, thus it has to be regulated by introducing IR and UV cutoffs $L$ and $\epsilon$
 %
 %
 \begin{equation}
@@ -177,22 +184,22 @@ In \cite{Korchemsky:1992xv}, it has been observed that $\gamma_{S}(\lambda)$ for
 \end{equation}
 %
 %
-where $\gamma$ is a boost angle in \names{Minkowski} signature and $\Gamma_{\rm cusp}(\gamma,\lambda)$ is the angle and coupling dependent cusp anomaly function. In the limit of large $\lambda$ the function $f(\lambda)$ is obtained as the coefficient of the logarithmic divergence  which is also known as scaling function from integrability. It is related to the anomalous dimension of twist two operators via \cite{Kruczenski:2002fb}
+where $\gamma$ is a boost angle in \names{Minkowski} signature and $\Gamma_{\rm cusp}(\gamma,\lambda)$ is the angle and coupling dependent cusp anomaly function. In the limit of large $\lambda$ the function $f(\lambda)$ is obtained as the coefficient of the logarithmic divergence  which in this context is also known as scaling function. It is related to the anomalous dimension of twist two operators via \cite{Kruczenski:2002fb}
 %
 %
 \begin{equation}
-\gamma_{S}(\lambda) \simeq -2 f(\lambda) \ln S,\quad  (S\to \infty).
+\gamma_{S}(\lambda) \simeq 2 f(\lambda) \ln S,\quad  (S\to \infty).
 \end{equation}
 %
 %
-The correspondence (\ref{W_Z}) now tells us that it is possible to access the scaling function also via path integral calculations from the string theory side by considering fluctuations around a certain vacuum that acts as a minimal surface conformally bounded by a cusped contour $\mathcal{C}_{\rm cusp}$.  The remarks in \cite{Kruczenski:2002fb,Kruczenski:2007cy} suggest that the factor $\vert \gamma\vert \ln (L/\epsilon)$ corresponds to the regulated area of a cusped string worldsheet and is thus related to the world volume of the string $V_{2}=\int \dd\tau \dd \sigma$, leading to 
+The correspondence (\ref{W_Z}) now tells us that it is possible to access the scaling function also via path integral calculations from the string theory side by considering fluctuations around a certain vacuum that acts as a minimal surface conformally bounded by a cusped contour $\mathcal{C}_{\rm cusp}$.  The remarks in \cite{Kruczenski:2002fb,Kruczenski:2007cy} suggest that the factor $\vert \gamma\vert \ln (L/\epsilon)$ in (\ref{W_f}) corresponds to the regulated area of a cusped string worldsheet and is thus related to the world volume of the string $V_{2}=\int \dd\tau \dd \sigma$, leading to 
 %
 %
 \begin{equation}
-\langle \mathcal{W}[\mathcal{C_{\rm cusp}}] \rangle = e^{-\frac{f(\lambda)}{2}\frac{V_{2}}{4}}.
+\langle \mathcal{W}[\mathcal{C_{\rm cusp}}] \rangle =Z_{\rm string}[\mathcal{C_{\rm cusp}}] e^{-\frac{f(\lambda)}{2}\frac{V_{2}}{4}}.
 \label{eq: W_exp_f}
 \end{equation}
-Semiclassical calculations with such vacua allowed to compute the scaling function up to two loops at strong coupling (see e.g. \cite{Giombi:2009gd})
+Semiclassical quantisation around such vacua allowed to compute the scaling function up to two loops in sigma-model perturbation theory (see e.g. \cite{Giombi:2009gd})
 %
 %
 \begin{equation}
@@ -201,7 +208,7 @@ f(g) = 4g - \frac{3\ln 2}{\pi} - \frac{K}{4\pi^{2}g} + \mathcal{O}(g^{-2}), \qua
 \end{equation}
 %
 %
-where $K\approx 0.916$ is the \names{Catalan} constant. As mentioned the scaling function is also known from integrability where it can be derived from the $BES$\footnote{$BES$ stands for Beisert-Eden-Staudacher equation, which is an integral equation derived via a \names{Bethe} Ansatz in quantum integrability \cite{Beisert:2006ez}.} equation for any finite values of $g$. So our main aim is to reproduce the scaling function in numerical simulations. 
+where $K\approx 0.916$ is the \names{Catalan} constant. As mentioned, the scaling function is also known relying on the assumption of the integrability of $\mathcal{N}\geq 4$ SYM (see e.g. \cite{Beisert:2010jr}) where it can be derived from the $BES$\footnote{$BES$ stands for Beisert-Eden-Staudacher equation, which is an integral equation derived via a \names{Bethe} Ansatz in quantum integrability \cite{Beisert:2006ez}.} equation for any finite values of $g$. Our main aim is to reproduce the scaling function in numerical simulations for the string model with path integral defined by (a suitable version of) (\ref{Z_string}). 
 %
 %
 %
