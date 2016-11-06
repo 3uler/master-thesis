@@ -36,7 +36,7 @@ where $\gamma$ is the \names{Gramian} determinant of the embedding
 \end{align}
 %
 %
-where the induced metric $\gamma_{\alpha\beta}$ is the pull-back of the flat \names{Minkowski} metric $\eta_{MN}$. We also defined $\dd^{2}\sigma = \dd\sigma^{0}\dd\sigma^{1}$ and the parameter in front of the integral is the inverse string tension with $\alpha'$ being related to the string length $l_{\rm s}$ by $\alpha'=l_{\rm s}^{2}$. Due to the square root this so called \names{Nambu-Goto} action is not very suitable for a path integral quantization. To get rid of the square root one can introduce an auxiliary metric $h_{\alpha\beta}(\sigma)$ with $h_{\alpha\beta}h^{\beta\rho}=\delta_{\alpha}^{\rho}$ and define the \names{Polyakov} action by
+where the induced metric $\gamma_{\alpha\beta}$ is the pull-back of the flat \names{Minkowski} metric $\eta_{MN}$. We also defined $\dd^{2}\sigma = \dd\sigma^{0}\dd\sigma^{1}$ and the parameter in front of the integral is the string tension, making the action dimensionless, with the Regge slope $\alpha'$ being related to the string length $l_{\rm s}$ by $\alpha'=l_{\rm s}^{2}$. Due to the square root this so called \names{Nambu-Goto} action is not very suitable for a path integral quantization. To get rid of the square root one can introduce an auxiliary metric $h_{\alpha\beta}(\sigma)$ with $h_{\alpha\beta}h^{\beta\rho}=\delta_{\alpha}^{\rho}$ and define the \names{Polyakov} action by
 %
 %
 \begin{equation}
@@ -91,3 +91,130 @@ This is a gauge symmetry on the worldsheet.
 \widetilde{X}^{M}(\sigma) &= X^{M}(\sigma), &  \tilde{h}_{\alpha\beta}(\sigma)&=\Omega^{2}h_{\alpha\beta}(\sigma).
 \end{align}
 \end{itemize}
+%
+%
+We also have to employ suitable boundary conditions. There are in fact two types of strings with different boundary conditions, open strings and closed strings:
+%
+%
+\begin{itemize}
+\item \textit{Open strings}\\
+For the open string we can set $\sigma_{0}=l$ ans thus $\sigma\in (0,l)$. These type of strings satisfy either \names{Neumann}  boundary conditions
+%
+\begin{equation}
+\del_{\sigma}X^{M}(\tau,\sigma)\big\vert_{\sigma=0,l} = 0
+\end{equation}
+%
+or \names{Dirichlet} boundary conditions
+%
+\begin{equation}
+\delta X^{M}(\tau,\sigma)\big\vert_{\sigma=0,l}=0.
+\end{equation}
+%
+%
+\item \textit{Closed strings}\\
+Here we usually set $\sigma_{0}=2\pi$ leading to $\sigma\in [0,2\pi)$. This type of string satisfies periodic boundary conditions
+%
+\begin{gather}
+X^{M}(\tau,0)=X^{M}(\tau,2\pi), \qquad \del_{\sigma}X^{M}(\tau	,\sigma)\big\vert_{\sigma=0} = \del_{\sigma}X^{M}(\tau	,\sigma)\big\vert_{\sigma=2\pi}, \notag\\ h_{\alpha\beta}(\tau,0)=h_{\alpha\beta}(\tau,2\pi).
+\end{gather}
+\end{itemize}
+%
+%
+One can then exploit the symmetries of the \names{Polyakov} action to give the string equations of motion a rather simple form. For instance, one can use the local symmetries to choose a convenient gauge in which the worldsheet metric is conformally flat
+%
+%
+\begin{equation}
+h_{\alpha\beta} = \Omega^{2}(\sigma) \eta_{\alpha\beta}, \quad \text{with} \quad \eta_{\alpha\beta} = \text{diag}(-,+).
+\end{equation}
+%
+%
+In this conformal gauge the \names{Polyakov} action takes the form 
+%
+%
+\begin{equation}
+S_{\rm P} = \frac{1}{4\pi\alpha'} \int \dd^{2}\sigma\, \left(\del_{\tau}X^{M}\del_{\tau}X^{N}-\del_{\sigma}X^{M}\del_{\sigma}X^{N}\right)\eta_{MN}
+\end{equation}
+%
+%
+which is leading to the simple equations of motion
+%
+%
+\begin{equation}
+\left(\del_{\tau}^{2}-\del_{\sigma}^{2}\right)X^{M}=0.
+\end{equation}
+%
+%
+Their solutions are well known and can be derived by decomposition into \names{Fourier} modes.
+%
+%
+%
+%
+%
+%  - - - - - - - - -   superstring theory  - - - - - - - - - - - 
+%
+%
+%
+%
+%
+\subsection{Superstring theory}
+The theory considered so far describes only bosons and also gives rise to unphysical tachyon states. To apply string theory to naturally observed object it also lacks in the appearance of fermionic degrees of freedom. Those can be included by the introduction of supersymmetry. The supersymmetrized \names{Polyakov} action also contains the superpartners $\mathit{\Psi}^{M}$ next to the coordinate fields $X^{M}$. In conformal gauge this action reads
+%
+%
+\begin{equation}
+S_{\rm P} = -\frac{1}{4\pi\alpha'} \int \dd^{2}\sigma \eta^{\alpha\beta}\left( \del_{\alpha}X^{M}\del_{\beta}X^{N} + i \bar{\mathit{\Psi}} \gamma_{\alpha} \del_{\beta} \mathit{\Psi} \right) \eta_{MN}.
+\label{eq: S_P_ferm}
+\end{equation}
+%
+%
+Here $\gamma_{\alpha}$ are 2d \names{Dirac} matrices and $\mathit{\Psi}^{M}$ can be chosen to be \names{Majorana-Weyl} spinors $\mathit{\Psi}^{M}=(\psi_{-}^{M},\psi_{+}^{M})^{\rm T}$. From the action (\ref{eq: S_P_ferm}) one can then derive the \names{Dirac} equation which reduces to two sets of \names{Weyl} equations that are given in light-cone coordinates $\sigma_{\pm}=\tau \pm \sigma$ by
+%
+%
+\begin{equation}
+\del_{+}\psi_{-}^{M} = \del_{-}\psi_{+}^{M} = 0.
+\end{equation}
+%
+%
+By partial integration of the fermionic part of the action one can find a surface term which imposes boundary conditions. There are again two types:
+%
+%
+\begin{itemize}
+\item\textit{Open strings}
+\begin{equation}
+\psi_{-}^{M}(\tau,0)=\psi_{+}^{M}(\tau,0),\quad \psi_{-}^{M}(\tau,l)=e^{2\pi i \nu} \psi_{+}^{M}(\tau,l),\quad \nu=0,1/2.
+\end{equation}
+%
+The corresponding sectors for the values $\nu=0$ and $\nu=1/2$ are called \names{Ramond} (R) and \names{Neveu-Schwarz} (NS) sectors, respectively.
+%
+%
+\item\textit{Closed strings}\\
+For closed strings there are four sectors of the corresponding combinations of periodic (R) or anti-periodic boundary conditions given by
+%
+\begin{equation}
+\begin{alignedat}{2}
+\psi_{-}^{M}(\tau,\sigma+2\pi) &= e^{2\pi i \nu}\psi_{-}^{M}(\tau,\sigma) \\
+\psi_{+}^{M}(\tau,\sigma+2\pi) &= e^{2\pi i \nu'}\psi_{+}^{M}(\tau,\sigma) .
+\end{alignedat}
+\end{equation}
+\end{itemize}
+%
+%
+With help of a so called GSO projection it is possible to project out all tachyon states and leave an equal number of bosons and fermions at each mass level. This helps to give rise to supersymmetry also in target space.
+%
+%
+%
+%
+% - - - - - - - - -   strings on curved backgrounds  - - - - - - - - -- - - - - 
+%
+%
+%
+%
+\subsection{Strings on curved backgrounds}
+For now we have only considered strings propagating in flat \names{Minkowski} target space. To impose a more general application to string theory, one also has to take other backgrounds into account. Therefore we promote the target space metric $\eta_{MN}\rightarrow g_{MN}(X)$, leading to the bosonic \names{Polyakov} action
+%
+%
+\begin{equation}
+S_{\rm P} = -\frac{1}{4\pi\alpha'} = \int\limits_{\Sigma} \dd^{2}\sigma\, \sqrt{-h}h^{\alpha\beta}g_{MN}(X) \del_{\alpha}X^{M}\del_{\beta}X^{N}.
+\end{equation}
+%
+%
+This is called the \textit{bosonic non-linear string sigma model}. For the inclusion of supersymmetry this process is not so straight forward any more. Next to the flat ten-dimensional \names{Minkowski} space, type IIB supergravity admits $\AdSS$ as another maximally supersymmetric solution (see e.g. \cite{Arutyunov:2009ga}) which we are explicitly interested in. This solution is supported by a self-dual \names{Ramond-Ramond} five-form flux. The difficulties emerging here are due to the non-locality of the RR flux and that it is unclear how to couple it to the string worldsheet. Remarkably this problem has been solved by Metsaev and Tseytlin in \cite{Metsaev:1998it} with a \names{Green-Schwarz} type of approach, but unfortunately we will not be able to present the full procedure here due to its complexity and requirement of sophisticated analytical tools. We therefore refer the reader to the original publication. What we will have to deal with in the following is a special solution to to a gauge fixed version of this $\AdSS$ string developed in \cite{Metsaev:1998it}. But before we come to that, we want to give a brief introduction on how to discretize string theory in order to conduct a numerical study on $AdS/CFT$ from a stringy point of view.
