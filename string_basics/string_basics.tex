@@ -1,0 +1,93 @@
+\section{Basics on superstring theory}
+In this chapter we want to give a brief introduction to the basic concepts of string theory, starting from its simplest possible form, the bosonic string and further develop the subject to a supersymmetric version including fermions. Since we want to apply the concepts of $AdS/CFT$, we are mostly interested in strings propagating in $AdS$ backgrounds. The following assertions are mainly based in the remarks in \cite{Polchinski:1998rq,Polchinski:1998rr}.
+%
+%
+%
+% - - - - - - - -  bosonic string  - - - - - - - -
+%
+%
+%
+%
+\subsection{The bosonic string}
+The basic idea of string theory is that the fundamental objects described by the theory are extended from point-like particles to one-dimensional strings propagating through spacetime and sweeping out a $(1+1)$-dimensional surface $\widetilde{\Sigma}$ called the string worldsheet. The string can be parameterized by two coordinates, the proper time $\tau$ and the spatial extent $\sigma$ of the string which we will also denote by $(\sigma^{0},\sigma^{1})=(\tau,\sigma)$. We can then apply a homeomorphism $\big(\Sigma,\phi)$ that maps the 2d sheet $\Sigma$ into the target space which is a $D$-dimensional \names{Minkowski} space\footnote{We will utilize the metric $\eta_{MN}=\text{diag}(-,+,+,\ldots,+) with M,N=0,1,2,\ldots,D-1.$} $\mathbb{R}^{D-1,1}$ with embedding coordinates $X^{\mu}(\tau,\sigma)$ and therefore
+%
+%
+\begin{equation}
+\begin{alignedat}{3}
+\phi :\quad  \Sigma = (\tau_{\rm in},\tau_{\rm fin}) \times (0,\sigma) \quad &\longrightarrow \quad \widetilde{\Sigma} \\
+(\tau,\sigma) \qquad\quad &\longrightarrow \quad X^{\mu}(\tau,\sigma). 
+\end{alignedat}
+\end{equation}
+%
+%
+The simplest possible action is proportional to the area of the surface of $\widetilde{\Sigma}$, given by
+%
+%
+\begin{equation}
+S_{\rm NG} = -\frac{1}{2\pi\alpha'} \int\limits_{\Sigma} \dd^{2}\sigma \, \sqrt{-\gamma},
+\end{equation}
+%
+%
+where $\gamma$ is the \names{Gramian} determinant of the embedding
+%
+%
+\begin{align}
+\gamma &= \det \big(\gamma_{\alpha\beta}\big), & \gamma_{\alpha\beta} &= \del_{\alpha}X^{M}\del_{\beta}X^{N}\eta_{MN},
+\end{align}
+%
+%
+where the induced metric $\gamma_{\alpha\beta}$ is the pull-back of the flat \names{Minkowski} metric $\eta_{MN}$. We also defined $\dd^{2}\sigma = \dd\sigma^{0}\dd\sigma^{1}$ and the parameter in front of the integral is the inverse string tension with $\alpha'$ being related to the string length $l_{\rm s}$ by $\alpha'=l_{\rm s}^{2}$. Due to the square root this so called \names{Nambu-Goto} action is not very suitable for a path integral quantization. To get rid of the square root one can introduce an auxiliary metric $h_{\alpha\beta}(\sigma)$ with $h_{\alpha\beta}h^{\beta\rho}=\delta_{\alpha}^{\rho}$ and define the \names{Polyakov} action by
+%
+%
+\begin{equation}
+S_{\rm P} = -\frac{1}{4\pi\alpha'} \int\limits_{\Sigma}\dd^{2}\sigma\, \sqrt{-h}h^{\alpha\beta}\gamma_{\alpha\beta}.
+\end{equation}
+%
+%
+This action is equivalent to the \names{Nambu-Goto} action on the classical level which can be proved by deriving the equations of motion for $h_{\alpha\beta}$, $\delta S/ \delta h^{\alpha\beta} = 0$. We can use this to define the corresponding energy-momentum tensor
+%
+%
+\begin{equation}
+T_{\alpha\beta} \equiv -4\pi\alpha' \frac{1}{\sqrt{-h}} \frac{\delta S}{\delta h^{\alpha\beta}} = \gamma_{\alpha\beta} - \frac{1}{2} h_{\alpha\beta} h^{\rho\sigma}\gamma_{\rho\sigma} = 0.
+\end{equation}
+%
+%
+From the constraint that $T_{\alpha\beta}$ has to vanish we can derive the classical equivalence of the actions $S_{\rm NG}$ and $S_{\rm P}$ with
+%
+%
+\begin{equation}
+\sqrt{-\gamma} = \frac{1}{2} \sqrt{-h} h^{\rho\sigma} \gamma_{\rho\sigma}.
+\end{equation}
+%
+%
+We will thus use the the \names{Polyakov} action in the following, since it is easier to handle. But before we continue, we want to analyse the symmetries preserved by the \names{Polyakov} action.
+%
+%
+\begin{itemize}
+\item\textit{Global D-dimensional Poincarè invariance} 
+%
+\begin{equation}
+X^{M} \rightarrow \widetilde{X}^{M} = \Lambda_{N}^{M} X^{N} + a^{M}, \qquad \delta	h_{\alpha\beta} = 0,
+\end{equation}
+%
+with $\Lambda_{N}^{M}$ and $a^{M}$ being $D$-dimensional \names{Lorentz} transformations and spacetime translations.
+%
+%
+\item\textit{Reparametrisation invariance of the worldsheet (or diffeomorphism invariance)}\\
+We can choose a reparametrisation of the worldsheet coordinates $\sigma^{\alpha}\rightarrow \tilde{\sigma}^{\alpha}(\sigma)$, where the fields $X^{M}$ and the 2d metric transform according
+%
+\begin{equation}
+\begin{alignedat}{3}
+X^{M}(\sigma) &\rightarrow \widetilde{X}^{M}(\tilde{\sigma}) = X^{M}(\sigma), \\
+h_{\alpha\beta}(\sigma) &\rightarrow \tilde{h}_{\alpha\beta}(\tilde{\sigma}) = \frac{\del \sigma^{\alpha}}{\del \tilde{\sigma}^{\gamma}} \frac{\del \sigma^{\beta}}{\del \tilde{\sigma}^{\delta}}h_{\gamma\delta}(\sigma).
+\end{alignedat}
+\end{equation}
+%
+This is a gauge symmetry on the worldsheet.
+%
+%
+\item\textit{Weyl invariance} 
+\begin{align}
+\widetilde{X}^{M}(\sigma) &= X^{M}(\sigma), &  \tilde{h}_{\alpha\beta}(\sigma)&=\Omega^{2}h_{\alpha\beta}(\sigma).
+\end{align}
+\end{itemize}
