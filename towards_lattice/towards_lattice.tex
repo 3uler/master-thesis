@@ -1,6 +1,6 @@
-\section{Towards the lattice simulation}
+\chapter{Towards the lattice simulation}
 \label{sec: towards_lat}
-With the current status of the action (\ref{eq: cusp_action}) we could almost start to discretize the operators and fields, at least for the bosonic part this would not be a problem. For the fermions however this is not so straight forward. In order to include the fermionic contribution into the weight factor of the path integral like explained in section \ref{sec: hmc_alg} one needs to integrate out the \names{Grassmann} variables to result into a \names{Pfaffian} or determinant of a fermionic operator. As presented in Appendix \ref{sec: grassmann_analysis} this is only possible if the fermions appearing are of quadratic order. But in the fluctuation action (\ref{eq: cusp_action}) also quartic contributions of fermions appear, which have to be linearized with help of a \names{Hubbard-Statonovich} transformation.\footnote{See Appendix \ref{sec: grassmann_analysis} for details}
+With the current status of the action (\ref{eq: cusp_action}) we could almost start to discretize the operators and fields, at least for the bosonic part this would not be a problem. For the fermions however this is not so straight forward. In order to include the fermionic contribution into the weight factor of the path integral like explained in section \ref{sec: hmc_alg} one needs to integrate out the \names{Grassmann} variables to result into a \names{Pfaffian} or determinant of a fermionic operator. As presented in Appendix \ref{sec: grassmann_analysis} this is only possible if the fermions appearing are of quadratic order. But in the fluctuation action (\ref{eq: cusp_action}) also quartic contributions of fermions emerge, which have to be linearized first with help of a \names{Hubbard-Stratonovich} transformation.\footnote{See Appendix \ref{sec: grassmann_analysis} for details}
 %
 %
 %
@@ -8,8 +8,8 @@ With the current status of the action (\ref{eq: cusp_action}) we could almost st
 %
 %
 %
-\subsection{Linearization of fermionic contributions}
-\subsubsection{Naive approach and sign problem}
+\section{Linearization of fermionic contributions}
+\subsection{Naive approach and sign problem}
 The only quartic interactions are coming from the $\eta$ fields and we can write this part of the action as
 %
 %
@@ -20,7 +20,7 @@ S^{\rm F}_{4} [\eta_{i},\eta^{i}] = g \int \dd t \dd s \, \left[-\frac{1}{z^{2}}
 \end{equation}
 %
 %
-In the path integral representation the euclidean action contributes within an exponential $e^{-S_{\rm E}}$. By performing a naive \names{Hubbard-Statonovich} transformation to this exponential we can reduce the four-fermion contributions to quadratic \names{Yukawa} terms whereas we have to introduce 7 bosonic real auxiliary fields $\phi$ and $\phi^{N}$
+In the path integral representation the \names{Euclidean} action contributes within an exponential $e^{-S_{\rm E}}$. By performing a naive \names{Hubbard-Statonovich} transformation on this exponential we can reduce the four-fermion contributions to quadratic \names{Yukawa} terms whereas we have to introduce 7 bosonic real auxiliary fields $\phi$ and $\phi^{N}$
 %
 %
 \begin{align}
@@ -41,16 +41,16 @@ Here we can notice that the second term appears to be complex, since the $SO(6)$
 \end{equation}
 %
 %
-where we have used (\ref{eq: SO6_id}). As discussed in section \ref{sec: sign_prob} this complex phase in the weight function is potentially leading to a non treatable sign problem. We therefore chose to make a field redefinition that circumvents the appearance of a complex phase during the HS transformation. 
+where we have used (\ref{eq: SO6_id}). As discussed in section \ref{sec: sign_prob} this complex phase in the weight function is potentially leading to a non treatable sign problem. We therefore chose to make a field redefinition that circumvents the appearance of a complex phase during the HS transformation.
 %
 %
 %
-% - - - - alternative field def - - - - - 
+% - - - - alternative field def - - - - -
 %
 %
 %
-\subsubsection{Alternative field redefinition}
-By using the identities for the $SO(6)$ matrices stated in Appendix \ref{sec: SO6} we can rewrite the second term in the \names{Laggrangian} of (\ref{eqq: S_4}) as
+\subsection{Alternative field redefinition}
+By using the identities for the $SO(6)$ matrices stated in Appendix \ref{sec: SO6} we can rewrite the second term in the \names{Lagrangian} of (\ref{eqq: S_4}) as
 %
 %
 \begin{equation}
@@ -82,7 +82,7 @@ with this new definitions it is simple to check that
 \end{align}
 %
 %
-With this we now define
+With this we then define
 %
 %
 \begin{equation}
@@ -98,7 +98,7 @@ and find
 \end{equation}
 %
 %
-We can now substitute the new fields into the \names{Lagrangian} and obtain
+We can thus substitute the new fields into the \names{Lagrangian} and obtain
 %
 %
 \begin{equation}
@@ -114,7 +114,7 @@ where we only need to select the right sign in the field definition to overcome 
 \end{equation}
 %
 %
-If we now perform a HS transformation there will be no complex phase. The HS transformation yields
+If we then perform a HS transformation there will be no complex phase. The HS transformation yields
 %
 %
 \begin{equation}
@@ -136,16 +136,16 @@ Here the collection of fields $\phi^{i}_{j}$ can be thought of as a complex herm
 %
 %
 \begin{equation}
- \mathcal{L}_4\to \frac{12}{z} \eta^2 \phi +\phi^2+\frac{2}{z}\eta_j \phi^j_i \eta^i +\frac{2}{z} (\rho^N)^{ik}n_N \eta_k\phi^j_i  (\rho^L)_{jl}n_L  \eta^l+\phi^i_j \phi^j_i\,. 
+ \mathcal{L}_4\to \frac{12}{z} \eta^2 \phi +\phi^2+\frac{2}{z}\eta_j \phi^j_i \eta^i +\frac{2}{z} (\rho^N)^{ik}n_N \eta_k\phi^j_i  (\rho^L)_{jl}n_L  \eta^l+\phi^i_j \phi^j_i\,,
 \end{equation}
 %
 %
-So now we can write the full \names{Lagrangian} as 
+and we can write the full \names{Lagrangian} as
 %
 %
 \begin{align}
-\mathcal{L}_{\rm cusp} &=  {\left\vert \partial_t {x} + {\frac{m}{2}}{x} \right\vert}^2 + \frac{1}{{ z}^4}{\left\vert \partial_s {x} -\frac{m}{2}{x} \right\vert}^2 + \left(\partial_t {z}^M + \frac{m}{2}{z}^M \right)^2 \\ &\quad+ \frac{1}{{ z}^4} \left(\partial_s {z}^M -\frac{m}{2}{z}^M\right)^2 
-+ \phi^2 + {\rm Tr} \left( \tilde{\phi}\, \tilde{\phi}^{\dagger} \right) + \mathit{\Psi}^T \mathcal{O}_{\rm F} \mathit{\Psi} \,. \notag
+\mathcal{L}_{\rm cusp} &=  {\left\vert \partial_t {x} + {\frac{m}{2}}{x} \right\vert}^2 + \frac{1}{{ z}^4}{\left\vert \partial_s {x} -\frac{m}{2}{x} \right\vert}^2 + \left(\partial_t {z}^M + \frac{m}{2}{z}^M \right)^2 \\ &\quad+ \frac{1}{{ z}^4} \left(\partial_s {z}^M -\frac{m}{2}{z}^M\right)^2
++ \phi^2 + {\rm tr} \left( \tilde{\phi}\, \tilde{\phi}^{\dagger} \right) + \mathit{\Psi}^T \mathcal{O}_{\rm F} \mathit{\Psi} \,. \notag
 \end{align}
 %
 %
@@ -182,33 +182,33 @@ The auxiliary matrix $\tilde{\phi}$ is constructed from 16 real auxiliary fields
 \begin{equation}
 \tilde{\phi} = \frac{1}{\sqrt{2}}
 \begin{pmatrix}
-\sqrt{2}\phi_{13} & \phi_{1}+i\phi_{2} & \phi_{3}+i\phi_{4} & \phi_{5}+i\phi_{6} \\ 
-\phi_{1}-i\phi_{2} & \sqrt{2}\phi_{14} & \phi_{7}+i\phi_{8} & \phi_{9}+i\phi_{10} \\ 
-\phi_{3}-i\phi_{4} & \phi_{7}-i\phi_{8} & \sqrt{2}\phi_{15} & \phi_{11}+i\phi_{12} \\ 
+\sqrt{2}\phi_{13} & \phi_{1}+i\phi_{2} & \phi_{3}+i\phi_{4} & \phi_{5}+i\phi_{6} \\
+\phi_{1}-i\phi_{2} & \sqrt{2}\phi_{14} & \phi_{7}+i\phi_{8} & \phi_{9}+i\phi_{10} \\
+\phi_{3}-i\phi_{4} & \phi_{7}-i\phi_{8} & \sqrt{2}\phi_{15} & \phi_{11}+i\phi_{12} \\
 \phi_{5}-i\phi_{6} & \phi_{9}-i\phi_{10} & \phi_{11}-i\phi_{12} & \sqrt{2}\phi_{16}
 \end{pmatrix} ,
 \end{equation}
 %
 %
-so that we have the simple expression for
+so that we have the simple expression
 %
 %
 \begin{equation}
-{\rm Tr}\left(\tilde{\phi}\, \tilde{\phi}^{\dagger}\right) = \sum\limits_{I=1}^{16} (\phi_{I})^{2} \equiv (\phi_{I})^{2}\,.
+{\rm tr}\left(\tilde{\phi}\, \tilde{\phi}^{\dagger}\right) = \sum\limits_{I=1}^{16} (\phi_{I})^{2} \equiv (\phi_{I})^{2}\,.
 \end{equation}
 %
 %
 %
 %
 %
-% - - - - - - - -  matrix properties  - - - - - - - - - 
+% - - - - - - - -  matrix properties  - - - - - - - - -
 %
 %
 %
 %
 %
 %
-\subsubsection{Matrix properties} \label{sec: matrix_prop}
+\subsection{Matrix properties} \label{sec: matrix_prop}
 The fermion matrix obeys some fundamental symmetries that shall be summarized in this section. Since $\mathcal{O}_{\rm F}$ is acting as a bilinear together with the anticommuting \names{Grassmann} fields, it is clear that the matrix representation of $\mathcal{O}_{\rm F}$ needs to be skew-symmetric
 %
 %
@@ -226,7 +226,7 @@ It further possesses a global $U(1)$ and $SO(6)$ symmetry. The $U(1)$ symmetry m
 \end{equation}
 %
 %
-Therefore only fermions with complementary charges are allowed to couple, in order to respect the $U(1)$ symmetry and the blocks that lead to other couplings need to be zero. The $SO(6)$ symmetry requires the $4\times 4$ block structure and that each block is built from the $SO(6)$ invariant structures: $\mathds{1}_{4},\,\rho^{M}u^{M},\,\rho_{M}^{\dagger}u^{M}$. The fermion matrix obeys also another constraint which is reminiscent of the $\gamma_{5}-$hermiticity in lattice QCD \cite{montvay_lattice}
+Therefore only fermions with complementary charges are allowed to couple in order to respect the $U(1)$ symmetry, and the blocks that lead to other couplings need to be zero. The $SO(6)$ symmetry requires the $4\times 4$ block structure and that each block is built from the $SO(6)$ invariant structures: $\mathds{1}_{4},\,\rho^{M}u^{M},\,\rho_{M}^{\dagger}u^{M}$. The fermion matrix obeys also another constraint which is reminiscent of the $\gamma_{5}-$hermiticity in lattice QCD \cite{montvay_lattice}
 %
 %
 \begin{equation}
@@ -240,9 +240,9 @@ where $\Gamma_{5}$ is the following unitary, antihermitian matrix
 %
 \begin{equation}
 \Gamma_{5} = \begin{pmatrix}
-0 & \mathds{1}_{4} & 0 & 0 \\ 
- -\mathds{1}_{4}& 0 & 0 & 0 \\ 
-0 & 0 & 0 & \mathds{1}_{4} \\ 
+0 & \mathds{1}_{4} & 0 & 0 \\
+ -\mathds{1}_{4}& 0 & 0 & 0 \\
+0 & 0 & 0 & \mathds{1}_{4} \\
 0 & 0 & -\mathds{1}_{4} & 0
 \end{pmatrix} ,\qquad
 \Gamma_{5}^{\dagger}\Gamma_{5}= \mathds{1}_{16}, \quad \Gamma_{5}^{\dagger} = -\Gamma_{5}.
@@ -254,16 +254,16 @@ A general skew-symmetric block matrix $M$ that is $\Gamma_{5}$-hermitian needs t
 %
 \begin{equation}
 M=\begin{pmatrix}
-d_{1} & a & b & c \\ 
--a^{\rm T} & -d_{1}^{\dagger} & -c^{*} & b^{*} \\ 
--b^{\rm T} & c^{\dagger} & d_{2} & f \\ 
+d_{1} & a & b & c \\
+-a^{\rm T} & -d_{1}^{\dagger} & -c^{*} & b^{*} \\
+-b^{\rm T} & c^{\dagger} & d_{2} & f \\
 -c^{\rm T} & -b^{\dagger} & -f^{\rm T} & -d_{2}^{\dagger}
 \end{pmatrix} ,\qquad d_{i}=-d_{i}^{\rm T},\quad a=a^{\dagger}, \quad f=f^{\dagger}.
 \label{eq: G5_herm_mat}
 \end{equation}
 %
 %
-We can use the two properties (\ref{eq: skew_sym}) and (\ref{eq: G5_sym}) to ensure the absence of a complex phase
+We can use the two properties (\ref{eq: skew_sym}) and (\ref{eq: G5_sym}) to ensure the absence of a complex phase in the determinant
 %
 %
 \begin{align}
@@ -312,7 +312,7 @@ and therefore
 \end{equation}
 %
 %
-where $N=\vert \mathit{\Lambda}\vert /4$. Since the eigenvalues should behave like continuous functions along a HMC trajectory it should not be possible for the \names{Pfaffian} to change its sign throughout a trajectory. So if one chooses a starting configuration with positive \names{Pfaffian} it should remain nonnegative during the whole simulation and the \names{Pfaffian} should be a valid probability distribution. Yet it is not quite clear what happens if there are also purely real or imaginary eigenvalues appearing. If they come in the same kind of quartets then there should not be a problem, otherwise the behaviour is not fully understood yet.
+where $N=\vert \mathit{\Lambda}\vert /4$. Since the eigenvalues should behave like continuous functions along a HMC trajectory it should not be possible for the \names{Pfaffian} to change its sign throughout a trajectory. So if one chooses a starting configuration with positive \names{Pfaffian} it should remain nonnegative during the whole simulation and the \names{Pfaffian} should be a valid probability distribution. Yet it is not quite clear what happens if there are also purely real or imaginary eigenvalues appearing. If they come in the same kind of quartets then there should not be a problem, otherwise the behaviour is not fully understood yet. We therefore need to keep track of of the \names{Pfaffian} during simulation to legitimate its status as valid probability density.
 %
 %
 %
@@ -324,7 +324,7 @@ where $N=\vert \mathit{\Lambda}\vert /4$. Since the eigenvalues should behave li
 %
 %
 %
-\subsubsection{Pseudofermionic weight function}
+\subsection{Pseudofermionic weight function}
 Now since we have linearised fermionic contributions to quadratic order, we are able to integrate over the \names{Grassmann} fields in the partition function
 %
 %
@@ -337,13 +337,13 @@ where we will split $S = S_{\rm B} + S_{\rm F}$ into its bosonic ($S_{\rm B}$) a
 %
 %
 \begin{align}
-S_{\rm B} &= g\,\int \dd t\dd s\; {\left\vert \partial_t {x} + {\frac{m}{2}}{x} \right\vert}^2 + \frac{1}{{ z}^4}{\left\vert \partial_s {x} -\frac{m}{2}{x} \right\vert}^2 + \left(\partial_t {z}^M + \frac{m}{2}{z}^M \right)^2 \notag \\ 
+S_{\rm B} &= g\,\int \dd t\dd s\; {\left\vert \partial_t {x} + {\frac{m}{2}}{x} \right\vert}^2 + \frac{1}{{ z}^4}{\left\vert \partial_s {x} -\frac{m}{2}{x} \right\vert}^2 + \left(\partial_t {z}^M + \frac{m}{2}{z}^M \right)^2 \notag \\
 &\qquad\qquad+ \frac{1}{{ z}^4} \left(\partial_s {z}^M -\frac{m}{2}{z}^M\right)^2 + \phi^2 + (\phi_{I})^{2}\,, \label{eq: bos_act} \\[0.5cm]
-S_{\rm F} &=  g\,\int \dd t\dd s\; \mathit{\Psi}^T \mathcal{O}_{\rm F} \mathit{\Psi}\,. \notag 
+S_{\rm F} &=  g\,\int \dd t\dd s\; \mathit{\Psi}^T \mathcal{O}_{\rm F} \mathit{\Psi}\,. \notag
 \end{align}
 %
 %
-As motivated in section \ref{sec: grassmann_analysis} the \names{Grassmann} integral over $\mathit{\Psi}$ will result in a \names{Pfaffian} ${\rm Pf}\,\mathcal{O}_{\rm F}$. To include the \names{Pfaffian} into the weight function we have to rewrite it in terms of pseudofermions $\xi$ as emphasized in section \ref{sec: hmc_alg}. To legitimately apply this procedure we need the \names{Pfaffian} to be real and non-negative. By our alternative approach to linearization we made sure to exclude any potential phase ambiguities. As we could see from the previous section the \names{Pfaffian} is definitely a real quantity. So the only problem that we might have to face is if the it is negative. As discussed before this is not quite clear yet. For now we will assume the \names{Pfaffian} to be positive since the eigenvalue spectrum suggests it and it can also be observed to be the case for all simulations at least for large values of $g$. For this reason, we proceed as in \cite{Roiban} and introduce pseudofermions $\xi$ via
+As motivated in section \ref{sec: grassmann_analysis} the \names{Grassmann} integral over $\mathit{\Psi}$ will result in a \names{Pfaffian} ${\rm Pf}\,\mathcal{O}_{\rm F}$. To include the \names{Pfaffian} into the weight function we have to rewrite it in terms of pseudofermions $\xi$ as emphasized in section \ref{sec: hmc_alg}. To legitimately apply this procedure we need the \names{Pfaffian} to be real and non-negative. By our alternative approach to linearization we made sure to exclude any potential phase ambiguities. As we could see from the previous section we are convinced that the \names{Pfaffian} can be treated as a positive real quantity which we will assume to be true in the following. For this reason, we proceed as in \cite{Roiban} and introduce pseudofermions $\xi$ via
 %
 %
 \begin{equation}
@@ -357,20 +357,20 @@ where
 \begin{equation}
 S_{\xi} = g\,\int \dd t\dd s \; \xi^{\dagger} \left(\mathcal{O}_{\rm F}\,\mathcal{O}_{\rm F}^{\dagger} \right)^{-\frac{1}{4}} \xi \,,
 \end{equation}
-and $\xi$ is a collection of 16 complex bosonic scalar fields. But before we can go any further we need to discretize the action with help of the methods introduced in \autoref{sec: disc_lat}. 
+and $\xi$ is a collection of 16 complex bosonic scalar fields. But before we can go any further we need to discretize the action with help of the methods introduced in \autoref{sec: disc_lat}.
 %
 %
 %
 %
 %
-% - - - - - - - - - - -  Discretization  - - - - - - - - - - - - 
+% - - - - - - - - - - -  Discretization  - - - - - - - - - - - -
 %
 %
 %
 %
 %
-\subsection{Discretizing the action}
-In the previous steps we have constructed a \names{Lagrangian} fitting to our problem and modified terms to be able to apply a RHMC algorithm. To proceed with this task we need a discretized version of the bosonic action and the fermionic operator $\mathcal{O}_{\rm F}$. 
+\section{Discretizing the action}
+In the previous steps we have constructed a \names{Lagrangian} fitting to our problem and modified terms to be able to apply a RHMC algorithm. To proceed with this task we need a discretized version of the bosonic action and the fermionic operator $\mathcal{O}_{\rm F}$.
 %
 %
 %
@@ -378,7 +378,7 @@ In the previous steps we have constructed a \names{Lagrangian} fitting to our pr
 %
 %
 %
-\subsubsection{Bosonic action}
+\subsection{Bosonic action}
 For the bosonic term this is quite easy. First we need to do a dimensional analysis of the fields in the action. In the simulation we can only deal with dimensionless fields. Since the action also needs to be dimensionless we can see that the fields $x,x^{*}$ and $z^{M}$ are dimensionless as preferred but the auxiliary fields are of dimension $[\phi]=1/[a]$. We therefore do a redefinition of the discretized fields
 %
 %
@@ -391,7 +391,7 @@ in order to have dimensionless quantities as well. We can now write the discreti
 %
 %
 \begin{align}
-\hat{S}_{\rm B} &= g\, \sum\limits_{n\in\mathit{\Lambda}} \Bigg[ \left\vert x(n+\hat{0}) + \left(\tfrac{M}{2}-1\right) x(n) \right\vert^{2} 
+\hat{S}_{\rm B} &= g\, \sum\limits_{n\in\mathit{\Lambda}} \Bigg[ \left\vert x(n+\hat{0}) + \left(\tfrac{M}{2}-1\right) x(n) \right\vert^{2}
 + \frac{1}{[z(n)]^{4}} \left\vert x(n+\hat{1}) - \left(\tfrac{M}{2}+1\right) x(n) \right\vert^{2} \notag\\
 %
 %
@@ -407,13 +407,13 @@ where we applied a simple forward derivative to the $x,x^{*}$ and $z^{M}$ fields
 %
 %
 %
-% - - - - - - - - - -  fermionic operator   - - - - - 
+% - - - - - - - - - -  fermionic operator   - - - - -
 %
 %
 %
 %
 %
-\subsubsection{Wilson term}
+\subsection{Wilson term}
 Before discretizing the fermionic operator we have to think about the doubling problem arising through naively discretized first derivatives, discussed in \autoref{sec: ferm_doubling}. The free fermionic operator (evaluated in the bosonic vacuum) represented in a momentum basis reads
 %
 %
@@ -421,11 +421,11 @@ Before discretizing the fermionic operator we have to think about the doubling p
 \everymath{\footnotesize}
 \begin{flalign}
 \!\!\!
-K_{\rm F} &= 
+K_{\rm F} &=
 \begin{pmatrix}
-0 & -p_{0}\mathds{1}_{4} & \left(p_{1}-i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 \\ 
--p_{0}\mathds{1}_{4} & 0 & 0 & \left(p_{1}-i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} \\ 
--\left(p_{1}+i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 & 0 & -p_{0}\mathds{1}_{4} \\ 
+0 & -p_{0}\mathds{1}_{4} & \left(p_{1}-i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 \\
+-p_{0}\mathds{1}_{4} & 0 & 0 & \left(p_{1}-i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} \\
+-\left(p_{1}+i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 & 0 & -p_{0}\mathds{1}_{4} \\
 0 & -\left(p_{1}+i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} & -p_{0}\mathds{1}_{4} & 0
 \end{pmatrix} ,
 \raisetag{-8pt}
@@ -470,11 +470,11 @@ We therefore chose to explicitly break the $U(1)$ symmetry and introduce a \name
 \everymath{\footnotesize}
 \begin{flalign}
 \!\!\!
-\hat{K}_{\rm F} &= 
+\hat{K}_{\rm F} &=
 \begin{pmatrix}
-W_{+} & -\mathring{p}_{0}\mathds{1}_{4} & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 \\ 
--\mathring{p}_{0}\mathds{1}_{4} & -W_{+}^{\dagger} & 0 & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} \\ 
--\left(\mathring{p}_{1}+i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 & W_{-} & -\mathring{p}_{0}\mathds{1}_{4} \\ 
+W_{+} & -\mathring{p}_{0}\mathds{1}_{4} & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 \\
+-\mathring{p}_{0}\mathds{1}_{4} & -W_{+}^{\dagger} & 0 & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} \\
+-\left(\mathring{p}_{1}+i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 & W_{-} & -\mathring{p}_{0}\mathds{1}_{4} \\
 0 & -\left(\mathring{p}_{1}+i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} & -\mathring{p}_{0}\mathds{1}_{4} & -W_{-}^{\dagger}
 \end{pmatrix} ,
 \raisetag{-8pt}
@@ -506,7 +506,7 @@ This leads to the analogue expression of (\ref{eq: det_K_F})
 \end{equation}
 %
 %
-If we substitute this into the denominator of (\ref{eq: 1_loop}) and apply the replacement $p_{i}^{2} \to \hat{p}_{i}^{2}$ in the numerator, the discretized equivalent of the 1-loop free energy can be defined by 
+If we substitute this into the denominator of (\ref{eq: 1_loop}) and apply the replacement $p_{i}^{2} \to \hat{p}_{i}^{2}$ in the numerator, the discretized equivalent of the 1-loop free energy can be defined by
 %
 %
 \begin{equation}
@@ -545,12 +545,12 @@ where we used that $V_{2}=a^{2}\vert \mathit{\Lambda}\vert = a^{2}LT$ and we are
 \begingroup
 \everymath{\footnotesize}
 \begin{flalign}
-\!\!\!\!\!\!\!\!\! 
-\widetilde{\mathcal{O}}_{\rm F} &= 
+\!\!\!\!\!\!\!\!\!
+\widetilde{\mathcal{O}}_{\rm F} &=
 \begin{pmatrix}
-W_{+} & -\mathring{p}_{0}\mathds{1}_{4} & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 \\ 
--\mathring{p}_{0}\mathds{1}_{4} & -W_{+}^{\dagger} & 0 & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} \\ 
--\left(\mathring{p}_{1}+i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 & \!\!\!\!\!\!\!\!\!\!\!\!    2\tfrac{z^{M}}{z^{4}}\rho^{M}(\del_{s}x-\tfrac{m}{2}x) + W_{-} & -\mathring{p}_{0}\mathds{1}_{4} \\ 
+W_{+} & -\mathring{p}_{0}\mathds{1}_{4} & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 \\
+-\mathring{p}_{0}\mathds{1}_{4} & -W_{+}^{\dagger} & 0 & \left(\mathring{p}_{1}-i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} \\
+-\left(\mathring{p}_{1}+i\tfrac{m}{2}\right)\rho^{M}u^{M} & 0 & \!\!\!\!\!\!\!\!\!\!\!\!    2\tfrac{z^{M}}{z^{4}}\rho^{M}(\del_{s}x-\tfrac{m}{2}x) + W_{-} & -\mathring{p}_{0}\mathds{1}_{4} \\
 0 &  \!\!\!\!\!\!\!\!\! -\left(\mathring{p}_{1}+i\tfrac{m}{2}\right)\rho_{M}^{\dagger}u^{M} & -\mathring{p}_{0}\mathds{1}_{4} &\!\!\!\!\!\!\!\!\!\!\!\!    -2\tfrac{z^{M}}{z^{4}}\rho_{M}^{\dagger}(\del_{s}x^{*}-\tfrac{m}{2}x^{*})-W_{-}^{\dagger}
 \end{pmatrix} ,
 \raisetag{-8pt}
@@ -558,7 +558,7 @@ W_{+} & -\mathring{p}_{0}\mathds{1}_{4} & \left(\mathring{p}_{1}-i\tfrac{m}{2}\r
 \endgroup
 %
 %
-with 
+with
 %
 %
 \begin{equation}
@@ -578,25 +578,25 @@ where an additional $1/z$ factor is present for the purpose of improved stabilit
 %
 %
 %
-\subsubsection{Fermionic operator}
+\subsection{Fermionic operator}
 \label{sec: ferm_op}
 By knowing the structure of the \names{Wilson} term we can finally discretize the fermionic operator and write it in terms of a single matrix by using the lexicographic index notation introduced in \autoref{sec: disc_lat}. The discretized fermion matrix $\hat{\mathcal{O}}_{\rm F}$ is of size $16V\times 16V$ and we are going to subdivide it into 4 by 4 blocks of size $4V\times 4V$ as
 %
 %
 \begin{equation}
-\left(\hat{\mathcal{O}}_{\rm F}\right)_{16V\times 16V} = 
+\left(\hat{\mathcal{O}}_{\rm F}\right)_{16V\times 16V} =
 \left(
 \begin{array}{c|c|c|c}
 O_{4V\times 4V} & \cdots & \cdots & \cdots \\ \hline
 \vdots & \ddots & \qquad & \qquad \\ \hline
 \vdots & \qquad & \ddots & \qquad \\ \hline
 \vdots & \qquad & \qquad & \ddots
-\end{array} 
+\end{array}
 \right).
 \end{equation}
 %
 %
-To build the block matrices we assume that for every lattice index $l,p=0,\ldots,(V-1)$ we have a $4\times 4$ matrix with indices $i,j=1,\ldots,4$ and emphasize the structure 
+To build the block matrices we assume that for every lattice index $l,p=0,\ldots,(V-1)$ we have a $4\times 4$ matrix with indices $i,j=1,\ldots,4$ and emphasize the structure
 %
 %
 \begin{equation}
@@ -619,11 +619,11 @@ The discretized fermion matrix is now given by
 \everymath{\footnotesize}
 \begin{flalign}
 \!
-\hat{\mathcal{O}}_{\rm F} = 
+\hat{\mathcal{O}}_{\rm F} =
 \begin{pmatrix}
-\hat{W}_{+} & i\bar{\Delta}^{\rm A}_{0} & -i\left(\vec{\Delta}^{Z}_{1} + \tfrac{M}{2}\bar{Z}\right) & 0 \\ 
-i\bar{\Delta}^{\rm A}_{0} & -\hat{W}_{+}^{\dagger} & 0 & -i\left(\vec{\Delta}^{Z^{\dagger}}_{1} + \tfrac{M}{2}\bar{Z}^{\dagger}\right)  \\ 
-i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!\! 2\left(\bar{\Delta}^{x}_{1}-\tfrac{M}{2}\bar{Z}^{x}\right)+\hat{W}_{-} & i\bar{\Delta}^{\rm A}_{0} -\hat{A}^{\rm T} \\ 
+\hat{W}_{+} & i\bar{\Delta}^{\rm A}_{0} & -i\left(\vec{\Delta}^{Z}_{1} + \tfrac{M}{2}\bar{Z}\right) & 0 \\
+i\bar{\Delta}^{\rm A}_{0} & -\hat{W}_{+}^{\dagger} & 0 & -i\left(\vec{\Delta}^{Z^{\dagger}}_{1} + \tfrac{M}{2}\bar{Z}^{\dagger}\right)  \\
+i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!\! 2\left(\bar{\Delta}^{x}_{1}-\tfrac{M}{2}\bar{Z}^{x}\right)+\hat{W}_{-} & i\bar{\Delta}^{\rm A}_{0} -\hat{A}^{\rm T} \\
 0 & i\left(\cev{\Delta}^{Z^{\dagger}}_{1} - \tfrac{M}{2}\bar{Z}^{\dagger}\right) & i\bar{\Delta}^{\rm A}_{0} +\hat{A} & \!\!\!\!\! 2\left(\bar{\Delta}^{x^{*}}_{1}-\tfrac{M}{2}\bar{Z}^{x^{*}}\right)-\hat{W}_{-}^{\dagger}
 \end{pmatrix} ,
 \raisetag{-8pt}

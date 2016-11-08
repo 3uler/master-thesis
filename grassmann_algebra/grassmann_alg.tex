@@ -1,4 +1,4 @@
-\subsection{Grassmann Algebra}
+\section{Grassmann Algebra}
 When we start considering a QFT including fermions, we have to conclude that our canonical quantisation rules for bosons no longer apply. Instead of a commutation relation
 \begin{equation}
 \left[ \phi(x),\Pi(y)\right] = i \hbar \delta(x-y)
@@ -62,7 +62,6 @@ They therefore behave like a formally purely imaginary quantity, whereas
 behaves like a formally real quantity.
 %
 %
-\\[2cm]
 %
 %
 %
@@ -71,7 +70,7 @@ behaves like a formally real quantity.
 %
 %
 %
-\subsection{Grassmann Analysis} \label{sec: grassmann_analysis}
+\section{Grassmann Analysis} \label{sec: grassmann_analysis}
 Now we want to see how we can differentiate and integrate Grassmann variables. We define the derivative to be
 \begin{equation}
 \dfrac{\del \xi_{m}}{\del\xi_{n}}\equiv\delta_{m n} .
@@ -151,7 +150,7 @@ where $\mathrm{Pf}\left(A\right)$ is the Pfaffian of $A$, which is defined by th
 \begin{equation}
 \mathrm{Pf}\left(A\right)^{2} = \det(A)
 \end{equation}
-This relation holds true for an even number of arbitrary many Grassmann generators. Its is therefore possible to integrate out Grassmann variables and be left with calculating a determinant or Pfaffian, which comes in quite essential when dealing with Grassmann integrals numerically.\\[2cm]
+This relation holds true for an even number of arbitrary many Grassmann generators. Its is therefore possible to integrate out Grassmann variables and be left with calculating a determinant or Pfaffian, which comes in quite essential when dealing with Grassmann integrals numerically.
 %
 %
 %
@@ -161,7 +160,7 @@ This relation holds true for an even number of arbitrary many Grassmann generato
 %
 %
 %
-\subsection{Hubbard-Stratonovich Transformation} \label{sec: HS_trafo}
+\section{Hubbard-Stratonovich Transformation} \label{sec: HS_trafo}
 We have now seen how to deal with bilinear exponentials. But in many cases one also has to deal with higher forms than bilinears. In principle one can expand any function into finitely many terms, like we have seen earlier, and then perform the integration rules, which is but rather ugly and proved not very efficient in numerical simulations. But there is a method to transform an exponential with 4-forms into one with bilinears, by performing an integration over additional bosonic auxiliary fields. This is called a Hubbard-Stratonovich transformation. Assuming that we have a finite number of complex Grassmann variables $\eta_{i}$, we can see that the object $\eta^{2}\equiv \eta^{i}\eta_{i}$ transforms like a formally real quantity
 \begin{equation}
 \left(\eta^{i}\eta_{i}\right)^{\ast}=\left(\eta_{i}\right)^{\ast}\left(\eta^{i}\right)^{\ast} =\eta^{i}\eta_{i}.

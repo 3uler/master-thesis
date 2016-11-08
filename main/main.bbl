@@ -93,6 +93,13 @@ J.~M.~Maldacena,
 \texttt{\arxivref{hep-th/9803002}{hep-th/9803002}}.
 %%CITATION = HEP-TH/9803002;%%
 
+\bibitem{Giombi:2009gd}
+S.~Giombi, R.~Ricci, R.~Roiban, A.~A.~Tseytlin and C.~Vergu,
+\textit{``{Quantum AdS(5) x S5 superstring in the AdS light-cone gauge}''},
+\textsf{\doiref{10.1007/JHEP03(2010)003}{JHEP~1003,~003~(2010)}},
+\texttt{\arxivref{0912.5105}{arXiv:0912.5105}}.
+%%CITATION = ARXIV:0912.5105;%%
+
 \bibitem{Gubser:2002tv}
 S.~S.~Gubser, I.~R.~Klebanov and A.~M.~Polyakov,
 \textit{``{A Semiclassical limit of the gauge / string correspondence}''},
@@ -123,13 +130,6 @@ M.~Kruczenski, R.~Roiban, A.~Tirziu and A.~A.~Tseytlin,
 \textsf{\doiref{10.1016/j.nuclphysb.2007.09.005}{Nucl.~Phys.~B791,~93~(2008)}},
 \texttt{\arxivref{0707.4254}{arXiv:0707.4254}}.
 %%CITATION = ARXIV:0707.4254;%%
-
-\bibitem{Giombi:2009gd}
-S.~Giombi, R.~Ricci, R.~Roiban, A.~A.~Tseytlin and C.~Vergu,
-\textit{``{Quantum AdS(5) x S5 superstring in the AdS light-cone gauge}''},
-\textsf{\doiref{10.1007/JHEP03(2010)003}{JHEP~1003,~003~(2010)}},
-\texttt{\arxivref{0912.5105}{arXiv:0912.5105}}.
-%%CITATION = ARXIV:0912.5105;%%
 
 \bibitem{Beisert:2010jr}
 N.~Beisert et~al.,

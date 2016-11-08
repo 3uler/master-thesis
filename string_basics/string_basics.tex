@@ -1,4 +1,4 @@
-\section{Basics on superstring theory}
+\chapter{Basics on superstring theory}
 In this chapter we want to give a brief introduction to the basic concepts of string theory, starting from its simplest possible form, the bosonic string and further develop the subject to a supersymmetric version including fermions. Since we want to apply the concepts of $AdS/CFT$, we are mostly interested in strings propagating in $AdS$ backgrounds. The following assertions are mainly based in the remarks in \cite{Polchinski:1998rq,Polchinski:1998rr}.
 %
 %
@@ -8,14 +8,14 @@ In this chapter we want to give a brief introduction to the basic concepts of st
 %
 %
 %
-\subsection{The bosonic string}
+\section{The bosonic string}
 The basic idea of string theory is that the fundamental objects described by the theory are extended from point-like particles to one-dimensional strings propagating through spacetime and sweeping out a $(1+1)$-dimensional surface $\widetilde{\Sigma}$ called the string worldsheet. The string can be parameterized by two coordinates, the proper time $\tau$ and the spatial extent $\sigma$ of the string which we will also denote by $(\sigma^{0},\sigma^{1})=(\tau,\sigma)$. We can then apply a homeomorphism $\big(\Sigma,\phi)$ that maps the 2d sheet $\Sigma$ into the target space which is a $D$-dimensional \names{Minkowski} space\footnote{We will utilize the metric $\eta_{MN}=\text{diag}(-,+,+,\ldots,+) with M,N=0,1,2,\ldots,D-1.$} $\mathbb{R}^{D-1,1}$ with embedding coordinates $X^{\mu}(\tau,\sigma)$ and therefore
 %
 %
 \begin{equation}
 \begin{alignedat}{3}
 \phi :\quad  \Sigma = (\tau_{\rm in},\tau_{\rm fin}) \times (0,\sigma) \quad &\longrightarrow \quad \widetilde{\Sigma} \\
-(\tau,\sigma) \qquad\quad &\longrightarrow \quad X^{\mu}(\tau,\sigma). 
+(\tau,\sigma) \qquad\quad &\longrightarrow \quad X^{\mu}(\tau,\sigma).
 \end{alignedat}
 \end{equation}
 %
@@ -64,7 +64,7 @@ We will thus use the the \names{Polyakov} action in the following, since it is e
 %
 %
 \begin{itemize}
-\item\textit{Global D-dimensional Poincarè invariance} 
+\item\textit{Global D-dimensional Poincarè invariance}
 %
 \begin{equation}
 X^{M} \rightarrow \widetilde{X}^{M} = \Lambda_{N}^{M} X^{N} + a^{M}, \qquad \delta	h_{\alpha\beta} = 0,
@@ -73,7 +73,7 @@ X^{M} \rightarrow \widetilde{X}^{M} = \Lambda_{N}^{M} X^{N} + a^{M}, \qquad \del
 with $\Lambda_{N}^{M}$ and $a^{M}$ being $D$-dimensional \names{Lorentz} transformations and spacetime translations.
 %
 %
-\item\textit{Reparametrisation invariance of the worldsheet (or diffeomorphism invariance)}\\
+\item\textit{Reparametrisation invariance of the worldsheet (or diffeomorphism invariance)}\\[2mm]
 We can choose a reparametrisation of the worldsheet coordinates $\sigma^{\alpha}\rightarrow \tilde{\sigma}^{\alpha}(\sigma)$, where the fields $X^{M}$ and the 2d metric transform according
 %
 \begin{equation}
@@ -86,7 +86,7 @@ h_{\alpha\beta}(\sigma) &\rightarrow \tilde{h}_{\alpha\beta}(\tilde{\sigma}) = \
 This is a gauge symmetry on the worldsheet.
 %
 %
-\item\textit{Weyl invariance} 
+\item\textit{Weyl invariance}
 \begin{align}
 \widetilde{X}^{M}(\sigma) &= X^{M}(\sigma), &  \tilde{h}_{\alpha\beta}(\sigma)&=\Omega^{2}h_{\alpha\beta}(\sigma).
 \end{align}
@@ -97,7 +97,7 @@ We also have to employ suitable boundary conditions. There are in fact two types
 %
 %
 \begin{itemize}
-\item \textit{Open strings}\\
+\item \textit{Open strings}\\[2mm]
 For the open string we can set $\sigma_{0}=l$ ans thus $\sigma\in (0,l)$. These type of strings satisfy either \names{Neumann}  boundary conditions
 %
 \begin{equation}
@@ -111,7 +111,7 @@ or \names{Dirichlet} boundary conditions
 \end{equation}
 %
 %
-\item \textit{Closed strings}\\
+\item \textit{Closed strings}\\[2mm]
 Here we usually set $\sigma_{0}=2\pi$ leading to $\sigma\in [0,2\pi)$. This type of string satisfies periodic boundary conditions
 %
 \begin{gather}
@@ -128,7 +128,7 @@ h_{\alpha\beta} = \Omega^{2}(\sigma) \eta_{\alpha\beta}, \quad \text{with} \quad
 \end{equation}
 %
 %
-In this conformal gauge the \names{Polyakov} action takes the form 
+In this conformal gauge the \names{Polyakov} action takes the form
 %
 %
 \begin{equation}
@@ -150,13 +150,13 @@ Their solutions are well known and can be derived by decomposition into \names{F
 %
 %
 %
-%  - - - - - - - - -   superstring theory  - - - - - - - - - - - 
+%  - - - - - - - - -   superstring theory  - - - - - - - - - - -
 %
 %
 %
 %
 %
-\subsection{Superstring theory}
+\section{Superstring theory}
 The theory considered so far describes only bosons and also gives rise to unphysical tachyon states. To apply string theory to naturally observed object it also lacks in the appearance of fermionic degrees of freedom. Those can be included by the introduction of supersymmetry. The supersymmetrized \names{Polyakov} action also contains the superpartners $\mathit{\Psi}^{M}$ next to the coordinate fields $X^{M}$. In conformal gauge this action reads
 %
 %
@@ -203,18 +203,19 @@ With help of a so called GSO projection it is possible to project out all tachyo
 %
 %
 %
-% - - - - - - - - -   strings on curved backgrounds  - - - - - - - - -- - - - - 
+% - - - - - - - - -   strings on curved backgrounds  - - - - - - - - -- - - - -
 %
 %
 %
 %
-\subsection{Strings on curved backgrounds}
+\section{Strings in curved backgrounds}
 For now we have only considered strings propagating in flat \names{Minkowski} target space. To impose a more general application to string theory, one also has to take other backgrounds into account. Therefore we promote the target space metric $\eta_{MN}\rightarrow g_{MN}(X)$, leading to the bosonic \names{Polyakov} action
 %
 %
 \begin{equation}
-S_{\rm P} = -\frac{1}{4\pi\alpha'} = \int\limits_{\Sigma} \dd^{2}\sigma\, \sqrt{-h}h^{\alpha\beta}g_{MN}(X) \del_{\alpha}X^{M}\del_{\beta}X^{N}.
+S_{\rm P} = -\frac{1}{4\pi\alpha'}  \int\limits_{\Sigma} \dd^{2}\sigma\, \sqrt{-h}h^{\alpha\beta}g_{MN}(X) \del_{\alpha}X^{M}\del_{\beta}X^{N}.
+\label{eq: S_P_nlsigma}
 \end{equation}
 %
 %
-This is called the \textit{bosonic non-linear string sigma model}. For the inclusion of supersymmetry this process is not so straight forward any more. Next to the flat ten-dimensional \names{Minkowski} space, type IIB supergravity admits $\AdSS$ as another maximally supersymmetric solution (see e.g. \cite{Arutyunov:2009ga}) which we are explicitly interested in. This solution is supported by a self-dual \names{Ramond-Ramond} five-form flux. The difficulties emerging here are due to the non-locality of the RR flux and that it is unclear how to couple it to the string worldsheet. Remarkably this problem has been solved by Metsaev and Tseytlin in \cite{Metsaev:1998it} with a \names{Green-Schwarz} type of approach, but unfortunately we will not be able to present the full procedure here due to its complexity and requirement of sophisticated analytical tools. We therefore refer the reader to the original publication. What we will have to deal with in the following is a special solution to to a gauge fixed version of this $\AdSS$ string developed in \cite{Metsaev:1998it}. But before we come to that, we want to give a brief introduction on how to discretize string theory in order to conduct a numerical study on $AdS/CFT$ from a stringy point of view.
+This is called the \textit{bosonic non-linear string sigma model}. For the inclusion of supersymmetry this process is not so straight forward any more. Next to the flat ten-dimensional \names{Minkowski} space, type IIB supergravity admits $\AdSS$ as another maximally supersymmetric solution as a background (see e.g. \cite{Arutyunov:2009ga}) which we are explicitly interested in. This solution is supported by a self-dual \names{Ramond-Ramond} five-form flux. The difficulties emerging here are due to the non-locality of the RR flux and that it is unclear how to couple it to the string worldsheet. Remarkably this problem has been solved by Metsaev and Tseytlin in \cite{Metsaev:1998it} with a \names{Green-Schwarz} type of approach, but unfortunately we will not be able to present the full procedure here due to its complexity and requirement of sophisticated analytical tools. We therefore refer the reader to the original publication. What we will have to deal with in the following is a special solution to to a gauge fixed version of this $\AdSS$ string developed in \cite{Metsaev:1998it}. But before we come to that, we want to give a brief introduction on how to discretize string theory in order to conduct a numerical study on $AdS/CFT$ from a stringy point of view.

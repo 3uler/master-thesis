@@ -5,7 +5,7 @@
 %
 %
 %
-\section{Grassmann Numbers}
+\chapter{Grassmann Numbers}
 \input{grassmann_alg}
 %
 %
@@ -13,11 +13,11 @@
 %
 %
 %
-\section[$AdS_{5}\times S^{5}$ spacetime]{$\mathitbf{AdS_{5}\times S^{5}}$ spacetime}
+\chapter[$\mathbf{AdS_{5}\times S^{5}}$ spacetime]{$\mathitbf{AdS_{5}\times S^{5}}$ spacetime}%[$AdS_{5}\times S^{5}$ spacetime]
 The $AdS_{5}\times S^{5}$ space is in the central focus of the gauge/gravity duality and should be concerned more deeply. It is a direct product of five dimensional Anti-de Sitter ($AdS$) space and a five dimensional compact sphere. Both are maximally symmetric spaces and therefore inherit the isometry groups $SO(2,4)$ in case of $AdS_{5}$ and respectively $SO(6)$ for $S^{5}$ \cite{Ammon:2015wua}. This is an important fact for the $AdS/CFT$ correspondence since the direct product of these groups has the same amount of degrees of freedom as the superconformal group $SO(2,4)\times SO(6) = SU(2,2\vert 4)$ as the undelying symmetry group of $\mathcal{N}=4$ super \names{Yang-Mills} theory in four dimensional \names{Minkowski} space.
 %
 %
-\subsection[$AdS_{5}$ space]{$\mathitbf{AdS_{5}}$ space}\label{AdS5}
+\section[$\mathrm{AdS_{5}}$ space]{$\mathitbf{AdS_{5}}$ space}\label{AdS5}
 Since the construction of a sphere is rather simple, we focus on the Anti-de Sitter space. $AdS_{5}$ is a hyperboloid with constant negative curvature, that can be embedded in six dimensional \names{Minkowski} spacetime $X = (X^{0},X^{1},\ldots,X^{5}) \in \mathbb{R}^{4,2}$, with metric ${\tilde{\eta} = {\rm diag}(-,+,+,+,+,-)}$, so that
 \begin{equation}
 \dd s^{2} = -\left(\dd X^{0}\right)^{2} + \left(\dd X^{1}\right)^{2} + \cdots + \left(\dd X^{4}\right)^{2} - \left(\dd X^{5}\right)^{2} = \tilde{\eta}_{MN} \dd X^{M}\dd X^{N},
@@ -53,7 +53,7 @@ uv = \eta_{\mu \nu} X^{\mu}X^{\nu},
 with $\mu,\nu \in {0,1,2,3}$ and $\left(\eta_{\mu \nu}\right) = {\rm diag}(-,+,+,+).$ Whenever $v \neq 0$ we can rescale the coordinates to set $v = 1$ and solve for $u$. Therefore one is left with a four dimensional \names{Minkowski} space $\mathbb{R}^{3,1}$. Points with $v=0$ are ``points at infinity'' added to four dimensional \names{Minkowski} space. This makes $\del AdS_{5}$ a conformal compactification of four dimensional \names{Minkowski} space. According to Maldacena \cite{maldacena1} the correspondence between a $\mathcal{N}=4$ theory on $\mathbb{R}^{3,1}$ and Type IIB on $AdS_{5}\times S^{5}$ therefore expresses a string theory on $AdS_{5}\times S^{5}$ in terms of a theory on the boundary and thus is referred to as ``holographic'' \cite{Witten:1998qj}.
 %
 %
-\subsection{Poincaré patch}\label{p_patch}
+\section{Poincaré patch}\label{p_patch}
 Let us now introduce a parametrisation of the hyperboloid (\ref{hyperbol}) by the following coordinates $x^{\mu} \in \mathbb{R}$, for $\mu \in {0,1,2,3}$ and $z \in \mathbb{R}_{+}$. The parametrisation in these coordinates is given by (see e.g. \cite{Ammon:2015wua,Bayona:2005nq})
 \begin{align}
 X^{0} &= \frac{z}{2} \left( 1+ \frac{1}{z^{2}}\left( x_{\mu}x^{\mu} + R^{2}\right) \right), \notag \\
@@ -67,7 +67,7 @@ with $x_{\mu}x^{\mu}=\eta_{\mu\nu}x^{\mu}x^{\nu}$ and $\left(\eta_{\mu \nu}\righ
 \end{equation}
 %
 %
-For the whole $\AdSS$ space in \names{Poincaré} patch we find 
+For the whole $\AdSS$ space in \names{Poincaré} patch we find
 %
 %
 \begin{equation}
@@ -83,17 +83,17 @@ where $u^{I}$ $(I=1,\ldots,6)$ are coordinates on $S^{5}$ that satisfy $u^{I}u^{
 %
 %
 %
-\section{SO(6) matrices} \label{sec: SO6}
+\chapter{SO(6) matrices} \label{sec: SO6}
 The matrices $\rho^{M}_{ij}$ appearing in the action (\ref{eq: cusp_action}) are the off-diagonal blocks of $SO(6)$ \names{Dirac} matrices $\gamma^{M}$ in chiral representation\footnote{The upper or lower placement of the index $M$ on the block matrices has no meaning and is only changed for the purpose of readability.}
 %
 %
 \begin{equation}
 \gamma^{M} \equiv \begin{pmatrix}
-0 & \rho_{M}^{\dagger} \\ 
+0 & \rho_{M}^{\dagger} \\
 \rho^{M} & 0
-\end{pmatrix} 
+\end{pmatrix}
 = \begin{pmatrix}
-0 & (\rho^{M})^{ij} \\ 
+0 & (\rho^{M})^{ij} \\
 (\rho^{M})_{ij} & 0
 \end{pmatrix} .
 \end{equation}
@@ -112,46 +112,46 @@ and we chose to use the following representation
 %
 \begin{align}
 \rho^{1}_{ij} &= \begin{pmatrix}
-0 & 1 & 0 & 0 \\ 
--1 & 0 & 0 & 0 \\ 
-0 & 0 & 0 & 1 \\ 
+0 & 1 & 0 & 0 \\
+-1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
 0 & 0 & -1 & 0
 \end{pmatrix} , &
 %
 \rho^{2}_{ij} &= \begin{pmatrix}
-0 & i & 0 & 0 \\ 
--i & 0 & 0 & 0 \\ 
-0 & 0 & 0 & -i \\ 
+0 & i & 0 & 0 \\
+-i & 0 & 0 & 0 \\
+0 & 0 & 0 & -i \\
 0 & 0 & i & 0
 \end{pmatrix} , &
 %
 \rho^{3}_{ij} &= \begin{pmatrix}
-0 & 0 & 0 & 1 \\ 
-0 & 0 & 1 & 0 \\ 
-0 & -1 & 0 & 0 \\ 
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+0 & -1 & 0 & 0 \\
 -1 & 0 & 0 & 0
 \end{pmatrix} , \notag\\[0.6cm]
 %
 %
 %
 \rho^{4}_{ij} &= \begin{pmatrix}
-0 & 0 & 0 & -i \\ 
-0 & 0 & i & 0 \\ 
-0 & -i & 0 & 0 \\ 
+0 & 0 & 0 & -i \\
+0 & 0 & i & 0 \\
+0 & -i & 0 & 0 \\
 i & 0 & 0 & 0
 \end{pmatrix} , &
 %
 \rho^{5}_{ij} &= \begin{pmatrix}
-0 & 0 & i & 0 \\ 
-0 & 0 & 0 & i \\ 
--i & 0 & 0 & 0 \\ 
+0 & 0 & i & 0 \\
+0 & 0 & 0 & i \\
+-i & 0 & 0 & 0 \\
 0 & -i & 0 & 0
 \end{pmatrix} , &
 %
 \rho^{6}_{ij} &= \begin{pmatrix}
-0 & 0 & 1 & 0 \\ 
-0 & 0 & 0 & -1 \\ 
--1 & 0 & 0 & 0 \\ 
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & -1 \\
+-1 & 0 & 0 & 0 \\
 0 & 1 & 0 & 0
 \end{pmatrix} . \raisetag{-6pt}
 \end{align}
@@ -173,7 +173,7 @@ The generators of the $SO(6)$ can be built by
 \end{equation}
 %
 %
-Further relations and identities are 
+Further relations and identities are
 %
 %
 \begin{align}
@@ -197,7 +197,7 @@ Further relations and identities are
 %
 %
 %
-\section{Discrete Fourier Transform}
+\chapter{Discrete Fourier Transform}
 \label{app: disc_ft}
 To perform a Fourier transform on the lattice one needs to discretize it to deal with a finite sequence of $N$ complex numbers $x_{0},x_{1},\ldots,x_{N-1}$. We define the discrete Fourier transform $X_{k}$ to be a vector in the base of roots of unit with components $x_{n}$ as follows:
 \begin{equation}
@@ -271,7 +271,7 @@ Here again the important relations hold
 %
 %
 %
-\section{Discretized fermion matrix}
+\chapter{Discretized fermion matrix}
 \label{app: disc_ferm}
 Here we want to present the details leading to the discretized version (\ref{eq: disc_OF}) of the operator $\mathcal{O}_{\rm F}$. As emphasized in section \ref{sec: ferm_op} $\hat{\mathcal{O}}_{\rm F}$ is a $16V\times 16V$ matrix and we will continue to use the notation introduced there to write subdivided blocks of size $4V\times 4V$ to result in
 %
@@ -280,11 +280,11 @@ Here we want to present the details leading to the discretized version (\ref{eq:
 \everymath{\footnotesize}
 \begin{flalign}
 \!
-\hat{\mathcal{O}}_{\rm F} = 
+\hat{\mathcal{O}}_{\rm F} =
 \begin{pmatrix}
-\hat{W}_{+} & i\bar{\Delta}^{\rm A}_{0} & -i\left(\vec{\Delta}^{Z}_{1} + \tfrac{M}{2}\bar{Z}\right) & 0 \\ 
-i\bar{\Delta}^{\rm A}_{0} & -\hat{W}_{+}^{\dagger} & 0 & -i\left(\vec{\Delta}^{Z^{\dagger}}_{1} + \tfrac{M}{2}\bar{Z}^{\dagger}\right)  \\ 
-i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!\! 2\left(\bar{\Delta}^{x}_{1}-\tfrac{M}{2}\bar{Z}^{x}\right)+\hat{W}_{-} & i\bar{\Delta}^{\rm A}_{0} -\hat{A}^{\rm T} \\ 
+\hat{W}_{+} & i\bar{\Delta}^{\rm A}_{0} & -i\left(\vec{\Delta}^{Z}_{1} + \tfrac{M}{2}\bar{Z}\right) & 0 \\
+i\bar{\Delta}^{\rm A}_{0} & -\hat{W}_{+}^{\dagger} & 0 & -i\left(\vec{\Delta}^{Z^{\dagger}}_{1} + \tfrac{M}{2}\bar{Z}^{\dagger}\right)  \\
+i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!\! 2\left(\bar{\Delta}^{x}_{1}-\tfrac{M}{2}\bar{Z}^{x}\right)+\hat{W}_{-} & i\bar{\Delta}^{\rm A}_{0} -\hat{A}^{\rm T} \\
 0 & i\left(\cev{\Delta}^{Z^{\dagger}}_{1} - \tfrac{M}{2}\bar{Z}^{\dagger}\right) & i\bar{\Delta}^{\rm A}_{0} +\hat{A} & \!\!\!\!\! 2\left(\bar{\Delta}^{x^{*}}_{1}-\tfrac{M}{2}\bar{Z}^{x^{*}}\right)-\hat{W}_{-}^{\dagger}
 \end{pmatrix} .
 \raisetag{-8pt}
@@ -380,7 +380,7 @@ is therefore skew-symmetric $\big(\hat{W}_{\pm}\big)^{\rm T} = -\hat{W}_{\pm}$ w
 \end{align}
 %
 %
-with 
+with
 %
 %
 \begin{align}

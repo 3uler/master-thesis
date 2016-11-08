@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[german,english]{babel} 
 \usepackage{amsmath}
@@ -24,6 +24,7 @@
 \usepackage{framed, color} 
 \usepackage[colorlinks=false,hidelinks]{hyperref}
 \usepackage{tcolorbox}
+\usepackage{anyfontsize}
 
 \usepackage{ifthen}
 
@@ -78,8 +79,8 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[RO]{\slshape \nouppercase{\rightmark}}
-\fancyhead[LE]{\slshape \nouppercase{\leftmark}}
+\fancyhead[RO]{ \nouppercase{\rightmark}}
+\fancyhead[LE]{ \nouppercase{\leftmark}} %\slshape
 
 \fancyfoot{}
 \fancyfoot[CE,CO]{\thepage}
@@ -88,6 +89,7 @@
 
 
 %Einstellung serifenlose überschriften
+\titleformat{\chapter}[hang]{\sffamily \bfseries \Large}{\framebox[0.9cm]{\mdseries\fontsize{40}{0}\selectfont\thechapter}}{ 0.5cm}{ }[\vspace{-0.65cm}\rule{\textwidth}{1pt}]
 \titleformat*{\section}{\sffamily \bfseries \Large}
 \titleformat*{\subsection}{\sffamily \bfseries \large}
 \titleformat*{\subsubsection}{\sffamily \bfseries \normalsize}
