@@ -3,15 +3,15 @@
 \BOOKMARK [1][-]{section.1.2}{Superstring theory}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.3}{Strings in curved backgrounds}{chapter.1}% 4
 \BOOKMARK [0][-]{chapter.2}{Lattice Basics}{}% 5
-\BOOKMARK [1][-]{section.2.1}{Discretizing the Lattice}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Bosons and Fermions on the Lattice}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.1}{Bosonic Propagator}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.2}{Fermionic Propagator and the Doubling Problem}{section.2.2}% 9
-\BOOKMARK [1][-]{section.2.3}{Monte Carlo Methods}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.3.1}{Monte Carlo Integration}{section.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.3.2}{Importance Sampling and Markov Chains}{section.2.3}% 12
-\BOOKMARK [2][-]{subsection.2.3.3}{Fermions on the Lattice and the Hybrid Monte Carlo Algorithm}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.4}{Numerical sign problems}{section.2.3}% 14
+\BOOKMARK [1][-]{section.2.1}{Discretizing the worldsheet}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Bosons and fermions on the lattice}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.1}{Bosonic propagator}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.2}{Fermionic propagator and the doubling problem}{section.2.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Monte Carlo methods}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{Monte Carlo integration}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{Importance sampling and Markov chains}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{Fermions on the lattice and the hybrid Monte Carlo algorithm}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.4}{The numerical sign problem}{section.2.3}% 14
 \BOOKMARK [0][-]{chapter.3}{Preliminaries}{}% 15
 \BOOKMARK [1][-]{section.3.1}{AdS/CFT correspondence}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.2}{Wilson loops}{chapter.3}% 17
@@ -31,14 +31,14 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{Wilson term}{section.4.2}% 31
 \BOOKMARK [2][-]{subsection.4.2.3}{Fermionic operator}{section.4.2}% 32
 \BOOKMARK [0][-]{section*.6}{Appendices}{}% 33
-\BOOKMARK [0][-]{Appendix.a.A}{Grassmann Numbers}{}% 34
-\BOOKMARK [1][-]{section.a.A.1}{Grassmann Algebra}{Appendix.a.A}% 35
-\BOOKMARK [1][-]{section.a.A.2}{Grassmann Analysis}{Appendix.a.A}% 36
-\BOOKMARK [1][-]{section.a.A.3}{Hubbard-Stratonovich Transformation}{Appendix.a.A}% 37
+\BOOKMARK [0][-]{Appendix.a.A}{Grassmann numbers}{}% 34
+\BOOKMARK [1][-]{section.a.A.1}{Grassmann algebra}{Appendix.a.A}% 35
+\BOOKMARK [1][-]{section.a.A.2}{Grassmann analysis}{Appendix.a.A}% 36
+\BOOKMARK [1][-]{section.a.A.3}{Hubbard-Stratonovich transformation}{Appendix.a.A}% 37
 \BOOKMARK [0][-]{Appendix.a.B}{AdS5S5 spacetime}{}% 38
 \BOOKMARK [1][-]{section.a.B.1}{AdS5 space}{Appendix.a.B}% 39
 \BOOKMARK [1][-]{section.a.B.2}{Poincar\351 patch}{Appendix.a.B}% 40
 \BOOKMARK [0][-]{Appendix.a.C}{SO\(6\) matrices}{}% 41
-\BOOKMARK [0][-]{Appendix.a.D}{Discrete Fourier Transform}{}% 42
+\BOOKMARK [0][-]{Appendix.a.D}{Discrete Fourier transform}{}% 42
 \BOOKMARK [0][-]{Appendix.a.E}{Discretized fermion matrix}{}% 43
 \BOOKMARK [0][-]{chapter*.8}{Bibliography}{}% 44

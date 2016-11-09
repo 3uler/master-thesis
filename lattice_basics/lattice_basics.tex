@@ -1,6 +1,6 @@
 \chapter{Lattice Basics}
 In this section we want to present the basic concepts of lattice field theory, which has developed to a highly sophisticated research area in the last decades especially in the regime of QCD. This approach to field theory is not only of major concern for performing numerical calculations. It even provides a natural attempt to regularization, which makes it also an interesting topic for theorists in the field of gauge theories.
-\section{Discretizing the Lattice}
+\section{Discretizing the worldsheet}
 \label{sec: disc_lat}
 A computer is not able to deal with continuous variables, since already a continuous real interval can contain an infinite amount of points, but a computer only has limited memory. Hence we need to limit the amount of points that we consider to make calculations. Since all the target space coordinates\footnote{which represent the fields in our two-dimensional QFT} depend on the worldsheet coordinates $\tau$ and $\sigma$, it seems natural to discretize the worldsheet map. We therefore introduce a lattice spacing $a$ and the lattice size in spacial direction $L$ and in time direction $T$. Following the remarks in \cite{gattringer2009quantum} we define the two-dimensional lattice $\mathit{\Lambda}$ to be
 \begin{equation}
@@ -75,10 +75,10 @@ It is more convenient to use the symmetric finite difference, because the error 
 \begin{equation}
 \del_{\alpha} \mathit{\Phi}(\tau,\sigma) = \widehat{\del }_{\alpha}\mathit{\Phi}(n) + \mathcal{O}(a^{2}) \equiv \dfrac{\mathit{\Phi}(n-\hat{\alpha})-\mathit{\Phi}(n+\hat{\alpha})}{2a} + \mathcal{O}(a^{2}),
 \end{equation}
-\begin{equation}
-\text{with} \qquad \del_{\alpha}\mathit{\Phi}(\tau,\sigma) \equiv \dfrac{\del \mathit{\Phi}(\tau,\sigma)}{\del \sigma_{\alpha}}, \qquad \sigma_{\alpha}=(\tau,\sigma), \qquad \alpha=0,1
-\end{equation}
-and where $\hat{\alpha}$ is the unit vector in $\alpha$-direction. For the integration over the worldsheet coordinates we replace the integral by a finite sum over all lattice points
+%\begin{equation}
+%\text{with} \qquad \del_{\alpha}\mathit{\Phi}(\tau,\sigma) \equiv \dfrac{\del \mathit{\Phi}(\tau,\sigma)}{\del \sigma_{\alpha}}, \qquad \sigma_{\alpha}=(\tau,\sigma), \qquad \alpha=0,1
+%\end{equation}
+where $\hat{\alpha}$ is the unit vector in $\alpha$-direction. For the integration over the worldsheet coordinates we replace the integral by a finite sum over all lattice points
 \begin{equation}
 \int \dd\tau \dd\sigma \longrightarrow a^{2}\sum\limits_{n \in \mathit{\Lambda}}.
 \end{equation}
@@ -146,8 +146,8 @@ We will come back to this notation in \autoref{sec: towards_lat}. For now on we 
 %
 %
 %
-\section{Bosons and Fermions on the Lattice}
-\subsection{Bosonic Propagator}
+\section{Bosons and fermions on the lattice}
+\subsection{Bosonic propagator}
 In the examined theory bosons and fermions are both scalar fields of either real, or complex \names{Grassmann} type. The equations of motion of bosons are given by the \names{Klein-Gordon} equation, which contains only second derivatives. To discretize the second derivative we define the corresponding finite difference operator simply by applying a forward and a backward finite difference
 \begin{align}
 {\widehat{\del}_\alpha}^{\,2}\mathit{\Phi}(n) = \cev{\del}_{\alpha}\vec{\del}_{\alpha}\mathit{\Phi}(n) = \dfrac{\mathit{\Phi}(n+\hat{\alpha})-2\mathit{\Phi}(n)+\mathit{\Phi}(n-\hat{\alpha})}{a^{2}}.
@@ -187,7 +187,7 @@ This is precisely what we expected for the \names{Euclidean} propagator in the c
 %  FERMION DOUBLING
 %
 %
-\subsection{Fermionic Propagator and the Doubling Problem}
+\subsection{Fermionic propagator and the doubling problem}
 \label{sec: ferm_doubling}
 In the case of fermions the equations of motion in 4-dimensional QFT are given by the Dirac equation, which is a linearisation of the \names{Klein-Gordon} equation and only contains first derivatives. To not explicitly break existing symmetries, we have to go with the symmetric derivative in this case. Now we can follow the exact same steps as for the bosonic case to investigate the continuum limit of a \names{Dirac} like operator in our 2-dimensional space time. As mentioned we start from the symmetric finite difference
 \begin{equation}
@@ -256,7 +256,7 @@ Here we can convince ourselves, that there are no more additional poles in the d
 %
 %
 %
-\section{Monte Carlo Methods}
+\section{Monte Carlo methods}
 Now after we know, how to discretize differential operators and act with them on bosonic and fermionic quantities, we are able to build a discretized Lagrangian as well. But what we really need is a method to perform the calculation of observables in the path integral formalism. In QFT in the continuum we calculate the expectation value of an observable $O$ via \cite{peskin}
 \begin{equation}
 \left\langle O \right\rangle = \dfrac{1}{Z} \int \mathcal{D} \mathit{\phi}\, O(\mathit{\phi})\exp\left(-S\left[\mathit{\phi}\right]\right),
@@ -273,7 +273,7 @@ In fact there is no rigorous mathematical definition for the path integral in th
 This means, that for every lattice point a multidimensional integral needs to be calculated. Even for small lattices this task becomes tortuous and soon even supercomputers would not be able to do that calculation in reasonable time. Out of this reason other methods of calculation have been considered. The most favoured one is a statistical method going under the name of Monte Carlo simulation. With this type of calculation it is possible to obtain good statistical approximations of high-dimensional integrals in reasonable time. At this point we want to study some details of the Monte Carlo methods used in the scope of this thesis.
 %
 %
-\subsection{Monte Carlo Integration}
+\subsection{Monte Carlo integration}
 The easiest way to understand the idea behind any form of calculation with Monte Carlo methods is via the Monte Carlo integration. Suppose we want to calculate the following multi-dimensional integral
 \begin{equation}
 I=\int_{\Omega} f(x) \,\dd x,
@@ -337,7 +337,7 @@ This means that we can estimate the value of $\pi/4$ by counting the number of p
 %
 %
 %
-\subsection{Importance Sampling and Markov Chains}
+\subsection{Importance sampling and Markov chains}
 More generally one can estimate integrals over a function $f(x)$ multiplied with a certain weight function $\rho(x)$ in the same way. We can write for the expectation value
 \begin{equation}
 \langle f \rangle_{\rho} \equiv \dfrac{\int _{\Omega} f(x)\rho(x)\,\dd x}{\int _{\Omega} \rho(x)\,\dd x} = \lim\limits_{N\to\infty}\dfrac{1}{N}\sum\limits_{i=1}^{N} f(\overline{x}_{i}).
@@ -424,7 +424,7 @@ This condition is called detailed balance and is used by most algorithms generat
 %
 %- - - - - - - - - - - - - - - - - - - - - - - -
 %
-\subsection{Fermions on the Lattice and the Hybrid Monte Carlo Algorithm}
+\subsection{Fermions on the lattice and the hybrid Monte Carlo algorithm}
 \label{sec: hmc_alg}
 %
 %
@@ -561,7 +561,7 @@ F_{i}[\phi] = \frac{\del }{\del \phi_{i}}\left[ S_{\rm B}\left[\phi\right] + \et
 %
 %
 %
-\subsection{Numerical sign problems}\label{sec: sign_prob}
+\subsection{The numerical sign problem}\label{sec: sign_prob}
 As discussed previously we want to calculate expectation values of observables $O(\phi)$, depending on bosonic fields $\phi$ which are distributed according to a certain probability weight function $\rho(\phi)$
 %
 %
