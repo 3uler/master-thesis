@@ -100,7 +100,16 @@ l (n)= Ln_{0} + n_{1} \qquad \text{with} \qquad  l=0,1,\ldots,(V-1),\quad V=LT,
 \end{equation}
 %
 %
-so that the according fields $\phi_{l(n)}\equiv \phi(n)$ are actual vectors. For the finite differences derivatives we also need  to know the neighboring relations. So if we want to move on the grid in direction $\pm \hat{\alpha}$, which lexicographic index corresponds to this movement? These relations are implemented into a \textit{next neighbor} function (nb) which also takes into account the boundary conditions (toroidal in our case) and returns the corresponding vector index
+so that the according fields $\phi_{l(n)}\equiv \phi(n)$ are actual vectors and we can apply a matrix-vector notation 
+%
+%
+\begin{equation}
+\phi^{\rm T}M\phi \equiv \sum\limits_{l,p=0}^{V-1} \phi_{l}M_{lp}\phi_{p},
+\label{eq: lexi_mat_vec}
+\end{equation}
+%
+%
+where then $M$ is also an actual matrix. For the finite differences derivatives we also need  to know the neighboring relations. So if we want to move on the grid in direction $\pm \hat{\alpha}$, which lexicographic index corresponds to this movement? These relations are implemented into a \textit{next neighbor} function (nb) which also takes into account the boundary conditions (toroidal in our case) and returns the corresponding vector index
 %
 %
 \begin{equation}
@@ -428,7 +437,7 @@ This condition is called detailed balance and is used by most algorithms generat
 \label{sec: hmc_alg}
 %
 %
-There are many possible algorithms to generate field configurations. The choice is depending on the structure of the problem at hand. For the here presented case the algorithm of choice is called rational hybrid Monte Carlo (RHCM). The basic reason to use this algorithm is the presence of fermions in a specific manner. It is in general complicated to deal with fermions in numerical simulations due to the anti commuting properties of \names{Grassmann} variables. An efficient procedure is to integrate out fermions via \names{Grassmann} integration, presented in Appendix \ref{sec: grassmann_analysis}, which results in our case in the Pfaffian of a fermionic operator $M[\phi]$ depending on the bosonic fields $\phi$. We now want to include the Pfaffian as a probability weight factor in the process of generating \names{Markov} chain configurations. To act as a probability weight factor, $\text{Pf}\,M$ must be real and nonnegative. If we consider this to be the case for the moment, we can write
+There are many possible algorithms to generate field configurations. The choice is depending on the structure of the problem at hand. For the here presented case the algorithm of choice is called rational hybrid Monte Carlo (RHCM). The basic reason to use this algorithm is the presence of fermions in a specific manner. It is in general complicated to deal with fermions in numerical simulations due to the anti commuting properties of \names{Grassmann} variables. An efficient procedure is to integrate out fermions via \names{Grassmann} integration, presented in Appendix \ref{sec: grassmann_analysis}, which results in our case in the \names{Pfaffian} of a fermionic operator $M[\phi]$ depending on the bosonic fields $\phi$. We now want to include the \names{Pfaffian} as a probability weight factor in the process of generating \names{Markov} chain configurations. To act as a probability weight factor, $\text{Pf}\,M$ must be real and nonnegative. If we consider this to be the case for the moment, we can write
 %
 %
 \begin{equation}
@@ -437,18 +446,18 @@ There are many possible algorithms to generate field configurations. The choice 
 \end{equation}
 %
 %
-In general one could have to deal with an arbitrary fraction $\alpha$ in the exponent on the right side of (\ref{pfaff}). If we restrict $\pf M$ to be also nonzero and therefore entirely positive using that $MM^{\dagger}$ is positive definite, one can rewrite the determinant as a bosonic path integral with pseudofermions $\eta$
+In general one could have to deal with an arbitrary fraction $\alpha$ in the exponent on the right side of (\ref{pfaff}). If we restrict $\pf M$ to be also nonzero and therefore entirely positive using that $MM^{\dagger}$ is positive definite, one can rewrite the determinant as a bosonic path integral with pseudofermions $\xi$
 %
 %
 \begin{equation}
-\left( \det MM^{\dagger}\right)^{\alpha} = \dfrac{1}{\det \left(MM^{\dagger}\right)^{-\alpha}} \sim \int \mathcal{D}\eta\,\mathcal{D}\eta^{\dagger}\; e^{-\eta^{\dagger}(MM^{\dagger})^{-\alpha}\eta}\, .
+\left( \det MM^{\dagger}\right)^{\alpha} = \dfrac{1}{\det \left(MM^{\dagger}\right)^{-\alpha}} \sim \int \mathcal{D}\eta\,\mathcal{D}\eta^{\dagger}\; e^{-\xi^{\dagger}(MM^{\dagger})^{-\alpha}\xi}\, .
 \end{equation}
 %
 %
 Since there is an inversion included, the operator in the exponent is highly nonlocal in the bosonic fields $\phi$. So even a small change in the fields could cause a large difference in the weight factor. Ergo one needs an algorithm that ensures that the generated configurations are part of the contributing regime of the weight factor. In a case like that it proved efficient to use a hybrid Monte Carlo (HMC) algorithm when $\alpha=1$, which uses \names{Hamiltonian} dynamics trajectories along some fictitious time to generate new configurations. For non-integer $\alpha$ one can use a rational approximation of $\left(MM^{\dagger}\right)^{-\alpha}$. Combined with the HMC this is called the rational hybrid Monte Carlo (RHMC) algorithm.\\
 %
-At this point we want to introduce the HMC algorithm which has been proposed in \cite{hmc}. A more detailed explanation is presented in \cite{gattringer2009quantum,montvay_lattice} which serves as a guideline for the following. The HMC is referred to as hybrid because it combines a molecular dynamic (MD) evolution with random noise patterns to simulate quantum fluctuations, an additional \names{Metropolis} acceptance step lets it result into an exact MC algorithm. The field update is  separated into two phases. Pseudofermions are updated first with an exact heat bath, while the bosons are kept constant. Therefore, a configuration $\xi$ is generated from a \names{Gaussian} distribution $P(\xi) \sim e^{-\xi^{\dagger}\xi}$ and we set $\eta = M\xi$.\\
-In the second phase a molecular dynamic evolution is used to update the bosonic fields while the pseudofermions are kept constant.  We can now think of the effective action $S_{\rm eff}[\phi]= S_{\rm B}[\phi] + \eta^{\dagger}(MM^{\dagger})^{-1}\eta$ as only dependent on the bosonic fields $\phi$. Now for each field $\phi_{i}$ a conjugate momentum $\pi_{i}$ is introduced and we expand the path integral with $\int \mathcal{D}\pi\, \exp(-1/2 \;\pi^{2})$ to obtain
+At this point we want to introduce the HMC algorithm which has been proposed in \cite{hmc}. A more detailed explanation is presented in \cite{gattringer2009quantum,montvay_lattice} which serves as a guideline for the following. The HMC is referred to as hybrid because it combines a molecular dynamic (MD) evolution with random noise patterns to simulate quantum fluctuations, an additional \names{Metropolis} acceptance step lets it result into an exact MC algorithm. The field update is  separated into two phases. Pseudofermions are updated first with an exact heat bath, while the bosons are kept constant. Therefore, a configuration $\vartheta$ is generated from a \names{Gaussian} distribution $P(\vartheta) \sim e^{-\vartheta^{\dagger}\vartheta}$ and we set $\xi = M\vartheta$.\\
+In the second phase a molecular dynamic evolution is used to update the bosonic fields while the pseudofermions are kept constant.  We can now think of the effective action $S_{\rm eff}[\phi]= S_{\rm B}[\phi] + \xi^{\dagger}(MM^{\dagger})^{-1}\xi$ as only dependent on the bosonic fields $\phi$. Now for each field $\phi_{i}$ a conjugate momentum $\pi_{i}$ is introduced and we expand the path integral with $\int \mathcal{D}\pi\, \exp(-1/2 \;\pi^{2})$ to obtain
 %
 %
 \begin{equation}
@@ -519,7 +528,7 @@ This has been proved to obey detailed balance in \cite{hmc}. Concluding one can 
 %
 \begin{itemize}
 \item \textbf{Pseudofermions}\\
-Generate the pseudofermion field $\eta = M\xi$, where $\xi$ is distributed according to $\exp(-\xi^{\dagger}\xi)$.
+Generate the pseudofermion field $\xi = M\vartheta$, where $\vartheta$ is distributed according to $\exp(-\vartheta^{\dagger}\vartheta)$.
 %
 %
 \item \textbf{Conjugate fields}\\
@@ -544,13 +553,13 @@ $\phi_{i}'=\phi_{i}^{(n)}= \phi_{i}^{(n-1)} + \pi_{i}^{(n-\frac{1}{2})}\;, \quad
 %
 \item \textbf{Monte Carlo step}\\
 Accept new configuration $\phi'$ if a random number $r \in [0,1)$ is smaller than
-\[\exp\left(\frac{1}{2}\left(\pi^{2}-\pi'^{2}\right) + S_{\rm B}[\phi]-S_{\rm B}[\phi'] +\xi^{\dagger}\xi - \eta^{\dagger}\left(M'M'^{\dagger}\right)^{-1} \eta \right)\, .  \]
+\[\exp\left(\frac{1}{2}\left(\pi^{2}-\pi'^{2}\right) + S_{\rm B}[\phi]-S_{\rm B}[\phi'] +\vartheta^{\dagger}\vartheta - \xi^{\dagger}\left(M'M'^{\dagger}\right)^{-1} \xi \right)\, .  \]
 \end{itemize}
 %
 %
 Here we used $\phi_{i}^{(j)}\equiv \phi_{i}(j\epsilon)$ and the driving forces are denoted by
 \begin{equation}
-F_{i}[\phi] = \frac{\del }{\del \phi_{i}}\left[ S_{\rm B}\left[\phi\right] + \eta^{\dagger}\left(MM^{\dagger}\right)^{-1}\eta \right]\,.
+F_{i}[\phi] = \frac{\del }{\del \phi_{i}}\left[ S_{\rm B}\left[\phi\right] + \xi^{\dagger}\left(MM^{\dagger}\right)^{-1}\xi \right]\,.
 \end{equation}
 %
 %

@@ -330,6 +330,7 @@ Now since we have linearised fermionic contributions to quadratic order, we are 
 %
 \begin{equation}
 Z = \int \mathcal{D}x\,\mathcal{D}x^{*}\,\mathcal{D}z^{N}\,\mathcal{D}\phi\,\mathcal{D}\phi_{I}\,\mathcal{D}\mathit{\Psi}\; e^{-S}\,,
+\label{eq: Z_string2}
 \end{equation}
 %
 %
@@ -356,6 +357,7 @@ where
 %
 \begin{equation}
 S_{\xi} = g\,\int \dd t\dd s \; \xi^{\dagger} \left(\mathcal{O}_{\rm F}\,\mathcal{O}_{\rm F}^{\dagger} \right)^{-\frac{1}{4}} \xi \,,
+\label{eq: S_xi}
 \end{equation}
 and $\xi$ is a collection of 16 complex bosonic scalar fields. But before we can go any further we need to discretize the action with help of the methods introduced in \autoref{sec: disc_lat}.
 %
@@ -633,3 +635,123 @@ i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!
 %
 %
 where we refer the reader to Appendix \ref{app: disc_ferm} for a detailed derivation of the single terms.
+%
+%
+%
+%
+%
+% - - - - - - - - - - - -    Applying the RHMC   - - - - - - - - - - 
+%
+%
+%
+%
+%
+\section{Applying the RHMC algorithm}
+Since the current status is a realization of discretized operators and fields that are also dimensionless, we can return to a discretized version of the equations (\ref{eq: Z_string2}-\ref{eq: S_xi}) and implement a RHMC algorithm based on HMC algorithm introduced in section \ref{sec: hmc_alg}. There we described the algorithm by means of an inversed hermitian operator in the pseudofermionic action
+%
+%
+\begin{equation}
+\hat{S}_{\xi} = g \xi^{\dagger}\left(\hat{M}^{\dagger}\hat{M}\right)^{-1}\xi,
+\end{equation}
+%
+%
+where we applied a matrix-vector notation in the sense of (\ref{eq: lexi_mat_vec}). In our present case we are instead faced with
+%
+%
+\begin{equation}
+\hat{S}_{\xi} = g \xi^{\dagger}\left(\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}\right)^{-\frac{1}{4}} \xi.
+\end{equation}
+%
+%
+To treat this kind of matrix valued function one uses a rational approximation
+%
+%
+\begin{equation}
+\left(\hat{M}^{\dagger}\hat{M}\right)^{\rho	} = \alpha_{0} + \sum\limits_{i=1}^{P} \frac{\alpha_{i}}{\hat{M}^{\dagger}\hat{M}+\beta_{i}\mathds{1}},
+\end{equation}
+%
+%
+where $\alpha_{i}$ and $\beta_{i}$ are constant coefficients. For predicted limits of the eigenvalues $\lambda_{\rm min}$ and $\lambda_{\rm max}$ of a matrix and of cause a given exponent $\rho$ one can use a \names{Remez} algorithm to obtain the coefficients $\alpha_{i}$ and $\beta_{i}$ up to some order $P$ of accuracy of the approximation, feasible for any matrix satisfying the spectral bounds.\\
+For the implementation of the RHMC we need two sets of coefficients for two different approximations with $\rho=1/8$ and $\rho=-1/4$, respectively. The requirement of $\rho=-1/4$ should be clear, but we also need an approximation with $\rho=1/8$ to generate pseudofermionic fields\footnote{Compare to the list of items in section \ref{sec: hmc_alg}.} 
+%
+%
+\begin{equation}
+\xi = \left(\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}\right)^{\frac{1}{8}} \vartheta
+\end{equation}
+%
+%
+distributed according to
+%
+%
+\begin{equation}
+\exp\left(-\vartheta^{\dagger}\vartheta\right) = \exp\left( -\xi^{\dagger}\left(\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}\right)^{-\frac{1}{4}} \xi \right).
+\end{equation}
+%
+%
+We use an order $P=15$ approximation and the utilized values $\alpha_{i}$ and $\beta_{i}$ can be found in \textbf{{\Huge INSERT TABLE REF}}. In order to state the full RHMC procedure we want to take  a closer look at the pseudofermionic contribution to the bosonic force
+%
+%
+\begin{equation}
+F_{m}^{\xi}[\mathit{\Phi}] = \frac{\del }{\del \mathit{\Phi}_{m}}\left[ \xi^{\dagger}\left(\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}\right)^{-\frac{1}{4}} \xi \right], \quad \mathit{\Phi}_{m} = \left(x,x^{*},z^{N},\phi,\phi^{I}\right),
+\end{equation}
+%
+%
+with $\quad m=1,\ldots,25$. Inserting the rational approximation yields\footnote{With help of the matrix-scalar derivative 
+$\dfrac{\del U^{-1}(x)}{\del x} = -U^{-1}\dfrac{\del U}{\del x} U^{-1}.$ \vspace{0.2cm}}
+%
+%
+\begin{equation}
+\begin{alignedat}{2}
+F_{m}^{\xi}[\mathit{\Phi}] &= - \sum\limits_{i=1}^{P} \alpha_{i} \left(\frac{1}{\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}+\beta_{i}\mathds{1}} \xi \right)^{\dagger} \frac{\del }{\del \mathit{\Phi}_{m}}\left(\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}\right) \left(\frac{1}{\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}+\beta_{i}\mathds{1}} \xi \right) \\
+%
+%
+&= -\sum\limits_{i=1}^{P} \alpha_{i}\left[ \left(\hat{\mathcal{O}}_{\rm F} s_{i}\right)^{\dagger} \frac{\del \hat{\mathcal{O}}_{\rm F}}{\del \mathit{\Phi}_{m}} s_{i} + s_{i}^{\dagger} \frac{\del \hat{\mathcal{O}}_{\rm F}^{\dagger}}{\del \mathit{\Phi}_{m}} \hat{\mathcal{O}}_{\rm F} s_{i} \right],
+\end{alignedat}
+\end{equation}
+%
+%
+where $s_{i}= \left(\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}+\beta_{i}\mathds{1}\right)^{-1}\xi$ are interpreted as the solutions to the matrix equation
+%
+%
+\begin{equation}
+\left(\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}+\beta_{i}\mathds{1}\right) s^{i} = \xi, \qquad i=1,\ldots,P \;.
+\end{equation}
+%
+%
+To obtain all $P$ solutions at once, we employ a \textit{multi-shift conjugate gradient solver} adapted from the \texttt{openQCD} package\footnote{\url{http://luscher.web.cern.ch/luscher/openQCD/}} by Martin Lüscher. For the single terms of the matrix derivative $\del \hat{\mathcal{O}}_{\rm F} / \del \mathit{\Phi}_{m}$ we refer the reader to the Appendix \textbf{{\LARGE INSERT APP REF}}. The single steps for the RHMC are therefore:
+%
+%
+\begin{itemize}
+\item \textbf{Pseudofermions}\\
+Generate the $16V$-dimensional pseudofermionic field $\xi = \left(\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}\right)^{\frac{1}{8}} \vartheta$, where $\vartheta$ is distributed according $\exp\left(-\vartheta^{\dagger}\vartheta\right)$.
+%
+%
+\item \textbf{Conjugate fields}\\
+For an initial boson configuration $\mathit{\Phi}^{(0)}$ generate $\mathit{\Pi}^{(0)}$ according to the \names{Gaussian} distribution $\exp \left(-\frac{1}{2}\mathit{\Pi}^{2}\right)$.
+%
+%
+\item \textbf{Initial step}\\
+$\mathit{\Pi}_{m}^{(\frac{1}{2})} = \mathit{\Pi}_{m}^{(0)} - \frac{\epsilon}{2} F_{m}[\mathit{\Phi}]\Big\vert_{\mathit{\Phi}^{(0)}}  \;.$
+%
+%
+\item \textbf{Intermediate step}\\
+Full steps for $j=1,\ldots,n-1$ \\[0.2cm]
+$\mathit{\Phi}_{m}^{(j)} = \mathit{\Phi}_{m}^{(j-1)} + \mathit{\Pi}_{m}^{(j-\frac{1}{2})}, \quad  \mathit{\Pi}_{m}^{(j+\frac{1}{2})} = \mathit{\Pi}_{m}^{(j-\frac{1}{2})} - \epsilon F_{m}[\mathit{\Phi}]\Big\vert_{\mathit{\Phi}^{(j)}}\;.$
+%
+%
+\item \textbf{Final step}\\
+$\mathit{\Phi}_{m}' = \mathit{\Phi}_{m}^{(n)} = \mathit{\Phi}_{m}^{(n-1)} + \mathit{\Pi}_{m}^{(n-\frac{1}{2})}, \quad \mathit{\Pi}_{m}' = \mathit{\Pi}_{m}^{(n)} = \mathit{\Pi}_{m}^{(n-\frac{1}{2})} - \frac{\epsilon}{2} F_{m}[\mathit{\Phi}]\Big\vert_{\mathit{\Phi}^{(n)}}\;.$
+%
+%
+\item \textbf{Monte Carlo step}\\
+Accept new configuration $\mathit{\Phi}'$ if a random number $r \in [0,1)$ is smaller than
+\[\exp\left(\frac{1}{2}\left(\mathit{\Pi}^{2}-\mathit{\Pi}'^{2}\right) + S_{\rm B}[\mathit{\Phi}]- S_{\rm B}[\mathit{\Phi}'] +\vartheta^{\dagger}\vartheta - \xi^{\dagger} \left(\hat{\mathcal{O}}_{\rm F}^{\dagger}\hat{\mathcal{O}}_{\rm F}\right)^{-\frac{1}{4}} \xi \right) \;.  \]
+\end{itemize}
+%
+%
+Hereby we have used 
+%
+%
+\begin{equation}
+F_{m}[\mathit{\Phi}] = \frac{\del S_{\rm B}[\mathit{\Phi}]}{\del \mathit{\Phi}_{m}} + F_{m}^{\xi}[\mathit{\Phi}].
+\end{equation}
