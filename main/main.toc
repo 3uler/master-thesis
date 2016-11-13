@@ -34,17 +34,18 @@
 \contentsline {subsection}{\numberline {4.2.3}Fermionic operator}{43}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Applying the RHMC algorithm}{44}{section.4.3}
 \contentsline {chapter}{\numberline {5}Simulations and observables}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}Implementation and simulation parameters}{47}{section.5.1}
-\contentsline {chapter}{Appendices}{49}{section*.6}
-\contentsline {chapter}{\numberline {A}Grassmann numbers}{51}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Grassmann algebra}{51}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Grassmann analysis}{52}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{54}{section.a.A.3}
-\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{57}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{57}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{58}{section.a.B.2}
-\contentsline {chapter}{\numberline {C}SO(6) matrices}{61}{Appendix.a.C}
-\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{63}{Appendix.a.D}
-\contentsline {chapter}{\numberline {E}Discretized fermion matrix}{65}{Appendix.a.E}
-\contentsline {chapter}{Bibliography}{69}{chapter*.8}
+\contentsline {section}{\numberline {5.1}Implementation and the continuum limit}{47}{section.5.1}
+\contentsline {section}{\numberline {5.2}Simulation parameters}{48}{section.5.2}
+\contentsline {chapter}{Appendices}{51}{section*.7}
+\contentsline {chapter}{\numberline {A}Grassmann numbers}{53}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Grassmann algebra}{53}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Grassmann analysis}{54}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{56}{section.a.A.3}
+\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{59}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{59}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{60}{section.a.B.2}
+\contentsline {chapter}{\numberline {C}SO(6) matrices}{63}{Appendix.a.C}
+\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{65}{Appendix.a.D}
+\contentsline {chapter}{\numberline {E}Discretized fermion matrix}{67}{Appendix.a.E}
+\contentsline {chapter}{Bibliography}{71}{chapter*.9}
 \contentsfinish 

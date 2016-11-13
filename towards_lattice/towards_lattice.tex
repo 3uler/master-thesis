@@ -668,10 +668,11 @@ To treat this kind of matrix valued function one uses a rational approximation
 %
 \begin{equation}
 \left(\hat{M}^{\dagger}\hat{M}\right)^{\rho	} = \alpha_{0} + \sum\limits_{i=1}^{P} \frac{\alpha_{i}}{\hat{M}^{\dagger}\hat{M}+\beta_{i}\mathds{1}},
+\label{eq: rat_approx}
 \end{equation}
 %
 %
-where $\alpha_{i}$ and $\beta_{i}$ are constant coefficients. For predicted limits of the eigenvalues $\lambda_{\rm min}$ and $\lambda_{\rm max}$ of a matrix and of cause a given exponent $\rho$ one can use a \names{Remez} algorithm to obtain the coefficients $\alpha_{i}$ and $\beta_{i}$ up to some order $P$ of accuracy of the approximation, feasible for any matrix satisfying the spectral bounds.\\
+where $\alpha_{i}$ and $\beta_{i}$ are constant coefficients. For predicted limits of the eigenvalues $\lambda_{\rm min}$ and $\lambda_{\rm max}$ of a matrix and of cause a given exponent $\rho$ one can use a \names{Remez} algorithm to obtain the coefficients $\alpha_{i}$ and $\beta_{i}$ up to some order $P$ of accuracy of the approximation, valid for any matrix satisfying the spectral bounds.\\
 For the implementation of the RHMC we need two sets of coefficients for two different approximations with $\rho=1/8$ and $\rho=-1/4$, respectively. The requirement of $\rho=-1/4$ should be clear, but we also need an approximation with $\rho=1/8$ to generate pseudofermionic fields\footnote{Compare to the list of items in section \ref{sec: hmc_alg}.} 
 %
 %
@@ -688,7 +689,7 @@ distributed according to
 \end{equation}
 %
 %
-We use an order $P=15$ approximation and the utilized values $\alpha_{i}$ and $\beta_{i}$ can be found in \textbf{{\Huge INSERT TABLE REF}}. In order to state the full RHMC procedure we want to take  a closer look at the pseudofermionic contribution to the bosonic force
+We use an order $P=15$ approximation and the utilized values $\alpha_{i}$ and $\beta_{i}$ can be found in \autoref{tab: rat_app_coef}. In order to state the full RHMC procedure we want to take  a closer look at the pseudofermionic contribution to the bosonic force
 %
 %
 \begin{equation}
