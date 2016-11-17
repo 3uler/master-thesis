@@ -6,42 +6,42 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Master.bib
 You've used 29 entries,
             1217 wiz_defined-function locations,
-            561 strings with 7797 characters,
-and the built_in function-call counts, 12269 in all, are:
-= -- 1216
-> -- 245
-< -- 742
-+ -- 808
-- -- 116
-* -- 674
-:= -- 1641
+            557 strings with 7740 characters,
+and the built_in function-call counts, 11835 in all, are:
+= -- 1160
+> -- 247
+< -- 712
++ -- 781
+- -- 115
+* -- 653
+:= -- 1597
 add.period$ -- 0
 call.type$ -- 29
 change.case$ -- 3
-chr.to.int$ -- 72
+chr.to.int$ -- 68
 cite$ -- 29
-duplicate$ -- 162
-empty$ -- 656
-format.name$ -- 66
-if$ -- 2421
+duplicate$ -- 148
+empty$ -- 643
+format.name$ -- 67
+if$ -- 2330
 int.to.chr$ -- 0
 int.to.str$ -- 29
-missing$ -- 156
-newline$ -- 194
+missing$ -- 154
+newline$ -- 192
 num.names$ -- 29
-pop$ -- 79
+pop$ -- 75
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1261
+skip$ -- 1209
 stack$ -- 0
-substring$ -- 1002
-swap$ -- 162
-text.length$ -- 72
+substring$ -- 951
+swap$ -- 148
+text.length$ -- 68
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 101
+while$ -- 97
 width$ -- 31
-write$ -- 272
+write$ -- 269

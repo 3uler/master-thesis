@@ -1,5 +1,5 @@
 \chapter{Basics on superstring theory}
-In this chapter we want to give a brief introduction to the basic concepts of string theory, starting from its simplest possible form, the bosonic string and further develop the subject to a supersymmetric version including fermions. Since we want to apply the concepts of $AdS/CFT$, we are mostly interested in strings propagating in $AdS$ backgrounds. The following assertions are mainly based on the remarks in \cite{Polchinski:1998rq,Polchinski:1998rr,Ammon:2015wua}.
+In this chapter we want to give a brief introduction to the basic concepts of string theory, starting from its simplest possible form, the bosonic string, and further develop the subject to a supersymmetric version including fermions. Since we will work in the framework of the $AdS/CFT$ correspondence (see \autoref{sec: preleminaries}), we are mostly interested in strings propagating in $AdS$ backgrounds. The following sections are mainly based on \cite{Polchinski:1998rq,Polchinski:1998rr,Ammon:2015wua,Becker:2007zj}.
 %
 %
 %
@@ -9,18 +9,18 @@ In this chapter we want to give a brief introduction to the basic concepts of st
 %
 %
 \section{The bosonic string}
-The basic idea of string theory is that the fundamental objects described by the theory are extended from point-like particles to one-dimensional strings propagating through spacetime and sweeping out a $(1+1)$-dimensional surface $\widetilde{\Sigma}$ called the string worldsheet. The string can be parameterized by two coordinates, the proper time $\tau$ and the spatial extent $\sigma$ of the string which we will also denote by $(\sigma^{0},\sigma^{1})=(\tau,\sigma)$. We can then apply a homeomorphism $\big(\Sigma,\phi)$ that maps the 2d sheet $\Sigma$ into the target space which is a $D$-dimensional \names{Minkowski} space\footnote{We will utilize the metric $\eta_{MN}=\text{diag}(-,+,+,\ldots,+)$ with $M,N=0,1,2,\ldots,D-1.$} $\mathbb{R}^{D-1,1}$ with embedding coordinates $X^{\mu}(\tau,\sigma)$ and therefore
+The basic idea of string theory is that the fundamental objects described by the model are one-dimensional strings, propagating through spacetime and sweeping out a $(1+1)$-dimensional surface $\widetilde{\Sigma}$ called the string worldsheet. The string can be parameterized by two coordinates, the proper time $\tau$ and the spatial extent $\sigma$ of the string which we will also denote by $(\sigma^{0},\sigma^{1})=(\tau,\sigma)$. We can then apply a homeomorphism $\varphi$ that maps the 2d sheet $\Sigma$ into the target space, e.g. $D$-dimensional \names{Minkowski} space\footnote{We will use the metric $\eta_{MN}=\text{diag}(-,+,+,\ldots,+)$ with $M,N=0,1,2,\ldots,D-1.$} $\mathbb{R}^{D-1,1}$ with embedding coordinates $X^{\mu}(\tau,\sigma)$
 %
 %
 \begin{equation}
 \begin{alignedat}{3}
-\phi :\quad  \Sigma = (\tau_{\rm in},\tau_{\rm fin}) \times (0,\sigma) \quad &\longrightarrow \quad \widetilde{\Sigma} \\
+\varphi :\quad  \Sigma = (\tau_{\rm in},\tau_{\rm fin}) \times (0,\sigma_{0}) \quad &\longrightarrow \quad \widetilde{\Sigma} \\
 (\tau,\sigma) \qquad\quad &\longrightarrow \quad X^{\mu}(\tau,\sigma).
 \end{alignedat}
 \end{equation}
 %
 %
-The simplest possible action is proportional to the area of the surface of $\widetilde{\Sigma}$, given by
+The simplest possible action, the \names{Nambu-Goto} action, is proportional to the area of the surface $\widetilde{\Sigma}$ and is given by
 %
 %
 \begin{equation}
@@ -36,7 +36,7 @@ where $\gamma$ is the \names{Gramian} determinant of the embedding
 \end{align}
 %
 %
-where the induced metric $\gamma_{\alpha\beta}$ is the pull-back of the flat \names{Minkowski} metric $\eta_{MN}$. We also defined $\dd^{2}\sigma = \dd\sigma^{0}\dd\sigma^{1}$ and the parameter in front of the integral is the string tension, making the action dimensionless, with the Regge slope $\alpha'$ being related to the string length $l_{\rm s}$ by $\alpha'=l_{\rm s}^{2}$. Due to the square root this so called \names{Nambu-Goto} action is not very suitable for a path integral quantization. To get rid of the square root one can introduce an auxiliary metric $h_{\alpha\beta}(\sigma)$ with $h_{\alpha\beta}h^{\beta\rho}=\delta_{\alpha}^{\rho}$ and define the \names{Polyakov} action by
+and the induced metric $\gamma_{\alpha\beta}$ is the pull-back of $\eta_{MN}$. The parameter in front of the integral is the string tension, making the action dimensionless, with the \names{Regge} slope $\alpha'$ being related to the string length $l_{\rm s}$ by $\alpha'=l_{\rm s}^{2}$. We also defined $\dd^{2}\sigma = \dd\sigma^{0}\dd\sigma^{1}$. Due to the square root this action is not very suitable for a path integral quantization. To get rid of the square root one can introduce an auxiliary metric\footnote{With the dependence of $\sigma$ we hereby actually mean a short form for $\sigma=(\sigma^{0},\sigma^{1})$ and by no means a single dependence on the string length only.} $h_{\alpha\beta}(\sigma)$ with $h_{\alpha\beta}h^{\beta\rho}=\delta_{\alpha}^{\rho}$ and define the \names{Polyakov} action
 %
 %
 \begin{equation}
@@ -44,7 +44,7 @@ S_{\rm P} = -\frac{1}{4\pi\alpha'} \int\limits_{\Sigma}\dd^{2}\sigma\, \sqrt{-h}
 \end{equation}
 %
 %
-This action is equivalent to the \names{Nambu-Goto} action on the classical level which can be proved by deriving the equations of motion for $h_{\alpha\beta}$, $\delta S/ \delta h^{\alpha\beta} = 0$. We can use this to define the corresponding energy-momentum tensor
+This action is equivalent to the \names{Nambu-Goto} action at the classical level, as can be proved by deriving the equations of motion for $h_{\alpha\beta}$, $\delta S/ \delta h^{\alpha\beta} = 0$. Defining the corresponding energy-momentum tensor $T_{\alpha\beta}$, such equations are the statement that $T_{\alpha\beta}$ has to vanish
 %
 %
 \begin{equation}
@@ -52,15 +52,15 @@ T_{\alpha\beta} \equiv -4\pi\alpha' \frac{1}{\sqrt{-h}} \frac{\delta S}{\delta h
 \end{equation}
 %
 %
-From the constraint that $T_{\alpha\beta}$ has to vanish we can derive the classical equivalence of the actions $S_{\rm NG}$ and $S_{\rm P}$ with
+From this follows
 %
 %
 \begin{equation}
-\sqrt{-\gamma} = \frac{1}{2} \sqrt{-h} h^{\rho\sigma} \gamma_{\rho\sigma}.
+\sqrt{-\gamma} = \frac{1}{2} \sqrt{-h} h^{\rho\sigma} \gamma_{\rho\sigma},
 \end{equation}
 %
 %
-We will thus use the the \names{Polyakov} action in the following, since it is easier to handle. But before we continue, we want to analyse the symmetries preserved by the \names{Polyakov} action.
+and thus the classical equivalence of the actions $S_{\rm NG}$ and $S_{\rm P}$. The symmetries of $S_{\rm P}$ are
 %
 %
 \begin{itemize}
@@ -73,7 +73,7 @@ X^{M} \rightarrow \widetilde{X}^{M} = \Lambda_{N}^{M} X^{N} + a^{M}, \qquad \del
 with $\Lambda_{N}^{M}$ and $a^{M}$ being $D$-dimensional \names{Lorentz} transformations and spacetime translations.
 %
 %
-\item\textit{Reparametrisation invariance of the worldsheet (or diffeomorphism invariance)}\\[2mm]
+\item\textit{Reparametrisation (or diffeomorphism) invariance of the worldsheet}\\[2mm]
 We can choose a reparametrisation of the worldsheet coordinates $\sigma^{\alpha}\rightarrow \tilde{\sigma}^{\alpha}(\sigma)$, where the fields $X^{M}$ and the 2d metric transform according
 %
 \begin{equation}
@@ -86,19 +86,20 @@ h_{\alpha\beta}(\sigma) &\rightarrow \tilde{h}_{\alpha\beta}(\tilde{\sigma}) = \
 This is a gauge symmetry on the worldsheet.
 %
 %
-\item\textit{Weyl invariance}
+\item\textit{Weyl invariance}\\
+The action is invariant under the rescaling
 \begin{align}
-\widetilde{X}^{M}(\sigma) &= X^{M}(\sigma), &  \tilde{h}_{\alpha\beta}(\sigma)&=\Omega^{2}h_{\alpha\beta}(\sigma).
+\widetilde{X}^{M}(\sigma) &= X^{M}(\sigma), &  \tilde{h}_{\alpha\beta}(\sigma)&=\mathit{\Omega}^{2}(\sigma)h_{\alpha\beta}(\sigma).
 \end{align}
 \end{itemize}
 %
 %
-We also have to employ suitable boundary conditions. There are in fact two types of strings with different boundary conditions, open strings and closed strings:
+We also have to employ suitable boundary conditions. There are in fact two types of strings with different boundary conditions:
 %
 %
 \begin{itemize}
 \item \textit{Open strings}\\[2mm]
-For the open string we can set $\sigma_{0}=l$ ans thus $\sigma\in (0,l)$. These type of strings satisfy either \names{Neumann}  boundary conditions
+In this case we can set $\sigma_{0}=l$ ans thus $\sigma\in (0,l)$. These type of strings satisfy either \names{Neumann}  boundary conditions
 %
 \begin{equation}
 \del_{\sigma}X^{M}(\tau,\sigma)\big\vert_{\sigma=0,l} = 0
@@ -112,7 +113,7 @@ or \names{Dirichlet} boundary conditions
 %
 %
 \item \textit{Closed strings}\\[2mm]
-Here we usually set $\sigma_{0}=2\pi$ leading to $\sigma\in [0,2\pi)$. This type of string satisfies periodic boundary conditions
+Here we usually set $\sigma_{0}=2\pi$, leading to $\sigma\in [0,2\pi)$. This type of string satisfies periodic boundary conditions
 %
 \begin{gather}
 X^{M}(\tau,0)=X^{M}(\tau,2\pi), \qquad \del_{\sigma}X^{M}(\tau	,\sigma)\big\vert_{\sigma=0} = \del_{\sigma}X^{M}(\tau	,\sigma)\big\vert_{\sigma=2\pi}, \notag\\ h_{\alpha\beta}(\tau,0)=h_{\alpha\beta}(\tau,2\pi).
@@ -124,7 +125,7 @@ One can then exploit the symmetries of the \names{Polyakov} action to give the s
 %
 %
 \begin{equation}
-h_{\alpha\beta} = \Omega^{2}(\sigma) \eta_{\alpha\beta}, \quad \text{with} \quad \eta_{\alpha\beta} = \text{diag}(-,+).
+h_{\alpha\beta} = \mathit{\Omega}^{2}(\sigma) \eta_{\alpha\beta}, \quad \text{with} \quad \eta_{\alpha\beta} = \text{diag}(-,+).
 \end{equation}
 %
 %
@@ -144,7 +145,15 @@ which is leading to the simple equations of motion
 \end{equation}
 %
 %
-Their solutions are well known and can be derived by decomposition into \names{Fourier} modes.
+Their solutions are well known and can be derived by decomposition into \names{Fourier} modes. If one analyses the mass spectrum of the free string, there will appear states of negative mass square
+%
+%
+\begin{equation}
+\alpha' M^{2} = -1.
+\end{equation}
+%
+%
+Such states are called tachyons. They are not very well understood and give rise to instabilities in the theory that need to be removed.
 %
 %
 %
@@ -157,48 +166,59 @@ Their solutions are well known and can be derived by decomposition into \names{F
 %
 %
 \section{Superstring theory}
-The theory considered so far describes only bosons and also gives rise to unphysical tachyon states. To apply string theory to naturally observed object it also lacks in the appearance of fermionic degrees of freedom. Those can be included by the introduction of supersymmetry. The supersymmetrized \names{Polyakov} action also contains the superpartners $\mathit{\Psi}^{M}$ next to the coordinate fields $X^{M}$. In conformal gauge this action reads
-%
-%
-\begin{equation}
-S_{\rm P} = -\frac{1}{4\pi\alpha'} \int \dd^{2}\sigma \eta^{\alpha\beta}\left( \del_{\alpha}X^{M}\del_{\beta}X^{N} + i \bar{\mathit{\Psi}} \gamma_{\alpha} \del_{\beta} \mathit{\Psi} \right) \eta_{MN}.
-\label{eq: S_P_ferm}
-\end{equation}
-%
-%
-Here $\gamma_{\alpha}$ are 2d \names{Dirac} matrices and $\mathit{\Psi}^{M}$ can be chosen to be \names{Majorana-Weyl} spinors $\mathit{\Psi}^{M}=(\psi_{-}^{M},\psi_{+}^{M})^{\rm T}$. From the action (\ref{eq: S_P_ferm}) one can then derive the \names{Dirac} equation which reduces to two sets of \names{Weyl} equations that are given in light-cone coordinates $\sigma_{\pm}=\tau \pm \sigma$ by
-%
-%
-\begin{equation}
-\del_{+}\psi_{-}^{M} = \del_{-}\psi_{+}^{M} = 0.
-\end{equation}
-%
-%
-By partial integration of the fermionic part of the action one can find a surface term which imposes boundary conditions. There are again two types:
+The theory considered so far describes only bosons and also gives rise to unphysical tachyon states. To make predictions on the real world which also contains non-bosonic particles like quarks and leptons, we require string theory to include fermions as well. It turns out that for the presence of fermions, string theory requires supersymmetry, a symmetry that introduces a fermionic superpartner to every bosonic field. The resulting theories are then called superstring theories. Among others there are two basic approaches to incorporate supersymmetry into string theory \cite{Becker:2007zj}
 %
 %
 \begin{itemize}
-\item\textit{Open strings}
-\begin{equation}
-\psi_{-}^{M}(\tau,0)=\psi_{+}^{M}(\tau,0),\quad \psi_{-}^{M}(\tau,l)=e^{2\pi i \nu} \psi_{+}^{M}(\tau,l),\quad \nu=0,1/2.
-\end{equation}
+\item \textit{The Ramond-Neveu-Schwarz formalism} is supersymmetric on the worldsheet.
 %
-The corresponding sectors for the values $\nu=0$ and $\nu=1/2$ are called \names{Ramond} (R) and \names{Neveu-Schwarz} (NS) sectors, respectively.
-%
-%
-\item\textit{Closed strings}\\
-For closed strings there are four sectors of the corresponding combinations of periodic (R) or anti-periodic boundary conditions given by
-%
-\begin{equation}
-\begin{alignedat}{2}
-\psi_{-}^{M}(\tau,\sigma+2\pi) &= e^{2\pi i \nu}\psi_{-}^{M}(\tau,\sigma) \\
-\psi_{+}^{M}(\tau,\sigma+2\pi) &= e^{2\pi i \nu'}\psi_{+}^{M}(\tau,\sigma) .
-\end{alignedat}
-\end{equation}
+\item \textit{The Green-Schwarz (GS) fomalism} is supersymmetric in the target space.
 \end{itemize}
 %
 %
-With help of a so called GSO projection it is possible to project out all tachyon states and leave an equal number of bosons and fermions at each mass level. This helps to give rise to supersymmetry also in target space.
+Depending on how one applies supersymmetry there arise different possibilities on what kinds of strings the model will describe. With regard to the $AdS/CFT$ correspondence (see \autoref{sec: preleminaries}) we want to focus on Type IIB superstring theory which requires $D=10$ spacetime dimensions. Type II means that the model only describes closed oriented strings, whereas B refers to a property of the fermionic fields. In the following we choose the GS formalism to apply supersymmetry in the target space. \\
+Usually we have mapped the worldsheet into spacetime, but for a supersymmetric generalization in the GS formalism we consider mapping the worldsheet into superspace, where the basic target space fields are
+%
+%
+\begin{equation}
+X^{\mu}(\tau,\sigma) \qquad \text{and} \qquad \mathit{\Theta}^{Aa}(\tau,\sigma).
+\end{equation}
+%
+%
+Here $\mathit{\Theta}^{Aa}$ are \names{Majorana-Weyl} (MW) spinors. The index $A$ is running from 1 to the number of supersymmetries $\mathcal{N}$ which is $\mathcal{N}=2$ for the Type II string theories, whereas $a$ labels the components of the spacetime spinor in $D$ dimensions with $a=1,\ldots,2^{D/2}$ if $D$ is even. So in the 10 dimensional case of Type IIB string theory we have two anti-commuting spinors
+%
+%
+\begin{equation}
+\mathit{\Theta}^{1a}, \mathit{\Theta}^{2a}\qquad \text{with} \qquad a=1,\ldots,32.
+\end{equation}
+%
+%
+Due to the MW property there are only 16 independent real components for each spinor. To write a \names{Polyakov}-like supersymmetric action one can start by 
+%
+%
+\begin{equation}
+S_{1} = -\frac{1}{4\pi\alpha'} \int \dd^{2}\sigma \; \sqrt{h}h^{\alpha\beta} \Pi^{\mu}_{\alpha}\Pi^{\nu}_{\beta} \eta_{\mu\nu},
+\end{equation}
+%
+%
+with
+%
+%
+\begin{equation}
+\Pi^{\mu}_{\alpha} \equiv \del_{\alpha}X^{\mu} - \bar{\mathit{\Theta}\;}\!\!^{A}\Gamma^{\mu}\del_{\alpha}\mathit{\Theta}^{A}
+\label{eq: Pi_susy}
+\end{equation}
+%
+%
+and $\Gamma^{\mu}$ are 10d \names{Dirac} matrices and $\bar{\mathit{\Theta}\;}\!\!=\mathit{\Theta}^{\dagger}\Gamma_{0}$. By studying this kind of action for a point particle one finds that certain peculiarities arise when the particle is massless \cite{Becker:2007zj}. To circumvent this a \names{Wess-Zumino} (WZ) term $S_{2}$ is added which gives rise to a new symmetry in the full action $S=S_{1}+S_{2}$.  This so called $\kappa$-symmetry is a symmetry of the spinor fields
+%
+%
+\begin{align}
+\delta\bar{\mathit{\Theta}\;}\!\!^{1} &= \bar{\kappa}^{1}P_{-}, & \delta\bar{\mathit{\Theta}\;}\!\!^{2} &= \bar{\kappa}^{2}P_{+},
+\end{align}
+%
+%
+where $\kappa^{1}$ and $\kappa^{2}$ are arbitrary MW spinors with appropriate chirality and $P_{\pm}$ are projection operators. This symmetry acts like in internal gauge symmetry for the fermionic spinor fields. By fixing $\kappa$-symmetry half of the components of the fermionic variables decouple from the theory which means we are left with 8 independent real components for each spinor.
 %
 %
 %
@@ -209,7 +229,7 @@ With help of a so called GSO projection it is possible to project out all tachyo
 %
 %
 \section{Strings in curved backgrounds}
-For now we have only considered strings propagating in flat \names{Minkowski} target space. To impose a more general application to string theory, one also has to take other backgrounds into account. Therefore we promote the target space metric $\eta_{MN}\rightarrow g_{MN}(X)$, leading to the bosonic \names{Polyakov} action
+For now we have only considered strings propagating in flat \names{Minkowski} target space. To give string theory a more general application, one also has to take other backgrounds into account. Therefore we promote the target space metric $\eta_{MN}\rightarrow g_{MN}(X)$, leading to the bosonic \names{Polyakov} action
 %
 %
 \begin{equation}
@@ -218,4 +238,36 @@ S_{\rm P} = -\frac{1}{4\pi\alpha'}  \int\limits_{\Sigma} \dd^{2}\sigma\, \sqrt{-
 \end{equation}
 %
 %
-This is called the \textit{bosonic non-linear string sigma model}. For the inclusion of supersymmetry this process is not so straight forward any more. Next to the flat ten-dimensional \names{Minkowski} space, type IIB supergravity admits $\AdSS$ as another maximally supersymmetric solution as a background (see e.g. \cite{Arutyunov:2009ga}) which we are explicitly interested in. This solution is supported by a self-dual \names{Ramond-Ramond} five-form flux. The difficulties emerging here are due to the non-locality of the RR flux and that it is unclear how to couple it to the string worldsheet. Remarkably this problem has been solved by Metsaev and Tseytlin in \cite{Metsaev:1998it} with a \names{Green-Schwarz} type of approach, but unfortunately we will not be able to present the full procedure here due to its complexity and requirement of sophisticated analytical tools. We therefore refer the reader to the original publication. What we will have to deal with in the following is a special solution to to a gauge fixed version of this $\AdSS$ string developed in \cite{Metsaev:1998it}. But before we come to that, we want to give a brief introduction on how to discretize string theory in order to conduct a numerical study on $AdS/CFT$ from a stringy point of view.
+This is called the \textit{bosonic non-linear string sigma model}. Hereby the process of incorporating supersymmetry is not so straightforward anymore. Next to the flat 10d \names{Minkowski} spacetime there is also another maximally supersymmetric solution as a background for the Type IIB case which is the product $\AdSS$ of a five dimensional anti-\names{de Sitter} space $AdS_{5}$ and a five-sphere $S^{5}$. This solution is supported by a self-dual \names{Ramond-Ramond} five-form flux. This is due to the presence of a higher-dimensional generalization of strings, called D-branes. In the second superstring revolution of the 90's a new symmetry, called T-duality, was discovered. This symmetry states for the Type IIB case that a closed string corresponds in the dual picture to an open string, ending on D-branes. Some of these D-branes can carry a conserved charge that ensures their stability. For an open string, ending on such charged branes, the spectrum is tachyon-free. In the following we will consider three dimensional D3-branes which are required to formulate the $AdS/CFT$ correspondence. In the language of forms we can compute the electric and magnetic\footnote{Here we assume the existence of magnetic monopoles.} charges $\mu_{e}$ and $\mu_{m}$, using \names{Gauss's} law for D$p$-branes\footnote{D$p$-branes refer to D-branes of dimension $p$.} in a generalized formulation of \names{Maxwell's} equations
+%
+%
+\begin{align}
+\mu_{e} &= \int\limits_{S^{D-p-2}} \star F_{p+2},  &   \mu_{m} &= \int\limits_{S^{p+2}}  F_{p+2},
+\end{align}
+%
+%
+where $F_{p+2}$ is the field strength defined by
+%
+%
+\begin{equation}
+F_{n} = \frac{1}{n!} F_{\mu_{1}\cdots \mu_{n}} \dd x^{\mu_{1}} \wedge \cdots \wedge \dd x^{\mu_{n}},
+\end{equation}
+%
+%
+and $\star F_{p+2}$ is its \names{Hodge} dual. For our case with D3-branes with $p=3$ we find $F_{p+2}=F_{5}$ and in $D=10$ dimensions that $F_{5}=\star F_{5}$ is self-dual. Therefore both charges are computed via the flux supported by a self dual five form through the sphere $S^{5}$. To construct an action one has to incorporate the field strength to the kinetic part of the action 
+%
+%
+\begin{equation}
+S_{1} = -\frac{1}{4\pi \alpha'} \int \dd^{2}\sigma\; \sqrt{-h}h^{\alpha\beta} G_{\alpha\beta},
+\end{equation}
+%
+%
+where $G_{\alpha\beta}$ needs to contain contracted terms of $\Pi^{\mu}_{\alpha}$ in (\ref{eq: Pi_susy}) that respects the appropriate background and also a field strength $\mathcal{F}_{\alpha\beta} = F_{\alpha\beta}+b_{\alpha\beta}$, where $F_{\alpha\beta}$ represents the five-form field strength manifested on the worldsheet and $b_{\alpha\beta}$ is a term that makes it supersymmetric. To achieve $\kappa$-symmetry one needs to add a WZ term which is the integral of a three-form $\Omega_{3}$ over a three-space $M_{3}$ that has the worldsheet as its boundary
+%
+%
+\begin{equation}
+S_{2} = \int\limits_{M_{3}} \Omega_{3}.
+\end{equation}
+%
+%
+Remarkably this problem has been solved by Metsaev and Tseytlin in \cite{Metsaev:1998it}, but we will not present the full procedure here due to its complexity and requirement of sophisticated analytical tools. We therefore refer the reader to the original publication. What we will have to deal with in the following is a special solution to a gauge fixed version of this $\AdSS$ GS string developed in \cite{Metsaev:1998it}. But before we come to that, we want to give a brief introduction on how to discretize string theory in order to conduct a numerical study on $AdS/CFT$ from a stringy point of view.
