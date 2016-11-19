@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  17 NOV 2016 13:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  19 NOV 2016 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1070,18 +1070,36 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip50
+\LTright=\skip51
+\LTpre=\skip52
+\LTpost=\skip53
+\LTchunksize=\count145
+\LTcapwidth=\dimen196
+\LT@head=\box48
+\LT@firsthead=\box49
+\LT@foot=\box50
+\LT@lastfoot=\box51
+\LT@cols=\count146
+\LT@rows=\count147
+\c@LT@tables=\count148
+\c@LT@chunks=\count149
+\LT@p@ftn=\toks38
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/multibib/multibib.sty
 Package: multibib 2008/12/10 v1.4 Multiple bibliographies for one document.
-\mb@biblabelwidth=\count145
+\mb@biblabelwidth=\count150
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/sidecap/sidecap.sty
 Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
-\SC@BOXWD=\dimen196
-\SC@CAPWD=\dimen197
-\SC@tempdima=\dimen198
-\SC@tempdimb=\dimen199
-\c@SC@C=\count146
-\SC@BOX=\box48
+\SC@BOXWD=\dimen197
+\SC@CAPWD=\dimen198
+\SC@tempdima=\dimen199
+\SC@tempdimb=\dimen200
+\c@SC@C=\count151
+\SC@BOX=\box52
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
@@ -1089,28 +1107,33 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen200
-\captionmargin@=\dimen201
-\captionwidth=\dimen202
-\caption@tempdima=\dimen203
-\caption@indent=\dimen204
-\caption@parindent=\dimen205
-\caption@hangindent=\dimen206
+\captionmargin=\dimen201
+\captionmargin@=\dimen202
+\captionwidth=\dimen203
+\caption@tempdima=\dimen204
+\caption@indent=\dimen205
+\caption@parindent=\dimen206
+\caption@hangindent=\dimen207
 )
-\c@ContinuedFloat=\count147
+\c@ContinuedFloat=\count152
 Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+)
 Package caption Info: sidecap package is loaded.
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip50
-\f@ncyO@elh=\skip51
-\f@ncyO@erh=\skip52
-\f@ncyO@olh=\skip53
-\f@ncyO@orh=\skip54
-\f@ncyO@elf=\skip55
-\f@ncyO@erf=\skip56
-\f@ncyO@olf=\skip57
-\f@ncyO@orf=\skip58
+\fancy@headwidth=\skip54
+\f@ncyO@elh=\skip55
+\f@ncyO@erh=\skip56
+\f@ncyO@olh=\skip57
+\f@ncyO@orh=\skip58
+\f@ncyO@elf=\skip59
+\f@ncyO@erf=\skip60
+\f@ncyO@olf=\skip61
+\f@ncyO@orf=\skip62
 ))
 (./main.aux)
 \openout1 = `main.aux'.
@@ -1138,17 +1161,17 @@ LaTeX Font Info:    ... okay on input line 2.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count148
-\scratchdimen=\dimen207
-\scratchbox=\box49
-\nofMPsegments=\count149
-\nofMParguments=\count150
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count151
-\MPscratchDim=\dimen208
-\MPnumerator=\count152
-\makeMPintoPDFobject=\count153
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count153
+\scratchdimen=\dimen208
+\scratchbox=\box53
+\nofMPsegments=\count154
+\nofMParguments=\count155
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count156
+\MPscratchDim=\dimen209
+\MPnumerator=\count157
+\makeMPintoPDFobject=\count158
+\everyMPtoPDFconversion=\toks40
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1211,7 +1234,7 @@ File: english.bdf 2012/01/03 v1.31 babelbib: multilingual bibliographies (HH)
 babelbib extension \bibsenglish added to \extrasenglish
 babelbib extension \btxifchangecaseon added to \extrasenglish
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box50
+\AtBeginShipoutBox=\box54
 Package hyperref Info: Link coloring OFF on input line 2.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1220,7 +1243,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count154
+\c@section@level=\count159
 )
 LaTeX Info: Redefining \ref on input line 2.
 LaTeX Info: Redefining \pageref on input line 2.
@@ -1240,20 +1263,20 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 126.
 )
-\CenteringLeftskip=\skip59
-\RaggedLeftLeftskip=\skip60
-\RaggedRightLeftskip=\skip61
-\CenteringRightskip=\skip62
-\RaggedLeftRightskip=\skip63
-\RaggedRightRightskip=\skip64
-\CenteringParfillskip=\skip65
-\RaggedLeftParfillskip=\skip66
-\RaggedRightParfillskip=\skip67
-\JustifyingParfillskip=\skip68
-\CenteringParindent=\skip69
-\RaggedLeftParindent=\skip70
-\RaggedRightParindent=\skip71
-\JustifyingParindent=\skip72
+\CenteringLeftskip=\skip63
+\RaggedLeftLeftskip=\skip64
+\RaggedRightLeftskip=\skip65
+\CenteringRightskip=\skip66
+\RaggedLeftRightskip=\skip67
+\RaggedRightRightskip=\skip68
+\CenteringParfillskip=\skip69
+\RaggedLeftParfillskip=\skip70
+\RaggedRightParfillskip=\skip71
+\JustifyingParfillskip=\skip72
+\CenteringParindent=\skip73
+\RaggedLeftParindent=\skip74
+\RaggedRightParindent=\skip75
+\JustifyingParindent=\skip76
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -2459,15 +2482,19 @@ Overfull \hbox (5.70668pt too wide) in paragraph at lines 633--633
 Chapter 5.
 [47
 
-])
+]
+Underfull \vbox (badness 10000) detected at line 95
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+[48] (./runs_table.tex
+Underfull \vbox (badness 10000) detected at line 27
+ []
 
-[48] [49] [50
+[49] [50])) [51] [52
 
-] [51
+] [53
 
-] [52] (./appendix.tex
+] [54] (./appendix.tex
 Appendix A.
 (./grassmann_alg.tex
 Overfull \hbox (10.03091pt too wide) in paragraph at lines 5--7
@@ -2475,7 +2502,7 @@ Overfull \hbox (10.03091pt too wide) in paragraph at lines 5--7
  re-la-tions for fermionic
  []
 
-[53
+[55
 
 ]
 Overfull \hbox (0.39642pt too wide) in paragraph at lines 41--43
@@ -2484,7 +2511,7 @@ that $^^C[](\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 ) = 0\OML/cmm/m/it/12 ;  \OMS/cms
 y/m/n/12 8 \OML/cmm/m/it/12 k >
  []
 
-[54] [55] [56]) [57] [58
+[56] [57] [58]) [59] [60
 
 ]
 Appendix B.
@@ -2525,8 +2552,8 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 20.
 
 
-</Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf, id=96
-5, 361.35pt x 367.3725pt>
+</Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf, id=97
+7, 361.35pt x 367.3725pt>
 File: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf G
 raphic file (type pdf)
 
@@ -2535,8 +2562,8 @@ Package pdftex.def Info: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/
 graphics/AdS2.pdf used on input line 34.
 (pdftex.def)             Requested size: 230.46967pt x 234.31036pt.
 
-[59] [60 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.p
-df>] [61] [62
+[61] [62 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.p
+df>] [63] [64
 
 ]
 Appendix C.
@@ -2545,11 +2572,11 @@ Overfull \hbox (14.9206pt too wide) in paragraph at lines 157--157
 [] 
  []
 
-[63] [64]
+[65] [66]
 Appendix D.
-[65
+[67
 
-] [66]
+] [68]
 Appendix E.
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 29
@@ -2856,18 +2883,18 @@ Overfull \hbox (5.70668pt too wide) in paragraph at lines 291--291
 [] 
  []
 
-[67
+[69
 
-]) [68] [69] (./main.bbl [70
+]) [70] [71] (./main.bbl [72
 
-] [71]) [72]
+] [73]) [74]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 665DC2EA2F0B05D3D94490C8BBD75A39;3458.
+(rerunfilecheck)             Checksum: 1CFBCD55858E0D9A6AAAEBAA116CBC5E;3458.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2875,10 +2902,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 35.
  ) 
 Here is how much of TeX's memory you used:
- 22521 strings out of 493089
- 412499 string characters out of 6134842
- 496291 words of memory out of 5000000
- 25078 multiletter control sequences out of 15000+600000
+ 22648 strings out of 493089
+ 414252 string characters out of 6134842
+ 507580 words of memory out of 5000000
+ 25193 multiletter control sequences out of 15000+600000
  41807 words of font info for 158 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,21n,73p,1480b,756s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2923,10 +2950,10 @@ ype1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2015/texmf-dist/fonts
 onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (72 pages, 1750220 bytes).
+Output written on main.pdf (74 pages, 1756447 bytes).
 PDF statistics:
- 1353 PDF objects out of 1440 (max. 8388607)
- 1219 compressed objects within 13 object streams
- 442 named destinations out of 1000 (max. 500000)
+ 1370 PDF objects out of 1440 (max. 8388607)
+ 1234 compressed objects within 13 object streams
+ 446 named destinations out of 1000 (max. 500000)
  412 words of extra memory for PDF output out of 10000 (max. 10000000)
 

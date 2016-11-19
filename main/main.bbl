@@ -172,6 +172,15 @@ S.~Giombi, R.~Ricci, R.~Roiban and A.~A.~Tseytlin,
 \texttt{\arxivref{1011.2755}{arXiv:1011.2755}}.
 %%CITATION = ARXIV:1011.2755;%%
 
+\bibitem{Wolff:2003sm}
+ALPHA Collaboration, U.~Wolff,
+\textit{``{Monte Carlo errors with less errors}''},
+\textsf{\doiref{10.1016/S0010-4655(03)00467-3,
+  10.1016/j.cpc.2006.12.001}{Comput.~Phys.~Commun.~156,~143~(2004)}},
+\texttt{\arxivref{hep-lat/0306017}{hep-lat/0306017}},
+[Erratum: Comput. Phys. Commun.176,383(2007)].
+%%CITATION = HEP-LAT/0306017;%%
+
 \bibitem{Cartier:2002zp}
 P.~Cartier, C.~DeWitt-Morette, M.~Ihl and C.~Saemann,
 \textit{``{Supermanifolds: Application to supersymmetry}''},
