@@ -7,6 +7,90 @@
 \small
 \parskip 0pt
 
+\bibitem{Abbott:2016blz}
+Virgo, LIGO Scientific Collaboration, B.~P.~Abbott et~al.,
+\textit{``{Observation of Gravitational Waves from a Binary Black Hole
+  Merger}''},
+\textsf{\doiref{10.1103/PhysRevLett.116.061102}{Phys.~Rev.~Lett.~116,~061102~(2016)}},
+\texttt{\arxivref{1602.03837}{arXiv:1602.03837}}.
+%%CITATION = ARXIV:1602.03837;%%
+
+\bibitem{Abbott:2016nmj}
+Virgo, LIGO Scientific Collaboration, B.~P.~Abbott et~al.,
+\textit{``{GW151226: Observation of Gravitational Waves from a 22-Solar-Mass
+  Binary Black Hole Coalescence}''},
+\textsf{\doiref{10.1103/PhysRevLett.116.241103}{Phys.~Rev.~Lett.~116,~241103~(2016)}},
+\texttt{\arxivref{1606.04855}{arXiv:1606.04855}}.
+%%CITATION = ARXIV:1606.04855;%%
+
+\bibitem{Chatrchyan:2012xdj}
+CMS Collaboration, S.~Chatrchyan et~al.,
+\textit{``{Observation of a new boson at a mass of 125 GeV with the CMS
+  experiment at the LHC}''},
+\textsf{\doiref{10.1016/j.physletb.2012.08.021}{Phys.~Lett.~B716,~30~(2012)}},
+\texttt{\arxivref{1207.7235}{arXiv:1207.7235}}.
+%%CITATION = ARXIV:1207.7235;%%
+
+\bibitem{Aad:2012tfa}
+ATLAS Collaboration, G.~Aad et~al.,
+\textit{``{Observation of a new particle in the search for the Standard Model
+  Higgs boson with the ATLAS detector at the LHC}''},
+\textsf{\doiref{10.1016/j.physletb.2012.08.020}{Phys.~Lett.~B716,~1~(2012)}},
+\texttt{\arxivref{1207.7214}{arXiv:1207.7214}}.
+%%CITATION = ARXIV:1207.7214;%%
+
+\bibitem{Veneziano:1968yb}
+G.~Veneziano,
+\textit{``{Construction of a crossing - symmetric, Regge behaved amplitude for
+  linearly rising trajectories}''},
+\textsf{\doiref{10.1007/BF02824451}{Nuovo~Cim.~A57,~190~(1968)}}.
+%%CITATION = NUCIA,A57,190;%%
+
+\bibitem{maldacena1}
+J.~M.~Maldacena,
+\textit{``{The Large N limit of superconformal field theories and
+  supergravity}''},
+\textsf{\doiref{10.1023/A:1026654312961}{Int.~J.~Theor.~Phys.~38,~1113~(1999)}},
+\texttt{\arxivref{hep-th/9711200}{hep-th/9711200}},
+[Adv. Theor. Math. Phys.2,231(1998)].
+%%CITATION = HEP-TH/9711200;%%
+
+\bibitem{Catterall_physrept}
+S.~Catterall, D.~B.~Kaplan and M.~Unsal,
+\textit{``{Exact lattice supersymmetry}''},
+\textsf{\doiref{10.1016/j.physrep.2009.09.001}{Phys.~Rept.~484,~71~(2009)}},
+\texttt{\arxivref{0903.4881}{arXiv:0903.4881}}.
+%%CITATION = ARXIV:0903.4881;%%
+
+\bibitem{Bergner:2016sbv}
+G.~Bergner and S.~Catterall,
+\textit{``{Supersymmetry on the lattice}''},
+\texttt{\arxivref{1603.04478}{arXiv:1603.04478}}.
+%%CITATION = ARXIV:1603.04478;%%
+
+\bibitem{Roiban}
+R.~McKeown and R.~Roiban,
+\textit{``{The quantum $AdS_5 \times S^5$ superstring at finite coupling}''},
+\texttt{\arxivref{1308.4875}{arXiv:1308.4875}}.
+%%CITATION = ARXIV:1308.4875;%%
+
+\bibitem{Bianchi:2016cyv}
+L.~Bianchi, M.~S.~Bianchi, V.~Forini, B.~Leder and E.~Vescovi,
+\textit{``{Green-Schwarz superstring on the lattice}''},
+\textsf{\doiref{10.1007/JHEP07(2016)014}{JHEP~1607,~014~(2016)}},
+\texttt{\arxivref{1605.01726}{arXiv:1605.01726}}.
+%%CITATION = ARXIV:1605.01726;%%
+
+\bibitem{Forini:2016sot}
+V.~Forini, L.~Bianchi, M.~S.~Bianchi, B.~Leder and E.~Vescovi,
+\textit{``{Lattice and string worldsheet in AdS/CFT: a numerical study}''},
+\textsf{PoS~LATTICE2015,~244~(2016)},
+\texttt{\arxivref{1601.04670}{arXiv:1601.04670}},
+in: \textit{``{Proceedings, 33rd International Symposium on Lattice Field
+  Theory (Lattice 2015): Kobe, Japan, July 14-18, 2015}''},
+244p.
+%%CITATION = ARXIV:1601.04670;%%
+
 \bibitem{Polchinski:1998rq}
 J.~Polchinski,
 \textit{``{String theory. Vol. 1: An introduction to the bosonic string}''},
@@ -34,49 +118,6 @@ R.~R.~Metsaev and A.~A.~Tseytlin,
 \textsf{\doiref{10.1016/S0550-3213(98)00570-7}{Nucl.~Phys.~B533,~109~(1998)}},
 \texttt{\arxivref{hep-th/9805028}{hep-th/9805028}}.
 %%CITATION = HEP-TH/9805028;%%
-
-\bibitem{gattringer2009quantum}
-C.~Gattringer and C.~Lang,
-\textit{``Quantum Chromodynamics on the Lattice: An Introductory
-  Presentation''},
-Springer Berlin Heidelberg (2009).
-
-\bibitem{montvay_lattice}
-I.~Montvay and G.~Münster,
-\textit{``Quantum fields on a lattice''},
-Cambridge University Press (1994).
-
-\bibitem{peskin}
-M.~E.~Peskin and D.~V.~Schroeder,
-\textit{``An introduction to quantum field theory''},
-Addison-Wesley Pub. Co (1995).
-
-\bibitem{mc_methods}
-M.~H.~Kalos and P.~A.~Whitlock,
-\textit{``Monte Carlo Methods''},
-2 edition,
-Wiley-VCH (2008).
-
-\bibitem{rothe}
-H.~J.~Rothe,
-\textit{``Lattice Gauge Theories: An Introduction''},
-3 edition,
-World Scientific Publishing Company (2005).
-
-\bibitem{hmc}
-S.~Duane, A.~Kennedy, B.~J.~Pendleton and D.~Roweth,
-\textit{``Hybrid Monte Carlo''},
-\textsf{\doiref{10.1016/0370-2693(87)91197-X}{Physics~Letters~B~195,~216
-  ~(1987)}}.
-
-\bibitem{maldacena1}
-J.~M.~Maldacena,
-\textit{``{The Large N limit of superconformal field theories and
-  supergravity}''},
-\textsf{\doiref{10.1023/A:1026654312961}{Int.~J.~Theor.~Phys.~38,~1113~(1999)}},
-\texttt{\arxivref{hep-th/9711200}{hep-th/9711200}},
-[Adv. Theor. Math. Phys.2,231(1998)].
-%%CITATION = HEP-TH/9711200;%%
 
 \bibitem{BRINK197777}
 L.~Brink, J.~H.~Schwarz and J.~Scherk,
@@ -158,11 +199,39 @@ R.~R.~Metsaev, C.~B.~Thorn and A.~A.~Tseytlin,
 \texttt{\arxivref{hep-th/0009171}{hep-th/0009171}}.
 %%CITATION = HEP-TH/0009171;%%
 
-\bibitem{Roiban}
-R.~McKeown and R.~Roiban,
-\textit{``{The quantum $AdS_5 \times S^5$ superstring at finite coupling}''},
-\texttt{\arxivref{1308.4875}{arXiv:1308.4875}}.
-%%CITATION = ARXIV:1308.4875;%%
+\bibitem{gattringer2009quantum}
+C.~Gattringer and C.~Lang,
+\textit{``Quantum Chromodynamics on the Lattice: An Introductory
+  Presentation''},
+Springer Berlin Heidelberg (2009).
+
+\bibitem{montvay_lattice}
+I.~Montvay and G.~Münster,
+\textit{``Quantum fields on a lattice''},
+Cambridge University Press (1994).
+
+\bibitem{peskin}
+M.~E.~Peskin and D.~V.~Schroeder,
+\textit{``An introduction to quantum field theory''},
+Addison-Wesley Pub. Co (1995).
+
+\bibitem{mc_methods}
+M.~H.~Kalos and P.~A.~Whitlock,
+\textit{``Monte Carlo Methods''},
+2 edition,
+Wiley-VCH (2008).
+
+\bibitem{rothe}
+H.~J.~Rothe,
+\textit{``Lattice Gauge Theories: An Introduction''},
+3 edition,
+World Scientific Publishing Company (2005).
+
+\bibitem{hmc}
+S.~Duane, A.~Kennedy, B.~J.~Pendleton and D.~Roweth,
+\textit{``Hybrid Monte Carlo''},
+\textsf{\doiref{10.1016/0370-2693(87)91197-X}{Physics~Letters~B~195,~216
+  ~(1987)}}.
 
 \bibitem{Giombi:2010bj}
 S.~Giombi, R.~Ricci, R.~Roiban and A.~A.~Tseytlin,
