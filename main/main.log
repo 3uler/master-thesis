@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  21 NOV 2016 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  23 NOV 2016 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,9 +1088,25 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count149
 \LT@p@ftn=\toks38
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/sansmath/sansmath.sty
+Package: sansmath 2007/02/28  ver 1.1 Donald Arseneau
+\c@mv@sans=\count150
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `sans'
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 103.
+LaTeX Font Info:    Overwriting math alphabet `\mathsfsl' in version `sans'
+(Font)                  OT1/cmss/m/sl --> OT1/cmss/m/sl on input line 104.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `sans'
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 105.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `sans'
+(Font)                  OML/cmm/m/it --> OML/cmm/m/it on input line 109.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `sans'
+(Font)                  OMS/cmsy/m/n --> OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathsfbf' in version `sans'
+(Font)                  OT1/cmss/bx/sl --> OT1/cmss/bx/n on input line 112.
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/multibib/multibib.sty
 Package: multibib 2008/12/10 v1.4 Multiple bibliographies for one document.
-\mb@biblabelwidth=\count150
+\mb@biblabelwidth=\count151
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/sidecap/sidecap.sty
 Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
@@ -1098,7 +1114,7 @@ Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
 \SC@CAPWD=\dimen198
 \SC@tempdima=\dimen199
 \SC@tempdimb=\dimen200
-\c@SC@C=\count151
+\c@SC@C=\count152
 \SC@BOX=\box52
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
@@ -1115,7 +1131,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen206
 \caption@hangindent=\dimen207
 )
-\c@ContinuedFloat=\count152
+\c@ContinuedFloat=\count153
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -1161,16 +1177,16 @@ LaTeX Font Info:    ... okay on input line 2.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count153
+\scratchcounter=\count154
 \scratchdimen=\dimen208
 \scratchbox=\box53
-\nofMPsegments=\count154
-\nofMParguments=\count155
+\nofMPsegments=\count155
+\nofMParguments=\count156
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count156
+\MPscratchCnt=\count157
 \MPscratchDim=\dimen209
-\MPnumerator=\count157
-\makeMPintoPDFobject=\count158
+\MPnumerator=\count158
+\makeMPintoPDFobject=\count159
 \everyMPtoPDFconversion=\toks40
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1243,7 +1259,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count159
+\c@section@level=\count160
 )
 LaTeX Info: Redefining \ref on input line 2.
 LaTeX Info: Redefining \pageref on input line 2.
@@ -1307,19 +1323,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2]
 Chapter 1.
-) (./string_basics.tex [3
+[3
 
-] [4]
+]) (./string_basics.tex [4] [5] [6
+
+]
 Chapter 2.
-[5
-
-] [6]
+[7] [8]
 Overfull \hbox (9.50705pt too wide) in paragraph at lines 173--175
 []\OT1/cmr/m/it/12 The Ramond-Neveu-Schwarz for-mal-ism \OT1/cmr/m/n/12 is su-p
 er-sym-met-ric on the world-
  []
 
-[7] [8] [9]) (./ads_cft_basics.tex [10]
+[9] [10] [11]) (./ads_cft_basics.tex [12]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--18
@@ -1330,19 +1346,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--18
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 27.
 
-[11
+[13
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
+ [14]
 LaTeX Font Info:    Try loading font information for U+euf on input line 78.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [13]
+) [15]
 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/Wilson_worldshe
-et.png, id=429, 317.185pt x 581.372pt>
+et.png, id=477, 317.185pt x 581.372pt>
 File: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/Wilson_wor
 ldsheet.png Graphic file (type png)
 
@@ -1352,6 +1368,11 @@ Package pdftex.def Info: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/
 graphics/Wilson_worldsheet.png used on input line 148.
 (pdftex.def)             Requested size: 134.4416pt x 246.4278pt.
 
+Overfull \hbox (12.02408pt too wide) in paragraph at lines 171--171
+ |[]\OT1/cmss/bx/n/17.28 The cusp anoma-lous di-men-sion of $\OMS/cmsy/b/n/17.2
+8 N[]$ \OT1/cmss/bx/n/17.28 SYM| 
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 171.
@@ -1360,13 +1381,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 171.
 
-[14] [15 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/Wilson
+[16] [17 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/Wilson
 _worldsheet.png>]
 Overfull \hbox (10.50252pt too wide) in paragraph at lines 236--236
  |[]\OT1/cmss/bx/n/17.28 The Green-Schwarz su-per-string ac-tion in AdS
  []
 
-[16]
+[18]
 Overfull \hbox (20.47241pt too wide) in paragraph at lines 283--283
 [] 
  []
@@ -1376,9 +1397,9 @@ Overfull \hbox (4.55014pt too wide) in paragraph at lines 297--297
 [] 
  []
 
-[17]
+[19]
 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/cusp_worldsheet
-_vec.png, id=503, 481.67955pt x 481.67955pt>
+_vec.png, id=546, 481.67955pt x 481.67955pt>
 File: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/cusp_world
 sheet_vec.png Graphic file (type png)
 
@@ -1388,11 +1409,7 @@ Package pdftex.def Info: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/
 graphics/cusp_worldsheet_vec.png used on input line 312.
 (pdftex.def)             Requested size: 268.87737pt x 268.88612pt.
 
-Underfull \vbox (badness 5548) has occurred while \output is active []
-
- [18 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/cusp_world
-sheet_vec.png>]
-Overfull \hbox (15.65875pt too wide) in paragraph at lines 354--360
+Overfull \hbox (16.9643pt too wide) in paragraph at lines 354--360
 \OT1/cmr/m/n/12 With a tran-si-tion to the new world-sheet co-or-di-nates $[]$
  []
 
@@ -1401,18 +1418,19 @@ Overfull \hbox (8.9344pt too wide) in paragraph at lines 374--374
 [] 
  []
 
-[19] [20]) (./lattice_basics.tex [21] [22
+[20 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/cusp_worlds
+heet_vec.png>] [21]) (./lattice_basics.tex [22] [23] [24
 
 ]
 Chapter 4.
-[23] [24] [25] [26]
+[25] [26] [27] [28]
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 226.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [27]
-[28] [29] [30] [31] [32] [33] [34]) (./towards_lattice.tex [35] [36]
+) [29]
+[30] [31] [32] [33] [34] [35] [36]) (./towards_lattice.tex [37] [38]
 Chapter 5.
 
 Overfull \hbox (1.18216pt too wide) in paragraph at lines 20--26
@@ -1420,9 +1438,9 @@ Overfull \hbox (1.18216pt too wide) in paragraph at lines 20--26
 Eu-clidean \OT1/cmr/m/n/12 ac-tion con-tributes within
  []
 
-[37
+[39
 
-] [38]
+] [40]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 16
 7.
@@ -1608,7 +1626,7 @@ Overfull \hbox (29.63899pt too wide) in paragraph at lines 167--167
 [] 
  []
 
-[39] [40] [41]
+[41] [42] [43]
 Overfull \hbox (12.49242pt too wide) in paragraph at lines 405--405
 [] 
  []
@@ -1616,7 +1634,7 @@ Overfull \hbox (12.49242pt too wide) in paragraph at lines 405--405
 
 Underfull \vbox (badness 7595) has occurred while \output is active []
 
- [42]
+ [44]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 43
 4.
@@ -1802,7 +1820,7 @@ Overfull \hbox (13.53351pt too wide) in paragraph at lines 434--434
 [] 
  []
 
-[43]
+[45]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 48
 3.
@@ -1988,7 +2006,7 @@ Overfull \hbox (13.53351pt too wide) in paragraph at lines 483--483
 [] 
  []
 
-[44]
+[46]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 55
 9.
@@ -2479,23 +2497,47 @@ Overfull \hbox (5.70668pt too wide) in paragraph at lines 633--633
 [] 
  []
 
-[45] [46] [47]) (./simulations.tex [48]
+[47] [48] [49]) (./simulations.tex [50]
 Chapter 6.
-[49
+[51
 
 ]
 Underfull \vbox (badness 10000) detected at line 95
  []
 
-[50] (./runs_table.tex
+[52] (./runs_table.tex
 Underfull \vbox (badness 10000) detected at line 27
  []
 
-[51] [52])) [53] [54
+[53] [54]) [55]
 
-] [55
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 161.
 
-] [56] (./appendix.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\delimiter' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\delimiter' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 161.
+
+) [56] [57
+
+
+] [58] (./appendix.tex
 Appendix A.
 (./grassmann_alg.tex
 Overfull \hbox (10.03091pt too wide) in paragraph at lines 5--7
@@ -2503,16 +2545,16 @@ Overfull \hbox (10.03091pt too wide) in paragraph at lines 5--7
  re-la-tions for fermionic
  []
 
-[57
+[59
 
 ]
 Overfull \hbox (0.39642pt too wide) in paragraph at lines 41--43
 \OT1/cmr/m/n/12 and with ([]A.1.4[]) it ap-plies for all higher ten-sor spaces 
-that $^^C[](\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 ) = 0\OML/cmm/m/it/12 ;  \OMS/cms
-y/m/n/12 8 \OML/cmm/m/it/12 k >
+that $^^C[](\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 ) = 0,  \OMS/cmsy/m/n/12 8 \OML/c
+mm/m/it/12 k >
  []
 
-[58] [59] [60]) [61] [62
+[60] [61] [62]) [63] [64
 
 ]
 Appendix B.
@@ -2537,10 +2579,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 16.
 
 
-LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 16.
-
-
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 20.
 
@@ -2554,7 +2592,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf, id=10
-12, 361.35pt x 367.3725pt>
+56, 361.35pt x 367.3725pt>
 File: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf G
 raphic file (type pdf)
 
@@ -2563,8 +2601,8 @@ Package pdftex.def Info: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/
 graphics/AdS2.pdf used on input line 34.
 (pdftex.def)             Requested size: 230.46967pt x 234.31036pt.
 
-[63] [64 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.p
-df>] [65] [66
+[65] [66 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.p
+df>] [67] [68
 
 ]
 Appendix C.
@@ -2573,11 +2611,11 @@ Overfull \hbox (14.9206pt too wide) in paragraph at lines 157--157
 [] 
  []
 
-[67] [68]
+[69] [70]
 Appendix D.
-[69
+[71
 
-] [70]
+] [72]
 Appendix E.
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 29
@@ -2884,18 +2922,18 @@ Overfull \hbox (5.70668pt too wide) in paragraph at lines 291--291
 [] 
  []
 
-[71
+[73
 
-]) [72] [73] (./main.bbl [74
+]) [74] [75] (./main.bbl [76
 
-] [75] [76]) [77]
+] [77] [78]) [79]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 39.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B1907CE3F00CE469E107F13E25EEA7FB;3506.
+(rerunfilecheck)             Checksum: 84BC5A826E751F75319546A8AFF1849B;3657.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2903,58 +2941,55 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 39.
  ) 
 Here is how much of TeX's memory you used:
- 22674 strings out of 493089
- 414684 string characters out of 6134842
- 507923 words of memory out of 5000000
- 25203 multiletter control sequences out of 15000+600000
+ 22730 strings out of 493089
+ 415520 string characters out of 6134842
+ 508648 words of memory out of 5000000
+ 25244 multiletter control sequences out of 15000+600000
  41807 words of font info for 158 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,21n,73p,1585b,756s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,21n,73p,1588b,756s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/doublestroke/dsrom12.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2015/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (77 pages, 1766915 bytes).
+Output written on main.pdf (79 pages, 1765876 bytes).
 PDF statistics:
- 1425 PDF objects out of 1440 (max. 8388607)
- 1286 compressed objects within 13 object streams
- 459 named destinations out of 1000 (max. 500000)
- 420 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1468 PDF objects out of 1728 (max. 8388607)
+ 1329 compressed objects within 14 object streams
+ 470 named destinations out of 1000 (max. 500000)
+ 436 words of extra memory for PDF output out of 10000 (max. 10000000)
 

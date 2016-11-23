@@ -1,4 +1,4 @@
-\chapter{Simulations and observables}
+\chapter{Simulations and observables}\label{ch: parameters}
 In this chapter we will present some basic information on the implementation of the previously discussed algorithm and state the utilized parameters of the conducted simulations. Furthermore we need to discuss how to take the continuum limit of the observables of interest.
 %
 %
@@ -120,3 +120,42 @@ In \autoref{tab: runs_param} we list the parameters of the simulations presented
 %
 %
 The meaning of the Q-value, given in the table, is defined in \cite{Wolff:2003sm}. It reveals information about the quality of an observable with respect to their replica. One derives the mean value for each replicum and analyses the distribution of these means in comparison to the total mean of all replica. The Q-value is of cause more meaningful if there is a high number of replica. If there is just one replicum then it is defined to be zero.
+%
+%
+%
+%
+%
+%
+% - - - - - - - - - -    Observables   - - - - - - - - - - 
+%
+%
+%
+%
+%
+\section{Observables}
+As pointed out earlier we are utmost interested in obtaining information on the scaling function $f(g)$. In out numerical simulation we are basically restricted calculate observable vevs and therefore need to find a suitable observable providing a connection to $f(g)$. By recapitulating (\ref{eq: W_S_cusp}) we can write
+%
+%
+\begin{equation}
+-\ln Z_{\rm cusp} = \frac{1}{8} f(g)V_{2}.
+\end{equation}
+%
+%
+With $Z_{\rm cusp} = \int \mathcal{D}\delta X\,\mathcal{D}\delta \mathit{\Psi}\;e^{-S_{\rm cusp}}$ and the structure of the action 
+\begin{equation}
+S_{\rm cusp} = g \int \dd t \dd s \; \mathcal{L}_{\rm cusp}
+\end{equation}
+we find
+%
+%
+\begin{equation}
+\langle S_{\rm cusp} \rangle = \frac{\int \mathcal{D}\delta X\,\mathcal{D}\delta\mathit{\Psi} \; S_{\rm cusp} \;e^{-S_{\rm cusp}}}{\int \mathcal{D}\delta X\,\mathcal{D}\delta\mathit{\Psi} \; e^{-S_{\rm cusp}}} = -g \frac{\dd \ln Z_{\rm cusp}}{\dd g} \equiv g\frac{V_{2}}{2} f'(g).
+\end{equation}
+%
+%
+We can therefore obtain information in the derivative of the scaling function from the vev of the action.\\
+To motivate our line of constant physics, we investigate the mass of the bosonic fluctuation field $x$ around the string vacuum which can be obtained from the correlation function $\langle x x^{*}\rangle$.
+%
+%
+%
+\subsection[The $\langle xx^{*}\rangle$ correlator]{The {$\mathitbf{\langle x\,x^{*}\rangle}$} correlator}

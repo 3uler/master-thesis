@@ -6,7 +6,7 @@ Among the most exciting breakthroughs in theoretical physics in the last decades
 What makes this conjecture so promising is that it relates a quantum field theory (QFT) of gauge fields in flat spacetime with a string theory. The latter one is also a promising candidate for a theory of quantum gravity. Unifying gravity with the other fundamental forces condensed in the Standard Model would be one of the next big milestones in physics. By studying the predictions of the $AdS/CFT$ correspondence scientists hope to get one step closer to this fundamental aim.
 %The $AdS/CFT$ correspondence is some sort of strong-weak coupling duality. It can relate a strong coupled field theory to its dual, a weakly curved gravity theory.
 The conjecture links two theories, very different in their physical content and interpretation, stating that they are mathematically equivalent.
-The $AdS$ part refers to a gravity theory on asymptotically Anti-de Sitter spacetime,  $CFT$ stands for conformal field theory. In its primary form \cite{Ammon:2015wua}, the correspondence states that \\[0.2cm]
+The $AdS$ part refers to a gravity theory on asymptotically anti-\names{de Sitter} spacetime,  $CFT$ stands for conformal field theory. In its primary form \cite{Ammon:2015wua}, the correspondence states that \\[0.2cm]
 %
 %
 %
@@ -117,7 +117,7 @@ Z_{\rm string}[\mathcal{C}] = \int\limits_{\del X^{\mu}=\mathcal{C}} \mathcal{D}
 \end{equation}
 %
 %
-Here $S_{\rm string}$ is the action of the fundamental string in $AdS_{5}\times S^{5}$, $h_{\alpha\beta}$ a 2d metric and ${X^{M}=(X^{\mu},X^{3+I})}$ ${(M=0,\ldots,9;\, \mu=0,\ldots,3; \; I=1,\ldots,6)}$ are the embedding functions in the string target space, depending on the worldsheet coordinates $(\tau,\sigma)\in \Sigma$ where $\Sigma$ representing a map of the string worldsheet. By defining $\widetilde{X}^{I}=X^{3+I}$ and therefore $X^{M}=(X^{\mu},\widetilde{X}^{I})$ the partition function (\ref{Z_string}) needs to meet the following boundary conditions
+Here $S_{\rm string}$ is the action of the fundamental string in $AdS_{5}\times S^{5}$, $h_{\alpha\beta}$ a 2d metric and ${X^{M}=(X^{\mu},X^{3+I})}$ ${(M=0,\ldots,9;\, \mu=0,\ldots,3; \; I=1,\ldots,6)}$ are the embedding functions in the string target space, depending on the worldsheet coordinates $(\tau,\sigma)\in \Sigma$ where $\Sigma$ is representing a map of the string worldsheet. By defining $\widetilde{X}^{I}=X^{3+I}$ and therefore $X^{M}=(X^{\mu},\widetilde{X}^{I})$ the partition function (\ref{Z_string}) needs to meet the following boundary conditions
 %
 %
 \begin{equation}
@@ -220,7 +220,7 @@ f(g) = 4g - \frac{3\ln 2}{\pi} - \frac{K}{4\pi^{2}g} + \mathcal{O}(g^{-2}), \qua
 \end{equation}
 %
 %
-where $K\approx 0.916$ is the \names{Catalan} constant. As mentioned, the scaling function is also known relying on the assumption of the integrability of $\mathcal{N}\geq 4$ SYM (see e.g. \cite{Beisert:2010jr}) where it can be derived from the $BES$\footnote{$BES$ stands for Beisert-Eden-Staudacher equation, which is an integral equation derived via a \names{Bethe} Ansatz in quantum integrability \cite{Beisert:2006ez}.} equation for any finite values of $g$. Our main aim is to reproduce the scaling function in numerical simulations for the string model with path integral defined by (a suitable version of) (\ref{Z_string}).
+where $K\approx 0.916$ is the \names{Catalan} constant. As mentioned, the scaling function is also known relying on the assumption of the integrability of $\mathcal{N}\geq 4$ SYM (see e.g. \cite{Beisert:2010jr}) where it can be derived from the $BES$\footnote{$BES$ stands for Beisert-Eden-Staudacher equation, which is an integral equation derived via a \names{Bethe} Ansatz in quantum integrability \cite{Beisert:2006ez}.} equation for any finite values of $g$. Our main aim is to reproduce the scaling function in numerical simulations for the string model with a path integral defined by (a suitable version of) (\ref{Z_string}).
 %
 %
 %
@@ -238,7 +238,7 @@ As mentioned in the previous section we can address the scaling function by cons
 %
 %
 \begin{equation}
-\langle \mathcal{W}_{\rm cusp} \rangle = \int \mathcal{D}\delta X\, \mathcal{D}\delta \mathit{\Psi}\; e^{-S_{\rm cusp}[X_{\rm cl} + \delta X,\delta \mathit{\Psi}]} = e^{-\frac{f(\lambda)}{2}\frac{V_{2}}{4}}.
+\langle \mathcal{W}_{\rm cusp} \rangle =Z_{\rm cusp}= \int \mathcal{D}\delta X\, \mathcal{D}\delta \mathit{\Psi}\; e^{-S_{\rm cusp}[X_{\rm cl} + \delta X,\delta \mathit{\Psi}]} = e^{-\frac{f(\lambda)}{2}\frac{V_{2}}{4}}.
 \label{eq: W_S_cusp}
 \end{equation}
 %
@@ -253,7 +253,7 @@ z^{M} = zu^{M}, \quad  u^{M}u^{M} = 1, \quad  z=\left(z^{M}z^{M}\right)^{\frac{1
 \end{gather}
 %
 %
-Here $x^{\mu},z$ are the local coordinates in the \names{Poincaré} patch of $AdS_{5}$ (see Appendix \ref{p_patch}) and $u^{M}\in \mathbb{R}^{6}$ are \names{Euclidean} coordinates restricted to the $S^{5}$ sphere by (\ref{S5_restrict}). In this case $AdS_{5}$ and $S^{5}$ have the same constant curvature radius $R=1$. Starting point is the action from \cite{Metsaev:1998it}, which is a covariant $\kappa$-symmetric superstring action for a Type IIB superstring on $\AdSS$ background. It is a 2d $\sigma$-model on the coset superspace $\frac{SU(2,2\vert 4)}{SO(4,1)\times SO(5)}$. Fixing $\kappa$-symmetry $\Gamma^{+}\vartheta^{I}=0$ with $(I=1,2)$ on the two 10d \names{Majorana-Weyl} GS spinors $\vartheta^{M}$  and choosing the conformally analogue gauge on the 2d metric
+Here $x^{\mu},z$ are the local coordinates in the \names{Poincaré} patch of $AdS_{5}$ (see Appendix \ref{p_patch}) and $u^{M}\in \mathbb{R}^{6}$ are \names{Euclidean} coordinates restricted to the $S^{5}$ sphere by (\ref{S5_restrict}). In this case $AdS_{5}$ and $S^{5}$ have the same constant curvature radius $R=1$. Starting point is the action from \cite{Metsaev:1998it}, which is a covariant $\kappa$-symmetric superstring action for a Type IIB superstring on $\AdSS$ background. It is a 2d $\sigma$-model on the coset superspace $\frac{SU(2,2\vert 4)}{SO(4,1)\times SO(5)}$. Fixing $\kappa$-symmetry $\Gamma^{+}\mathit{\Theta}^{I}=0$ with $(I=1,2)$ on the two 10d \names{Majorana-Weyl} GS spinors $\mathit{\Theta}^{I}$  and choosing the conformally analogue gauge on the 2d metric
 %
 %
 \begin{equation}
@@ -374,7 +374,7 @@ S_{\rm cusp} &= g \int \dd t \int \dd s \, \mathcal{L}_{\rm cusp} \label{eq: cus
 \end{align}
 %
 %
-In the following we will drop the tilde notation for convenience. We also want to remark that there has been no truncation applied and this is still the full fluctuation action and therefore perfectly valid for a further application on non-perturbative calculations. In a previous step we set the light-cone momentum $p^{+}=1$ for simplicity, but since $p^{+}$ actually is a dimensionfull quantity we will insert a mass scale parameter $m$ that is also necessary for a later renormalization on the lattice and therefore change
+In the following we will drop the tilde notation for convenience. We also want to remark that there has been no truncation applied and this is still the full fluctuation action and therefore perfectly valid for a further application on non-perturbative calculations. In a previous step we set the light-cone momentum $p^{+}=1$ for simplicity, but since $p^{+}$ will be a dimensionfull quantity in terms of a lattice spacing, when we discretize the model, we will insert a mass scale parameter $m$ that will also be necessary for a later renormalization on the lattice and we therefore change
 %
 %
 \begin{align}

@@ -4,44 +4,44 @@ The top-level auxiliary file: introduction_out.aux
 The style file: nb.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Master.bib
-You've used 10 entries,
+You've used 19 entries,
             1217 wiz_defined-function locations,
-            415 strings with 4389 characters,
-and the built_in function-call counts, 4977 in all, are:
-= -- 506
-> -- 85
-< -- 314
-+ -- 331
-- -- 44
-* -- 274
-:= -- 660
+            503 strings with 6538 characters,
+and the built_in function-call counts, 10473 in all, are:
+= -- 1085
+> -- 190
+< -- 667
++ -- 703
+- -- 89
+* -- 567
+:= -- 1370
 add.period$ -- 0
-call.type$ -- 10
+call.type$ -- 19
 change.case$ -- 0
-chr.to.int$ -- 36
-cite$ -- 10
-duplicate$ -- 70
-empty$ -- 246
-format.name$ -- 22
-if$ -- 970
+chr.to.int$ -- 72
+cite$ -- 19
+duplicate$ -- 160
+empty$ -- 500
+format.name$ -- 51
+if$ -- 2059
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 60
-newline$ -- 78
-num.names$ -- 10
-pop$ -- 37
+int.to.str$ -- 19
+missing$ -- 114
+newline$ -- 143
+num.names$ -- 19
+pop$ -- 72
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 511
+skip$ -- 1100
 stack$ -- 0
-substring$ -- 427
-swap$ -- 70
-text.length$ -- 34
+substring$ -- 915
+swap$ -- 160
+text.length$ -- 70
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 44
-width$ -- 12
-write$ -- 105
+while$ -- 89
+width$ -- 21
+write$ -- 199
