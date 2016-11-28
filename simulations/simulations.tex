@@ -26,7 +26,7 @@ m_{x}^{2}(g) = \frac{m^{2}}{2}\left(1 - \frac{1}{8g} + \mathcal{O}(g^{-2}) \righ
 \end{equation}
 %
 %
-Together with (\ref{eq: line_of_c_phys1}) this leads to 
+Together with (\ref{eq: line_of_c_phys1}) and for a fixed value of $g$ this leads to 
 %
 %
 \begin{equation}
@@ -133,7 +133,7 @@ The meaning of the Q-value, given in the table, is defined in \cite{Wolff:2003sm
 %
 %
 \section{Observables}
-As pointed out earlier we are utmost interested in obtaining information on the scaling function $f(g)$. In out numerical simulation we are basically restricted calculate observable vevs and therefore need to find a suitable observable providing a connection to $f(g)$. By recapitulating (\ref{eq: W_S_cusp}) we can write
+As pointed out earlier we are utmost interested in obtaining information on the scaling function $f(g)$. In our numerical simulation we are basically restricted to calculate observable vevs and therefore need to find a suitable observable providing a connection to $f(g)$. By recapitulating (\ref{eq: W_S_cusp}) we can write
 %
 %
 \begin{equation}
@@ -150,12 +150,211 @@ we find
 %
 \begin{equation}
 \langle S_{\rm cusp} \rangle = \frac{\int \mathcal{D}\delta X\,\mathcal{D}\delta\mathit{\Psi} \; S_{\rm cusp} \;e^{-S_{\rm cusp}}}{\int \mathcal{D}\delta X\,\mathcal{D}\delta\mathit{\Psi} \; e^{-S_{\rm cusp}}} = -g \frac{\dd \ln Z_{\rm cusp}}{\dd g} \equiv g\frac{V_{2}}{2} f'(g).
+\label{eq: <S_cusp>}
 \end{equation}
 %
 %
-We can therefore obtain information in the derivative of the scaling function from the vev of the action.\\
+We can therefore obtain information on the derivative of the scaling function from the vev of the action.\\
 To motivate our line of constant physics, we investigate the mass of the bosonic fluctuation field $x$ around the string vacuum which can be obtained from the correlation function $\langle x x^{*}\rangle$.
 %
 %
 %
+%
+%  - - - - - -   < x x* >  - - - - - - - -
+%
+%
+%
+% 
 \subsection[The $\langle xx^{*}\rangle$ correlator]{The {$\mathitbf{\langle x\,x^{*}\rangle}$} correlator}
+We define the physical masses of the $x,x^{*}$ fields as the values of the energy at vanishing momentum. In the large coupling limit the mass can be read off from a quadratic expansion of the \names{Lagrangian} \cite{Bianchi:2016cyv} to 
+%
+%
+\begin{equation}
+\frac{m_{x}^{2}}{m^{2}} \quad \textabove{=}{$\small g \!\gg \!1$} \quad \frac{1}{2}.
+\end{equation}
+%
+%
+The leading quantum corrections to the dispersion limit of the regarding fields have been computed in \cite{Giombi:2010bj}, leading to (\ref{eq: m_x}). We can determine the mass for different values of the coupling to estimate a dependence of $m_{x}^{2}$ of $g$. For a fixed value of $g$ one can calculate the physical mass on the lattice with timeslice correlation functions derived from the two-point functions
+%
+%
+\begin{equation}
+G_{x}(t_{1},s_{1};t_{2},s_{2}) = \langle x(t_{1},s_{1})\, x^{*}(t_{2},s_{2}) \rangle.
+\end{equation}
+%
+%
+A \names{Fourier} transform in the spatial components results in the \textit{timeslice correlator}
+%
+%
+\begin{equation}
+C_{x}(t,k) = \sum\limits_{s_{1},s_{2}} e^{-ik(s_{1}-s_{2})} G_{x}(t,s_{1};0,s_{2}).
+\end{equation}
+%
+%
+Thinking in terms of particle eigenstates $\vert k \rangle = \vert k,\alpha \rangle$, where $k$ corresponds to the spatial momentum and $\alpha$ to different energy states, one would find for a momentum and energy operator $P$ and $H$
+%
+%
+\begin{align}
+P \vert k,\alpha \rangle &= k \vert k,\alpha \rangle, \\
+H \vert k,\alpha \rangle &= E(k,\alpha) \vert k,\alpha \rangle.
+\end{align}
+%
+%
+We can therefore think in general of $C(t,k)$ representing (see \cite{montvay_lattice})
+%
+%
+\begin{equation}
+C(t,k) = \langle k\vert e^{-tH} \vert k \rangle = \sum\limits_{\alpha} \vert c_{\alpha} \vert^{2} e^{-t E(k,\alpha)}.
+\raisetag{-8pt}
+\end{equation}
+%\hfill
+%\vspace{0.2cm}
+%
+%
+For large $t$ the lowest energy $E(k,0)$ dominates the timeslice correlator. It can be recognised as the energy of a one-particle state and we can identify a physical mass with the energy at vanishing momentum
+%
+%
+\begin{equation}
+m \equiv E(0,0).
+\end{equation}
+%
+%
+For the $x$ fields we can therefore make the same assumptions and identify
+%
+%
+\begin{equation}
+C_{x}(t,0) \quad \textabove{\sim}{$\footnotesize t\!\gg\!1$} \quad e^{-tm_{x \rm LAT}}, \qquad m_{x\rm LAT} = E_{x}(k=0).
+\end{equation}
+%
+%
+The temporal boundary conditions on the lattice require to respect also a left moving part, since
+%
+%
+\begin{equation}
+C_{x}(t,0) = C_{x}(T-t,0)
+\end{equation}
+%
+%
+and thus
+%
+%
+\begin{equation}
+C_{x}(t,0) \quad \textabove{\sim}{$\footnotesize t\!\gg\!1$} \quad e^{-tm_{x \rm LAT}}+e^{-(T-t)m_{x \rm LAT}} \sim \text{cosh\,}\left(\left(\frac{T}{2}-t\right) m_{x\rm LAT}\right).
+\end{equation}
+%
+%
+%
+%
+On the lattice we can determine $m_{x\rm LAT}$ as a limit of an \textit{effective mass} $m_{x}^{\rm eff}$. For fixed values of $g$ and $T$ we can estimate $m_{x}^{\rm eff}(g,T)$ by a fit of the normalized timeslice correlator $\overline{\!C}_{x}(t,0)$ to the curve 
+%
+%
+\begin{equation}
+\text{cosh\,}\left(\left(\frac{T}{2}-t\right) m_{x}^{\rm eff}\right)
+\end{equation}
+%
+%
+in a regime of $t$ close to $T/2$ where excited states are suppressed. To obtain the continuum value, we extrapolate $m_{x}^{\rm eff}(g,T)$ for different lattice sizes to find
+%
+%
+\begin{equation}
+m_{x\rm LAT}(g) = \lim\limits_{T\to \infty} m_{x}^{\rm eff}(g,T).
+\end{equation}
+To improve the fit that estimates $m_{x}^{\rm eff}$ we chose the temporal lattice extent to be twice the spatial one.
+%
+%
+%
+%
+%
+%  - - - - - - - -    cusp action   - - - - - - - - - -
+%
+%
+%
+%
+\subsection{The cusp action}
+To measure the action (\ref{eq: <S_cusp>}) we first explore the regime of large $g$, where we recover the following lattice observable, behaving linear in $g$ and containing a quadratic divergence in $L$ in the continuum limit
+%
+%
+\begin{equation}
+\langle S_{\rm LAT} \rangle = S_{0} + \frac{c}{2} \left(2L^{2}\right), \qquad g\gg 1.
+\label{eq: S_LAT}
+\end{equation}
+%
+%
+In the continuum we would find
+%
+%
+\begin{equation}
+\langle S_{\rm cusp} \rangle = g \frac{V_{2}}{8}f'(g)  \quad \textabove{=}{$\footnotesize g\!\gg\!1$} \quad \frac{V_{2}}{2}g \equiv S_{0},
+\end{equation}
+%
+%
+leading to a possible description of $f'(g)$ given by
+%
+%
+\begin{equation}
+\frac{\langle S_{\rm cusp \rangle}}{S_{0}} = \frac{f'(g)}{4}.
+\end{equation}
+%
+%
+For a discretised version nonetheless we have to include the mass scale for the action to be dimensionless with respect to the lattice spacing
+%
+%
+\begin{equation}
+S_{0} = \frac{V_{2}}{2} m^{2}g = \frac{1}{2}\left(2L^{2}\right) M^{2} g.
+\end{equation}
+%
+%
+Furthermore we recalled the behaviour $f(g) = 4g + \text{const.} + \mathcal{O}(g^{-1})$ from (\ref{eq: scaling_fct}) and inserted $V_{2}=a^{2}(TL)=a^{2}(2L^{2})$, since we always use $T=2L$. $S_{0}$ is the discretised classical action and its value is fixed in each simulation for given $g$ and $LM$. In (\ref{eq: S_LAT}) we added a term quadratically divergent in $L$ in the continuum limit. To motivate the appearance of such behaviour let us recall that we calculate the vev of the cusp action via
+%
+%
+\begin{equation}
+ \langle S_{\rm cusp} \rangle = -g \frac{\dd \ln Z_{\rm cusp}}{\dd g},
+ \end{equation} 
+ %
+ %
+ with the partition function having a bosonic and fermionic contribution of quadratic order in the fields $Z_{\rm cusp}^{(2)}=Z_{\rm B}^{(2)}Z_{\rm F}^{(2)}$. For these contributions we can schematically write
+ %
+ %
+\begin{equation}
+\begin{alignedat}{2}
+Z_{\rm B}^{(2)} &= \int \prod\limits_{n=1}^{N_{\rm B}} \mathcal{D}\phi_{n} \; e^{-g \sum\limits_{i=1}^{N_{\rm B}} \int \dd t \dd s\; \phi_{i} \mathcal{O}_{i} \phi_{i}} \\
+%
+%
+&\textabove{=}{$^{\rm LAT}$} \int \prod\limits_{n=1}^{N_{\rm B}} \left( \prod\limits_{k=1}^{\vert \mathit{\Lambda}\vert} \dd \phi_{n}^{(k)} \right) \; e^{-g \sum\limits_{i=1}^{N_{\rm B}} \phi_{i}^{\rm T}\hat{\mathcal{O}}_{i}\phi_{i}} \\
+%
+%
+&= \prod\limits_{i=1}^{N_{\rm B}} \frac{1}{\sqrt{\det (g \hat{\mathcal{O}}_{i})}}   =    g^{-N_{\rm B}\frac{V}{2}} \prod\limits_{i=1}^{N_{\rm B}} \frac{1}{\sqrt{\det \hat{\mathcal{O}}_{i}}}  ,
+\end{alignedat}
+\end{equation}
+%
+%
+where $V=\vert \mathit{\Lambda}\vert$ and $N_{\rm B}$ is the number of bosonic fields $\phi_{i}$. In the same manner we find (with the number of fermions $N_{\rm F}$)
+%
+%
+\begin{equation}
+Z_{\rm F}^{(2)}= g^{N_{\rm F}\frac{V}{2}} \pf \left(\hat{\mathcal{O}}_{\rm F} \right)
+\end{equation}
+%
+%
+and thus
+%
+%
+\begin{equation}
+\begin{alignedat}{2}
+\langle S_{\rm cusp} \rangle &= -g \frac{\dd }{\dd g} \left( -\frac{V}{2}N_{\rm B} \ln g -\frac{1}{2} \sum\limits_{i=1}^{N_{\rm B}} \ln \left(\det \hat{\mathcal{O}}_{i}\right) + \frac{V}{2} N_{\rm F} \ln g + \ln \left( \pf \hat{\mathcal{O}}_{\rm F} \right) \right) \\
+%
+%
+&= \frac{V}{2} \left(N_{\rm B} - N_{\rm F}\right).
+\end{alignedat}
+\end{equation}
+%
+%
+This divergence with respect to the lattice volume is arising from all quadratic field contributions due to the non equality of boson and fermion numbers. After the HS transformation we have an additional amount of 17 auxiliary fields and in total 25 bosonic fields in contrast to 16 independent fermionic quantities. \\
+The fermionic contribution to (\ref{eq: <S_cusp>}) is solely of quadratic order and will result in a divergent term and is thus not relevant to measure $f'(g)$. Out of this reason it is conventional  to omit the coupling from the (pseudo) fermionic part of the action. In the observable $\langle S_{\rm LAT} \rangle$ therefore only contributes a measurement of the bosonic part of the action and thus a divergence that should be proportional to the number of bosonic fields in the large $g$ region
+%
+%
+\begin{equation}
+c\quad \textabove{=}{$\footnotesize g\!\gg\!1$} \quad N_{\rm B}.
+\end{equation}
+%
+%
+To prove this, $c$ can be determined numerically by an extrapolation with a fit linear in $1/L^{2}$ from data points for $\frac{\langle S_{\rm LAT}\rangle}{2L^{2}} = \frac{c}{2}+ \frac{S_{0}}{2L^{2}}$.

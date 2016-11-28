@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 %\usepackage{subfig}
 \usepackage[left=4cm,right=3.5cm,top=2.5cm,bottom=3.5cm]{geometry}
-%\usepackage[left=3cm,right=3cm,top=2.5cm,bottom=3.cm]{geometry}
+%\usepackage[left=3cm,right=3.5cm,top=2.5cm,bottom=3.5cm]{geometry}
 \usepackage{setspace}
 \usepackage{babelbib}
 \usepackage{bm}
@@ -29,7 +29,7 @@
 \usepackage{booktabs}
 \usepackage{ifthen}
 \usepackage{longtable}
-\usepackage{sansmath}
+\usepackage{mathtools}
 
 \usepackage[labeled,resetlabels]{multibib}	%%meherere literaturverzeichnisse
 
@@ -130,7 +130,8 @@
 % AdS_5 x S^5
 \newcommand{\AdSS}{\ensuremath{AdS_{5}\times S^{5}}}
 
-
+% text above symbol
+\newcommand{\textabove}[2]{\stackrel{\mathclap{\footnotesize\mbox{#2}}}{#1}}
 
 % definition of names to be written in a specific font
 \newcommand{\names}[1]{\textsc{#1}}

@@ -39,16 +39,17 @@
 \contentsline {section}{\numberline {6.2}Simulation parameters}{52}{section.6.2}
 \contentsline {section}{\numberline {6.3}Observables}{55}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{56}{subsection.6.3.1}
-\contentsline {chapter}{Appendices}{57}{section*.6}
-\contentsline {chapter}{\numberline {A}Grassmann numbers}{59}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Grassmann algebra}{59}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Grassmann analysis}{60}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{62}{section.a.A.3}
-\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{65}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{65}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{66}{section.a.B.2}
-\contentsline {chapter}{\numberline {C}SO(6) matrices}{69}{Appendix.a.C}
-\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{71}{Appendix.a.D}
-\contentsline {chapter}{\numberline {E}Discretized fermion matrix}{73}{Appendix.a.E}
-\contentsline {chapter}{Bibliography}{77}{chapter*.8}
+\contentsline {subsection}{\numberline {6.3.2}The cusp action}{57}{subsection.6.3.2}
+\contentsline {chapter}{Appendices}{61}{section*.6}
+\contentsline {chapter}{\numberline {A}Grassmann numbers}{63}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Grassmann algebra}{63}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Grassmann analysis}{64}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{66}{section.a.A.3}
+\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{69}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{69}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{70}{section.a.B.2}
+\contentsline {chapter}{\numberline {C}SO(6) matrices}{73}{Appendix.a.C}
+\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{75}{Appendix.a.D}
+\contentsline {chapter}{\numberline {E}Discretized fermion matrix}{77}{Appendix.a.E}
+\contentsline {chapter}{Bibliography}{81}{chapter*.8}
 \contentsfinish 
