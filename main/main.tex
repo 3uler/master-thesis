@@ -1,7 +1,20 @@
 \input{Preambel}
+\include{metadata}
 \begin{document}
-\tableofcontents
+\pagenumbering{roman}
+% - - - - -   Titlepage  - - - - - - 
+\include{titlepage}
+{\pagestyle{empty}
+\maketitle
+}
 %
+{\pagestyle{plain}
+\tableofcontents}
+\newpage
+
+%  - - - - -   Main part  - - - - - 
+\pagenumbering{arabic}
+\setcounter{page}{5} 
 \input{Introduction_var}
 %
 \input{string_basics}
@@ -31,9 +44,15 @@
 %
 %
 \end{appendices}
+%  - - - - - -   Bibliography   - - - - - - - - 
+%
 \newpage
 \bibliographystyle{nb}%{babunsrt} 
 \bibliography{Master}
+\newpage
+\cleardoublepage
 %
+%  - - - - -  Selbststaendigkeitserklaerung  - - - - - - -
+\input{declaration}
 %
 \end{document}

@@ -1,12 +1,13 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
+A level-1 auxiliary file: titlepage.aux
 The style file: nb.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Master.bib
 You've used 41 entries,
             1217 wiz_defined-function locations,
-            672 strings with 10585 characters,
+            673 strings with 10598 characters,
 and the built_in function-call counts, 18267 in all, are:
 = -- 1823
 > -- 366
