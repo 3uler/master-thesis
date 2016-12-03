@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {3.2}Wilson loops}{16}{section.3.2}
 \contentsline {section}{\numberline {3.3}Wilson loops in AdS/CFT}{17}{section.3.3}
 \contentsline {section}{\numberline {3.4}The cusp anomalous dimension of $\mathcal {N}=4$ SYM}{18}{section.3.4}
-\contentsline {section}{\numberline {3.5}The Green-Schwarz superstring action in AdS light-cone gauge}{20}{section.3.5}
+\contentsline {section}{\numberline {3.5}The GS superstring action in AdS light-cone gauge}{20}{section.3.5}
 \contentsline {section}{\numberline {3.6}Symmetries of the fluctuation action}{23}{section.3.6}
 \contentsline {section}{\numberline {3.7}Perturbative 1-loop free energy}{24}{section.3.7}
 \contentsline {chapter}{\numberline {4}Lattice Basics}{27}{chapter.4}
@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {4.3}Monte Carlo methods}{32}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Monte Carlo integration}{33}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Importance sampling and Markov chains}{34}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Fermions on the lattice and the hybrid Monte Carlo algorithm}{36}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.3}Fermions on the lattice and the HMC algorithm}{36}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}The numerical sign problem}{39}{subsection.4.3.4}
 \contentsline {chapter}{\numberline {5}Towards the lattice simulation}{41}{chapter.5}
 \contentsline {section}{\numberline {5.1}Linearization of fermionic contributions}{41}{section.5.1}
@@ -37,19 +37,19 @@
 \contentsline {chapter}{\numberline {6}Simulations and observables}{53}{chapter.6}
 \contentsline {section}{\numberline {6.1}Implementation and the continuum limit}{53}{section.6.1}
 \contentsline {section}{\numberline {6.2}Simulation parameters}{54}{section.6.2}
-\contentsline {section}{\numberline {6.3}Observables}{57}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{58}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}The cusp action}{59}{subsection.6.3.2}
-\contentsline {chapter}{Appendices}{63}{section*.6}
-\contentsline {chapter}{\numberline {A}Grassmann numbers}{65}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Grassmann algebra}{65}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Grassmann analysis}{66}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{68}{section.a.A.3}
-\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{71}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{71}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{72}{section.a.B.2}
-\contentsline {chapter}{\numberline {C}SO(6) matrices}{75}{Appendix.a.C}
-\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{77}{Appendix.a.D}
-\contentsline {chapter}{\numberline {E}Discretized fermion matrix}{79}{Appendix.a.E}
-\contentsline {chapter}{Bibliography}{83}{chapter*.8}
+\contentsline {section}{\numberline {6.3}Observables}{58}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{59}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}The cusp action}{60}{subsection.6.3.2}
+\contentsline {chapter}{Appendices}{65}{section*.8}
+\contentsline {chapter}{\numberline {A}Grassmann numbers}{67}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Grassmann algebra}{67}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Grassmann analysis}{68}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{70}{section.a.A.3}
+\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{73}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{73}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{74}{section.a.B.2}
+\contentsline {chapter}{\numberline {C}SO(6) matrices}{77}{Appendix.a.C}
+\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{79}{Appendix.a.D}
+\contentsline {chapter}{\numberline {E}Discretized fermion matrix}{81}{Appendix.a.E}
+\contentsline {chapter}{Bibliography}{85}{chapter*.10}
 \contentsfinish 

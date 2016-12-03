@@ -1,0 +1,59 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=-0.02,
+xmax=0.14,
+xlabel style={font=\color{white!15!black}},
+xlabel={$\frac{1}{L}$},
+ymin=0.3,
+ymax=0.6,
+ylabel style={font=\color{white!15!black}},
+ylabel={$\frac{m_{x}^{\rm eff}}{m}$},
+axis background/.style={fill=white},
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, draw=none, mark=o, mark options={solid, mycolor1}]
+ plot [error bars/.cd, y dir = both, y explicit]
+ table[row sep=crcr, y error plus index=2, y error minus index=3]{%
+0.0625	0.519076986137638	0.0511489116973836	0.0511489116973836\\
+0.0833333333333333	0.36502807025267	0.0242255061498635	0.0242255061498635\\
+0.1	0.448783862920625	0.0452736192199307	0.0452736192199307\\
+0.125	0.434263560312067	0.0564118528054754	0.0564118528054754\\
+0	0.429132318727196	0.100899673989091	0.100899673989091\\
+};
+\addlegendentry{Data $(m_x^{\rm eff}/m)^2$ from susceptibility, $g=100$}
+
+\addplot [color=blue, dashed]
+  table[row sep=crcr]{%
+0	0.429132318727196\\
+0.01	0.426625935087728\\
+0.02	0.424119551448261\\
+0.03	0.421613167808793\\
+0.04	0.419106784169326\\
+0.05	0.416600400529858\\
+0.06	0.41409401689039\\
+0.07	0.411587633250923\\
+0.08	0.409081249611455\\
+0.09	0.406574865971987\\
+0.1	0.40406848233252\\
+0.11	0.401562098693052\\
+0.12	0.399055715053585\\
+0.13	0.396549331414117\\
+0.14	0.394042947774649\\
+};
+\addlegendentry{linear model fit}
+
+\end{axis}
+\end{tikzpicture}%

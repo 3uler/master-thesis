@@ -8,7 +8,7 @@
 \BOOKMARK [1][-]{section.3.2}{Wilson loops}{chapter.3}% 8
 \BOOKMARK [1][-]{section.3.3}{Wilson loops in AdS/CFT}{chapter.3}% 9
 \BOOKMARK [1][-]{section.3.4}{The cusp anomalous dimension of N=4 SYM}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.5}{The Green-Schwarz superstring action in AdS light-cone gauge}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.5}{The GS superstring action in AdS light-cone gauge}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.6}{Symmetries of the fluctuation action}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.7}{Perturbative 1-loop free energy}{chapter.3}% 13
 \BOOKMARK [0][-]{chapter.4}{Lattice Basics}{}% 14
@@ -19,7 +19,7 @@
 \BOOKMARK [1][-]{section.4.3}{Monte Carlo methods}{chapter.4}% 19
 \BOOKMARK [2][-]{subsection.4.3.1}{Monte Carlo integration}{section.4.3}% 20
 \BOOKMARK [2][-]{subsection.4.3.2}{Importance sampling and Markov chains}{section.4.3}% 21
-\BOOKMARK [2][-]{subsection.4.3.3}{Fermions on the lattice and the hybrid Monte Carlo algorithm}{section.4.3}% 22
+\BOOKMARK [2][-]{subsection.4.3.3}{Fermions on the lattice and the HMC algorithm}{section.4.3}% 22
 \BOOKMARK [2][-]{subsection.4.3.4}{The numerical sign problem}{section.4.3}% 23
 \BOOKMARK [0][-]{chapter.5}{Towards the lattice simulation}{}% 24
 \BOOKMARK [1][-]{section.5.1}{Linearization of fermionic contributions}{chapter.5}% 25
@@ -38,7 +38,7 @@
 \BOOKMARK [1][-]{section.6.3}{Observables}{chapter.6}% 38
 \BOOKMARK [2][-]{subsection.6.3.1}{The "426830A xx*"526930B \040correlator}{section.6.3}% 39
 \BOOKMARK [2][-]{subsection.6.3.2}{The cusp action}{section.6.3}% 40
-\BOOKMARK [0][-]{section*.6}{Appendices}{}% 41
+\BOOKMARK [0][-]{section*.8}{Appendices}{}% 41
 \BOOKMARK [0][-]{Appendix.a.A}{Grassmann numbers}{}% 42
 \BOOKMARK [1][-]{section.a.A.1}{Grassmann algebra}{Appendix.a.A}% 43
 \BOOKMARK [1][-]{section.a.A.2}{Grassmann analysis}{Appendix.a.A}% 44
@@ -49,4 +49,4 @@
 \BOOKMARK [0][-]{Appendix.a.C}{SO\(6\) matrices}{}% 49
 \BOOKMARK [0][-]{Appendix.a.D}{Discrete Fourier transform}{}% 50
 \BOOKMARK [0][-]{Appendix.a.E}{Discretized fermion matrix}{}% 51
-\BOOKMARK [0][-]{chapter*.8}{Bibliography}{}% 52
+\BOOKMARK [0][-]{chapter*.10}{Bibliography}{}% 52

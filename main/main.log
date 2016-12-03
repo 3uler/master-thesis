@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  30 NOV 2016 19:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  3 DEC 2016 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,30 +710,152 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex
+File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2015/05/02 v1.12.1 Data Visualization (1.12.1)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks35
+\t@pgfplots@tokb=\toks36
+\t@pgfplots@tokc=\toks37
+\pgfplots@tmpa=\dimen169
+\c@pgfplots@coordindex=\count125
+\c@pgfplots@scanlineindex=\count126
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgflibraryfpu.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count127
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_trig_format.code.tex))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex
+\c@pgfplotsarray@tmp=\count128
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex
+\c@pgfplotstable@counta=\count129
+\t@pgfplotstable@a=\toks38
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count130
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen170
+\pgfdecoratedremainingdistance=\dimen171
+\pgfdecoratedinputsegmentcompleteddistance=\dimen172
+\pgfdecoratedinputsegmentremainingdistance=\dimen173
+\pgf@decorate@distancetomove=\dimen174
+\pgf@decorate@repeatstate=\count131
+\pgfdecorationsegmentamplitude=\dimen175
+\pgfdecorationsegmentlength=\dimen176
+)
+\tikz@lib@dec@box=\box39
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count132
+\pgfplots@xmin@reg=\dimen177
+\pgfplots@xmax@reg=\dimen178
+\pgfplots@ymin@reg=\dimen179
+\pgfplots@ymax@reg=\dimen180
+\pgfplots@zmin@reg=\dimen181
+\pgfplots@zmax@reg=\dimen182
+))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count125
-\c@@ppsavesec=\count126
-\c@@ppsaveapp=\count127
+\c@@pps=\count133
+\c@@ppsavesec=\count134
+\c@@ppsaveapp=\count135
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box39
+\ttl@box=\box40
 \beforetitleunit=\skip46
 \aftertitleunit=\skip47
-\ttl@plus=\dimen169
-\ttl@minus=\dimen170
-\ttl@toksa=\toks35
-\titlewidth=\dimen171
-\titlewidthlast=\dimen172
-\titlewidthfirst=\dimen173
+\ttl@plus=\dimen183
+\ttl@minus=\dimen184
+\ttl@toksa=\toks39
+\titlewidth=\dimen185
+\titlewidthlast=\dimen186
+\titlewidthfirst=\dimen187
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2011/12/15 v1.6 TOC entries
-\ttl@leftsep=\dimen174
+\ttl@leftsep=\dimen188
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
@@ -894,10 +1016,10 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip48
-\fb@frw=\dimen175
-\fb@frh=\dimen176
-\FrameRule=\dimen177
-\FrameSep=\dimen178
+\fb@frw=\dimen189
+\fb@frh=\dimen190
+\FrameRule=\dimen191
+\FrameSep=\dimen192
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -951,16 +1073,16 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen179
-\Hy@linkcounter=\count128
-\Hy@pagecounter=\count129
+\@linkdim=\dimen193
+\Hy@linkcounter=\count136
+\Hy@pagecounter=\count137
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count130
+\Hy@SavedSpaceFactor=\count138
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -973,17 +1095,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count131
+\c@Hy@tempcnt=\count139
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen180
-\Fld@menulength=\count132
-\Field@Width=\dimen181
-\Fld@charsize=\dimen182
+\XeTeXLinkMargin=\dimen194
+\Fld@menulength=\count140
+\Field@Width=\dimen195
+\Fld@charsize=\dimen196
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -993,17 +1115,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count133
-\c@Item=\count134
-\c@Hfootnote=\count135
+\Hy@abspage=\count141
+\c@Item=\count142
+\c@Hfootnote=\count143
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count136
-\c@bookmark@seq@number=\count137
+\Fld@listcount=\count144
+\c@bookmark@seq@number=\count145
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -1017,8 +1139,8 @@ Package: tcolorbox 2015/05/07 version 3.60 text color boxes
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks36
-\verbatim@line=\toks37
+\every@verbatim=\toks40
+\verbatim@line=\toks41
 \verbatim@in@stream=\read2
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/environ/environ.sty
@@ -1029,18 +1151,18 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count138
+\etb@tempcnta=\count146
 )
-\tcb@titlebox=\box40
-\tcb@upperbox=\box41
-\tcb@lowerbox=\box42
-\tcb@phantombox=\box43
-\c@tcbbreakpart=\count139
-\c@tcblayer=\count140
-\tcb@temp=\box44
+\tcb@titlebox=\box41
+\tcb@upperbox=\box42
+\tcb@lowerbox=\box43
+\tcb@phantombox=\box44
+\c@tcbbreakpart=\count147
+\c@tcblayer=\count148
 \tcb@temp=\box45
 \tcb@temp=\box46
 \tcb@temp=\box47
+\tcb@temp=\box48
 \tcb@out=\write4
 \tcb@record@out=\write5
 )
@@ -1049,23 +1171,23 @@ Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen183
-\lightrulewidth=\dimen184
-\cmidrulewidth=\dimen185
-\belowrulesep=\dimen186
-\belowbottomsep=\dimen187
-\aboverulesep=\dimen188
-\abovetopsep=\dimen189
-\cmidrulesep=\dimen190
-\cmidrulekern=\dimen191
-\defaultaddspace=\dimen192
-\@cmidla=\count141
-\@cmidlb=\count142
-\@aboverulesep=\dimen193
-\@belowrulesep=\dimen194
-\@thisruleclass=\count143
-\@lastruleclass=\count144
-\@thisrulewidth=\dimen195
+\heavyrulewidth=\dimen197
+\lightrulewidth=\dimen198
+\cmidrulewidth=\dimen199
+\belowrulesep=\dimen200
+\belowbottomsep=\dimen201
+\aboverulesep=\dimen202
+\abovetopsep=\dimen203
+\cmidrulesep=\dimen204
+\cmidrulekern=\dimen205
+\defaultaddspace=\dimen206
+\@cmidla=\count149
+\@cmidlb=\count150
+\@aboverulesep=\dimen207
+\@belowrulesep=\dimen208
+\@thisruleclass=\count151
+\@lastruleclass=\count152
+\@thisrulewidth=\dimen209
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -1076,32 +1198,32 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip51
 \LTpre=\skip52
 \LTpost=\skip53
-\LTchunksize=\count145
-\LTcapwidth=\dimen196
-\LT@head=\box48
-\LT@firsthead=\box49
-\LT@foot=\box50
-\LT@lastfoot=\box51
-\LT@cols=\count146
-\LT@rows=\count147
-\c@LT@tables=\count148
-\c@LT@chunks=\count149
-\LT@p@ftn=\toks38
+\LTchunksize=\count153
+\LTcapwidth=\dimen210
+\LT@head=\box49
+\LT@firsthead=\box50
+\LT@foot=\box51
+\LT@lastfoot=\box52
+\LT@cols=\count154
+\LT@rows=\count155
+\c@LT@tables=\count156
+\c@LT@chunks=\count157
+\LT@p@ftn=\toks42
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2015/05/11 v1.16 mathematical typesetting tools
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count150
-\calc@Bcount=\count151
-\calc@Adimen=\dimen197
-\calc@Bdimen=\dimen198
+\calc@Acount=\count158
+\calc@Bcount=\count159
+\calc@Adimen=\dimen211
+\calc@Bdimen=\dimen212
 \calc@Askip=\skip54
 \calc@Bskip=\skip55
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count152
+\calc@Ccount=\count160
 \calc@Cskip=\skip56
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -1111,28 +1233,28 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count153
-\l_MT_multwidth_dim=\dimen199
+\g_MT_multlinerow_int=\count161
+\l_MT_multwidth_dim=\dimen213
 \origjot=\skip57
-\l_MT_shortvdotswithinadjustabove_dim=\dimen200
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen201
-\l_MT_above_intertext_sep=\dimen202
-\l_MT_below_intertext_sep=\dimen203
-\l_MT_above_shortintertext_sep=\dimen204
-\l_MT_below_shortintertext_sep=\dimen205
+\l_MT_shortvdotswithinadjustabove_dim=\dimen214
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen215
+\l_MT_above_intertext_sep=\dimen216
+\l_MT_below_intertext_sep=\dimen217
+\l_MT_above_shortintertext_sep=\dimen218
+\l_MT_below_shortintertext_sep=\dimen219
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/multibib/multibib.sty
 Package: multibib 2008/12/10 v1.4 Multiple bibliographies for one document.
-\mb@biblabelwidth=\count154
+\mb@biblabelwidth=\count162
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/sidecap/sidecap.sty
 Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
-\SC@BOXWD=\dimen206
-\SC@CAPWD=\dimen207
-\SC@tempdima=\dimen208
-\SC@tempdimb=\dimen209
-\c@SC@C=\count155
-\SC@BOX=\box52
+\SC@BOXWD=\dimen220
+\SC@CAPWD=\dimen221
+\SC@tempdima=\dimen222
+\SC@tempdimb=\dimen223
+\c@SC@C=\count163
+\SC@BOX=\box53
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
@@ -1140,15 +1262,15 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen210
-\captionmargin@=\dimen211
-\captionwidth=\dimen212
-\caption@tempdima=\dimen213
-\caption@indent=\dimen214
-\caption@parindent=\dimen215
-\caption@hangindent=\dimen216
+\captionmargin=\dimen224
+\captionmargin@=\dimen225
+\captionwidth=\dimen226
+\caption@tempdima=\dimen227
+\caption@indent=\dimen228
+\caption@parindent=\dimen229
+\caption@hangindent=\dimen230
 )
-\c@ContinuedFloat=\count156
+\c@ContinuedFloat=\count164
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -1198,17 +1320,17 @@ LaTeX Font Info:    ... okay on input line 3.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count157
-\scratchdimen=\dimen217
-\scratchbox=\box53
-\nofMPsegments=\count158
-\nofMParguments=\count159
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count160
-\MPscratchDim=\dimen218
-\MPnumerator=\count161
-\makeMPintoPDFobject=\count162
-\everyMPtoPDFconversion=\toks40
+\scratchcounter=\count165
+\scratchdimen=\dimen231
+\scratchbox=\box54
+\nofMPsegments=\count166
+\nofMParguments=\count167
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count168
+\MPscratchDim=\dimen232
+\MPnumerator=\count169
+\makeMPintoPDFobject=\count170
+\everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1271,16 +1393,21 @@ File: english.bdf 2012/01/03 v1.31 babelbib: multilingual bibliographies (HH)
 babelbib extension \bibsenglish added to \extrasenglish
 babelbib extension \btxifchangecaseon added to \extrasenglish
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 3.
 
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
+your preamble.
+ on input line 3.
+
+\AtBeginShipoutBox=\box55
+Package hyperref Info: Link coloring OFF on input line 3.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count163
+\c@section@level=\count171
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
@@ -1465,7 +1592,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17]
 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/Wilson_worldshe
-et.png, id=495, 317.185pt x 581.372pt>
+et.png, id=494, 317.185pt x 581.372pt>
 File: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/Wilson_wor
 ldsheet.png Graphic file (type png)
 
@@ -1526,7 +1653,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/cusp_worldsheet
-_vec.png, id=563, 481.67955pt x 481.67955pt>
+_vec.png, id=562, 481.67955pt x 481.67955pt>
 File: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/cusp_world
 sheet_vec.png Graphic file (type png)
 
@@ -2837,7 +2964,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54] (./runs_table.tex
+[54] (./runs_table_Lm4Lm6.tex
 Underfull \vbox (badness 10000) detected at line 27
  []
 
@@ -2854,14 +2981,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56])
+[56]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57]
+[57])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 (Font)              using `OT1/cmss/bx/n' instead on input line 168.
@@ -2915,109 +3049,6 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 17
 LaTeX Font Warning: Command \small invalid in math mode on input line 173.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-5.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-5.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-5.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-5.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-5.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-5.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-5.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-5.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[58]
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
-1.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
-1.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
-1.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
-1.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
-1.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
-1.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
-1.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
-1.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 28
-6.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 28
-6.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 28
-6.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 28
-6.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 28
-6.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 28
-6.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 28
-6.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 28
-6.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -3025,28 +3056,139 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [59]
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 32
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+1.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+1.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+1.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+1.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+1.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+1.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+1.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+1.
+
+(./Plots/plot_coshcorr.tex) (./Plots/ex_massfit_cosh.tex)
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 30
 2.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 32
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 30
 2.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 32
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 30
 2.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 32
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 30
 2.
 
 
-Overfull \hbox (8.75204pt too wide) detected at line 348
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 30
+2.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 30
+2.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 30
+2.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 30
+2.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[61]
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 33
+8.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 33
+8.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 33
+8.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 33
+8.
+
+
+Overfull \hbox (8.75204pt too wide) detected at line 364
 [][][] []
  []
 
 
-Overfull \hbox (4.87402pt too wide) in paragraph at lines 348--355
+Overfull \hbox (4.87402pt too wide) in paragraph at lines 364--371
 \OT1/cmr/m/n/12 This di-ver-gence with re-spect to the lat-tice vol-ume is aris
 -ing from all quadratic
  []
@@ -3057,38 +3199,38 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60]
+[62]
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 35
-6.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 35
-6.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 37
+2.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 35
-6.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 37
+2.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 35
-6.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 37
+2.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 35
-6.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 37
+2.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 35
-6.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 37
+2.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 35
-6.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 37
+2.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 35
-6.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 37
+2.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 37
+2.
 
 )
 
@@ -3097,18 +3239,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61]
+[63]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62
+[64
 
-] [63
+] [65
 
-] [64] (./appendix.tex
+] [66] (./appendix.tex
 Appendix A.
 (./grassmann_alg.tex
 Overfull \hbox (10.03091pt too wide) in paragraph at lines 5--7
@@ -3116,7 +3258,7 @@ Overfull \hbox (10.03091pt too wide) in paragraph at lines 5--7
  re-la-tions for fermionic
  []
 
-[65
+[67
 
 ]
 Overfull \hbox (0.39642pt too wide) in paragraph at lines 41--43
@@ -3131,21 +3273,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[67]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[68])
+[68]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3159,7 +3287,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[70
+[70])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[71]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[72
 
 ]
 Appendix B.
@@ -3197,7 +3339,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf, id=11
-23, 361.35pt x 367.3725pt>
+36, 361.35pt x 367.3725pt>
 File: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf G
 raphic file (type pdf)
 
@@ -3206,20 +3348,6 @@ Package pdftex.def Info: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/
 graphics/AdS2.pdf used on input line 34.
 (pdftex.def)             Requested size: 230.46967pt x 234.31036pt.
 
-[71]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[72 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [73]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3227,14 +3355,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[74
+[74 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf>]
 
-]
-Appendix C.
-
-Overfull \hbox (14.9206pt too wide) in paragraph at lines 157--157
-[] 
- []
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [75]
 
@@ -3243,9 +3369,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[76]
+[76
+
+]
+Appendix C.
+
+Overfull \hbox (14.9206pt too wide) in paragraph at lines 157--157
+[] 
+ []
+
+[77]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[78]
 Appendix D.
-[77
+[79
 
 ]
 
@@ -3254,7 +3396,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[78]
+[80]
 Appendix E.
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 29
@@ -3561,7 +3703,7 @@ Overfull \hbox (5.70668pt too wide) in paragraph at lines 291--291
 [] 
  []
 
-[79
+[81
 
 ])
 
@@ -3570,44 +3712,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[80]
+[82]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[81] (./main.bbl
+[83] (./main.bbl
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[82
+[84
 
-] [83]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[84])
+] [85]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[85]
+[86])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[86
+[87]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[88
 
 ] (./declaration.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--9
@@ -3624,14 +3766,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--58
 
  []
 
-[87]
+[89]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
  (./main.aux (./titlepage.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 70B5BFC4675D382B800CD62D7E692494;3726.
+(rerunfilecheck)             Checksum: 3CB4F8B9185564999344035192FA7081;3701.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3639,13 +3781,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
  ) 
 Here is how much of TeX's memory you used:
- 23308 strings out of 493089
- 425619 string characters out of 6134842
- 521304 words of memory out of 5000000
- 25773 multiletter control sequences out of 15000+600000
- 42108 words of font info for 159 fonts, out of 8000000 for 9000
+ 32730 strings out of 493089
+ 738275 string characters out of 6134842
+ 947406 words of memory out of 5000000
+ 35048 multiletter control sequences out of 15000+600000
+ 42409 words of font info for 160 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,21n,73p,1588b,758s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,21n,107p,1588b,2545s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
@@ -3687,10 +3829,10 @@ ype1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2015/texmf-dist/fonts
 onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (87 pages, 1827150 bytes).
+Output written on main.pdf (89 pages, 1838597 bytes).
 PDF statistics:
- 1557 PDF objects out of 1728 (max. 8388607)
- 1405 compressed objects within 15 object streams
- 500 named destinations out of 1000 (max. 500000)
+ 1570 PDF objects out of 1728 (max. 8388607)
+ 1415 compressed objects within 15 object streams
+ 504 named destinations out of 1000 (max. 500000)
  449 words of extra memory for PDF output out of 10000 (max. 10000000)
 

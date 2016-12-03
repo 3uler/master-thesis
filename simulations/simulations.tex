@@ -115,11 +115,11 @@ In \autoref{tab: runs_param} we list the parameters of the simulations presented
 %
 %
 %
-\input{runs_table}
+\input{runs_table_Lm4Lm6}
 %
 %
 %
-The meaning of the Q-value, given in the table, is defined in \cite{Wolff:2003sm}. It reveals information about the quality of an observable with respect to their replica. One derives the mean value for each replicum and analyses the distribution of these means in comparison to the total mean of all replica. The Q-value is of cause more meaningful if there is a high number of replica. If there is just one replicum then it is defined to be zero.
+The meaning of the Q-value, given in the table, is defined in \cite{Wolff:2003sm}. It reveals information about the quality of an observable with respect to their replica. One derives the mean value for each replicum and analyses the distribution of these means in comparison to the total mean of all replica. The Q-value is of cause more meaningful if there is a high number of replica. 
 %
 %
 %
@@ -222,7 +222,7 @@ For the $x$ fields we can therefore make the same assumptions and identify
 %
 %
 \begin{equation}
-C_{x}(t,0) \quad \textabove{\sim}{$\footnotesize t\!\gg\!1$} \quad e^{-tm_{x \rm LAT}}, \qquad m_{x\rm LAT} = E_{x}(k=0).
+C_{x}(t) \equiv C_{x}(t,0) \quad \textabove{\sim}{$\footnotesize t\!\gg\!1$} \quad e^{-tm_{x \rm LAT}}, \qquad m_{x\rm LAT} = E_{x}(k=0).
 \end{equation}
 %
 %
@@ -230,7 +230,7 @@ The temporal boundary conditions on the lattice require to respect also a left m
 %
 %
 \begin{equation}
-C_{x}(t,0) = C_{x}(T-t,0)
+C_{x}(t) = C_{x}(T-t)
 \end{equation}
 %
 %
@@ -238,27 +238,43 @@ and thus
 %
 %
 \begin{equation}
-C_{x}(t,0) \quad \textabove{\sim}{$\footnotesize t\!\gg\!1$} \quad e^{-tm_{x \rm LAT}}+e^{-(T-t)m_{x \rm LAT}} \sim \text{cosh\,}\left(\left(\frac{T}{2}-t\right) m_{x\rm LAT}\right).
+C_{x}(t) \quad \textabove{\sim}{$\footnotesize t\!\gg\!1$} \quad e^{-tm_{x \rm LAT}}+e^{-(T-t)m_{x \rm LAT}} \sim \text{cosh\,}\left(\left(\frac{T}{2}-t\right) m_{x\rm LAT}\right).
 \end{equation}
 %
 %
 %
 %
-On the lattice we can determine $m_{x\rm LAT}$ as a limit of an \textit{effective mass} $m_{x}^{\rm eff}$. For fixed values of $g$ and $T$ we can estimate $m_{x}^{\rm eff}(g,T)$ by a fit of the normalized timeslice correlator $\overline{\!C}_{x}(t,0)$ to the curve 
+On the lattice we can determine $m_{x\rm LAT}$ as a limit of an \textit{effective mass} $m_{x}^{\rm eff}$. For fixed values of $g$ and $T$ we can estimate $m_{x}^{\rm eff}(g,T)$ by a fit of the timeslice correlator $C_{x}(t)$ to the curve (see \autoref{fig: coshcorr})
 %
 %
 \begin{equation}
-\text{cosh\,}\left(\left(\frac{T}{2}-t\right) m_{x}^{\rm eff}\right)
+A\cdot e^{-Tm_{x}^{\rm eff}/2}\cdot\text{cosh\,}\left(\left(\frac{T}{2}-t\right) m_{x}^{\rm eff}\right)
+\label{eq: cosh_fit}
 \end{equation}
 %
 %
-in a regime of $t$ close to $T/2$ where excited states are suppressed. To obtain the continuum value, we extrapolate $m_{x}^{\rm eff}(g,T)$ for different lattice sizes to find
+in a regime of $t$ close to $T/2$ where excited states are suppressed. To obtain the continuum value, we extrapolate $m_{x}^{\rm eff}(g,T)$ for different lattice sizes (see \autoref{fig: massfit_cosh}) to find
 %
 %
 \begin{equation}
 m_{x\rm LAT}(g) = \lim\limits_{T\to \infty} m_{x}^{\rm eff}(g,T).
 \end{equation}
 To improve the fit that estimates $m_{x}^{\rm eff}$ we chose the temporal lattice extent to be twice the spatial one.
+%
+%
+%
+\begin{figure}
+\centering
+\input{Plots/plot_coshcorr}
+\caption{Plot of the timeslice correlator $C_{x}(t)$ for a measurement of 400 data points with $L=12$ and $g=100$ without a \names{Wilson} term (blue dots). The parameters $A$ and $m_{x}^{\rm eff}$ have been determined by a fit and the corresponding curve (\ref{eq: cosh_fit}) is given in red with the errors of the effective mass as dashed lines.\label{fig: coshcorr}}
+\end{figure}
+%
+%
+\begin{figure}
+\centering
+\input{Plots/ex_massfit_cosh}
+\caption{This plot shows a simple example of a continuum extrapolation for $m_{x\rm LAT}$ with $g=100$ in absece of a \names{Wilson} term. Every point represents a value $m_{x}^{\rm eff}(T)$ generated from one replicum with 400 data points each. The result of the linear regression is added as a point with errorbars at zero. \label{fig: massfit_cosh}}
+\end{figure}
 %
 %
 %
