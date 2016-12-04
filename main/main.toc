@@ -37,9 +37,9 @@
 \contentsline {chapter}{\numberline {6}Simulations and observables}{53}{chapter.6}
 \contentsline {section}{\numberline {6.1}Implementation and the continuum limit}{53}{section.6.1}
 \contentsline {section}{\numberline {6.2}Simulation parameters}{54}{section.6.2}
-\contentsline {section}{\numberline {6.3}Observables}{58}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{59}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}The cusp action}{60}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.3}Observables}{60}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{60}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}The cusp action}{61}{subsection.6.3.2}
 \contentsline {chapter}{Appendices}{65}{section*.8}
 \contentsline {chapter}{\numberline {A}Grassmann numbers}{67}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Grassmann algebra}{67}{section.a.A.1}

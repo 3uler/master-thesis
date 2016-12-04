@@ -266,6 +266,32 @@ ALPHA Collaboration, U.~Wolff,
 [Erratum: Comput. Phys. Commun.176,383(2007)].
 %%CITATION = HEP-LAT/0306017;%%
 
+\bibitem{Ferrenberg:1988yz}
+A.~M.~Ferrenberg and R.~H.~Swendsen,
+\textit{``{New Monte Carlo Technique for Studying Phase Transitions}''},
+\textsf{\doiref{10.1103/PhysRevLett.61.2635}{Phys.~Rev.~Lett.~61,~2635~(1988)}}.
+%%CITATION = PRLTA,61,2635;%%
+
+\bibitem{Luscher:2008tw}
+M.~Luscher and F.~Palombi,
+\textit{``{Fluctuations and reweighting of the quark determinant on large
+  lattices}''},
+\textsf{PoS~LATTICE2008,~049~(2008)},
+\texttt{\arxivref{0810.0946}{arXiv:0810.0946}},
+in: \textit{``{Proceedings, 26th International Symposium on Lattice field
+  theory (Lattice 2008): Williamsburg, USA, July 14-19, 2008}''},
+049p.
+%%CITATION = ARXIV:0810.0946;%%
+
+\bibitem{Finkenrath:2013soa}
+J.~Finkenrath, F.~Knechtli and B.~Leder,
+\textit{``{One flavor mass reweighting in lattice QCD}''},
+\textsf{\doiref{10.1016/j.nuclphysb.2013.10.019,
+  10.1016/j.nuclphysb.2014.01.019}{Nucl.~Phys.~B877,~441~(2013)}},
+\texttt{\arxivref{1306.3962}{arXiv:1306.3962}},
+[Erratum: Nucl. Phys.B880,574(2014)].
+%%CITATION = ARXIV:1306.3962;%%
+
 \bibitem{Cartier:2002zp}
 P.~Cartier, C.~DeWitt-Morette, M.~Ihl and C.~Saemann,
 \textit{``{Supermanifolds: Application to supersymmetry}''},

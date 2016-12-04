@@ -149,6 +149,7 @@
 \newlabel{pi_est}{{4.3.1}{34}{Graphic of random numbers uniform in $\Omega $. $\pi /4$ can be estimated by the number of red points within the circle divided by total number of points.\relax }{figure.caption.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Importance sampling and Markov chains}{34}{subsection.4.3.2}}
 \citation{gattringer2009quantum}
+\newlabel{eq: vev_rho}{{4.3.14}{35}{Importance sampling and Markov chains}{equation.4.3.14}{}}
 \newlabel{trans_prob}{{4.3.16}{36}{Importance sampling and Markov chains}{equation.4.3.16}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Fermions on the lattice and the HMC algorithm}{36}{subsection.4.3.3}}
 \newlabel{sec: hmc_alg}{{4.3.3}{36}{Fermions on the lattice and the HMC algorithm}{subsection.4.3.3}{}}
@@ -191,6 +192,7 @@
 \newlabel{eq: disc_OF}{{5.2.18}{50}{Fermionic operator}{equation.5.2.18}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Applying the RHMC algorithm}{50}{section.5.3}}
 \newlabel{eq: rat_approx}{{5.3.3}{50}{Applying the RHMC algorithm}{equation.5.3.3}{}}
+\newlabel{eq: mscg}{{5.3.8}{51}{Applying the RHMC algorithm}{equation.5.3.8}{}}
 \citation{Giombi:2010bj}
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Simulations and observables}{53}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -219,21 +221,24 @@
     {1}{23.74988pt}\LT@entry 
     {1}{41.3747pt}}
 \citation{Wolff:2003sm}
+\citation{Ferrenberg:1988yz}
+\citation{Luscher:2008tw}
+\citation{Finkenrath:2013soa}
 \newlabel{tab: runs_param}{{6.2.2}{58}{Simulation parameters}{table.6.2.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {6.2.2}{\ignorespaces Parameters of the simulation: the coupling $g$, the temporal $(T)$ and spacial $(L)$ extent of the lattice, the line of constant physics fixed by $LM$ and the presence of a \textsc  {Wilson} term, toggled by $r$ to be included during the simulation (1) or not (0). The size of the statistics after thermalization is given in the last column in terms of molecular dynamic units (MDU) which equals an HMC trajectory of length one. The number of replica collected for each set of parameters is stated in the column named R. The auto-correlation times $\tau $ of our main observables $m_{x}$ and $S$ are also given in MDU together with the Q-value of the replica in parenthesis. }}{58}{table.6.2.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Observables}{58}{section.6.3}}
 \citation{Bianchi:2016cyv}
 \citation{Giombi:2010bj}
 \citation{montvay_lattice}
-\newlabel{eq: <S_cusp>}{{6.3.3}{59}{Observables}{equation.6.3.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{59}{subsection.6.3.1}}
-\newlabel{eq: cosh_fit}{{6.3.14}{60}{The $\langle xx^{*}\rangle $ correlator}{equation.6.3.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}The cusp action}{60}{subsection.6.3.2}}
-\newlabel{eq: S_LAT}{{6.3.16}{60}{The cusp action}{equation.6.3.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3.1}{\ignorespaces Plot of the timeslice correlator $C_{x}(t)$ for a measurement of 400 data points with $L=12$ and $g=100$ without a \textsc  {Wilson} term (blue dots). The parameters $A$ and $m_{x}^{\rm  eff}$ have been determined by a fit and the corresponding curve (\ref  {eq: cosh_fit}) is given in red with the errors of the effective mass as dashed lines.\relax }}{61}{figure.caption.6}}
-\newlabel{fig: coshcorr}{{6.3.1}{61}{Plot of the timeslice correlator $C_{x}(t)$ for a measurement of 400 data points with $L=12$ and $g=100$ without a \names {Wilson} term (blue dots). The parameters $A$ and $m_{x}^{\rm eff}$ have been determined by a fit and the corresponding curve (\ref {eq: cosh_fit}) is given in red with the errors of the effective mass as dashed lines.\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3.2}{\ignorespaces This plot shows a simple example of a continuum extrapolation for $m_{x\rm  LAT}$ with $g=100$ in absece of a \textsc  {Wilson} term. Every point represents a value $m_{x}^{\rm  eff}(T)$ generated from one replicum with 400 data points each. The result of the linear regression is added as a point with errorbars at zero. \relax }}{61}{figure.caption.7}}
-\newlabel{fig: massfit_cosh}{{6.3.2}{61}{This plot shows a simple example of a continuum extrapolation for $m_{x\rm LAT}$ with $g=100$ in absece of a \names {Wilson} term. Every point represents a value $m_{x}^{\rm eff}(T)$ generated from one replicum with 400 data points each. The result of the linear regression is added as a point with errorbars at zero. \relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Observables}{60}{section.6.3}}
+\newlabel{eq: <S_cusp>}{{6.3.3}{60}{Observables}{equation.6.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{60}{subsection.6.3.1}}
+\newlabel{eq: cosh_fit}{{6.3.14}{61}{The $\langle xx^{*}\rangle $ correlator}{equation.6.3.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}The cusp action}{61}{subsection.6.3.2}}
+\newlabel{eq: S_LAT}{{6.3.16}{61}{The cusp action}{equation.6.3.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3.1}{\ignorespaces Plot of the timeslice correlator $C_{x}(t)$ for a measurement of 400 data points with $L=12$ and $g=100$ without a \textsc  {Wilson} term (blue dots). The parameters $A$ and $m_{x}^{\rm  eff}$ have been determined by a fit and the corresponding curve (\ref  {eq: cosh_fit}) is given in red with the errors of the effective mass as dashed lines.\relax }}{62}{figure.caption.6}}
+\newlabel{fig: coshcorr}{{6.3.1}{62}{Plot of the timeslice correlator $C_{x}(t)$ for a measurement of 400 data points with $L=12$ and $g=100$ without a \names {Wilson} term (blue dots). The parameters $A$ and $m_{x}^{\rm eff}$ have been determined by a fit and the corresponding curve (\ref {eq: cosh_fit}) is given in red with the errors of the effective mass as dashed lines.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3.2}{\ignorespaces This plot shows a simple example of a continuum extrapolation for $m_{x\rm  LAT}$ with $g=100$ in absece of a \textsc  {Wilson} term. Every point represents a value $m_{x}^{\rm  eff}(T)$ generated from one replicum with 400 data points each. The result of the linear regression is added as a point with errorbars at zero. \relax }}{62}{figure.caption.7}}
+\newlabel{fig: massfit_cosh}{{6.3.2}{62}{This plot shows a simple example of a continuum extrapolation for $m_{x\rm LAT}$ with $g=100$ in absece of a \names {Wilson} term. Every point represents a value $m_{x}^{\rm eff}(T)$ generated from one replicum with 400 data points each. The result of the linear regression is added as a point with errorbars at zero. \relax }{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {chapter}{Appendices}{65}{section*.8}}
 \citation{Cartier:2002zp}
 \@writefile{toc}{\contentsline {chapter}{\numberline {A}Grassmann numbers}{67}{Appendix.a.A}}
@@ -324,8 +329,11 @@
 \bibcite{hmc}{35}
 \bibcite{Giombi:2010bj}{36}
 \bibcite{Wolff:2003sm}{37}
-\bibcite{Cartier:2002zp}{38}
-\bibcite{Berezin}{39}
-\bibcite{Witten:1998qj}{40}
-\bibcite{Bayona:2005nq}{41}
+\bibcite{Ferrenberg:1988yz}{38}
+\bibcite{Luscher:2008tw}{39}
+\bibcite{Finkenrath:2013soa}{40}
+\bibcite{Cartier:2002zp}{41}
+\bibcite{Berezin}{42}
+\bibcite{Witten:1998qj}{43}
+\bibcite{Bayona:2005nq}{44}
 \ttl@finishall
