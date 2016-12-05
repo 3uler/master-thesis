@@ -132,7 +132,20 @@ We can observe that for lower $g$ values the simulations become more involved. F
 \end{align}
 %
 %
-where $\mu$ is the reweighting mass parameter. The term $\mu^{2}\mathds{1}$ will shift the eigenvalues of $\tilde{\mathcal{O}}_{\rm F} \tilde{\mathcal{O}}_{\rm F}^{\dagger}$ apart from zero and ensures the stability of the simulation. For a small reweighting mass $\mu$ we can compute an estimate of the observable vev without the twisted mass $\langle O \rangle_{0}$ via
+where $\mu$ is the reweighting mass parameter. The term $\mu^{2}\mathds{1}$ will shift the eigenvalues of $\tilde{\mathcal{O}}_{\rm F} \tilde{\mathcal{O}}_{\rm F}^{\dagger}$ apart from zero and ensures the stability of the simulation. Hereby the crucial term in measuring an observable is the \names{Pfaffian} which is included in the probability distribution in the RHMC. We want to estimate observables generated from a distribution without an additional mass term by actually doing simulations with a twisted mass. While assuming the \names{Pfaffian} to be positive we can write
+%
+%
+\begin{equation}
+\begin{alignedat}{2}
+\pf\big(\hat{\mathcal{O}}_{\rm F}\big) &= \left(\frac{\det \big(\hat{\mathcal{O}}_{\rm F} \hat{\mathcal{O}}_{\rm F}^{\dagger} \big)}{\det \big(\tilde{\mathcal{O}}_{\rm F} \tilde{\mathcal{O}}_{\rm F}^{\dagger} \big)}\right)^{\frac{1}{4}} \pf\big(\tilde{\mathcal{O}}_{\rm F}\big)\\
+%
+&\equiv W \;\pf\left(\tilde{\mathcal{O}}_{\rm F}\right).
+\end{alignedat}
+\label{eq: rew_factor}
+\end{equation}
+%
+%
+For a small reweighting mass $\mu$ we can thus compute an estimate of the observable vev without the twisted mass $\langle O \rangle_{0}$ via
 %
 %
 \begin{equation}
@@ -140,15 +153,15 @@ where $\mu$ is the reweighting mass parameter. The term $\mu^{2}\mathds{1}$ will
 \end{equation}
 %
 %
-The vev $\langle O \rangle_{\mu}$ represents the value obtained from a RHMC simulation with twisted mass term and $W$ is the reweighting factor
+The vev $\langle O \rangle_{\mu}$ represents the value obtained from a RHMC simulation with twisted mass term and $W$ is the reweighting factor defined in (\ref{eq: rew_factor}). It can be expressed in terms of $\;\widetilde{\!W}=W^{4}$ which can be rewritten to
 %
 %
 \begin{equation}
-W = \frac{\det \left(\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}\right)}{\det\left(\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}+ \mu^{2}\right)} = \frac{1}{\det\left( \mathds{1}+\frac{\mu^{2}}{\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}}\right)} \equiv \frac{1}{\det M}.
+\widetilde{\!W} = \frac{\det \left(\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}\right)}{\det\left(\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}+ \mu^{2}\right)} = \frac{1}{\det\left( \mathds{1}+\frac{\mu^{2}}{\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}}\right)} \equiv \frac{1}{\det M}.
 \end{equation}
 %
 %
-We can estimate $W$ in a separate MC integration by using
+In a separate MC integration we estimate $\;\widetilde{\!W}$ by using
 %
 %
 \begin{equation}
@@ -169,13 +182,20 @@ With a \names{Gaussian} distribution $\rho(\xi)=\exp(-\xi^{\dagger}\xi)$ we find
 %
 \begin{equation}
 \begin{alignedat}{2}
-W &= \left\langle \exp \left[ -\xi^{\dagger}\left(\frac{\mu^{2}}{\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}}\right)\xi\right]\right\rangle_{\rho} \\
+\widetilde{\!W} &= \left\langle \exp \left[ -\xi^{\dagger}\left(\frac{\mu^{2}}{\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}}\right)\xi\right]\right\rangle_{\rho} \\
 &= \frac{1}{N_{\xi}} \sum\limits_{k=1}^{N_{\xi}} \exp \left[ -\xi_{k}^{\dagger}\left(\frac{\mu^{2}}{\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}}\right)\xi_{k}\right] + \mathcal{O}\left(\frac{1}{\sqrt{N_{\xi}}}\right). 
 \end{alignedat}
 \end{equation}
 %
 %
-The reweighting procedure is of cause also limited in its application ans is only valid for small shifts $\mu$. We therefore choose $\mu$ as small a possible, but large enough to ensure the stability of the simulation. The reweighting procedure has only been applied for the collection of data with $g=5$.
+The reweighting procedure is of cause also limited in its application and is only valid for small shifts $\mu$. We therefore choose $\mu$ as small a possible, but large enough to ensure the stability of the simulation. Reweighting has only been applied for the collection of data with $g=5$. A plot of the reweighting factors for a collection of field configurations is given in \autoref{fig: rew_factor}.
+%
+%
+\begin{figure}
+\centering
+\input{Plots/rew_factor}
+\caption{The reweighting factor $W$ for a collection of 100 field configurations for $L=8$ and $g=5$. Most values are very close to one , therefore the reweighting can be seen as a good estimate. \label{fig: rew_factor}}
+\end{figure}
 %
 %
 %
@@ -322,14 +342,14 @@ To improve the fit that estimates $m_{x}^{\rm eff}$ we chose the temporal lattic
 \begin{figure}
 \centering
 \input{Plots/plot_coshcorr}
-\caption{Plot of the timeslice correlator $C_{x}(t)$ for a measurement of 400 data points with $L=12$ and $g=100$ without a \names{Wilson} term (blue dots). The parameters $A$ and $m_{x}^{\rm eff}$ have been determined by a fit and the corresponding curve (\ref{eq: cosh_fit}) is given in red with the errors of the effective mass as dashed lines.\label{fig: coshcorr}}
+\caption{Plot of the timeslice correlator $C_{x}(t)$ for a measurement of 400 field configurations with $L=12$ and $g=100$ without a \names{Wilson} term (blue dots). The parameters $A$ and $m_{x}^{\rm eff}$ have been determined by a fit and the corresponding curve (\ref{eq: cosh_fit}) is given in red with the errors of the effective mass as dashed lines.\label{fig: coshcorr}}
 \end{figure}
 %
 %
 \begin{figure}
 \centering
 \input{Plots/ex_massfit_cosh}
-\caption{This plot shows a simple example of a continuum extrapolation for $m_{x\rm LAT}$ with $g=100$ in absece of a \names{Wilson} term. Every point represents a value $m_{x}^{\rm eff}(T)$ generated from one replicum with 400 data points each. The result of the linear regression is added as a point with errorbars at zero. \label{fig: massfit_cosh}}
+\caption{This plot shows a simple example of a continuum extrapolation for $m_{x\rm LAT}$ with $g=100$ in absece of a \names{Wilson} term. Every point represents a value $m_{x}^{\rm eff}(T)$ generated from one replicum with 400 field configurations each. The result of the linear regression is added as a point with errorbars at zero. \label{fig: massfit_cosh}}
 \end{figure}
 %
 %
