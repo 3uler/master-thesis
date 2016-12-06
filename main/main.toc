@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {3.1}AdS/CFT correspondence}{15}{section.3.1}
 \contentsline {section}{\numberline {3.2}Wilson loops}{16}{section.3.2}
 \contentsline {section}{\numberline {3.3}Wilson loops in AdS/CFT}{17}{section.3.3}
-\contentsline {section}{\numberline {3.4}The cusp anomalous dimension of $\mathcal {N}=4$ SYM}{18}{section.3.4}
+\contentsline {section}{\numberline {3.4}The cusp anomalous dimension of $\mathcal {N}=4$ SYM}{19}{section.3.4}
 \contentsline {section}{\numberline {3.5}The GS superstring action in AdS light-cone gauge}{20}{section.3.5}
 \contentsline {section}{\numberline {3.6}Symmetries of the fluctuation action}{23}{section.3.6}
 \contentsline {section}{\numberline {3.7}Perturbative 1-loop free energy}{24}{section.3.7}
@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {4.1}Discretizing the worldsheet}{27}{section.4.1}
 \contentsline {section}{\numberline {4.2}Bosons and fermions on the lattice}{29}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Bosonic propagator}{29}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Fermionic propagator and the doubling problem}{31}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Fermionic propagator and the doubling problem}{30}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Monte Carlo methods}{32}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Monte Carlo integration}{33}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Importance sampling and Markov chains}{34}{subsection.4.3.2}
@@ -39,8 +39,8 @@
 \contentsline {section}{\numberline {6.2}Simulation parameters}{54}{section.6.2}
 \contentsline {section}{\numberline {6.3}Observables}{60}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{61}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}The cusp action}{62}{subsection.6.3.2}
-\contentsline {chapter}{Appendices}{67}{section*.9}
+\contentsline {subsection}{\numberline {6.3.2}The cusp action}{63}{subsection.6.3.2}
+\contentsline {chapter}{Appendices}{67}{section*.10}
 \contentsline {chapter}{\numberline {A}Grassmann numbers}{69}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Grassmann algebra}{69}{section.a.A.1}
 \contentsline {section}{\numberline {A.2}Grassmann analysis}{70}{section.a.A.2}
@@ -51,5 +51,5 @@
 \contentsline {chapter}{\numberline {C}SO(6) matrices}{79}{Appendix.a.C}
 \contentsline {chapter}{\numberline {D}Discrete Fourier transform}{81}{Appendix.a.D}
 \contentsline {chapter}{\numberline {E}Discretized fermion matrix}{83}{Appendix.a.E}
-\contentsline {chapter}{Bibliography}{87}{chapter*.11}
+\contentsline {chapter}{Bibliography}{87}{chapter*.12}
 \contentsfinish 
