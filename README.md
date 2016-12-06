@@ -1,8 +1,8 @@
  -----------------------------
-|        MASTER THESIS        |
+|      #  MASTER THESIS        |
  -----------------------------
 
-%%Discretization of the Green-Schwarz superstring in
+## Discretization of the Green-Schwarz superstring in
 light-cone gauge on a lattice
 
 
