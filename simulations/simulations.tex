@@ -126,7 +126,7 @@ The meaning of the Q-value, given in the table, is defined in \cite{Wolff:2003sm
 \input{Plots/ev_dist_min}
 \hspace{0.2cm}
 \input{Plots/ev_dist_max}
-\caption{Histogram plot of the eigenvalue spectrum of one replicum with 400 field configurations for $L=12$ and $g=5,10,30$. For high values of $g$ the smallest eigenvalues are clearly separated from zero which ensures the stability of the simulation. With decreasing $g$ the smallest eigenvalues come arbitrarily close to zero whereas the largest eigenvalues increase at the same time which leads to high condition numbers of the fermionic operator and threatens the stability of the simulation. \label{fig: ev_dist}}
+\caption{Histogram plot of the distribution of the minimal and maximal eigenvalue of the operator $\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}$ for one replicum with 400 field configurations for $L=12$ and $g=5,10,30$. For high values of $g$ the smallest eigenvalues are clearly separated from zero which ensures the stability of the simulation. With decreasing $g$ the smallest eigenvalues come arbitrarily close to zero whereas the largest eigenvalues increase at the same time which leads to high condition numbers of the fermionic operator and threatens the stability of the simulation. \label{fig: ev_dist}}
 \end{figure}
 %
 
@@ -347,7 +347,7 @@ To improve the fit that estimates $m_{x}^{\rm eff}$ we chose the temporal lattic
 %
 %
 \begin{equation}
-\tilde{x}(t)=\frac{1}{\sqrt{L}} \sum\limits_{s} x(t,s)
+\tilde{x}(t)\equiv\frac{1}{\sqrt{L}} \sum\limits_{s} x(t,s)
 \end{equation}
 %
 %
@@ -433,6 +433,7 @@ leading to a possible description of $f'(g)$ given by
 %
 \begin{equation}
 \frac{\langle S_{\rm cusp }\rangle}{S_{0}} = \frac{f'(g)}{4}.
+\label{eq: Scusp_fprime}
 \end{equation}
 %
 %
@@ -444,7 +445,7 @@ S_{0} = \frac{V_{2}}{2} m^{2}g = \frac{1}{2}\left(2L^{2}\right) M^{2} g.
 \end{equation}
 %
 %
-Furthermore we recalled the behaviour $f(g) = 4g + \text{const.} + \mathcal{O}(g^{-1})$ from (\ref{eq: scaling_fct}) and inserted $V_{2}=a^{2}(TL)=a^{2}(2L^{2})$, since we always use $T=2L$. $S_{0}$ is the discretised classical action and its value is fixed in each simulation for given $g$ and $LM$. In (\ref{eq: S_LAT}) we added a term quadratically divergent in $L$ in the continuum limit. To motivate the appearance of such behaviour let us recall that we calculate the vev of the cusp action via
+Furthermore we recall the behaviour $f(g) = 4g + \text{const.} + \mathcal{O}(g^{-1})$ from (\ref{eq: scaling_fct}) and insert $V_{2}=a^{2}(TL)=a^{2}(2L^{2})$, since we always use $T=2L$. $S_{0}$ is the discretised classical action and its value is fixed in each simulation for given $g$ and $LM$. In (\ref{eq: S_LAT}) we observe a term quadratically divergent in $L$ in the continuum limit. To motivate the appearance of such behaviour let us recall that we calculate the vev of the cusp action via
 %
 %
 \begin{equation}
@@ -452,7 +453,7 @@ Furthermore we recalled the behaviour $f(g) = 4g + \text{const.} + \mathcal{O}(g
  \end{equation} 
  %
  %
-and focus especially on any contribution to the partition function that is of quadratic order in the bosonic fermionic fields  $Z_{\rm cusp}^{(2)}=Z_{\rm B}^{(2)}Z_{\rm F}^{(2)}$. For these contributions we can schematically write
+and focus especially on any contribution to the partition function that is of quadratic order in the bosonic and fermionic fields  $Z_{\rm cusp}^{(2)}=Z_{\rm B}^{(2)}Z_{\rm F}^{(2)}$. For these contributions we can schematically write
  %
  %
 \begin{equation}
@@ -498,4 +499,56 @@ c\quad \textabove{=}{$\footnotesize g\!\gg\!1$} \quad N_{\rm B}.
 \end{equation}
 %
 %
-To prove this, $c$ can be determined numerically by an extrapolation with a fit linear in $1/L^{2}$ from data points for $\frac{\langle S_{\rm LAT}\rangle}{2L^{2}} = \frac{c}{2}+ \frac{S_{0}}{2L^{2}}$.
+To prove this, $c$ can be determined numerically by an extrapolation with a fit linear in $1/L^{2}$ from data points for $\frac{\langle S_{\rm LAT}\rangle}{2L^{2}} = \frac{c}{2}+ \frac{S_{0}}{2L^{2}}$ (see Figures \ref{fig: Slat_over_N2}, \ref{fig: c_fit}).
+%
+%
+\begin{figure}[ht!]
+\centering
+\input{Plots/Slat_over_N2}
+\caption{Plots of $\frac{\langle S_{\rm LAT}\rangle}{2L^{2}}$, where fits (dashed lines) to data points are linear in $1/L^{2}$. To ensure better visibility of the fits at different $g$ values, $\ln g$ has been added. The extrapolation to the continuum limit (symbol at infinite $L$) determines the coefficient $c/2$ of the divergent ($\sim L^{2}$) contribution in (\ref{eq: S_LAT}).
+\label{fig: Slat_over_N2}}
+\end{figure}
+%
+%
+\begin{figure}[ht!]
+\centering
+\input{Plots/c_fit}
+\caption{Data points estimate the value of $c/2$ as from the extrapolations of the linear fits in \autoref{fig: Slat_over_N2}. Dashed and dotted lines are the results of, respectively, a linear fit in $1/g$ and a fit to a polynomial of degree two.
+\label{fig: c_fit}}
+\end{figure}
+%
+%
+We hereby find a value of $\frac{c}{2}=12.5(0)$ (with a discrepancy of $0.01$) for $g=30,\ldots,100$. This extrapolation thus supports the previous claim that the coefficient of the divergence corresponds to half the number of bosons appearing in the path integral which is $N_{\rm B}=25$. Having determined the value of $c$ with good precision, we can proceed first by fixing it to be exact $c=25$ and subtract the contributing divergence from $\langle S_{\rm LAT} \rangle$. We apply (\ref{eq: Scusp_fprime}) on the lattice
+%
+%
+\begin{equation}
+\frac{\langle S_{\rm LAT}\rangle -\frac{c}{2}\big(2L^{2}\big)}{S_{0}} \equiv \frac{f'(g)}{4},
+\label{eq: Slat_fprime}
+\end{equation}
+%
+%
+in order to perform simulations for finite $g$ and determine values for $f'(g)$ which is the main aim of our study. Data points with $g=100,\ldots,30$ in \autoref{fig: Slat-c_fix} show a good agreement with the perturbative predictions at leading order of (\ref{eq: scaling_fct}). For lower values of $g$ we observe deviations that obstruct the continuum limit and signal the presence of a further quadratic ($\sim L^{2}$) divergence increasing in its amplitude for decreasing $g$. From \autoref{fig: c_fit} we observe that the coefficient of the subtracted divergence is not overall constant, but possesses a $g$ dependence
+%
+%
+\begin{equation}
+c(g) = N_{\rm B} + \mathcal{O}(g^{-1}).
+\end{equation}
+%
+%
+\begin{figure}
+\centering
+\input{Plots/Slat-c_fix}
+\caption{Plot of the ratio $\frac{\langle S_{\rm LAT}\rangle -\frac{c}{2}\big(2L^{2}\big)}{S_{0}} \equiv \frac{f'(g)}{4}$, where its coefficient of the divergent contribution $c$ has been fixed to the value $c=15$ and $S_{0}=\frac{1}{2}M^{2}\big(2L^{2}\big)g$. For very large $g$, there is agreement with the continuum prediction $f'(g)=4$ in (\ref{eq: scaling_fct}). For smaller values ($g=10,5$) strong deviations appear.
+\label{fig: Slat-c_fix}}
+\end{figure}
+%
+%
+\begin{figure}
+\centering
+\input{Plots/Slat-c_g}
+\caption{Plots for the ratio $\frac{\langle S_{\rm LAT}\rangle -\frac{c}{2}\big(2L^{2}\big)}{S_{0}} + \ln g$ as a function of $1/L$, where the divergent contribution $c(g) L^{2}/2$ is now the continuum extrapolation determined in \autoref{fig: c_fit}. To ensure better visibility of the fits at different $g$ values, $\ln g$ as been added. Dashed lines represent a linear fit to all the data points for one value of $g$, while for dotted lines the fit is to a constant and only includes the two smallest lattice spacings. Symbols at zero are extrapolations from the constant in $1/L$.
+\label{fig: Slat-c_g}}
+\end{figure}
+%
+%
+We therefore must not only subtract the constant, but the full contribution of $c(g)$ which we do not know exactly. Hence we subtract the continuum extrapolation of $c(g)/2$ (times the number of lattice points, $2L^{2}$), as obtained in \autoref{fig: c_fit}. The result is shown in \autoref{fig: Slat-c_g} and the divergences appear to be removed completely. Due to the flatness of the data points, which indicates small lattice artefacts, they are fitted to a  constant. Since we do not observe further divergences, we thus use the continuum extrapolation $L\to\infty$ of \autoref{fig: Slat-c_g} to obtain the continuum limit of (\ref{eq: Slat_fprime}) and therefore a measure of $f'(g)/4$.
