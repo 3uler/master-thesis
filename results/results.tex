@@ -1,0 +1,35 @@
+\chapter{Results}
+In the end of the previous chapter we introduced the two observables that we explore in our lattice simulation and demonstrated the methods that lead to their continuum extrapolation. We now present the resulting measurements of the mass of the $x$ field and the derivative of the cusp anomaly. We further expose the data for additional simulations performed for $LM=6$ and without a \names{Wilson} term, respectively, to check for finite volume effects and the influence of fermion doublers.
+%
+%
+%
+%  - - - - - -     Masses  - - - - - - - -
+%
+%
+%
+\section[Mass of the $x$ field]{Mass of the $\mathbf{x}$ field}
+%
+%
+%
+%
+\section{Cusp anomaly}
+The main aim of the study at hand is to predict values  of the derivative of the cusp anomaly function for fine $g$, where our estimate for $f'(g)/4$ is governed by the continuum extrapolation in \autoref{fig: Slat-c_g}, leading to \autoref{fig: f_prime_Lm4}. Data points from the simulation can be directly compared to the derivative of the perturbative prediction (\ref{eq: scaling_fct}), depicted as a dashed line and to a prediction obtained via the integrability of the model (first derivative of the cusp anomaly obtained from a numerical solution to the \textit{BES} equation \cite{Beisert:2006ez}, depicted as a continuous line). To compare our results from the simulation $f'(g)$ with the continuum prediction $f'(g_{\rm c})_{\rm c}$, we have to match our data points to the continuum curve, since it is not clear that the bare continuum coupling $g_{\rm c}$ is equivalent to the one on the lattice. We assume that we can achieve the matching by a simple rescaling with a factor $g_{\rm c}= b\cdot g$. We then choose a data point where we want to apply the matching and then obtain the rescaling parameter $b$ from $f'(g)=f'(g_{\rm c})_{\rm c}$. This matching point is chosen to be at $g=10$, since it is far enough from the substantially flat regime of the observable and still in a region where no reweighting has to be applied and thus errors are still acceptably small. It therefore lies exactly in the continuous curve in \autoref{fig: f_prime_Lm4} and we derive $g_{\rm c}=0.04 \,g$. In the perturbative regime of large $g$ our data points are in good agreement with the perturbative prediction. For decreasing $g$ the perturbative series (\ref{eq: scaling_fct}) predicts an increase of $f'(g)$, governed by the term proportional to the \names{Katalan} constant $K$. In this regime we have increased the statistics of our simulation, compared to \cite{Bianchi:2016cyv}, to reduce errors, but our data in \autoref{fig: f_prime_Lm4} still does not catch the predicted upward trend. But notice that the data (still under the hypothesis of a simple scaling relation between the couplings) is following the predicted decrease of values of $g$ which are below the perturbative region. The non-perturbative regime begins with $g_{\rm c}=1$ or $g=25$, respectively, implying that our simulations at $g=15,10,5$ are already testing a fully non-perturbative regime of the string sigma-model under investigation. The point at $g=5$ $(g_{\rm c}=0.2)$ does not match the predicted curve within its errorbars which could be the effect of several different causes. It might be that the relation between continuum and lattice coupling is more complex than the assumed rescaling, further the reweighting might have caused a systematic error, and there has not been so many simulation data conducted at this specific value of $g=5$, also not for finer lattices than $L=16$, since for such small $g$ simulations are very involved and take more time. Another conspicuous point at $g=20$ $(g_{\rm c}=0.8)$ is afflicted with large errorbars as well. The behaviour there is quite peculiar, since the produced configurations are strongly correlated, noticeable from very high autocorrelation times in \autoref{tab: runs_param} (similar response occurs for simulations at $g=80$ and $r=0$). This behaviour might be some intrinsic problem of the algorithm, that is not determined yet, but is most certainly not related to the underlying theory. In the following we investigate further possible influences of systematic errors like finite volume effects or fermion doubling and check for the reliability of the \names{Pfaffian} as a valid probability density for the RHMC.
+%
+%
+%
+\begin{figure}
+\centering
+\input{Plots/f_prime_Lm4}
+\caption{Plot for $f'(g)/4$ as determined from the $L\to\infty$ extrapolation of (\ref{eq: Slat_fprime}), exposed as the extrapolations of the fits in \autoref{fig: Slat-c_g}, and plotted as a function of the bare continuum coupling $g_{\rm c}$ under the assumption that it is related to the bare coupling on the lattice $g$ via a finite rescaling $(g_{\rm c}=0.04\, g)$. The dashed line represents the derivative of the first few terms of the perturbative series (\ref{eq: scaling_fct}), the continuous line is obtained from a numerical solution to the \textit{BES} equation.
+\label{fig: f_prime_Lm4}}
+\end{figure}
+%
+%
+%
+%
+%  - - - - - -   systematic errors   - - - - - - - - -
+%
+%
+%
+%
+\section{Systematic errors and the Pfaffian sign}

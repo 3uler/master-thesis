@@ -9,18 +9,18 @@ In this chapter we want to give a brief introduction to the basic concepts of st
 %
 %
 \section{The bosonic string}
-The basic idea of string theory is that the fundamental objects described by the model are one-dimensional strings, propagating through spacetime and sweeping out a $(1+1)$-dimensional surface $\widetilde{\Sigma}$ called the string worldsheet. The string can be parameterized by two coordinates, the proper time $\tau$ and the spatial extent $\sigma$ of the string which we will also denote by $(\sigma^{0},\sigma^{1})=(\tau,\sigma)$. We can then apply a homeomorphism $\varphi$ that maps the 2d sheet $\Sigma$ into the target space, e.g. $D$-dimensional \names{Minkowski} space\footnote{We will use the metric $\eta_{MN}=\text{diag}(-,+,+,\ldots,+)$ with $M,N=0,1,2,\ldots,D-1.$} $\mathbb{R}^{D-1,1}$ with embedding coordinates $X^{\mu}(\tau,\sigma)$
+The basic idea of string theory is that the fundamental objects described by the model are one-dimensional strings, propagating through spacetime and sweeping out a $(1+1)$-dimensional surface $\widetilde{\Sigma}$ called the string worldsheet. The string can be parameterized by two coordinates, the proper time $\tau$ and the spatial extent $\sigma$ of the string which we will also denote by $(\sigma^{0},\sigma^{1})=(\tau,\sigma)$. We can then apply a homeomorphism $\varphi$ that maps the 2d sheet $\Sigma$ into the target space, e.g. $D$-dimensional \names{Minkowski} space\footnote{We will use the metric $\eta_{MN}=\text{diag}(-,+,+,\ldots,+)$ with $M,N=0,1,2,\ldots,D-1.$} $\mathbb{R}^{D-1,1}$ with embedding coordinates $X^{M}(\tau,\sigma)$
 %
 %
 \begin{equation}
 \begin{alignedat}{3}
 \varphi :\quad  \Sigma = (\tau_{\rm in},\tau_{\rm fin}) \times (0,\sigma_{0}) \quad &\longrightarrow \quad \widetilde{\Sigma} \\
-(\tau,\sigma) \qquad\quad &\longrightarrow \quad X^{\mu}(\tau,\sigma).
+(\tau,\sigma) \qquad\quad &\longrightarrow \quad X^{M}(\tau,\sigma).
 \end{alignedat}
 \end{equation}
 %
 %
-The simplest possible action, the \names{Nambu-Goto} action, is proportional to the area of the surface $\widetilde{\Sigma}$ and is given by
+The simplest possible action of the string, the \names{Nambu-Goto} action, is proportional to the area of the surface $\widetilde{\Sigma}$ and is given by
 %
 %
 \begin{equation}
@@ -99,7 +99,7 @@ We also have to employ suitable boundary conditions. There are in fact two types
 %
 \begin{itemize}
 \item \textit{Open strings}\\[2mm]
-In this case we can set $\sigma_{0}=l$ ans thus $\sigma\in (0,l)$. These type of strings satisfy either \names{Neumann}  boundary conditions
+In this case we can set $\sigma_{0}=\pi$ and thus $\sigma\in (0,\pi)$. These type of strings satisfy either \names{Neumann}  boundary conditions
 %
 \begin{equation}
 \del_{\sigma}X^{M}(\tau,\sigma)\big\vert_{\sigma=0,l} = 0
@@ -166,7 +166,7 @@ Such states are called tachyons. They are not very well understood and give rise
 %
 %
 \section{Superstring theory}
-The theory considered so far describes only bosons and also gives rise to unphysical tachyon states. To make predictions on the real world which also contains non-bosonic particles like quarks and leptons, we require string theory to include fermions as well. It turns out that for the presence of fermions, string theory requires supersymmetry, a symmetry that introduces a fermionic superpartner to every bosonic field. The resulting theories are then called superstring theories. Among others there are two basic approaches to incorporate supersymmetry into string theory \cite{Becker:2007zj}
+The theory considered so far describes only bosons and also gives rise to unphysical tachyon states. To make predictions on the real world which also contains non-bosonic particles like quarks and leptons, we require string theory to include fermions as well. It turns out that for the presence of fermions, string theory requires supersymmetry, a symmetry that introduces a fermionic superpartner to every bosonic field. The resulting theories are then called superstring theories. Among others there are two basic approaches to incorporate supersymmetry into string theory \cite{Becker:2007zj} which are both equivalent
 %
 %
 \begin{itemize}
@@ -176,12 +176,12 @@ The theory considered so far describes only bosons and also gives rise to unphys
 \end{itemize}
 %
 %
-Depending on how one applies supersymmetry there arise different possibilities on what kinds of strings the model will describe. With regard to the $AdS/CFT$ correspondence (see \autoref{sec: preleminaries}) we want to focus on Type IIB superstring theory which requires $D=10$ spacetime dimensions. Type II means that the model only describes closed oriented strings, whereas B refers to a property of the fermionic fields. In the following we choose the GS formalism to apply supersymmetry in the target space. \\
-Usually we have mapped the worldsheet into spacetime, but for a supersymmetric generalization in the GS formalism we consider mapping the worldsheet into superspace, where the basic target space fields are
+Depending on how one applies supersymmetry there arise different possibilities on what kinds of strings the model will describe. With regard to the $AdS/CFT$ correspondence (see \autoref{sec: preleminaries}) we want to focus on Type IIB superstring theory which requires $D=10$ spacetime dimensions. Type II strings have both left and right moving fermions and the resulting spacetime theory in $D=10$ dimensions has $\mathcal{N}=2$ supersymmetry, whereas B refers to the property of additional background gauge fields. In the following we choose the GS formalism to apply supersymmetry in the target space. \\
+Usually we map the worldsheet into spacetime, but for a supersymmetric generalization in the GS formalism we consider mapping the worldsheet into superspace, where the basic target space fields are
 %
 %
 \begin{equation}
-X^{\mu}(\tau,\sigma) \qquad \text{and} \qquad \mathit{\Theta}^{Aa}(\tau,\sigma).
+X^{M}(\tau,\sigma) \qquad \text{and} \qquad \mathit{\Theta}^{Aa}(\tau,\sigma).
 \end{equation}
 %
 %
@@ -193,24 +193,24 @@ Here $\mathit{\Theta}^{Aa}$ are \names{Majorana-Weyl} (MW) spinors. The index $A
 \end{equation}
 %
 %
-Due to the MW property there are only 16 independent real components for each spinor. To write a \names{Polyakov}-like supersymmetric action one can start by 
+Due to the MW property there are only 16 independent real components for each spinor. To write a \names{Polyakov}-like supersymmetric action in  \names{Minkowski} space one can start by 
 %
 %
 \begin{equation}
-S_{1} = -\frac{1}{4\pi\alpha'} \int \dd^{2}\sigma \; \sqrt{h}h^{\alpha\beta} \Pi^{\mu}_{\alpha}\Pi^{\nu}_{\beta} \eta_{\mu\nu},
+S_{1} = -\frac{1}{4\pi\alpha'} \int \dd^{2}\sigma \; \sqrt{h}h^{\alpha\beta} \Pi^{M}_{\alpha}\Pi^{N}_{\beta} \eta_{MN},
 \end{equation}
 %
 %
-with
+with the superfields
 %
 %
 \begin{equation}
-\Pi^{\mu}_{\alpha} \equiv \del_{\alpha}X^{\mu} - \bar{\mathit{\Theta}\;}\!\!^{A}\Gamma^{\mu}\del_{\alpha}\mathit{\Theta}^{A}
+\Pi^{M}_{\alpha} \equiv \del_{\alpha}X^{M} - \bar{\mathit{\Theta}\;}\!\!^{A}\Gamma^{M}\del_{\alpha}\mathit{\Theta}^{A}
 \label{eq: Pi_susy}
 \end{equation}
 %
 %
-and $\Gamma^{\mu}$ are 10d \names{Dirac} matrices and $\bar{\mathit{\Theta}\;}\!\!=\mathit{\Theta}^{\dagger}\Gamma_{0}$. By studying this kind of action for a point particle one finds that certain peculiarities arise when the particle is massless \cite{Becker:2007zj}. To circumvent this a \names{Wess-Zumino} (WZ) term $S_{2}$ is added which gives rise to a new symmetry in the full action $S=S_{1}+S_{2}$.  This so called $\kappa$-symmetry is a symmetry of the spinor fields
+and $\Gamma^{M}$ are 10d \names{Dirac} matrices and $\bar{\mathit{\Theta}\;}\!\!=\mathit{\Theta}^{\dagger}\Gamma_{0}$. By studying this kind of action for a point particle one finds that certain peculiarities arise when the particle is massless \cite{Becker:2007zj}. To circumvent this a \names{Wess-Zumino} (WZ) term $S_{2}$ is added which gives rise to a new symmetry in the full action $S=S_{1}+S_{2}$.  This so called $\kappa$-symmetry is a symmetry of the spinor fields
 %
 %
 \begin{align}
@@ -218,7 +218,7 @@ and $\Gamma^{\mu}$ are 10d \names{Dirac} matrices and $\bar{\mathit{\Theta}\;}\!
 \end{align}
 %
 %
-where $\kappa^{1}$ and $\kappa^{2}$ are arbitrary MW spinors with appropriate chirality and $P_{\pm}$ are projection operators. This symmetry acts like in internal gauge symmetry for the fermionic spinor fields. By fixing $\kappa$-symmetry half of the components of the fermionic variables decouple from the theory which means we are left with 8 independent real components for each spinor.
+where $\kappa^{1}$ and $\kappa^{2}$ are arbitrary MW spinors with appropriate chirality and $P_{\pm}$ are projection operators. This symmetry acts like an internal gauge symmetry for the fermionic spinor fields. By fixing $\kappa$-symmetry half of the components of the fermionic variables decouple from the theory which means we are left with 8 independent real components for each spinor.
 %
 %
 %
@@ -238,7 +238,7 @@ S_{\rm P} = -\frac{1}{4\pi\alpha'}  \int\limits_{\Sigma} \dd^{2}\sigma\, \sqrt{-
 \end{equation}
 %
 %
-This is called the \textit{bosonic non-linear string sigma model}. Hereby the process of incorporating supersymmetry is not so straightforward anymore. Next to the flat 10d \names{Minkowski} spacetime there is also another maximally supersymmetric solution as a background for the Type IIB case which is the product $\AdSS$ of a five dimensional anti-\names{de Sitter} space $AdS_{5}$ and a five-sphere $S^{5}$. This solution is supported by a self-dual \names{Ramond-Ramond} five-form flux. This is due to the presence of a higher-dimensional generalization of strings, called D-branes. In the second superstring revolution of the 90's a new symmetry, called T-duality, was discovered. This symmetry states for the Type IIB case that a closed string corresponds in the dual picture to an open string, ending on D-branes. Some of these D-branes can carry a conserved charge that ensures their stability. For an open string, ending on such charged branes, the spectrum is tachyon-free. In the following we will consider three dimensional D3-branes which are required to formulate the $AdS/CFT$ correspondence. In the language of forms we can compute the electric and magnetic\footnote{Here we assume the existence of magnetic monopoles.} charges $\mu_{e}$ and $\mu_{m}$, using \names{Gauss's} law for D$p$-branes\footnote{D$p$-branes refer to D-branes of dimension $p$.} in a generalized formulation of \names{Maxwell's} equations
+This is called the \textit{bosonic non-linear string sigma model}. Hereby, the process of incorporating supersymmetry is not so straightforward anymore. Next to the flat 10d \names{Minkowski} spacetime there is also another maximally supersymmetric solution as a background for the Type IIB case which is the product $\AdSS$ of a five-dimensional anti-\names{de Sitter} space $AdS_{5}$ and a five-sphere $S^{5}$. This solution is supported by a self-dual \names{Ramond-Ramond} five-form flux. This is due to the presence of D-branes which can be seen as \names{Dirichlet}-like boundary conditions or a higher-dimensional generalization of strings. In this context an open string with \names{Dirichlet} boundary conditions can be interpreted as an open string, ending on a hypersurface, called D-brane. Some of these D-branes can carry a conserved charge that ensures their stability. For an open string, ending on such charged branes, the spectrum is tachyon-free. In the following we consider three dimensional D3-branes which are required to formulate the $AdS/CFT$ correspondence. In the language of forms we can compute the electric and magnetic\footnote{Here we assume the existence of magnetic monopoles.} charges $\mu_{e}$ and $\mu_{m}$, using \names{Gauss's} law for D$p$-branes\footnote{D$p$-branes refer to D-branes of dimension $p$.} in a generalized formulation of \names{Maxwell's} equations
 %
 %
 \begin{align}
@@ -254,7 +254,7 @@ F_{n} = \frac{1}{n!} F_{\mu_{1}\cdots \mu_{n}} \dd x^{\mu_{1}} \wedge \cdots \we
 \end{equation}
 %
 %
-and $\star F_{p+2}$ is its \names{Hodge} dual. For our case with D3-branes with $p=3$ we find $F_{p+2}=F_{5}$ and in $D=10$ dimensions that $F_{5}=\star F_{5}$ is self-dual. Therefore both charges are computed via the flux supported by a self dual five form through the sphere $S^{5}$. To construct an action one has to incorporate the field strength to the kinetic part of the action 
+and $\star F_{p+2}$ is its \names{Hodge} dual. For our case with D3-branes with $p=3$ we find $F_{p+2}=F_{5}$ and in $D=10$ dimensions that $F_{5}=\star F_{5}$ is self-dual. Therefore both charges are computed via the flux supported by a self-dual five form through the sphere $S^{5}$. To construct an action one has to incorporate the field strength to the kinetic part of the action 
 %
 %
 \begin{equation}

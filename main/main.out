@@ -11,8 +11,8 @@
 \BOOKMARK [1][-]{section.3.5}{The GS superstring action in AdS light-cone gauge}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.6}{Symmetries of the fluctuation action}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.7}{Perturbative 1-loop free energy}{chapter.3}% 13
-\BOOKMARK [0][-]{chapter.4}{Lattice Basics}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Discretizing the worldsheet}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter.4}{Lattice basics}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Discretising the worldsheet}{chapter.4}% 15
 \BOOKMARK [1][-]{section.4.2}{Bosons and fermions on the lattice}{chapter.4}% 16
 \BOOKMARK [2][-]{subsection.4.2.1}{Bosonic propagator}{section.4.2}% 17
 \BOOKMARK [2][-]{subsection.4.2.2}{Fermionic propagator and the doubling problem}{section.4.2}% 18
@@ -38,15 +38,19 @@
 \BOOKMARK [1][-]{section.6.3}{Observables}{chapter.6}% 38
 \BOOKMARK [2][-]{subsection.6.3.1}{The "426830A xx*"526930B \040correlator}{section.6.3}% 39
 \BOOKMARK [2][-]{subsection.6.3.2}{The cusp action}{section.6.3}% 40
-\BOOKMARK [0][-]{section*.14}{Appendices}{}% 41
-\BOOKMARK [0][-]{Appendix.a.A}{Grassmann numbers}{}% 42
-\BOOKMARK [1][-]{section.a.A.1}{Grassmann algebra}{Appendix.a.A}% 43
-\BOOKMARK [1][-]{section.a.A.2}{Grassmann analysis}{Appendix.a.A}% 44
-\BOOKMARK [1][-]{section.a.A.3}{Hubbard-Stratonovich transformation}{Appendix.a.A}% 45
-\BOOKMARK [0][-]{Appendix.a.B}{AdS5S5 spacetime}{}% 46
-\BOOKMARK [1][-]{section.a.B.1}{AdS5 space}{Appendix.a.B}% 47
-\BOOKMARK [1][-]{section.a.B.2}{Poincar\351 patch}{Appendix.a.B}% 48
-\BOOKMARK [0][-]{Appendix.a.C}{SO\(6\) matrices}{}% 49
-\BOOKMARK [0][-]{Appendix.a.D}{Discrete Fourier transform}{}% 50
-\BOOKMARK [0][-]{Appendix.a.E}{Discretized fermion matrix}{}% 51
-\BOOKMARK [0][-]{chapter*.16}{Bibliography}{}% 52
+\BOOKMARK [0][-]{chapter.7}{Results}{}% 41
+\BOOKMARK [1][-]{section.7.1}{Mass of the x field}{chapter.7}% 42
+\BOOKMARK [1][-]{section.7.2}{Cusp anomaly}{chapter.7}% 43
+\BOOKMARK [1][-]{section.7.3}{Systematic errors and the Pfaffian sign}{chapter.7}% 44
+\BOOKMARK [0][-]{section*.15}{Appendices}{}% 45
+\BOOKMARK [0][-]{Appendix.a.A}{Grassmann numbers}{}% 46
+\BOOKMARK [1][-]{section.a.A.1}{Grassmann algebra}{Appendix.a.A}% 47
+\BOOKMARK [1][-]{section.a.A.2}{Grassmann analysis}{Appendix.a.A}% 48
+\BOOKMARK [1][-]{section.a.A.3}{Hubbard-Stratonovich transformation}{Appendix.a.A}% 49
+\BOOKMARK [0][-]{Appendix.a.B}{AdS5S5 spacetime}{}% 50
+\BOOKMARK [1][-]{section.a.B.1}{AdS5 space}{Appendix.a.B}% 51
+\BOOKMARK [1][-]{section.a.B.2}{Poincar\351 patch}{Appendix.a.B}% 52
+\BOOKMARK [0][-]{Appendix.a.C}{SO\(6\) matrices}{}% 53
+\BOOKMARK [0][-]{Appendix.a.D}{Discrete Fourier transform}{}% 54
+\BOOKMARK [0][-]{Appendix.a.E}{Discretized fermion matrix}{}% 55
+\BOOKMARK [0][-]{chapter*.17}{Bibliography}{}% 56

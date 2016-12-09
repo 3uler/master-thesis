@@ -13,8 +13,8 @@
 \contentsline {section}{\numberline {3.5}The GS superstring action in AdS light-cone gauge}{20}{section.3.5}
 \contentsline {section}{\numberline {3.6}Symmetries of the fluctuation action}{23}{section.3.6}
 \contentsline {section}{\numberline {3.7}Perturbative 1-loop free energy}{24}{section.3.7}
-\contentsline {chapter}{\numberline {4}Lattice Basics}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}Discretizing the worldsheet}{27}{section.4.1}
+\contentsline {chapter}{\numberline {4}Lattice basics}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Discretising the worldsheet}{27}{section.4.1}
 \contentsline {section}{\numberline {4.2}Bosons and fermions on the lattice}{29}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Bosonic propagator}{29}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Fermionic propagator and the doubling problem}{30}{subsection.4.2.2}
@@ -40,16 +40,20 @@
 \contentsline {section}{\numberline {6.3}Observables}{60}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{61}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}The cusp action}{63}{subsection.6.3.2}
-\contentsline {chapter}{Appendices}{69}{section*.14}
-\contentsline {chapter}{\numberline {A}Grassmann numbers}{71}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Grassmann algebra}{71}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Grassmann analysis}{72}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{74}{section.a.A.3}
-\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{77}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{77}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{78}{section.a.B.2}
-\contentsline {chapter}{\numberline {C}SO(6) matrices}{81}{Appendix.a.C}
-\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{83}{Appendix.a.D}
-\contentsline {chapter}{\numberline {E}Discretized fermion matrix}{85}{Appendix.a.E}
-\contentsline {chapter}{Bibliography}{89}{chapter*.16}
+\contentsline {chapter}{\numberline {7}Results}{69}{chapter.7}
+\contentsline {section}{\numberline {7.1}Mass of the $x$ field}{69}{section.7.1}
+\contentsline {section}{\numberline {7.2}Cusp anomaly}{69}{section.7.2}
+\contentsline {section}{\numberline {7.3}Systematic errors and the Pfaffian sign}{71}{section.7.3}
+\contentsline {chapter}{Appendices}{73}{section*.15}
+\contentsline {chapter}{\numberline {A}Grassmann numbers}{75}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Grassmann algebra}{75}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Grassmann analysis}{76}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{78}{section.a.A.3}
+\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{81}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{81}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{82}{section.a.B.2}
+\contentsline {chapter}{\numberline {C}SO(6) matrices}{85}{Appendix.a.C}
+\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{87}{Appendix.a.D}
+\contentsline {chapter}{\numberline {E}Discretized fermion matrix}{89}{Appendix.a.E}
+\contentsline {chapter}{Bibliography}{93}{chapter*.17}
 \contentsfinish 

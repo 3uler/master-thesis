@@ -1,8 +1,8 @@
-\chapter{Lattice Basics}\label{ch: lattice_basics}
+\chapter{Lattice basics}\label{ch: lattice_basics}
 In this section we want to present the basic concepts of lattice field theory, which has developed to a highly sophisticated research area in the last decades especially in the regime of QCD. This approach to field theory is not only of major concern for performing numerical calculations. It even provides a natural attempt to regularization, which makes it also an interesting topic for theorists in the field of gauge theories.
-\section{Discretizing the worldsheet}
+\section{Discretising the worldsheet}
 \label{sec: disc_lat}
-A computer is not able to deal with continuous variables, since already a continuous real interval can contain an infinite amount of points, but a computer only has limited memory. Hence we need to limit the amount of points that we consider to make calculations. Since all the target space coordinates\footnote{which represent the fields in our two-dimensional QFT} depend on the worldsheet coordinates $\tau$ and $\sigma$, it seems natural to discretize the worldsheet map. We therefore introduce a lattice spacing $a$ and the lattice size in spacial direction $L$ and in time direction $T$. Following the remarks in \cite{gattringer2009quantum} we define the two-dimensional lattice $\mathit{\Lambda}$ to be
+A computer is not able to deal with continuous variables, since already a continuous real interval can contain an infinite amount of points, but a computer only has limited memory. Hence, we need to limit the amount of points that we consider to make calculations. Since all the target space coordinates\footnote{which represent the fields in our two-dimensional QFT} depend on the worldsheet coordinates $\tau$ and $\sigma$, it seems natural to discretize the worldsheet map. We therefore introduce a lattice spacing $a$ and the lattice size in spacial direction $L$ and in time direction $T$. Following the remarks in \cite{gattringer2009quantum} we define the two-dimensional lattice $\mathit{\Lambda}$ to be
 \begin{equation}
 \mathit{\Lambda} = \left\lbrace \left(n_{0},n_{1}\right) \vert n_{0}=0,1,\ldots,(T-1) \; ; \;  n_{1}=0,1,\ldots,(L-1) \right\rbrace.
 \end{equation}
@@ -52,7 +52,7 @@ With that we can express the worldsheet coordinates with the lattice coordinates
 %
 %
 %
-And since the lattice spacing is overall constant we can abbreviatly refer to a field $\mathit{\Phi}$ in the theory as a function of the lattice variables $\mathit{\Phi}(n_{0},n_{1})$. We now further want to discretize differential operators and integrals. The differentiation can be discretized in various ways inspired by its mathematical definition via differential quotients. To see additionally which order of error is introduced compared to the exact derivative, we examine the \names{Taylor} expansion of a real function $f(x)$ with a small offset $\epsilon$
+And since the lattice spacing is overall constant we can abbreviatly refer to a field $\mathit{\Phi}$ in the theory as a function of the lattice variables $\mathit{\Phi}(n_{0},n_{1})$. We now further want to discretise differential operators and integrals. The differentiation can be discretised in various ways inspired by its mathematical definition via differential quotients. To see additionally which order of error is introduced compared to the exact derivative, we examine the \names{Taylor} expansion of a real function $f(x)$ with a small offset $\epsilon$
 \begin{equation}
 f(x\pm \epsilon) = f(x) \pm \epsilon f'(x) +\dfrac{\epsilon^{2}}{2}f''(x) \pm \dfrac{\epsilon^{3}}{6}f'''(x) + \ldots.
 \end{equation}
@@ -64,7 +64,7 @@ and in the same way also a backward derivative by using the $f(x-\epsilon)$ term
 \begin{equation}
 \dfrac{f(x-\epsilon)-f(x+\epsilon)}{2 \epsilon} = f'(x) + \mathcal{O}(\epsilon^{2}).
 \end{equation}
-It is more convenient to use the symmetric finite difference, because the error introduced by the finite lattice spacing is hereby reduced by one order.  By adding additional terms of $f(x\pm 2 \epsilon)$ it is possible to get a finite difference derivative which is exact up to an order of $\mathcal{O}(\epsilon^{3})$ and so on. Depending on the demanded accuracy one is able to regulate the introduced error via this method. With $\epsilon$ being our lattice spacing $a$ we find the derivative of our fields at $n=\left(n_{0}, n_{1} \right)$ to be\footnote{\noindent With $\widehat{\del }_{\alpha}$ beeing the symmetric finite difference in $\alpha$-direction. We also define the forward and backward finite difference respectively by
+It is more convenient to use the symmetric finite difference, because the error introduced by the finite lattice spacing is hereby reduced by one order.  By adding additional terms of $f(x\pm 2 \epsilon)$ it is possible to get a finite difference derivative which is exact up to an order of $\mathcal{O}(\epsilon^{3})$ and so on. Depending on the demanded accuracy one is able to regulate the introduced error via this method. With $\epsilon$ being our lattice spacing $a$ we find the derivative of our fields at $n=\left(n_{0}, n_{1} \right)$ to be\footnote{\noindent With $\widehat{\del }_{\alpha}$ being the symmetric finite difference in $\alpha$-direction. We also define the forward and backward finite difference respectively by
 \begin{equation*}
 \vec{\del}_{\alpha}\mathit{\Phi}(n)=\dfrac{\mathit{\Phi}(n+\hat{\alpha})-\mathit{\Phi}(n)}{a} \quad \text{and} \quad
 \cev{\del}_{\alpha}\mathit{\Phi}(n)=\dfrac{\mathit{\Phi}(n)-\mathit{\Phi}(n-\hat{\alpha})}{a}.
@@ -109,7 +109,7 @@ so that the according fields $\phi_{l(n)}\equiv \phi(n)$ are actual vectors and 
 \end{equation}
 %
 %
-where then $M$ is also an actual matrix. For the finite differences derivatives we also need  to know the neighboring relations. So if we want to move on the grid in direction $\pm \hat{\alpha}$, which lexicographic index corresponds to this movement? These relations are implemented into a \textit{next neighbor} function (nb) which also takes into account the boundary conditions (toroidal in our case) and returns the corresponding vector index
+where then $M$ is also an actual matrix. For the finite differences derivatives we also need  to know the neighbouring relations. So if we want to move on the grid in direction $\pm \hat{\alpha}$, which lexicographic index corresponds to this movement? These relations are implemented into a \textit{next neighbour} function (nb) which also takes into account the boundary conditions (toroidal in our case) and returns the corresponding vector index
 %
 %
 \begin{equation}
@@ -157,7 +157,7 @@ We will come back to this notation in \autoref{sec: towards_lat}. For now on we 
 %
 \section{Bosons and fermions on the lattice}
 \subsection{Bosonic propagator}
-In the examined theory bosons and fermions are both scalar fields of either real, or complex \names{Grassmann} type. The equations of motion of bosons are given by the \names{Klein-Gordon} equation, which contains only second derivatives. To discretize the second derivative we define the corresponding finite difference operator simply by applying a forward and a backward finite difference
+In the examined theory bosons and fermions are both scalar fields of either real, or complex \names{Grassmann} type. The equations of motion of bosons are given by the \names{Klein-Gordon} equation, which contains only second order derivatives. To discretise the second order derivative we define the corresponding finite difference operator simply by applying a forward and a backward finite difference
 \begin{align}
 {\widehat{\del}_\alpha}^{\,2}\mathit{\Phi}(n) = \cev{\del}_{\alpha}\vec{\del}_{\alpha}\mathit{\Phi}(n) = \dfrac{\mathit{\Phi}(n+\hat{\alpha})-2\mathit{\Phi}(n)+\mathit{\Phi}(n-\hat{\alpha})}{a^{2}}.
 \label{second deriv}
@@ -170,7 +170,7 @@ where we use (\ref{second deriv}) to define
 \begin{equation}
 {\widehat{\del}_\alpha}^{\,2}(n,m) \equiv	\dfrac{\delta_{m,n+\hat{\alpha}}-2\delta_{m,n}+\delta_{m,n-\hat{\alpha}}}{a^{2}}.
 \end{equation}
-To investigate the behaviour of bosons under the discretization we are interested in the propagator, which is the inverse of the differential operator in momentum space. We therefore perform a discrete \names{Fourier} transform, which is discussed in Appendix \ref{app: disc_ft}. Both indices $m$ and $n$ transform independently and in order to perform a unitary similarity transformation the second index is \names{Fourier} transformed using the complex conjugated phase \cite{gattringer2009quantum}
+To investigate the behaviour of bosons under the discretization we are interested in the propagator (which is related to the inverse of the differential operator) in momentum space. We therefore perform a discrete \names{Fourier} transform, which is discussed in Appendix \ref{app: disc_ft}. Both indices $m$ and $n$ transform independently and in order to perform a unitary similarity transformation the second index is \names{Fourier} transformed using the complex conjugated phase \cite{gattringer2009quantum}
 \begin{align}
 {\widetilde{\del}_\alpha}^{\,2}(p,q) &= \dfrac{1}{\vert \mathit{\Lambda}\vert} \sum\limits_{m,n \in \mathit{\Lambda}} \mathrm{e}^{-iq\cdot na} \, {\widehat{\del}_\alpha}^{\,2}(n,m) \, \mathrm{e}^{i p\cdot ma} \notag \\
 &= \dfrac{1}{\vert \mathit{\Lambda}\vert}\sum\limits_{n \in \mathit{\Lambda}} \mathrm{e}^{-i (q-p)\cdot na} \dfrac{1}{a^{2}} \left[ \mathrm{e}^{i p_{\alpha} a} -2 +\mathrm{e}^{-i p_{\alpha}a} \right] \\
@@ -198,7 +198,7 @@ This is precisely what we expected for the \names{Euclidean} propagator in the c
 %
 \subsection{Fermionic propagator and the doubling problem}
 \label{sec: ferm_doubling}
-In the case of fermions the equations of motion in 4-dimensional QFT are given by the Dirac equation, which is a linearisation of the \names{Klein-Gordon} equation and only contains first derivatives. To not explicitly break existing symmetries, we have to go with the symmetric derivative in this case. Now we can follow the exact same steps as for the bosonic case to investigate the continuum limit of a \names{Dirac} like operator in our 2-dimensional space time. As mentioned we start from the symmetric finite difference
+In the case of fermions the equations of motion in four-dimensional QFT are given by the Dirac equation, which is a linearisation of the \names{Klein-Gordon} equation and only contains first order derivatives. To not explicitly break existing symmetries, we have to go with the symmetric derivative in this case. Now we can follow the exact same steps as for the bosonic case to investigate the continuum limit of a \names{Dirac} like operator in our two-dimensional space time. As mentioned we start from the symmetric finite difference
 \begin{equation}
 \widehat{\del}_{\alpha}(m,n) \equiv \dfrac{\delta_{m,n+\hat{\alpha}}-\delta_{m,n-\hat{\alpha}}}{2a}
 \end{equation}
@@ -275,11 +275,12 @@ where $S$ is the \names{Euclidean} action depending on the collection of fields 
 \begin{equation}
 Z =  \int \mathcal{D} \mathit{\phi}\, \exp\left(-S\left[\mathit{\phi}\right]\right).
 \end{equation}
-In fact there is no rigorous mathematical definition for the path integral in the continuum. It is motivated from a discretized measure, which is then somehow said to be made continuus. This step is considered ill defined by most mathematicians, but since we stay on a discretized lattice, the path integral measure $\mathcal{D} \mathit{\phi}$ can be perfectly well defined and is represented by
+In fact there is no rigorous mathematical definition for the path integral in the continuum. It is motivated from a discretised measure, which is then somehow said to be made continuous. This step is considered ill defined by most mathematicians, but since we stay on a discretised lattice, the path integral measure $\mathcal{D} \mathit{\phi}$ can be perfectly well defined and is represented by
 \begin{equation}
 \mathcal{D} \mathit{\phi} = \prod\limits_{n \in \mathit{\Lambda}} \dd \phi(n).
+\label{eq: PI_measure}
 \end{equation}
-This means, that for every lattice point a multidimensional integral needs to be calculated. Even for small lattices this task becomes tortuous and soon even supercomputers would not be able to do that calculation in reasonable time. Out of this reason other methods of calculation have been considered. The most favoured one is a statistical method going under the name of Monte Carlo simulation. With this type of calculation it is possible to obtain good statistical approximations of high-dimensional integrals in reasonable time. At this point we want to study some details of the Monte Carlo methods used in the scope of this thesis.
+This means, that for every lattice point a multi-dimensional integral needs to be calculated. Even for small lattices this task becomes tortuous and soon even supercomputers would not be able to do that calculation in reasonable time. Out of this reason other methods of calculation have been considered. The most favoured one is a statistical method going under the name of Monte Carlo simulation. With this type of calculation it is possible to obtain good statistical approximations of high-dimensional integrals in reasonable time. At this point we want to study some details of the Monte Carlo methods used in the scope of this thesis.
 %
 %
 \subsection{Monte Carlo integration}
@@ -295,7 +296,7 @@ Hereby $V=\int_{\Omega}\dd x$ denotes the integration volume. One can show that 
 \begin{equation}
 \langle f \rangle = \lim\limits_{N\to\infty}\dfrac{1}{N}\sum\limits_{i=1}^{N} f(\overline{x}_{i}) = \dfrac{\int_{\Omega} f(x) \,\dd x}{\int_{\Omega}\dd x}.
 \end{equation}
-An instructive example is to calculate the value of $\pi$ with the 2D-integral $I=\int_{\Omega}H(x,y)\,\dd x\dd y$ over the domain $\Omega=[-1,1]\times [-1,1]$ with the function
+An instructive example is to calculate the value of $\pi$ with the 2d integral $I=\int_{\Omega}H(x,y)\,\dd x\dd y$ over the domain $\Omega=[-1,1]\times [-1,1]$ with the function
 \begin{equation}
 H(x,y)=\left\lbrace \begin{array}{l}
 1\quad \text{if}\quad x^2+y^2\leq 1 \\
@@ -352,7 +353,7 @@ More generally one can estimate integrals over a function $f(x)$ multiplied with
 \langle f \rangle_{\rho} \equiv \dfrac{\int _{\Omega} f(x)\rho(x)\,\dd x}{\int _{\Omega} \rho(x)\,\dd x} = \lim\limits_{N\to\infty}\dfrac{1}{N}\sum\limits_{i=1}^{N} f(\overline{x}_{i}).
 \end{equation}
 But in this case the random numbers $\overline{x}_{i}$ need to be distributed through the weight function $\rho(x)$. For this to be possible $\rho(x)$ needs to be a valid probability density function.
-Comparing with (\ref{PI_continuum}) we can convince ourselves, that this is the case for the \names{Euclidean} path integral. We can exploit this fact to make our calculation more efficient. In principle one could go with the simple Monte Carlo integration scheme, but since our integration domain is no compact interval but the $\mathbb{R}^{n}$, we would produce lots of configurations that would give no contribution to the path integral due to the weight factor and therefore introduce a large error. So if we produce random configurations distributed through a probability density given by the weight factor, we would generate mostly configurations with a non vanishing contribution and the statistical error will be reduced. This procedure is called importance sampling. But to do the importance sampling one needs to be able to produce random configurations according to the given probability density. Since the action appearing in this probability density is in general a very complicated function, this task becomes highly non trivial and there usually is no way to directly transform uniformly distributed random configurations into the favoured form. To make this more explicit, consider the one dimensional integral with normalized probability density function \cite{rothe}
+Comparing with (\ref{PI_continuum}) we can convince ourselves, that this is the case for the discretised \names{Euclidean} path integral with measure (\ref{eq: PI_measure}). We can exploit this fact to make our calculation more efficient. In principle one could go with the simple Monte Carlo integration scheme, but since our integration domain is no bounded interval, but $\mathbb{R}^{n}$, we would produce a lot of configurations that would give no contribution to the path integral due to the weight factor and therefore introduce a large error. So if we produce random configurations distributed through a probability density given by the weight factor, we would generate mostly configurations with a non-vanishing contribution and the statistical error will be reduced. This procedure is called importance sampling. But to do the importance sampling one needs to be able to produce random configurations according to the given probability density. Since the action appearing in this probability density is in general a very complicated function, this task becomes highly non-trivial and there usually is no way to directly transform uniformly distributed random configurations into the favoured form. To make this more explicit, consider the one-dimensional integral with normalized probability density function \cite{rothe}
 %
 %
 \begin{equation}
@@ -401,7 +402,7 @@ To circumvent this issue one uses a statistical model called \names{Markov} chai
 \end{equation}
 %
 %
-The first configurations up to an index $N_{\text{th}}$ should not be used for measurements since they are most certainly not properly distributed. The process needs a specific amount of time to reach its equilibrium distribution. Therefore this period is called equilibration or thermalization phase.
+The first configurations up to an index $N_{\text{th}}$ should not be used for measurements since they are most certainly not properly distributed. The process needs a specific amount of time to reach its equilibrium distribution. Therefore this period is called equilibration or thermalisation phase.
 A \names{Markov} process is characterized by a conditional transition probability $T(\mathit{\phi}' \vert \mathit{\phi})$ to move from a configuration $\mathit{\phi}$ to $\mathit{\phi}'$. This probability depends only on the configurations $\mathit{\phi}$ and $\mathit{\phi}'$ and not any previous ones. It obeys the properties
 %
 %
@@ -438,7 +439,7 @@ This condition is called detailed balance and is used by most algorithms generat
 \label{sec: hmc_alg}
 %
 %
-There are many possible algorithms to generate field configurations. The choice is depending on the structure of the problem at hand. For the here presented case the algorithm of choice is called rational hybrid Monte Carlo (RHCM). The basic reason to use this algorithm is the presence of fermions in a specific manner. It is in general complicated to deal with fermions in numerical simulations due to the anti commuting properties of \names{Grassmann} variables. An efficient procedure is to integrate out fermions via \names{Grassmann} integration, presented in Appendix \ref{sec: grassmann_analysis}, which results in our case in the \names{Pfaffian} of a fermionic operator $M[\phi]$ depending on the bosonic fields $\phi$. We now want to include the \names{Pfaffian} as a probability weight factor in the process of generating \names{Markov} chain configurations. To act as a probability weight factor, $\text{Pf}\,M$ must be real and nonnegative. If we consider this to be the case for the moment, we can write
+There are many possible algorithms to generate field configurations. The choice depends on the structure of the problem at hand. For the here presented case the algorithm of choice is called rational hybrid Monte Carlo (RHCM). The basic reason to use this algorithm is the presence of fermions in a specific manner. It is in general complicated to deal with fermions in numerical simulations due to the anti commuting properties of \names{Grassmann} variables. An efficient procedure is to integrate out fermions via \names{Grassmann} integration, presented in Appendix \ref{sec: grassmann_analysis}, which results in our case in the \names{Pfaffian} of a fermionic operator $M[\phi]$ depending on the bosonic fields $\phi$. We now want to include the \names{Pfaffian} as a probability weight factor in the process of generating \names{Markov} chain configurations. To act as a probability weight factor, $\text{Pf}\,M$ must be real and non-negative. If we consider this to be the case for the moment, we can write
 %
 %
 \begin{equation}
@@ -447,7 +448,7 @@ There are many possible algorithms to generate field configurations. The choice 
 \end{equation}
 %
 %
-In general one could have to deal with an arbitrary fraction $\alpha$ in the exponent on the right side of (\ref{pfaff}). If we restrict $\pf M$ to be also nonzero and therefore entirely positive using that $MM^{\dagger}$ is positive definite, one can rewrite the determinant as a bosonic path integral with pseudofermions $\xi$
+In general one could have to deal with an arbitrary fraction $\alpha$ in the exponent on the right side of (\ref{pfaff}). If we restrict $\pf M$ to be also non-zero and therefore entirely positive using that $MM^{\dagger}$ is positive definite, one can rewrite the determinant as a bosonic path integral with pseudofermions $\xi$
 %
 %
 \begin{equation}
@@ -455,7 +456,7 @@ In general one could have to deal with an arbitrary fraction $\alpha$ in the exp
 \end{equation}
 %
 %
-Since there is an inversion included, the operator in the exponent is highly nonlocal in the bosonic fields $\phi$. So even a small change in the fields could cause a large difference in the weight factor. Ergo one needs an algorithm that ensures that the generated configurations are part of the contributing regime of the weight factor. In a case like that it proved efficient to use a hybrid Monte Carlo (HMC) algorithm when $\alpha=1$, which uses \names{Hamiltonian} dynamics trajectories along some fictitious time to generate new configurations. For non-integer $\alpha$ one can use a rational approximation of $\left(MM^{\dagger}\right)^{-\alpha}$. Combined with the HMC this is called the rational hybrid Monte Carlo (RHMC) algorithm.\\
+Since there is an inversion included, the operator in the exponent is highly non-local in the bosonic fields $\phi$. So even a small change in the fields could cause a large difference in the weight factor. Ergo one needs an algorithm that ensures that the generated configurations are part of the contributing regime of the weight factor. In a case like that it proved efficient to use a hybrid Monte Carlo (HMC) algorithm when $\alpha=1$, which uses \names{Hamiltonian} dynamics trajectories along some fictitious time to generate new configurations. For non-integer $\alpha$ one can use a rational approximation of $\left(MM^{\dagger}\right)^{-\alpha}$. Combined with the HMC this is called the rational hybrid Monte Carlo (RHMC) algorithm.\\
 %
 At this point we want to introduce the HMC algorithm which has been proposed in \cite{hmc}. A more detailed explanation is presented in \cite{gattringer2009quantum,montvay_lattice} which serves as a guideline for the following. The HMC is referred to as hybrid because it combines a molecular dynamic (MD) evolution with random noise patterns to simulate quantum fluctuations, an additional \names{Metropolis} acceptance step lets it result into an exact MC algorithm. The field update is  separated into two phases. Pseudofermions are updated first with an exact heat bath, while the bosons are kept constant. Therefore, a configuration $\vartheta$ is generated from a \names{Gaussian} distribution $P(\vartheta) \sim e^{-\vartheta^{\dagger}\vartheta}$ and we set $\xi = M\vartheta$.\\
 In the second phase a molecular dynamic evolution is used to update the bosonic fields while the pseudofermions are kept constant.  We can now think of the effective action $S_{\rm eff}[\phi]= S_{\rm B}[\phi] + \xi^{\dagger}(MM^{\dagger})^{-1}\xi$ as only dependent on the bosonic fields $\phi$. Now for each field $\phi_{i}$ a conjugate momentum $\pi_{i}$ is introduced and we expand the path integral with $\int \mathcal{D}\pi\, \exp(-1/2 \;\pi^{2})$ to obtain
@@ -475,14 +476,16 @@ H[\phi,\pi] = \frac{1}{2}\pi^{2} + S_{\rm eff}[\phi]\, , \quad \pi^{2}=\sum\limi
 The evolution of the fields follows according to the classical equations of motion along a fictitious MC time $\tau$
 %
 %
-\begin{align}
-\dot{\pi}_{i} &=-\frac{\del H}{\del \phi_{i}} = -\frac{\del S_{\rm eff}}{\del \phi_{i}} \notag \\
-\dot{\phi}_{i} &= \frac{\del H}{\del \pi_{i}} = \pi_{i}
+\begin{equation}
+\begin{alignedat}{2}
+\dot{\pi}_{i} &=-\frac{\del H}{\del \phi_{i}} = -\frac{\del S_{\rm eff}}{\del \phi_{i}}, \\
+\dot{\phi}_{i} &= \frac{\del H}{\del \pi_{i}} = \pi_{i}.
+\end{alignedat}
 \label{ham_eom}
-\end{align}
+\end{equation}
 %
 %
-A numerical implementation of (\ref{ham_eom}) introduces a discrete step size $\epsilon \equiv \delta	\tau$ and errors of order $\mathcal{O}(\epsilon^{2})$. An additional \names{Metropolis} acceptance step can correct these errors. First the momenta $\pi$ are randomly generated from a \names{Gaussian} distribution $P_{\rm G}(\pi)=\exp(-1/2\,\pi^{2})$. Then a numerical integration scheme is used to change the configuration $\lbrace \phi,\pi \rbrace$ along a discretized trajectory in phase space to the new point $\lbrace \phi',\pi' \rbrace$. The transition probability $T_{\rm MD}(\phi',\pi' \vert \phi,\pi)$ of the MD evolution depends on the integration scheme. The latter needs to be reversible and area preserving for the algorithm to obey detailed balance. Thus, a \textit{leapfrog integration} scheme  is used. For one trajectory the fields $\phi$ are evolved in $n$ steps of length $\epsilon$. The momenta start with half a step of length $\epsilon / 2$, then $(n-1)$ full steps are performed and again a half-step. The first half-step is given by
+A numerical implementation of (\ref{ham_eom}) introduces a discrete step size $\epsilon \equiv \delta	\tau$ and errors of order $\mathcal{O}(\epsilon^{2})$. An additional \names{Metropolis} acceptance step can correct these errors. First the momenta $\pi$ are randomly generated from a \names{Gaussian} distribution $P_{\rm G}(\pi)=\exp(-1/2\,\pi^{2})$. Then a numerical integration scheme is used to change the configuration $\lbrace \phi,\pi \rbrace$ along a discretised trajectory in phase space to the new point $\lbrace \phi',\pi' \rbrace$. The transition probability $T_{\rm MD}(\phi',\pi' \vert \phi,\pi)$ of the MD evolution depends on the integration scheme. The latter needs to be reversible and area preserving for the algorithm to obey detailed balance. Thus, a \textit{leapfrog integration} scheme  is used. For one trajectory the fields $\phi$ are evolved in $n$ steps of length $\epsilon$. The momenta start with half a step of length $\epsilon / 2$, then $(n-1)$ full steps are performed and again a half-step. The first half-step is given by
 %
 %
 \begin{align}
@@ -495,7 +498,7 @@ The next steps for $j=1,\ldots,n-1$ are
 %
 %
 \begin{align}
-\pi_{i}\left(\left(j+\tfrac{1}{2}\right)\epsilon\right) &= \pi_{i}\left(\left(j-\tfrac{1}{2}\right)\epsilon\right) - \frac{\del S_{\rm eff}(\phi(j\epsilon))}{\del \phi_{i}}\epsilon \notag \\
+\pi_{i}\left(\left(j+\tfrac{1}{2}\right)\epsilon\right) &= \pi_{i}\left(\left(j-\tfrac{1}{2}\right)\epsilon\right) - \frac{\del S_{\rm eff}(\phi(j\epsilon))}{\del \phi_{i}}\epsilon, \notag \\
 \phi_{i}\left(\left(j+1\right)\epsilon\right) &= \phi^{i}\left(j\epsilon\right) + \pi_{i}\left(\left(j+\tfrac{1}{2}\right)\epsilon\right) \epsilon\, .
 \end{align}
 %
@@ -504,7 +507,7 @@ With the last half-step we arrive at the final momentum
 %
 %
 \begin{equation}
-\pi_{i}(n\epsilon) = \pi_{i}\left(\left(n+\tfrac{1}{2}\right)\epsilon\right) - \frac{\del S_{\rm eff}(\phi(n\epsilon))}{\del \phi_{i}}\frac{\epsilon}{2}\, .
+\pi_{i}(n\epsilon) = \pi_{i}\left(\left(n-\tfrac{1}{2}\right)\epsilon\right) - \frac{\del S_{\rm eff}(\phi(n\epsilon))}{\del \phi_{i}}\frac{\epsilon}{2}\, .
 \end{equation}
 %
 %
@@ -582,4 +585,4 @@ As discussed previously we want to calculate expectation values of observables $
 %
 The feasibility of calculations like that via Monte Carlo methods is only guaranteed if the weight function $\rho(\phi)$ is non-negative. In the process of dealing with fermions it is sometimes necessary to introduce bosonic auxiliary fields by a \names{Hubbard-Stratonovich} (HS)  transformation\footnote{See Appendix \ref{sec: HS_trafo} for futher details on the HS transformation.} which might lead to a complex phase in the weight function. For fluctuations of this phase that are very close to the purely real spectrum, this can be corrected by a reweighting procedure. If nonetheless the phase is distributed on the whole complex spectrum where the reweighting tends to fail, then one is talking of a \textit{sign problem}. There are several approaches to fix this issue but none of them works as a general method to cure the sign problem. \\[1cm]
 %
-With this set of basic methods we are able to attempt the continuum model action from the previous chapter and apply a discretization on the fields and operators. This process will be the subject of the next chapter.
+With this set of basic methods we are able to attempt the continuum model action from the previous chapter and apply a discretisation on the fields and operators. This process will be the subject of the next chapter.

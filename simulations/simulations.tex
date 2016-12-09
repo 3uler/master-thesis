@@ -17,7 +17,7 @@ V_{2}m_{x}^{2} = \text{const}.
 \end{equation}
 %
 %
-From a dimensional regularization scheme it is possible to find the corrections to the masses of the bosonic fields $x,x^{*}$ which read \cite{Giombi:2010bj}
+From a dimensional regularisation scheme it is possible to find the corrections to the masses of the bosonic fields $x,x^{*}$ which read \cite{Giombi:2010bj}
 %
 %
 \begin{equation}
@@ -35,11 +35,12 @@ Together with (\ref{eq: line_of_c_phys1}) and for a fixed value of $g$ this lead
 \end{equation}
 %
 %
-where $M=ma$ is the dimensionless lattice mass scale. The equality (\ref{eq: line_of_c_phys2}) relies on the hypothesis that $g$ is not (infinitely) renormalized\footnote{This argument can be substantiated by our perturbative knowledge of the scaling function. One could define $f(g)/4 = g + \text{const.} + \mathcal{O}(g^{-1})$ as a renormalized coupling. Since it is linear in $g$ up to first order and does not depend on a renormalization scale, the $\beta$-function is zero and $g$ needs no renormalization.}. Further the validity of (\ref{eq: m_x}) in the discretized model needs to be verified in order the physical masses undergo only a finite renormalization. This claim is supported by studying $x,x^{*}$ correlators where indeed no presence of $(1/a)$ divergences in the $m_{x}^{2}/m^{2}$ ratios can be found. Also for the large $g$ region they reach their expected continuum value of $1/2$. Having this in mind and also the result of the perturbative 1-loop free energy (\ref{eq: 1_loop}), we assume no further presence of a scale in the discretized model other than the lattice spacing $a$. Therefore any expectation value of an observable $\langle F_{\rm LAT}\rangle$ is a function of the "bare" input parameters $g,L$ and $M$
+where $M=ma$ is the dimensionless lattice mass scale. The equality (\ref{eq: line_of_c_phys2}) relies on the hypothesis that $g$ is not (infinitely) renormalised\footnote{This argument can be substantiated by our perturbative knowledge of the scaling function. One could define $f(g)/4 = g + \text{const.} + \mathcal{O}(g^{-1})$ as a renormalized coupling. Since it is linear in $g$ up to first order and does not depend on a renormalisation scale, the $\beta$-function is zero and $g$ needs no renormalisation.}. Further the validity of (\ref{eq: m_x}) in the discretised model needs to be verified in order the physical masses undergo only a finite renormalisation. This claim is supported by studying $x,x^{*}$ correlators where indeed no presence of $(1/a)$ divergences in the $m_{x}^{2}/m^{2}$ ratios can be found. Also for the large $g$ region they reach their expected continuum value of $1/2$. Having this in mind and also the result of the perturbative 1-loop free energy (\ref{eq: 1_loop}), we assume no further presence of a scale in the discretised model other than the lattice spacing $a$. Therefore any expectation value of an observable $\langle F_{\rm LAT}\rangle$ is a function of the "bare" input parameters $g,L$ and $M$
 %
 %
 \begin{equation}
 \langle F_{\rm LAT}\rangle = \langle F_{\rm LAT}(g,L,M)\rangle = \langle F(g) \rangle + \mathcal{O}(L^{-1}) + \mathcal{O}\left( e^{-LM}\right).
+\label{eq: F_LAT}
 \end{equation}
 %
 %
@@ -119,7 +120,7 @@ In \autoref{tab: runs_param} we list the parameters of the simulations presented
 %
 %
 %
-The meaning of the Q-value, given in the table, is defined in \cite{Wolff:2003sm}. It reveals information about the quality of an observable with respect to their replica. One derives the mean value for each replicum and analyses the distribution of these means in comparison to the total mean of all replica. The Q-value is of cause more meaningful if there is a high number of replica. \\
+The meaning of the Q-value, given in the table, is defined in \cite{Wolff:2003sm}. It reveals information about the quality of an observable with respect to their replica. One derives the mean value for each replicum and analyses the distribution of these means in comparison to the total mean of all replica. The Q-value is of course more meaningful if there is a high number of replica. \\
 %
 \begin{figure}
 \centering
@@ -196,7 +197,7 @@ With a \names{Gaussian} distribution $\rho(\xi)=\exp(-\xi^{\dagger}\xi)$ we find
 \end{equation}
 %
 %
-The reweighting procedure is of cause also limited in its application and is only valid for small shifts $\mu$. We therefore choose $\mu$ as small a possible, but large enough to ensure the stability of the simulation. Reweighting has only been applied for the collection of data with $g=5$. A plot of the reweighting factors for a collection of field configurations is given in \autoref{fig: rew_factor}.
+The reweighting procedure is of course also limited in its application and is only valid for small shifts $\mu$. We therefore choose $\mu$ as small a possible, but large enough to ensure the stability of the simulation. Reweighting has only been applied for the collection of data with $g=5$. A plot of the reweighting factors for a collection of field configurations is given in \autoref{fig: rew_factor}.
 %
 %
 \begin{figure}
@@ -411,11 +412,11 @@ C_{x}(t) = \langle\tilde{x}_{\rm R}(t)\tilde{x}_{\rm R}(0)\rangle + \langle \til
 %
 %
 \subsection{The cusp action}
-To measure the action (\ref{eq: <S_cusp>}) we first explore the regime of large $g$, where we recover the following lattice observable, behaving linear in $g$ and containing a quadratic divergence in $L$ in the continuum limit
+To measure the action (\ref{eq: <S_cusp>}) we first explore the regime of large $g$. With fixed $LM=4$ which we think is large enough to omit finite volume effects we recover, according to (\ref{eq: F_LAT}), the following lattice observable, behaving linear in $g$ and containing a quadratic divergence in $L$ in the continuum limit
 %
 %
 \begin{equation}
-\langle S_{\rm LAT} \rangle = S_{0} + \frac{c}{2} \left(2L^{2}\right), \qquad g\gg 1.
+\langle S_{\rm LAT} \rangle = S_{0} + \frac{c}{2} \left(2L^{2}\right) + \mathcal{O}(L^{-1}), \qquad g\gg 1.
 \label{eq: S_LAT}
 \end{equation}
 %
@@ -490,7 +491,7 @@ and thus
 \end{equation}
 %
 %
-This divergence with respect to the lattice volume is arising from all quadratic field contributions due to the non equality of boson and fermion numbers. After the HS transformation we have an additional amount of 17 auxiliary fields and in total 25 bosonic fields in contrast to 16 independent fermionic quantities. \\
+This divergence with respect to the lattice volume is arising from all quadratic field contributions due to the non-equality of boson and fermion numbers. After the HS transformation we have an additional amount of 17 auxiliary fields and in total 25 bosonic fields in contrast to 16 independent fermionic quantities. \\
 The fermionic contribution to (\ref{eq: <S_cusp>}) is solely of quadratic order and will result in a divergent term only and is thus not relevant to measure $f'(g)$. Out of this reason it is conventional  to omit the coupling from the (pseudo) fermionic part of the action. In the observable $\langle S_{\rm LAT} \rangle$ therefore only contributes a measurement of the bosonic part of the action and thus a divergence that should be proportional to the number of bosonic fields in the large $g$ region
 %
 %
@@ -513,7 +514,7 @@ To prove this, $c$ can be determined numerically by an extrapolation with a fit 
 \begin{figure}[ht!]
 \centering
 \input{Plots/c_fit}
-\caption{Data points estimate the value of $c/2$ as from the extrapolations of the linear fits in \autoref{fig: Slat_over_N2}. Dashed and dotted lines are the results of, respectively, a linear fit in $1/g$ and a fit to a polynomial of degree two.
+\caption{Data points estimate the value of $c/2$ as from the extrapolations of the linear fits in \autoref{fig: Slat_over_N2}. Dashed and dotted lines are the results of, respectively, a linear fit in $1/g$ and a fit to a polynomial of degree two. For better visibility we omitted the data point for $g=5$ which is $c/2=12.62(2)$.
 \label{fig: c_fit}}
 \end{figure}
 %
