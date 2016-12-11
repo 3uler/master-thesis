@@ -1,5 +1,5 @@
 \chapter{Simulations and observables}\label{ch: parameters}
-In this chapter we will present some basic information on the implementation of the previously discussed algorithm and state the utilized parameters of the conducted simulations. Furthermore we need to discuss how to take the continuum limit of the observables of interest.
+In this chapter we will present some basic information on the implementation of the previously discussed algorithm and state the utilised parameters of the conducted simulations. Furthermore we need to discuss how to take the continuum limit of the observables of interest.
 %
 %
 %
@@ -35,7 +35,7 @@ Together with (\ref{eq: line_of_c_phys1}) and for a fixed value of $g$ this lead
 \end{equation}
 %
 %
-where $M=ma$ is the dimensionless lattice mass scale. The equality (\ref{eq: line_of_c_phys2}) relies on the hypothesis that $g$ is not (infinitely) renormalised\footnote{This argument can be substantiated by our perturbative knowledge of the scaling function. One could define $f(g)/4 = g + \text{const.} + \mathcal{O}(g^{-1})$ as a renormalized coupling. Since it is linear in $g$ up to first order and does not depend on a renormalisation scale, the $\beta$-function is zero and $g$ needs no renormalisation.}. Further the validity of (\ref{eq: m_x}) in the discretised model needs to be verified in order the physical masses undergo only a finite renormalisation. This claim is supported by studying $x,x^{*}$ correlators where indeed no presence of $(1/a)$ divergences in the $m_{x}^{2}/m^{2}$ ratios can be found. Also for the large $g$ region they reach their expected continuum value of $1/2$. Having this in mind and also the result of the perturbative 1-loop free energy (\ref{eq: 1_loop}), we assume no further presence of a scale in the discretised model other than the lattice spacing $a$. Therefore any expectation value of an observable $\langle F_{\rm LAT}\rangle$ is a function of the "bare" input parameters $g,L$ and $M$
+where $M=ma$ is the dimensionless lattice mass scale. The equality (\ref{eq: line_of_c_phys2}) relies on the hypothesis that $g$ is not (infinitely) renormalised\footnote{This argument can be substantiated by our perturbative knowledge of the scaling function. One could define $f(g)/4 = g + \text{const.} + \mathcal{O}(g^{-1})$ as a renormalised coupling. Since it is linear in $g$ up to first order and does not depend on a renormalisation scale, the $\beta$-function is zero and $g$ needs no renormalisation.}. Further the validity of (\ref{eq: m_x}) in the discretised model needs to be verified in order the physical masses undergo only a finite renormalisation. This claim is supported by studying $x,x^{*}$ correlators where indeed no presence of $(1/a)$ divergences in the $m_{x}^{2}/m^{2}$ ratios can be found. Also for the large $g$ region they reach their expected continuum value of $1/2$. Having this in mind and also the result of the perturbative 1-loop free energy (\ref{eq: 1_loop}), we assume no further presence of a scale in the discretised model other than the lattice spacing $a$. Therefore any expectation value of an observable $\langle F_{\rm LAT}\rangle$ is a function of the "bare" input parameters $g,L$ and $M$
 %
 %
 \begin{equation}
@@ -56,7 +56,7 @@ For fixed $g$ one chooses a fixed $LM$, large enough to keep finite volume effec
 %
 %
 \section{Simulation parameters}
-As mentioned we employ different lattice sizes varying between $L=8$ and $L=32$. In the HMC simulation the MD equations of motion are evaluated along a fictitious MC time $\tau$. For one trajectory we utilize a MC time of $\tau = 0.5$ with by default 100 integrator steps and therefore $\epsilon=\delta\tau = 0.005$. For the fractional powers of the fermion matrix we use a rational approximation (\ref{eq: rat_approx}) of degree $P=15$ with the two sets of parameters stated in \autoref{tab: rat_app_coef}. We checked for a subset of the configurations that its accuracy is always better than $10^{-3}$ for $\xi^{\dagger}\big(\mathcal{O}_{\rm F}^{\dagger}\mathcal{O}_{\rm F}\big)^{-\frac{1}{4}}\xi$.
+As mentioned we employ different lattice sizes varying between $L=8$ and $L=32$. In the HMC simulation the MD equations of motion are evaluated along a fictitious MC time $\tau$. For one trajectory we utilise a MC time of $\tau = 0.5$ with by default 100 integrator steps and therefore $\epsilon=\delta\tau = 0.005$. For the fractional powers of the fermion matrix we use a rational approximation (\ref{eq: rat_approx}) of degree $P=15$ with the two sets of parameters stated in \autoref{tab: rat_app_coef}. We checked for a subset of the configurations that its accuracy is always better than $10^{-3}$ for $\xi^{\dagger}\big(\mathcal{O}_{\rm F}^{\dagger}\mathcal{O}_{\rm F}\big)^{-\frac{1}{4}}\xi$.
 %
 %
 %\begin{table}[h]

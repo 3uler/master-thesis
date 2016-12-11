@@ -14,11 +14,11 @@
 %
 %
 \chapter[$\mathbf{AdS_{5}\times S^{5}}$ spacetime]{$\mathitbf{AdS_{5}\times S^{5}}$ spacetime}%[$AdS_{5}\times S^{5}$ spacetime]
-The $AdS_{5}\times S^{5}$ space is in the central focus of the gauge/gravity duality and should be concerned more deeply. It is a direct product of five dimensional Anti-de Sitter ($AdS$) space and a five dimensional compact sphere. Both are maximally symmetric spaces and therefore inherit the isometry groups $SO(2,4)$ in case of $AdS_{5}$ and respectively $SO(6)$ for $S^{5}$ \cite{Ammon:2015wua}. This is an important fact for the $AdS/CFT$ correspondence since the direct product of these groups has the same amount of degrees of freedom as the superconformal group $SO(2,4)\times SO(6) = SU(2,2\vert 4)$ as the undelying symmetry group of $\mathcal{N}=4$ super \names{Yang-Mills} theory in four dimensional \names{Minkowski} space.
+The $AdS_{5}\times S^{5}$ space is in the central focus of the gauge/gravity duality and should be concerned more deeply. It is a direct product of five-dimensional Anti-de Sitter ($AdS$) space and a five dimensional compact sphere. Both are maximally symmetric spaces and therefore inherit the isometry groups $SO(2,4)$ in case of $AdS_{5}$ and respectively $SO(6)$ for $S^{5}$ \cite{Ammon:2015wua}. This is an important fact for the $AdS/CFT$ correspondence since the direct product of these groups has the same amount of degrees of freedom as the superconformal group $SO(2,4)\times SO(6) = SU(2,2\vert 4)$ as the undelying symmetry group of $\mathcal{N}=4$ super \names{Yang-Mills} theory in four-dimensional \names{Minkowski} space.
 %
 %
 \section[$\mathrm{AdS_{5}}$ space]{$\mathitbf{AdS_{5}}$ space}\label{AdS5}
-Since the construction of a sphere is rather simple, we focus on the Anti-de Sitter space. $AdS_{5}$ is a hyperboloid with constant negative curvature, that can be embedded in six dimensional \names{Minkowski} spacetime $X = (X^{0},X^{1},\ldots,X^{5}) \in \mathbb{R}^{4,2}$, with metric ${\tilde{\eta} = {\rm diag}(-,+,+,+,+,-)}$, so that
+Since the construction of a sphere is rather simple, we focus on the Anti-de Sitter space. $AdS_{5}$ is a hyperboloid with constant negative curvature, that can be embedded in six-dimensional \names{Minkowski} spacetime $X = (X^{0},X^{1},\ldots,X^{5}) \in \mathbb{R}^{4,2}$, with metric ${\tilde{\eta} = {\rm diag}(-,+,+,+,+,-)}$, so that
 \begin{equation}
 \dd s^{2} = -\left(\dd X^{0}\right)^{2} + \left(\dd X^{1}\right)^{2} + \cdots + \left(\dd X^{4}\right)^{2} - \left(\dd X^{5}\right)^{2} = \tilde{\eta}_{MN} \dd X^{M}\dd X^{N},
 \end{equation}
@@ -50,18 +50,18 @@ so we can rewrite (\ref{M_l_c}) as
 \begin{equation}
 uv = \eta_{\mu \nu} X^{\mu}X^{\nu},
 \end{equation}
-with $\mu,\nu \in {0,1,2,3}$ and $\left(\eta_{\mu \nu}\right) = {\rm diag}(-,+,+,+).$ Whenever $v \neq 0$ we can rescale the coordinates to set $v = 1$ and solve for $u$. Therefore one is left with a four dimensional \names{Minkowski} space $\mathbb{R}^{3,1}$. Points with $v=0$ are ``points at infinity'' added to four dimensional \names{Minkowski} space. This makes $\del AdS_{5}$ a conformal compactification of four dimensional \names{Minkowski} space. According to Maldacena \cite{maldacena1} the correspondence between a $\mathcal{N}=4$ theory on $\mathbb{R}^{3,1}$ and Type IIB on $AdS_{5}\times S^{5}$ therefore expresses a string theory on $AdS_{5}\times S^{5}$ in terms of a theory on the boundary and thus is referred to as ``holographic'' \cite{Witten:1998qj}.
+with $\mu,\nu \in \lbrace 0,1,2,3\rbrace$ and $\left(\eta_{\mu \nu}\right) = {\rm diag}(-,+,+,+).$ Whenever $v \neq 0$ we can rescale the coordinates to set $v = 1$ and solve for $u$. Therefore one is left with a four dimensional \names{Minkowski} space $\mathbb{R}^{3,1}$. Points with $v=0$ are ``points at infinity'' added to four dimensional \names{Minkowski} space. This makes $\del AdS_{5}$ a conformal compactification of four-dimensional \names{Minkowski} space. According to Maldacena \cite{maldacena1} the correspondence between a $\mathcal{N}=4$ theory on $\mathbb{R}^{3,1}$ and Type IIB on $AdS_{5}\times S^{5}$ therefore expresses a string theory on $AdS_{5}\times S^{5}$ in terms of a theory on the boundary and thus is referred to as ``holographic'' \cite{Witten:1998qj}.
 %
 %
 \section{Poincaré patch}\label{p_patch}
-Let us now introduce a parametrisation of the hyperboloid (\ref{hyperbol}) by the following coordinates $x^{\mu} \in \mathbb{R}$, for $\mu \in {0,1,2,3}$ and $z \in \mathbb{R}_{+}$. The parametrisation in these coordinates is given by (see e.g. \cite{Ammon:2015wua,Bayona:2005nq})
+Let us now introduce a parametrisation of the hyperboloid (\ref{hyperbol}) by the following coordinates $x^{\mu} \in \mathbb{R}$, for $\mu \in \lbrace 0,1,2,3\rbrace$ and $z \in \mathbb{R}_{+}$. The parametrisation in these coordinates is given by (see e.g. \cite{Ammon:2015wua,Bayona:2005nq})
 \begin{align}
 X^{0} &= \frac{z}{2} \left( 1+ \frac{1}{z^{2}}\left( x_{\mu}x^{\mu} + R^{2}\right) \right), \notag \\
 X^{i} &= \frac{R}{z}x^{i},\quad i\in {1,2,3}, \\
 X^{4} &= \frac{z}{2} \left( 1 + \frac{1}{z^{2}} \left(x_{\mu}x^{\mu} -R^{2} \right) \right), \notag \\
 X^{5} &= \frac{R}{z}x^{0}, \notag
 \end{align}
-with $x_{\mu}x^{\mu}=\eta_{\mu\nu}x^{\mu}x^{\nu}$ and $\left(\eta_{\mu \nu}\right) = {\rm diag}(-,+,+,+)$. These local coordinates are called \names{Poincaré} patch. The metric of $AdS_{5}$ in the \names{Poincaré} patch reads
+with $x_{\mu}x^{\mu}=\eta_{\mu\nu}x^{\mu}x^{\nu}$. These local coordinates are called \names{Poincaré} patch. The metric of $AdS_{5}$ in the \names{Poincaré} patch reads
 \begin{equation}
 \dd s^{2} = \frac{R^{2}}{z^{2}}\left(\dd z^{2} + \eta_{\mu \nu} \dd x^{\mu} \dd x^{\nu} \right).
 \end{equation}
@@ -99,7 +99,7 @@ The matrices $\rho^{M}_{ij}$ appearing in the action (\ref{eq: cusp_action}) are
 \end{equation}
 %
 %
-The $\rho^{M}_{ij}$ shall all skew symmetric and we define the ones with the upper indices to satisfy $(\rho^{M})^{ij}\equiv (\rho^{M}_{ij})^{\dagger}$. We can therefore state the following properties
+The $\rho^{M}_{ij}$ shall all be skew symmetric and we define the ones with the upper indices to satisfy $(\rho^{M})^{ij}\equiv (\rho^{M}_{ij})^{\dagger}$. We can therefore state the following properties
 %
 %
 \begin{equation}
@@ -199,12 +199,12 @@ Further relations and identities are
 %
 \chapter{Discrete Fourier transform}
 \label{app: disc_ft}
-To perform a \names{Fourier} transform on the lattice one needs to discretize it to deal with a finite sequence of $N$ complex numbers $x_{0},x_{1},\ldots,x_{N-1}$. We define the discrete \names{Fourier} transform $X_{k}$ to be a vector in the base of roots of unit with components $x_{n}$ as follows:
+To perform a \names{Fourier} transform on the lattice one needs to discretise it to deal with a finite sequence of $N$ complex numbers $x_{0},x_{1},\ldots,x_{N-1}$. We define the discrete \names{Fourier} transform $X_{k}$ to be a vector in the base of roots of unit with components $x_{n}$ as follows:
 \begin{equation}
 X_{k}=\dfrac{1}{\sqrt{N}} \sum\limits_{n=0}^{N-1} x_{n} \, e ^{-2\pi  i kn /N} \qquad  k \in \mathbb{Z}.
 \label{FT}
 \end{equation}
-We can limit the domain of $k$ to a finite set, because the exponential is periodic in $k$. In the following we want to stick to the domain $k \in \left[ -\tfrac{N}{2}+1,\ldots,\tfrac{N}{2} \right]$ and restrict us to even $N$. The inverse transform can be defined to be
+We can limit the domain of $k$ to a finite set, because the exponential is periodic in $k$. In the following we stick to the domain $k \in \left[ -\tfrac{N}{2}+1,\ldots,\tfrac{N}{2} \right]$ and restrict us to even $N$. The inverse transform can be defined to be
 %
 \begin{equation}
  x_{n}= \dfrac{1}{\sqrt{N}} \sum\limits_{k=-N/2+1}^{N/2} X_{k} \, e ^{2 \pi  i nk /N},
@@ -229,7 +229,7 @@ We can prove this easily. For $n=m$ this is trivial and for $n\neq m$ we make us
 \end{equation}
 %
 %
-Now we want to apply the Fourier transform on the two dimensional lattice used throughout this thesis. We defined the lattice to be
+Now we want to apply the Fourier transform on the two-dimensional lattice used throughout this thesis. We defined the lattice to be
 \begin{equation}
 \mathit{\Lambda}=\left\lbrace  n=\left(n_{0},n_{1}\right) \vert n_{0}=1,\ldots,N_{0}\,; \; n_{1}=1,\ldots,N_{1} \right\rbrace,
 \end{equation}
@@ -237,7 +237,7 @@ with $N_{0}=T$ and $N_{1}=L$. Therefore the total number of lattice points is gi
 \begin{equation}
 \vert \mathit{\Lambda}\vert \equiv TL.
 \end{equation}
-Following \cite{gattringer2009quantum} we now want to calculate the discrete Fourier transform $\tilde{f}(p)$ of a function $f(n)$. Here for $f(n)$ we impose toroidal boundary conditions
+Following \cite{gattringer2009quantum} we calculate the discrete Fourier transform $\tilde{f}(p)$ of a function $f(n)$. Here for $f(n)$ we impose toroidal boundary conditions
 \begin{equation}
 f(n+\hat{\imath}N_{i})= e ^{2\pi i \theta_{i}}f(n),
 \label{eq: boundary_cond}
@@ -271,9 +271,9 @@ Here again the important relations hold
 %
 %
 %
-\chapter{Discretized fermion matrix}
+\chapter{Discretised fermion matrix}
 \label{app: disc_ferm}
-Here we want to present the details leading to the discretized version (\ref{eq: disc_OF}) of the operator $\mathcal{O}_{\rm F}$. As emphasized in section \ref{sec: ferm_op} $\hat{\mathcal{O}}_{\rm F}$ is a $16V\times 16V$ matrix and we will continue to use the notation introduced there to write subdivided blocks of size $4V\times 4V$ to result in
+Here we want to present the details leading to the discretised version (\ref{eq: disc_OF}) of the operator $\mathcal{O}_{\rm F}$. As emphasised in section \ref{sec: ferm_op} $\hat{\mathcal{O}}_{\rm F}$ is a $16V\times 16V$ matrix and we will continue to use the notation introduced there to write subdivided blocks of size $4V\times 4V$ to result in
 %
 %
 \begingroup
@@ -292,7 +292,7 @@ i\left(\cev{\Delta}^{Z}_{1} - \tfrac{M}{2}\bar{Z}\right)  & 0 & \!\!\!\!\!\!\!\!
 \endgroup
 %
 %
-First of all we should mention that a straightforward discretization of the  operator $\mathcal{O}_{\rm F}$ would have been of dimension $[a]^{-1}$ which has been absorbed into the fermionic fields to make them dimensionless. Therefore $\hat{\mathcal{O}}_{\rm F}$ is dimensionless as well, as are now all the bosonic and fermionic fields. Further $\hat{\mathcal{O}}_{\rm F}$ needs to be anti-symmetric which is why all the discretized derivatives need to be symmetric finite differences. As it is standard in lattice QCD to use anti-periodic boundary conditions in the temporal direction for the fermions \cite{montvay_lattice}, we will apply those here as well. For the spatial direction periodic boundary conditions shall be used. So starting from block $(1,2)$ we make the transition
+First of all we should mention that a straightforward discretisation of the  operator $\mathcal{O}_{\rm F}$ would have been of dimension $[a]^{-1}$ which has been absorbed into the fermionic fields to make them dimensionless. Therefore $\hat{\mathcal{O}}_{\rm F}$ is dimensionless as well, as are now all the bosonic and fermionic fields. Further $\hat{\mathcal{O}}_{\rm F}$ needs to be anti-symmetric which is why all the discretised derivatives need to be symmetric finite differences. As it is standard in lattice QCD to use anti-periodic boundary conditions in the temporal direction for the fermions \cite{montvay_lattice}, we will apply those here as well. For the spatial direction periodic boundary conditions shall be used. So starting from block $(1,2)$ we make the transition
 %
 %
 \begin{equation}
@@ -317,7 +317,7 @@ Thereby the superscripts \textit{A, a} refer to the property of the finite diffe
 \end{equation}
 %
 %
-Since $z^{M}/z^{3}$ is on the right, the derivative will also act on this term which we will have to consider in the discretization. Thus we introduce the definitions
+Since $z^{M}/z^{3}$ is on the right, the derivative will also act on this term which we will have to consider in the discretisation. Thus we introduce the definitions
 %
 %
 \begin{gather}
@@ -351,7 +351,7 @@ where
 \end{gather}
 %
 %
-The discretized version of $A$ is given by
+The discretised version of $A$ is given by
 %
 %
 \begin{align}

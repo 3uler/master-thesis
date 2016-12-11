@@ -14,7 +14,7 @@ which in the classical limit $\hbar \rightarrow 0$ is leading to objects that be
 which seems rather strange at first. But the concept of anticommuting numbers, so called \names{Grassmann} variables, has proved quite useful in the path integral framework to represent the algebra of fermionic position and momentum observables as operators on a space of functions. In the following we want to define these objects and study their properties.\\[1cm]
 %
 %
-We can identify \names{Grassmann} numbers with elements of the exterior algebra $\Lambda^{1}(V)$ over a vector space $V$ over a field $K$. According to the dimension of $V$ the algebra has a finite collection of generators $\xi_{1},\ldots,\xi_{N}$ with $N=\text{dim}V \geq 1$ or infinitely many, if the vector space is infinite dimensional. With the exterior product there exists an associative connection on the algebra, which is linear in scalar multiplication and satisfies
+We can identify \names{Grassmann} numbers with elements of the exterior algebra $\Lambda^{1}(V)$ over a vector space $V$ over a field $K$. According to the dimension of $V$ the algebra has a finite collection of generators $\xi_{1},\ldots,\xi_{N}$ with $N=\text{dim}V \geq 1$ or infinitely many if the vector space is infinite dimensional. With the exterior product there exists an associative connection on the algebra, which is linear in scalar multiplication and satisfies
 \begin{equation}
 \xi_{i}\wedge \xi_{i} =0.
 \label{wedge_zero}
@@ -71,14 +71,14 @@ behaves like a formally real quantity.
 %
 %
 \section{Grassmann analysis} \label{sec: grassmann_analysis}
-Now we want to see how we can differentiate and integrate \names{Grassmann} variables. We define the derivative to be
+Now we want to see how we can differentiate and integrate \names{Grassmann} variables. We define the derivative to obey
 \begin{equation}
 \dfrac{\del \xi_{m}}{\del\xi_{n}}\equiv\delta_{m n} .
 \end{equation}
 Following \cite{Cartier:2002zp} and \cite{Berezin} we define the product rule to satisfy
 \begin{align}
 \dfrac{\del }{\del\xi_{n}} \left(\xi_{m_{1}}\xi_{m_{2}}\cdots \xi_{m_{r}}\right) &\equiv \delta_{m_{1} n}\,\xi_{m_{2}}\cdots\xi_{m_{r}}-\delta_{m_{2} n}\,\xi_{m_{1}} \xi_{m_{3}}\cdots \xi_{m_{r}} +\cdots  \notag \\
-&\quad + (-1)^{r-1} \delta_{m_{r} n}\,\xi_{m_{1}}\cdots \xi_{m_{r}}.
+&\quad + (-1)^{r-1} \delta_{m_{r} n}\,\xi_{m_{1}}\cdots \xi_{m_{r-1}}.
 \end{align}
 The tangent vectors are also elements of the exterior algebra and satisfy the same anticommutation rules
 \begin{equation}
@@ -99,7 +99,7 @@ For an integral $\mathcal{I}[f]$ of a function $f(\xi)$ it holds true that
 \begin{equation}
 \dfrac{\del}{\del \xi}\mathcal{I}[f] =0,
 \end{equation}
-since the integral is independent of the integration variable. With (\ref{wedge_zero}) it is also true that
+since the integral is independent of the integration variable. With (\ref{wedge_zero}) it also follows that
 \begin{equation}
 \dfrac{\del}{\del \xi}\dfrac{\del}{\del \xi}=0
 \end{equation}
@@ -107,11 +107,11 @@ and therefore one can identify the integration on \names{Grassmann} numbers with
 \begin{equation}
 \mathcal{I}[f]=\int \dd\xi\; f(\xi) = C\frac{\del }{\del\xi}f(\xi).
 \end{equation}
-So we end up with the following integration rules, if we define $C\equiv 1$:
+So we end up with the following integration rules if we define $C\equiv 1$:
 \begin{equation}
 \int \dd\xi\; \xi = \frac{\del }{\del\xi}\xi =1,\qquad \int \dd\xi\; 1 = \frac{\del }{\del\xi}1 =0.
 \end{equation}
-We now want to perform an integration over the complex \names{Grassmann} variables $\eta$ and $\eta^{\dagger}$. Therefore we want to investigate an integration over the function
+We now want to perform an integration over the complex \names{Grassmann} variables $\eta$ and $\eta^{\dagger}$. Therefore we investigate an integration over the function
 \begin{equation}
 e ^{-a\eta\eta^{\dagger}}.
 \end{equation}
@@ -150,7 +150,7 @@ where $\mathrm{Pf}\left(A\right)$ is the \names{Pfaffian} of $A$, which is defin
 \begin{equation}
 \mathrm{Pf}\left(A\right)^{2} = \det(A)
 \end{equation}
-This relation holds true for an even number of arbitrary many \names{Grassmann} generators. Its is therefore possible to integrate out \names{Grassmann} variables and be left with calculating a determinant or \names{Pfaffian}, which comes in quite essential when dealing with \names{Grassmann} integrals numerically.
+This relation holds true for an even number of arbitrary many \names{Grassmann} generators. It is therefore possible to integrate out \names{Grassmann} variables and be left with calculating a determinant or \names{Pfaffian}, which comes in quite essential when dealing with \names{Grassmann} integrals numerically.
 %
 %
 %
@@ -161,7 +161,7 @@ This relation holds true for an even number of arbitrary many \names{Grassmann} 
 %
 %
 \section{Hubbard-Stratonovich transformation} \label{sec: HS_trafo}
-We have now seen how to deal with bilinear exponentials. But in many cases one also has to deal with higher forms than bilinears. In principle one can expand any function into finitely many terms, like we have seen earlier, and then perform the integration rules, which is but rather ugly and proved not very efficient in numerical simulations. But there is a method to transform an exponential with 4-forms into one with bilinears, by performing an integration over additional bosonic auxiliary fields. This is called a \names{Hubbard-Stratonovich} transformation. Assuming that we have a finite number of complex \names{Grassmann} variables $\eta_{i}$, we can see that the object $\eta^{2}\equiv \eta^{i}\eta_{i}$ transforms like a formally real quantity
+We have now seen how to deal with bilinear exponentials. But in many cases one also has to deal with higher forms than bilinears. In principle one can expand any function into finitely many terms, like we have seen earlier, and then perform the integration rules, which is but rather ugly and proved not very efficient in numerical simulations. However there is a method to transform an exponential with 4-forms into one with bilinears, by performing an integration over additional bosonic auxiliary fields. This is called a \names{Hubbard-Stratonovich} transformation. Assuming that we have a finite number of complex \names{Grassmann} variables $\eta_{i}$, we can see that the object $\eta^{2}\equiv \eta^{i}\eta_{i}$ transforms like a formally real quantity
 \begin{equation}
 \left(\eta^{i}\eta_{i}\right)^{\ast}=\left(\eta_{i}\right)^{\ast}\left(\eta^{i}\right)^{\ast} =\eta^{i}\eta_{i}.
 \end{equation}
@@ -174,4 +174,4 @@ which one can proof simply by square addition and performing a \names{Gaussian} 
 \begin{equation}
 e ^{-\frac{(\eta^{2})^{2}}{4a}}=e ^{\frac{(i\eta^{2})^{2}}{4a}}=\sqrt{\frac{a}{\pi}} \int\dd\phi\; e ^{-a\phi^{2}+i\eta^{2}\phi}.
 \end{equation}
-We can see that this introduces an imaginary term in the exponent and therefore a high oscillatory function in the integral. Analytically this term would not bother us, but since we want to perform a numerical calculation something like this often results into a numerical sign problem, discussed in section \ref{sec: sign_prob}.
+We can see that this introduces an imaginary term in the exponent and therefore a highly oscillating function in the integral. Analytically this term would not bother us, but since we want to perform a numerical calculation something like this often results into a numerical sign problem, discussed in section \ref{sec: sign_prob}.

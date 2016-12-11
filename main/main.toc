@@ -1,59 +1,62 @@
 \select@language {english}
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
-\contentsline {chapter}{\numberline {2}Basics on superstring theory}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}The bosonic string}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Superstring theory}{11}{section.2.2}
-\contentsline {section}{\numberline {2.3}Strings in curved backgrounds}{13}{section.2.3}
-\contentsline {chapter}{\numberline {3}Preliminaries}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}AdS/CFT correspondence}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Wilson loops}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Wilson loops in AdS/CFT}{17}{section.3.3}
-\contentsline {section}{\numberline {3.4}The cusp anomalous dimension of $\mathcal {N}=4$ SYM}{19}{section.3.4}
-\contentsline {section}{\numberline {3.5}The GS superstring action in AdS light-cone gauge}{20}{section.3.5}
-\contentsline {section}{\numberline {3.6}Symmetries of the fluctuation action}{23}{section.3.6}
-\contentsline {section}{\numberline {3.7}Perturbative 1-loop free energy}{24}{section.3.7}
-\contentsline {chapter}{\numberline {4}Lattice basics}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}Discretising the worldsheet}{27}{section.4.1}
-\contentsline {section}{\numberline {4.2}Bosons and fermions on the lattice}{29}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Bosonic propagator}{29}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Fermionic propagator and the doubling problem}{30}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Monte Carlo methods}{32}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Monte Carlo integration}{33}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Importance sampling and Markov chains}{34}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Fermions on the lattice and the HMC algorithm}{36}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}The numerical sign problem}{39}{subsection.4.3.4}
-\contentsline {chapter}{\numberline {5}Towards the lattice simulation}{41}{chapter.5}
-\contentsline {section}{\numberline {5.1}Linearization of fermionic contributions}{41}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Naive approach and sign problem}{41}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Alternative field redefinition}{42}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Matrix properties}{44}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Pseudofermionic weight function}{45}{subsection.5.1.4}
-\contentsline {section}{\numberline {5.2}Discretizing the action}{46}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Bosonic action}{46}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Wilson term}{47}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Fermionic operator}{49}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Applying the RHMC algorithm}{50}{section.5.3}
-\contentsline {chapter}{\numberline {6}Simulations and observables}{53}{chapter.6}
-\contentsline {section}{\numberline {6.1}Implementation and the continuum limit}{53}{section.6.1}
-\contentsline {section}{\numberline {6.2}Simulation parameters}{54}{section.6.2}
-\contentsline {section}{\numberline {6.3}Observables}{60}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{61}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}The cusp action}{63}{subsection.6.3.2}
-\contentsline {chapter}{\numberline {7}Results}{69}{chapter.7}
-\contentsline {section}{\numberline {7.1}Mass of the $x$ field}{69}{section.7.1}
-\contentsline {section}{\numberline {7.2}Cusp anomaly}{69}{section.7.2}
-\contentsline {section}{\numberline {7.3}Systematic errors and the Pfaffian sign}{71}{section.7.3}
-\contentsline {chapter}{Appendices}{73}{section*.15}
-\contentsline {chapter}{\numberline {A}Grassmann numbers}{75}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Grassmann algebra}{75}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Grassmann analysis}{76}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{78}{section.a.A.3}
-\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{81}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{81}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{82}{section.a.B.2}
-\contentsline {chapter}{\numberline {C}SO(6) matrices}{85}{Appendix.a.C}
-\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{87}{Appendix.a.D}
-\contentsline {chapter}{\numberline {E}Discretized fermion matrix}{89}{Appendix.a.E}
-\contentsline {chapter}{Bibliography}{93}{chapter*.17}
+\contentsline {chapter}{Abstract}{iii}{Doc-Start}
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
+\contentsline {chapter}{\numberline {2}Basics on superstring theory}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}The bosonic string}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Superstring theory}{13}{section.2.2}
+\contentsline {section}{\numberline {2.3}Strings in curved backgrounds}{15}{section.2.3}
+\contentsline {chapter}{\numberline {3}Preliminaries}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}AdS/CFT correspondence}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Wilson loops}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}Wilson loops in AdS/CFT}{19}{section.3.3}
+\contentsline {section}{\numberline {3.4}The cusp anomalous dimension of $\mathcal {N}=4$ SYM}{21}{section.3.4}
+\contentsline {section}{\numberline {3.5}The GS superstring action in AdS light-cone gauge}{22}{section.3.5}
+\contentsline {section}{\numberline {3.6}Symmetries of the fluctuation action}{25}{section.3.6}
+\contentsline {section}{\numberline {3.7}Perturbative 1-loop free energy}{26}{section.3.7}
+\contentsline {chapter}{\numberline {4}Lattice basics}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Discretising the worldsheet}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}Bosons and fermions on the lattice}{31}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Bosonic propagator}{31}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Fermionic propagator and the doubling problem}{32}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Monte Carlo methods}{34}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Monte Carlo integration}{35}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Importance sampling and Markov chains}{36}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Fermions on the lattice and the HMC algorithm}{38}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}The numerical sign problem}{41}{subsection.4.3.4}
+\contentsline {chapter}{\numberline {5}Towards the lattice simulation}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}Linearisation of fermionic contributions}{43}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Naive approach and sign problem}{43}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Alternative field redefinition}{44}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Matrix properties}{46}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Pseudofermionic weight function}{47}{subsection.5.1.4}
+\contentsline {section}{\numberline {5.2}Discretizing the action}{48}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Bosonic action}{48}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Wilson term}{49}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Fermionic operator}{51}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Applying the RHMC algorithm}{52}{section.5.3}
+\contentsline {chapter}{\numberline {6}Simulations and observables}{55}{chapter.6}
+\contentsline {section}{\numberline {6.1}Implementation and the continuum limit}{55}{section.6.1}
+\contentsline {section}{\numberline {6.2}Simulation parameters}{56}{section.6.2}
+\contentsline {section}{\numberline {6.3}Observables}{62}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{63}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}The cusp action}{65}{subsection.6.3.2}
+\contentsline {chapter}{\numberline {7}Results}{71}{chapter.7}
+\contentsline {section}{\numberline {7.1}Mass of the x field}{71}{section.7.1}
+\contentsline {section}{\numberline {7.2}Cusp anomaly}{71}{section.7.2}
+\contentsline {section}{\numberline {7.3}Systematic errors and the Pfaffian sign}{73}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion and outlook}{75}{chapter.8}
+\contentsline {chapter}{Appendices}{77}{section*.15}
+\contentsline {chapter}{\numberline {A}Grassmann numbers}{79}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Grassmann algebra}{79}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Grassmann analysis}{80}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{82}{section.a.A.3}
+\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{85}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{85}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{86}{section.a.B.2}
+\contentsline {chapter}{\numberline {C}SO(6) matrices}{89}{Appendix.a.C}
+\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{91}{Appendix.a.D}
+\contentsline {chapter}{\numberline {E}Discretised fermion matrix}{93}{Appendix.a.E}
+\contentsline {chapter}{Bibliography}{97}{chapter*.17}
 \contentsfinish 

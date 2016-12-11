@@ -1,8 +1,8 @@
 \chapter{Lattice basics}\label{ch: lattice_basics}
-In this section we want to present the basic concepts of lattice field theory, which has developed to a highly sophisticated research area in the last decades especially in the regime of QCD. This approach to field theory is not only of major concern for performing numerical calculations. It even provides a natural attempt to regularization, which makes it also an interesting topic for theorists in the field of gauge theories.
+In this section we want to present the basic concepts of lattice field theory, which has developed to a highly sophisticated research area in the last decades especially in the regime of QCD. This approach to field theory is not only of major concern for performing numerical calculations. It even provides a natural attempt to regularisation, which makes it also an interesting topic for theorists in the field of gauge theories.
 \section{Discretising the worldsheet}
 \label{sec: disc_lat}
-A computer is not able to deal with continuous variables, since already a continuous real interval can contain an infinite amount of points, but a computer only has limited memory. Hence, we need to limit the amount of points that we consider to make calculations. Since all the target space coordinates\footnote{which represent the fields in our two-dimensional QFT} depend on the worldsheet coordinates $\tau$ and $\sigma$, it seems natural to discretize the worldsheet map. We therefore introduce a lattice spacing $a$ and the lattice size in spacial direction $L$ and in time direction $T$. Following the remarks in \cite{gattringer2009quantum} we define the two-dimensional lattice $\mathit{\Lambda}$ to be
+A computer is not able to deal with continuous variables, since already a continuous real interval can contain an infinite amount of points, but a computer only has limited memory. Hence, we need to limit the amount of points that we consider to make calculations. Since all the target space coordinates\footnote{which represent the fields in our two-dimensional QFT} depend on the worldsheet coordinates $\tau$ and $\sigma$, it seems natural to discretise the worldsheet map. We therefore introduce a lattice spacing $a$ and the lattice size in spacial direction $L$ and in time direction $T$. Following the remarks in \cite{gattringer2009quantum} we define the two-dimensional lattice $\mathit{\Lambda}$ to be
 \begin{equation}
 \mathit{\Lambda} = \left\lbrace \left(n_{0},n_{1}\right) \vert n_{0}=0,1,\ldots,(T-1) \; ; \;  n_{1}=0,1,\ldots,(L-1) \right\rbrace.
 \end{equation}
@@ -84,7 +84,7 @@ where $\hat{\alpha}$ is the unit vector in $\alpha$-direction. For the integrati
 \end{equation}
 %
 %
-For a better visualization it is more convenient to use an abbreviated notation. In the following we will denote $\phi \equiv \phi(n)$ as a field which depends on the lattice coordinates $n$. The same is true for an operator $M\equiv M(m,n)$. A shorter expression of a matrix-vector like product is given by
+For a better visualisation it is more convenient to use an abbreviated notation. In the following we will denote $\phi \equiv \phi(n)$ as a field which depends on the lattice coordinates $n$. The same is true for an operator $M\equiv M(m,n)$. A shorter expression of a matrix-vector like product is given by
 %
 %
 \begin{equation}
@@ -170,7 +170,7 @@ where we use (\ref{second deriv}) to define
 \begin{equation}
 {\widehat{\del}_\alpha}^{\,2}(n,m) \equiv	\dfrac{\delta_{m,n+\hat{\alpha}}-2\delta_{m,n}+\delta_{m,n-\hat{\alpha}}}{a^{2}}.
 \end{equation}
-To investigate the behaviour of bosons under the discretization we are interested in the propagator (which is related to the inverse of the differential operator) in momentum space. We therefore perform a discrete \names{Fourier} transform, which is discussed in Appendix \ref{app: disc_ft}. Both indices $m$ and $n$ transform independently and in order to perform a unitary similarity transformation the second index is \names{Fourier} transformed using the complex conjugated phase \cite{gattringer2009quantum}
+To investigate the behaviour of bosons under the discretisation we are interested in the propagator (which is related to the inverse of the differential operator) in momentum space. We therefore perform a discrete \names{Fourier} transform, which is discussed in Appendix \ref{app: disc_ft}. Both indices $m$ and $n$ transform independently and in order to perform a unitary similarity transformation the second index is \names{Fourier} transformed using the complex conjugated phase \cite{gattringer2009quantum}
 \begin{align}
 {\widetilde{\del}_\alpha}^{\,2}(p,q) &= \dfrac{1}{\vert \mathit{\Lambda}\vert} \sum\limits_{m,n \in \mathit{\Lambda}} \mathrm{e}^{-iq\cdot na} \, {\widehat{\del}_\alpha}^{\,2}(n,m) \, \mathrm{e}^{i p\cdot ma} \notag \\
 &= \dfrac{1}{\vert \mathit{\Lambda}\vert}\sum\limits_{n \in \mathit{\Lambda}} \mathrm{e}^{-i (q-p)\cdot na} \dfrac{1}{a^{2}} \left[ \mathrm{e}^{i p_{\alpha} a} -2 +\mathrm{e}^{-i p_{\alpha}a} \right] \\
@@ -233,7 +233,7 @@ Once more we want to study the continuum limit of the propagator for the massles
 \begin{equation}
 \left.\widetilde{D}_{D}^{-1}(p)\right\vert_{m=0} =  \dfrac{- \tfrac{i}{a}\sum_{\alpha=0}^{1} \gamma_{\alpha} \sin (p_{\alpha}a)}{ a^{-2}\sum_{\alpha=0}^{1} \sin^2 (p_{\alpha}a)  } \xrightarrow{a \rightarrow 0} \dfrac{-i \sum_{\alpha=0}^{1} \gamma_{\alpha} p_{\alpha} }{p^2}.
 \end{equation}
-Here again the propagator has the correct naive continuum limit but this time we face another problem. Since again $p_{\alpha}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. As a result in the numerical simulation it seems that there are in this case three additional fermions, which emerge only from the method of discretization and are  non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who introduced a possible solution.  He suggested to add a term proportional to the discretized \names{Laplace} operator\cite{montvay_lattice}, which is known as a \names{Wilson} term. We can express it in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
+Here again the propagator has the correct naive continuum limit but this time we face another problem. Since again $p_{\alpha}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. As a result in the numerical simulation it seems that there are in this case three additional fermions, which emerge only from the method of discretisation and are  non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who introduced a possible solution.  He suggested to add a term proportional to the discretised \names{Laplace} operator\cite{montvay_lattice}, which is known as a \names{Wilson} term. We can express it in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
 \begin{align*}
 \cos(2x)&=\cos^{2}(x) -\sin^{2}(x) \\
 \Leftrightarrow\quad \sin^{2}(x) &= \tfrac{1}{2}\left(1-\cos(2x)\right)
@@ -266,7 +266,7 @@ Here we can convince ourselves, that there are no more additional poles in the d
 %
 %
 \section{Monte Carlo methods}
-Now after we know, how to discretize differential operators and act with them on bosonic and fermionic quantities, we are able to build a discretized Lagrangian as well. But what we really need is a method to perform the calculation of observables in the path integral formalism. In QFT in the continuum we calculate the expectation value of an observable $O$ via \cite{peskin}
+Now after we know, how to discretise differential operators and act with them on bosonic and fermionic quantities, we are able to build a discretised Lagrangian as well. But what we really need is a method to perform the calculation of observables in the path integral formalism. In QFT in the continuum we calculate the expectation value of an observable $O$ via \cite{peskin}
 \begin{equation}
 \left\langle O \right\rangle = \dfrac{1}{Z} \int \mathcal{D} \mathit{\phi}\, O(\mathit{\phi})\exp\left(-S\left[\mathit{\phi}\right]\right),
 \label{PI_continuum}
@@ -353,7 +353,7 @@ More generally one can estimate integrals over a function $f(x)$ multiplied with
 \langle f \rangle_{\rho} \equiv \dfrac{\int _{\Omega} f(x)\rho(x)\,\dd x}{\int _{\Omega} \rho(x)\,\dd x} = \lim\limits_{N\to\infty}\dfrac{1}{N}\sum\limits_{i=1}^{N} f(\overline{x}_{i}).
 \end{equation}
 But in this case the random numbers $\overline{x}_{i}$ need to be distributed through the weight function $\rho(x)$. For this to be possible $\rho(x)$ needs to be a valid probability density function.
-Comparing with (\ref{PI_continuum}) we can convince ourselves, that this is the case for the discretised \names{Euclidean} path integral with measure (\ref{eq: PI_measure}). We can exploit this fact to make our calculation more efficient. In principle one could go with the simple Monte Carlo integration scheme, but since our integration domain is no bounded interval, but $\mathbb{R}^{n}$, we would produce a lot of configurations that would give no contribution to the path integral due to the weight factor and therefore introduce a large error. So if we produce random configurations distributed through a probability density given by the weight factor, we would generate mostly configurations with a non-vanishing contribution and the statistical error will be reduced. This procedure is called importance sampling. But to do the importance sampling one needs to be able to produce random configurations according to the given probability density. Since the action appearing in this probability density is in general a very complicated function, this task becomes highly non-trivial and there usually is no way to directly transform uniformly distributed random configurations into the favoured form. To make this more explicit, consider the one-dimensional integral with normalized probability density function \cite{rothe}
+Comparing with (\ref{PI_continuum}) we can convince ourselves, that this is the case for the discretised \names{Euclidean} path integral with measure (\ref{eq: PI_measure}). We can exploit this fact to make our calculation more efficient. In principle one could go with the simple Monte Carlo integration scheme, but since our integration domain is no bounded interval, but $\mathbb{R}^{n}$, we would produce a lot of configurations that would give no contribution to the path integral due to the weight factor and therefore introduce a large error. So if we produce random configurations distributed through a probability density given by the weight factor, we would generate mostly configurations with a non-vanishing contribution and the statistical error will be reduced. This procedure is called importance sampling. But to do the importance sampling one needs to be able to produce random configurations according to the given probability density. Since the action appearing in this probability density is in general a very complicated function, this task becomes highly non-trivial and there usually is no way to directly transform uniformly distributed random configurations into the favoured form. To make this more explicit, consider the one-dimensional integral with normalised probability density function \cite{rothe}
 %
 %
 \begin{equation}
@@ -403,7 +403,7 @@ To circumvent this issue one uses a statistical model called \names{Markov} chai
 %
 %
 The first configurations up to an index $N_{\text{th}}$ should not be used for measurements since they are most certainly not properly distributed. The process needs a specific amount of time to reach its equilibrium distribution. Therefore this period is called equilibration or thermalisation phase.
-A \names{Markov} process is characterized by a conditional transition probability $T(\mathit{\phi}' \vert \mathit{\phi})$ to move from a configuration $\mathit{\phi}$ to $\mathit{\phi}'$. This probability depends only on the configurations $\mathit{\phi}$ and $\mathit{\phi}'$ and not any previous ones. It obeys the properties
+A \names{Markov} process is characterised by a conditional transition probability $T(\mathit{\phi}' \vert \mathit{\phi})$ to move from a configuration $\mathit{\phi}$ to $\mathit{\phi}'$. This probability depends only on the configurations $\mathit{\phi}$ and $\mathit{\phi}'$ and not any previous ones. It obeys the properties
 %
 %
 \begin{equation}
@@ -527,7 +527,7 @@ T(\phi'\vert\phi) = \int \mathcal{D}\pi' \mathcal{D}\pi\; T_{\rm A}(\phi',\pi' \
 \end{equation}
 %
 %
-This has been proved to obey detailed balance in \cite{hmc}. Concluding one can summarize the HMC algorithm in the following steps:
+This has been proved to obey detailed balance in \cite{hmc}. Concluding one can summarise the HMC algorithm in the following steps:
 %
 %
 \begin{itemize}

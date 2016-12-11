@@ -6,15 +6,20 @@
 \include{titlepage}
 {\pagestyle{empty}
 \maketitle
+%
+\cleardoublepage
 }
 %
+% - - - - - -  abstract  - - - - - - 
+\input{abstract}
+\selectlanguage{english}
+% - - - -  toc  - - - - - - - - 
 {\pagestyle{plain}
 \tableofcontents}
 \newpage
-
 %  - - - - -   Main part  - - - - - 
 \pagenumbering{arabic}
-\setcounter{page}{5} 
+\setcounter{page}{7} 
 \input{Introduction_var}
 %
 \input{string_basics}
@@ -37,6 +42,7 @@
 %
 \input{results}
 %
+\input{conclusions}
 %\newpage
 \titleformat{\chapter}[hang]{\sffamily \bfseries \LARGE}{\fontsize{40}{0}\selectfont\thechapter}{ 0.5cm}{ }[ ]
 \begin{appendices}
@@ -52,8 +58,12 @@
 \bibliographystyle{nb}%{babunsrt} 
 \bibliography{Master}
 \newpage
+\pagestyle{empty}
 \cleardoublepage
 %
+% - - - - -  Acknowledgemet  - - - - - - - - 
+\input{acknowledgement}
+\newpage
 %  - - - - -  Selbststaendigkeitserklaerung  - - - - - - -
 \input{declaration}
 %
