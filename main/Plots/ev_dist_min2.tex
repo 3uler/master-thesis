@@ -1,0 +1,80 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
+%
+\begin{tikzpicture}[thick,scale=0.49, every node/.style={scale=1.42}]
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=0,
+xmax=0.025,
+xlabel style={font=\color{white!15!black}},
+xlabel={${\rm min}(\lambda(\hat{\mathcal{O}}_{\rm F}^\dagger \hat{\mathcal{O}}_{\rm F}))$},
+ymin=0,
+ymax=0.25,
+ylabel style={font=\color{white!15!black}},
+ylabel={probability},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot[ybar interval, fill=mycolor1, fill opacity=0.6, draw=black, area legend] table[row sep=crcr] {%
+x	y\\
+0	0.14\\
+0.0013	0.12\\
+0.0026	0.18\\
+0.0039	0.06\\
+0.0052	0.14\\
+0.0065	0.1\\
+0.0078	0.06\\
+0.0091	0.1\\
+0.0104	0.04\\
+0.0117	0.06\\
+0.013	0.06\\
+};
+\addlegendentry{$g = 5$}
+
+\addplot[ybar interval, fill=mycolor2, fill opacity=0.6, draw=black, area legend] table[row sep=crcr] {%
+x	y\\
+0.001	0.0263157894736842\\
+0.0024	0.0460526315789474\\
+0.0038	0.0328947368421053\\
+0.0052	0.0921052631578947\\
+0.0066	0.125\\
+0.008	0.197368421052632\\
+0.0094	0.190789473684211\\
+0.0108	0.197368421052632\\
+0.0122	0.0789473684210526\\
+0.0136	0.0131578947368421\\
+0.015	0.0131578947368421\\
+};
+\addlegendentry{$g = 10$}
+
+\addplot[ybar interval, fill=mycolor3, fill opacity=0.6, draw=black, area legend] table[row sep=crcr] {%
+x	y\\
+0.011	0.00657894736842105\\
+0.0123	0.00657894736842105\\
+0.0136	0.0197368421052632\\
+0.0149	0.0723684210526316\\
+0.0162	0.144736842105263\\
+0.0175	0.190789473684211\\
+0.0188	0.177631578947368\\
+0.0201	0.243421052631579\\
+0.0214	0.105263157894737\\
+0.0227	0.0328947368421053\\
+0.024	0.0328947368421053\\
+};
+\addlegendentry{$g = 30$}
+
+\end{axis}
+\end{tikzpicture}%

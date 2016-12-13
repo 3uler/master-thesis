@@ -44,19 +44,19 @@
 \contentsline {subsection}{\numberline {6.3.2}The cusp action}{65}{subsection.6.3.2}
 \contentsline {chapter}{\numberline {7}Results}{71}{chapter.7}
 \contentsline {section}{\numberline {7.1}Mass of the x field}{71}{section.7.1}
-\contentsline {section}{\numberline {7.2}Cusp anomaly}{71}{section.7.2}
-\contentsline {section}{\numberline {7.3}Systematic errors and the Pfaffian sign}{73}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusion and outlook}{75}{chapter.8}
-\contentsline {chapter}{Appendices}{77}{section*.15}
-\contentsline {chapter}{\numberline {A}Grassmann numbers}{79}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Grassmann algebra}{79}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Grassmann analysis}{80}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{82}{section.a.A.3}
-\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{85}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{85}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{86}{section.a.B.2}
-\contentsline {chapter}{\numberline {C}SO(6) matrices}{89}{Appendix.a.C}
-\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{91}{Appendix.a.D}
-\contentsline {chapter}{\numberline {E}Discretised fermion matrix}{93}{Appendix.a.E}
-\contentsline {chapter}{Bibliography}{97}{chapter*.17}
+\contentsline {section}{\numberline {7.2}Cusp anomaly}{73}{section.7.2}
+\contentsline {section}{\numberline {7.3}Systematic errors and the Pfaffian sign}{75}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion and outlook}{77}{chapter.8}
+\contentsline {chapter}{Appendices}{79}{section*.17}
+\contentsline {chapter}{\numberline {A}Grassmann numbers}{81}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Grassmann algebra}{81}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Grassmann analysis}{82}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Hubbard-Stratonovich transformation}{84}{section.a.A.3}
+\contentsline {chapter}{\numberline {B}$\mathbf {AdS_{5}\times S^{5}}$ spacetime}{87}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}$\mathrm {AdS_{5}}$ space}{87}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Poincar\IeC {\'e} patch}{88}{section.a.B.2}
+\contentsline {chapter}{\numberline {C}SO(6) matrices}{91}{Appendix.a.C}
+\contentsline {chapter}{\numberline {D}Discrete Fourier transform}{93}{Appendix.a.D}
+\contentsline {chapter}{\numberline {E}Discretised fermion matrix}{95}{Appendix.a.E}
+\contentsline {chapter}{Bibliography}{99}{chapter*.19}
 \contentsfinish 

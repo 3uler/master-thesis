@@ -8,11 +8,30 @@ In the end of the previous chapter we introduced the two observables that we exp
 %
 %
 \section[Mass of the x field]{Mass of the x field}
+To estimate the mass of the $x$ field we proceed as presented in section \ref{sec: xx_corr} by calculating the effective masses for the various lattices sizes under consideration. For every fixed $g$ we do a continuum extrapolation (\autoref{fig: mx_Lm4_cont_lim}) and plot $m_{x}^{2}/m^{2}$ over $g$ in \autoref{fig: mx_vs_g_Lm4}. The data points are afflicted with large errorbars. This is because the correlation functions are highly fluctuating and the mass therefore is a challenging observable with a lot of statistical noise that needs a high amount of replica to give good estimates. Nonetheless, we observe for $5<g<100$ $(0.2<g_{\rm c}<4)$\footnote{See section \ref{sec: res_cusp} for the meaning of $g_{\rm c}$.} our data overestimates the mass compared to the perturbative large $g$ prediction ((\ref{eq: m_x}) and dotted line in \autoref{fig: mx_vs_g_Lm4}), but it follows the predicted bending down for smaller couplings. The deviation for the point at $g=5$ $(g_{\rm c}=4)$ could be due to the fact that we do not have as many replica for the various lattice sizes for this particular $g$ value and thus not such a good estimate as for the other values. The same is true for $g=5$ $(g_{\rm c}=0.2)$ where additionally the reweighting might also conflict the mass measurement. The remaining points qualitatively follow the bending down, but are larger than the mass prediction. An explanation could be given by the subtraction of the non-connected part of the correlator in (\ref{eq: conn_corr}) which might be not exact. This is checked by considering simulations without a \names{Wilson} term in section \ref{sec: sys_errors}. There the $SO(2)$ symmetry is unbroken and the correlator coincides with its connected part. 
+%
+%
+%
+\begin{figure}
+\centering
+\input{Plots/mx_Lm4_cont_lim}
+\caption{Plot of $m_{x\rm LAT}^{2}(L,g)/M^{2}= m_{x}^{2}(g)/m^{2}+\mathcal{O}(1/L)$, as from fits to connected correlators discussed in section \ref{sec: xx_corr}. To ensure better visibility of the fits at different $g$ values, $\ln g$ has been added. Dashed lines represent a linear fit to all the data points for one value of $g$, while for dotted lines the fit is to a constant and only contains the two smallest lattice spacings. Multiple points at the same value of $g$ and $L$ indicate multiple replica.
+\label{fig: mx_Lm4_cont_lim}}
+\end{figure}
+%
+%
+%
+\begin{figure}
+\centering
+\input{Plots/mx_vs_g_Lm4}
+\caption{Continuum extrapolation corresponding to the linear fit fits in \autoref{fig: mx_Lm4_cont_lim}. The extrapolation is plotted as a function of the continuum coupling $g_{\rm c}=0.04\,g$ to facilitate the comparison with the prediction coming from the perturbative expectation (PT) (\ref{eq: m_x}), and uses the matching procedure performed for the observable action. The latter is described in section \ref{sec: res_cusp}.
+\label{fig: mx_vs_g_Lm4}}
+\end{figure}
 %
 %
 %
 %
-\section{Cusp anomaly}
+\section{Cusp anomaly}\label{sec: res_cusp}
 The main aim of the study at hand is to predict values  of the derivative of the cusp anomaly function for fine $g$, where our estimate for $f'(g)/4$ is governed by the continuum extrapolation in \autoref{fig: Slat-c_g}, leading to \autoref{fig: f_prime_Lm4}. Data points from the simulation can be directly compared to the derivative of the perturbative prediction (\ref{eq: scaling_fct}), depicted as a dashed line and to a prediction obtained via the integrability of the model (first derivative of the cusp anomaly obtained from a numerical solution to the \textit{BES} equation \cite{Beisert:2006ez}, depicted as a continuous line). To compare our results from the simulation $f'(g)$ with the continuum prediction $f'(g_{\rm c})_{\rm c}$, we have to match our data points to the continuum curve, since it is not clear that the bare continuum coupling $g_{\rm c}$ is equivalent to the one on the lattice. We assume that we can achieve the matching by a simple rescaling with a factor $g_{\rm c}= b\cdot g$. We then choose a data point where we want to apply the matching and then obtain the rescaling parameter $b$ from $f'(g)=f'(g_{\rm c})_{\rm c}$. This matching point is chosen to be at $g=10$, since it is far enough from the substantially flat regime of the observable and still in a region where no reweighting has to be applied and thus errors are still acceptably small. It therefore lies exactly in the continuous curve in \autoref{fig: f_prime_Lm4} and we derive $g_{\rm c}=0.04 \,g$. In the perturbative regime of large $g$ our data points are in good agreement with the perturbative prediction. For decreasing $g$ the perturbative series (\ref{eq: scaling_fct}) predicts an increase of $f'(g)$, governed by the term proportional to the \names{Katalan} constant $K$. In this regime we have increased the statistics of our simulation, compared to \cite{Bianchi:2016cyv}, to reduce errors, but our data in \autoref{fig: f_prime_Lm4} still does not catch the predicted upward trend. But notice that the data (still under the hypothesis of a simple scaling relation between the couplings) is following the predicted decrease of values of $g$ which are below the perturbative region. The non-perturbative regime begins with $g_{\rm c}=1$ or $g=25$, respectively, implying that our simulations at $g=15,10,5$ are already testing a fully non-perturbative regime of the string sigma-model under investigation. The point at $g=5$ $(g_{\rm c}=0.2)$ does not match the predicted curve within its errorbars which could be the effect of several different causes. It might be that the relation between continuum and lattice coupling is more complex than the assumed rescaling, further the reweighting might have caused a systematic error, and there has not been so many simulation data conducted at this specific value of $g=5$, also not for finer lattices than $L=16$, since for such small $g$ simulations are very involved and take more time. Another conspicuous point at $g=20$ $(g_{\rm c}=0.8)$ is afflicted with large errorbars as well. The behaviour there is quite peculiar, since the produced configurations are strongly correlated, noticeable from very high autocorrelation times in \autoref{tab: runs_param} (similar response occurs for simulations at $g=80$ and $r=0$). This behaviour might be some intrinsic problem of the algorithm, that is not determined yet, but is most certainly not related to the underlying theory. In the following we investigate further possible influences of systematic errors like finite volume effects or fermion doubling and check for the reliability of the \names{Pfaffian} as a valid probability density for the RHMC.
 %
 %
@@ -32,4 +51,4 @@ The main aim of the study at hand is to predict values  of the derivative of the
 %
 %
 %
-\section{Systematic errors and the Pfaffian sign}
+\section{Systematic errors and the Pfaffian sign}\label{sec: sys_errors}

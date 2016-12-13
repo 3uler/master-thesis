@@ -1,0 +1,49 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=0,
+xmax=0.13,
+xlabel style={font=\color{white!15!black}},
+xlabel={$1/N$},
+ymin=0,
+ymax=14,
+ylabel style={font=\color{white!15!black}},
+ylabel={$<\lambda_{min}>/\sigma_{min}$},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=blue, draw=none, mark=+, mark options={solid, blue}]
+ plot [error bars/.cd, y dir = both, y explicit]
+ table[row sep=crcr, y error plus index=2, y error minus index=3]{%
+0.125	8.62082875751349	1.40837219358935	1.40837219358935\\
+0.1	8.41913345231103	1.32250879479266	1.32250879479266\\
+0.0833333333333333	8.6120262021668	0.874072829704015	0.874072829704015\\
+0.0625	10.1236640025576	2.24580483798358	2.24580483798358\\
+};
+\addlegendentry{g = 30}
+
+\addplot [color=black, draw=none, mark=o, mark options={solid, black}]
+ plot [error bars/.cd, y dir = both, y explicit]
+ table[row sep=crcr, y error plus index=2, y error minus index=3]{%
+0.125	3.18915709275261	0.335168492707627	0.335168492707627\\
+0.1	3.65390487842978	0.745923013957024	0.745923013957024\\
+0.0833333333333333	3.20158297890721	0.228736283611952	0.228736283611952\\
+0.0625	4.51214838498055	0.339023282750031	0.339023282750031\\
+0.0416666666666667	4.5353861107916	0.777440619874027	0.777440619874027\\
+};
+\addlegendentry{g = 10}
+
+\end{axis}
+\end{tikzpicture}%

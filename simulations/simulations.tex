@@ -124,9 +124,9 @@ The meaning of the Q-value, given in the table, is defined in \cite{Wolff:2003sm
 %
 \begin{figure}
 \centering
-\input{Plots/ev_dist_min}
+\input{Plots/ev_dist_min2}
 \hspace{0.2cm}
-\input{Plots/ev_dist_max}
+\input{Plots/ev_dist_max2}
 \caption{Histogram plot of the distribution of the minimal and maximal eigenvalue of the operator $\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}$ for one replicum with 400 field configurations for $L=12$ and $g=5,10,30$. For high values of $g$ the smallest eigenvalues are clearly separated from zero which ensures the stability of the simulation. With decreasing $g$ the smallest eigenvalues come arbitrarily close to zero whereas the largest eigenvalues increase at the same time which leads to high condition numbers of the fermionic operator and threatens the stability of the simulation. \label{fig: ev_dist}}
 \end{figure}
 %
@@ -250,7 +250,7 @@ To motivate our line of constant physics, we investigate the mass of the bosonic
 %
 %
 % 
-\subsection[The $\langle xx^{*}\rangle$ correlator]{The {$\mathitbf{\langle x\,x^{*}\rangle}$} correlator}
+\subsection[The $\langle xx^{*}\rangle$ correlator]{The {$\mathitbf{\langle x\,x^{*}\rangle}$} correlator} \label{sec: xx_corr}
 We define the physical masses of the $x,x^{*}$ fields as the values of the energy at vanishing momentum. In the large coupling limit the mass can be read off from a quadratic expansion of the \names{Lagrangian} \cite{Bianchi:2016cyv} to 
 %
 %
@@ -380,12 +380,36 @@ In the lattice simulation we implement the $x$ field as its real and imaginary p
 \end{equation}
 %
 %
-The second line will vanish according to translational invariance and time reversal. We therefore calculate the connected timeslice correlators as
+The second line will vanish according to translational invariance and time reversal. We can thus calculate the connected timeslice correlators as
 %
 %
 \begin{equation}
 C_{x}(t) = \langle\tilde{x}_{\rm R}(t)\tilde{x}_{\rm R}(0)\rangle + \langle \tilde{x}_{\rm I}(t)\tilde{x}_{\rm I}(0)\rangle - \langle \tilde{x}_{\rm R}\rangle^{2} - \langle \tilde{x}_{\rm I}\rangle^{2}.
 \end{equation}
+%
+%
+%
+Numerically we checked the two conditions
+\begin{equation}
+\begin{alignedat}{2}
+\langle \tilde{x}_{k}(t)\, \tilde{x}_{i}(0)\rangle &= 0 \quad k\neq i, \; k,i\in \lbrace {\rm R,I}, \\
+\langle \tilde{x}_{\rm R}\rangle &= - \langle \tilde{x}_{\rm I}\rangle.
+\end{alignedat}
+\end{equation}
+%
+%
+%
+Applying these we can calculate the connected timeslice correlator via
+%
+%
+\begin{equation}
+C_{x}(t) = \langle\tilde{x}_{\rm R}(t)\tilde{x}_{\rm R}(0) + \tilde{x}_{\rm I}(t)\tilde{x}_{\rm I}(0) + \tilde{x}_{\rm R}(t)\tilde{x}_{\rm I}(0) + \tilde{x}_{\rm I}(t)\tilde{x}_{\rm R}(0) \rangle.
+\label{eq: conn_corr}
+\end{equation}
+%
+%
+%
+We want to emphasise here that we can subtract the non-connected part for every configuration and then do the average. This reduces the statistical errors compared to the previous method.
 %
 %
 %
