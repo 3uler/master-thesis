@@ -8,7 +8,8 @@ In the end of the previous chapter we introduced the two observables that we exp
 %
 %
 \section[Mass of the x field]{Mass of the x field}
-To estimate the mass of the $x$ field we proceed as presented in section \ref{sec: xx_corr} by calculating the effective masses for the various lattices sizes under consideration. For every fixed $g$ we do a continuum extrapolation (\autoref{fig: mx_Lm4_cont_lim}) and plot $m_{x}^{2}/m^{2}$ over $g$ in \autoref{fig: mx_vs_g_Lm4}. The data points are afflicted with large errorbars. This is because the correlation functions are highly fluctuating and the mass therefore is a challenging observable with a lot of statistical noise that needs a high amount of replica to give good estimates. Nonetheless, we observe for $5<g<100$ $(0.2<g_{\rm c}<4)$\footnote{See section \ref{sec: res_cusp} for the meaning of $g_{\rm c}$.} our data overestimates the mass compared to the perturbative large $g$ prediction ((\ref{eq: m_x}) and dotted line in \autoref{fig: mx_vs_g_Lm4}), but it follows the predicted bending down for smaller couplings. The deviation for the point at $g=5$ $(g_{\rm c}=4)$ could be due to the fact that we do not have as many replica for the various lattice sizes for this particular $g$ value and thus not such a good estimate as for the other values. The same is true for $g=5$ $(g_{\rm c}=0.2)$ where additionally the reweighting might also conflict the mass measurement. The remaining points qualitatively follow the bending down, but are larger than the mass prediction. An explanation could be given by the subtraction of the non-connected part of the correlator in (\ref{eq: conn_corr}) which might be not exact. This is checked by considering simulations without a \names{Wilson} term in section \ref{sec: sys_errors}. There the $SO(2)$ symmetry is unbroken and the correlator coincides with its connected part. 
+To estimate the mass of the $x$ field we proceed as presented in section \ref{sec: xx_corr} by calculating the effective masses for the various lattices sizes under consideration. For every fixed $g$ we do a continuum extrapolation (\autoref{fig: mx_Lm4_cont_lim}) and plot $m_{x}^{2}/m^{2}$ over $g$ in \autoref{fig: mx_vs_g_Lm4}. The data points are afflicted with large errorbars. This is because the correlation functions are highly fluctuating and the mass therefore is a challenging observable with a lot of statistical noise that needs a high amount of replica to give good estimates. Nonetheless, we observe for $5<g<100$ $(0.2<g_{\rm c}<4)$ %\footnote{See section \ref{sec: res_cusp} for the meaning of $g_{\rm c}$.} 
+our data overestimates the mass compared to the perturbative large $g$ prediction ((\ref{eq: m_x}) and dotted line in \autoref{fig: mx_vs_g_Lm4}), but it follows the predicted bending down for smaller couplings. The deviation for the point at $g=100$ $(g_{\rm c}=4)$ could be due to the fact that we do not have as many replica for the various lattice sizes for this particular $g$ value and thus not such a good estimate as for the other values. The same is true for $g=5$ $(g_{\rm c}=0.2)$ where additionally the reweighting might also conflict the mass measurement. The remaining points qualitatively follow the bending down, but are larger than the mass prediction. An explanation could be given by the subtraction of the non-connected part of the correlator in (\ref{eq: conn_corr}) which might be not exact. This is checked by considering simulations without a \names{Wilson} term in section \ref{sec: sys_errors}. There the $SO(2)$ symmetry is unbroken and the correlator coincides with its connected part. 
 %
 %
 %
@@ -24,7 +25,7 @@ To estimate the mass of the $x$ field we proceed as presented in section \ref{se
 \begin{figure}
 \centering
 \input{Plots/mx_vs_g_Lm4}
-\caption{Continuum extrapolation corresponding to the linear fit fits in \autoref{fig: mx_Lm4_cont_lim}. The extrapolation is plotted as a function of the continuum coupling $g_{\rm c}=0.04\,g$ to facilitate the comparison with the prediction coming from the perturbative expectation (PT) (\ref{eq: m_x}), and uses the matching procedure performed for the observable action. The latter is described in section \ref{sec: res_cusp}.
+\caption{Continuum extrapolation corresponding to the linear fits in \autoref{fig: mx_Lm4_cont_lim}. The extrapolation is plotted as a function of the continuum coupling $g_{\rm c}=0.04\,g$ to facilitate the comparison with the prediction coming from the perturbative expectation (PT) (\ref{eq: m_x}), and uses the matching procedure performed for the observable action. The latter is described in section \ref{sec: res_cusp}.
 \label{fig: mx_vs_g_Lm4}}
 \end{figure}
 %
@@ -52,3 +53,61 @@ The main aim of the study at hand is to predict values  of the derivative of the
 %
 %
 \section{Systematic errors and the Pfaffian sign}\label{sec: sys_errors}
+%
+\subsection*{Finite volume effects}
+According to (\ref{eq: F_LAT}) finite volume effects can be decreased by increasing the value of $LM$. To check for the influence of these effects we performed simulations with $LM=6$. The results for the cusp anomaly are illustrated in \autoref{fig: f_prime_Lm4_andLm6} (red) together with the values of the $LM=4$ simulation (blue). Both results are in very good agreement with each other within their respective errors which suggests that finite volume effects do not play a dominating role in our conducted simulations. The mass is presented in \autoref{fig: mx_vs_g_Lm4Lm6} together with the $LM=4$ values. Here the data points deviate more due to the high statistical noise involved in this observable. According to \autoref{tab: runs_param} we do not have a high number of replica for the $LM=6$ simulations. We also had to omit many simulation results for lattice sizes $L=8,10$. For larger values of $LM$ smaller lattices tend to behave unstable. There the simulations get stuck at some configuration and do not change any more. This also deteriorates the statistics for the mass measurement. Therefore the mass derived from the $LM=6$ simulations is not very representative. But the received data points are in the in the same regime as those for the $LM=4$ simulations which also indicates no influence of finite volume effects.
+%
+%
+%
+\begin{figure}
+\centering
+\input{Plots/f_prime_Lm4_andLm6}
+\caption{Plot for $f'(g)/4$ as a function of the bare continuum coupling $g_{\rm c}=0.04\,g$. Data points from simulations with $LM=6$ (red) are added to those with $LM=4$ (blue). The matching is again made for the $LM=4$ point at $g=10$.
+\label{fig: f_prime_Lm4_andLm6}}
+\end{figure}
+%
+%
+%
+\begin{figure}
+\centering
+\input{Plots/mx_vs_g_Lm4Lm6}
+\caption{Continuum extrapolation for the $x$ field mass as a function of the bare continuum coupling $g_{\rm c}=0.04\,g$. Data points for the $LM=6$ simulations (red) are added to those with $LM=4$ (blue).
+\label{fig: mx_vs_g_Lm4Lm6}}
+\end{figure}
+%
+%
+%
+\subsection*{Wilson term}
+To check for the possible influence of fermion doubling or the breaking of symmetry induced by the \names{Wilson} term we perform simulations for $LM=4$ at $r=0$, i.e. without the presence of a \names{Wilson} term. We observe that the instabilities due to small eigenvalues of the fermionic operator occur at much higher values of $g$ than before. A reweighting procedure has not been applied in this case and we are thus only able to conduct simulations for $g \geq 25$. This indicates that the \names{Wilson} term already contributes to the shift of the eigenvalues and allows simulations at lower $g$, at the cost of breaking the $SO(2)$ symmetry which leads to a more challenging mass calculation due to the subtraction of non-connected parts of correlators discussed in section \ref{sec: xx_corr}. The data for the mass in \autoref{fig: mx_vs_g_r0} agrees quite good with the mass prediction within its respective errors, although there is not such a high number of replica as for the $r=1$ simulations. This supports our line of constant physics, but indicates that our mass calculation in the case of $r=1$ suffers from an overestimation due to the subtraction procedure required by the symmetry breaking. The cusp anomaly is illustrated in \autoref{fig: f_prime_r0} and shows a similar behaviour as the data obtained from $r=1$ simulations. We therefore assume that there is no influence of fermion doubling on the considered observables. There might be an effect on measurements of the masses of fermionic fields. Their investigation should be considered as a future aim.
+%
+%
+%
+\begin{figure}
+\centering
+\input{Plots/f_prime_r0}
+\caption{Plot for $f'(g)/4$ as a function of the bare continuum coupling $g_{\rm c}=0.04\,g$ with data points obtained from simulations without a \names{Wilson} term. The matching is applied for the point at $g=25$. The continuous and dotted lines represent the predictions coming from the \textit{BES} equation and perturbation theory, respectively.
+\label{fig: f_prime_r0}}
+\end{figure}
+%
+%
+%
+\begin{figure}
+\centering
+\input{Plots/mx_vs_g_r0}
+\caption{Continuum extrapolation for the $x$ field mass as a function of the bare continuum coupling $g_{\rm c}=0.04\,g$ with data points obtained from simulations without a \names{Wilson} term. The dotted line indicates the perturbative prediction according to (\ref{eq: m_x}).
+\label{fig: mx_vs_g_r0}}
+\end{figure}
+%
+%
+%
+\subsection*{Pfaffian sign}
+Throughout the investigations of the properties of the fermion matrix in section \ref{sec: matrix_prop} we found that the \names{Pfaffian} can only change its sign if purely real or imaginary eigenvalues transit through zero. So if we start from a configuration with positive \names{Pfaffian} and ensure a sufficiently large separation of the smallest eigenvalues from zero, then the \names{Pfaffian} will remain positive and hence acts as a valid probability density for the RHMC. For a representative amount of configurations we analyse the spectrum of the operator $\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}$ (which has eigenvalues $\vert \lambda_{i}\vert^{2}$, whereas $\lambda_{i}$ are eigenvalues of $\hat{\mathcal{O}}_{\rm F}$) and extract the smallest eigenvalues. Their distribution is shown in \autoref{fig: ev_dist} on the left for $L=12$ and $g=5,10,30$. For $g=10,30$ we plot the mean of such distributions divided by their standard deviation for different values of $L$ in \autoref{fig: ev_zero_gap}. This illustrates the separation from zero in units of standard deviations and we observe such a separation by at least 3 standard deviations which (if we assume the distribution in \autoref{fig: ev_dist} to be \names{Gaussian}) makes it very unlikely for any eigenvalue to get to close to zero for $g\geq 10$. For finer lattice spacings this separation tends to increase and we thus do not expect any problems in taking the continuum limit. This eliminates sign problems for the regime of $g\geq 10$. For $g=5$ we basically introduce a lower bound for the eigenvalues with the twisted mass term in the reweighting and if this is adjusted to be high enough then this method should be sufficient to ensure a positive \names{Pfaffian}. Nonetheless it would be good practice to find a method to check for sign flips also during simulations.
+%
+%
+%
+\begin{figure}
+\centering
+\input{Plots/ev_zero_gap}
+\caption{In \autoref{fig: ev_dist} on the left we saw the distribution of the minimal eigenvalues of $\hat{\mathcal{O}}_{\rm F}\hat{\mathcal{O}}_{\rm F}^{\dagger}$ for $L=12$ and multiple $g$. Here we plot mean over standard deviation of such distributions for $g=10,30$ and several values of $L$. Every point was derived from the minimal eigenvalues of 400 configurations.
+\label{fig: ev_zero_gap}}
+\end{figure}

@@ -20,6 +20,8 @@
 %  - - - - -   Main part  - - - - - 
 \pagenumbering{arabic}
 \setcounter{page}{7} 
+\begingroup
+\numberwithin{equation}{section}
 \input{Introduction_var}
 %
 \input{string_basics}
@@ -30,12 +32,6 @@
 %
 \input{lattice_basics}
 %
-%\newpage
-%
-%\input{ads_cft_basics}
-%
-%\newpage
-%
 \input{towards_lattice}
 %
 \input{simulations}
@@ -44,9 +40,14 @@
 %
 \input{conclusions}
 %\newpage
+\endgroup % end numberwithin 
 \titleformat{\chapter}[hang]{\sffamily \bfseries \LARGE}{\fontsize{40}{0}\selectfont\thechapter}{ 0.5cm}{ }[ ]
-\begin{appendices}
 %
+% - - - - -  appendix  - - - - - - - -
+%
+\begin{appendices}
+% use simpler equation numeration
+\renewcommand{\theequation}{\thechapter.\arabic{equation}} 
 %
 \input{appendix}
 %

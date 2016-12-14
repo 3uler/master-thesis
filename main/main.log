@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  13 DEC 2016 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  14 DEC 2016 19:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3320,10 +3320,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [70]
 Chapter 7.
 (./Plots/mx_Lm4_cont_lim.tex) (./Plots/mx_vs_g_Lm4.tex)
-(./Plots/f_prime_Lm4.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [71
+(./Plots/f_prime_Lm4.tex) [71
 
 ]
 
@@ -3332,7 +3329,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[72]) (./conclusions.tex
+[72] (./Plots/f_prime_Lm4_andLm6.tex) (./Plots/mx_vs_g_Lm4Lm6.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3342,7 +3339,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[73]
+[73] (./Plots/f_prime_r0.tex) (./Plots/mx_vs_g_r0.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3356,30 +3356,33 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[75]
+[75] (./Plots/ev_zero_gap.tex)) (./conclusions.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[76
+[76]
 
-]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[77]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[78]
 Chapter 8.
-) [77]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[78] [79
-
-
-] [80] (./appendix.tex
-Appendix A.
-(./grassmann_alg.tex [81
+) [79
 
 ]
 
@@ -3388,21 +3391,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[82]
+[80] [81
+
+
+] [82] (./appendix.tex
+Appendix A.
+(./grassmann_alg.tex [83
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[83]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[84])
+[84]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3416,7 +3419,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[86
+[86])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[87]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[88
 
 ]
 Appendix B.
@@ -3456,7 +3473,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf, id=13
-24, 361.35pt x 367.3725pt>
+48, 361.35pt x 367.3725pt>
 File: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf G
 raphic file (type pdf)
 
@@ -3465,20 +3482,6 @@ Package pdftex.def Info: /Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/
 graphics/AdS2.pdf used on input line 34.
 (pdftex.def)             Requested size: 247.54149pt x 251.66545pt.
 
-[87]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[88 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [89]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3486,10 +3489,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[90
+[90 </Users/Philipp/Documents/Uni/Masterarbeit/latex/draft/graphics/AdS2.pdf>]
 
-]
-Appendix C.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [91]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3497,9 +3503,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[92]
+[92
+
+]
+Appendix C.
+[93]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[94]
 Appendix D.
-[93
+[95
 
 ]
 
@@ -3508,7 +3525,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[94]
+[96]
 Appendix E.
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 29
@@ -3810,7 +3827,7 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 29
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 29
 1.
 
-[95
+[97
 
 ])
 
@@ -3819,51 +3836,51 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[96]
+[98]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[97] (./main.bbl
+[99] (./main.bbl
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[98
+[100
 
-] [99]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[100])
+] [101]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[101] [102
+[102])
 
-] (./acknowledgement.tex) [103] (./declaration.tex
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[103] [104
+
+] (./acknowledgement.tex) [105] (./declaration.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-) [104]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+) [106]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
  (./main.aux (./titlepage.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E2DB75F093F152D0B7FA1E465386B326;4058.
+(rerunfilecheck)             Checksum: 398D03E2E3B7B6409DE735564D63A3A2;4058.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3871,16 +3888,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 34294 strings out of 493089
- 771318 string characters out of 6134842
- 1547335 words of memory out of 5000000
- 36479 multiletter control sequences out of 15000+600000
+ 34469 strings out of 493089
+ 774889 string characters out of 6134842
+ 1551902 words of memory out of 5000000
+ 36633 multiletter control sequences out of 15000+600000
  179669 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,21n,107p,3706b,2534s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,21n,107p,3706b,2791s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/local/texlive/2015
 /texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/texmf-dis
@@ -3924,10 +3941,10 @@ cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on main.pdf (104 pages, 2132943 bytes).
+Output written on main.pdf (106 pages, 2162967 bytes).
 PDF statistics:
- 1785 PDF objects out of 2073 (max. 8388607)
- 1602 compressed objects within 17 object streams
- 554 named destinations out of 1000 (max. 500000)
+ 1810 PDF objects out of 2073 (max. 8388607)
+ 1623 compressed objects within 17 object streams
+ 560 named destinations out of 1000 (max. 500000)
  497 words of extra memory for PDF output out of 10000 (max. 10000000)
 

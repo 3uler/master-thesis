@@ -7,7 +7,7 @@
 \definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
 \definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
 %
-\begin{tikzpicture}
+\begin{tikzpicture}[thick,scale=0.8, every node/.style={scale=1}]
 
 \begin{axis}[%
 width=4.521in,
@@ -42,7 +42,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 2.81503384856355	0.514770135748412	0.0213132626566722	0.0213132626566722\\
 4.02147692651935	0.465164650651417	0.0316699854877118	0.0316699854877118\\
 };
-\addlegendentry{$Lm = 4$}
+\addlegendentry{$LM = 4$}
 
 \addplot [color=mycolor2, draw=none, mark=o, mark options={solid, mycolor2}]
  plot [error bars/.cd, y dir = both, y explicit]
@@ -56,7 +56,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 2.81503384856355	0.448817053368873	0.0193020707653866	0.0193020707653866\\
 4.02147692651935	0.498051524331094	0.0325864302058215	0.0325864302058215\\
 };
-\addlegendentry{$Lm = 6$}
+\addlegendentry{$LM = 6$}
 
 \addplot [color=black, dotted]
   table[row sep=crcr]{%
@@ -161,7 +161,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 3.99095695756461	0.484339595574556\\
 4.02147692651935	0.484458446202228\\
 };
-\addlegendentry{PT, $g_c=0.04 g$}
+\addlegendentry{PT, $g_c=0.04\, g$}
 
 \end{axis}
 \end{tikzpicture}%

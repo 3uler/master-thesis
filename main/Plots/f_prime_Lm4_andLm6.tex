@@ -7,7 +7,7 @@
 \definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
 \definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
 %
-\begin{tikzpicture}
+\begin{tikzpicture}[thick,scale=0.8, every node/.style={scale=1}]
 
 \begin{axis}[%
 width=4.521in,
@@ -17,11 +17,11 @@ scale only axis,
 xmin=-0.1,
 xmax=4.52147692651935,
 xlabel style={font=\color{white!15!black}},
-xlabel={$\text{g}_\text{c}$},
+xlabel={$g_\text{c}$},
 ymin=0,
 ymax=1.1,
 ylabel style={font=\color{white!15!black}},
-ylabel={$\text{f'(g}_\text{c}\text{)/4}$},
+ylabel={$f'(g_{\rm c})/4$},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
@@ -130,7 +130,7 @@ legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align
 0.891010101010101	1.00842963247942\\
 0.9	1.00849389558664\\
 };
-\addlegendentry{$\text{BES, g}_\text{c}\text{=0.04 g}$}
+\addlegendentry{$\text{BES, } g_{\rm c}=0.04\, g$}
 
 \addplot [color=black, dotted]
   table[row sep=crcr]{%
@@ -235,7 +235,7 @@ legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align
 3.99095695756461	1.00036414490934\\
 4.02147692651935	1.00035863871384\\
 };
-\addlegendentry{$\text{PT, g}_\text{c}\text{=0.04 g}$}
+\addlegendentry{$\text{PT, } g_{\rm c}=0.04\, g$}
 
 \addplot [color=mycolor1, draw=none, mark=*, mark options={solid, mycolor1}]
  plot [error bars/.cd, y dir = both, y explicit]
@@ -252,7 +252,7 @@ legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align
 2.81503384856355	0.998419223498108	0.0059057924961199	0.0059057924961199\\
 4.02147692651935	0.998087249666246	0.00457394341712051	0.00457394341712051\\
 };
-\addlegendentry{$Lm = 4$}
+\addlegendentry{$LM = 4$}
 
 \addplot [color=mycolor2, draw=none, mark=o, mark options={solid, mycolor2}]
  plot [error bars/.cd, y dir = both, y explicit]
@@ -266,7 +266,7 @@ legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align
 2.81503384856355	0.995168793533323	0.00681853839956619	0.00681853839956619\\
 4.02147692651935	0.999133961803922	0.00277469275310392	0.00277469275310392\\
 };
-\addlegendentry{$Lm = 6$}
+\addlegendentry{$LM = 6$}
 
 \end{axis}
 \end{tikzpicture}%

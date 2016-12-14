@@ -6,7 +6,7 @@
 %
 \definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
 %
-\begin{tikzpicture}
+\begin{tikzpicture}[thick,scale=0.8, every node/.style={scale=1}]
 
 \begin{axis}[%
 width=4.521in,
@@ -16,11 +16,11 @@ scale only axis,
 xmin=-0.1,
 xmax=4.5,
 xlabel style={font=\color{white!15!black}},
-xlabel={$g_c$},
+xlabel={$g_{\rm c}$},
 ymin=0,
 ymax=1.1,
 ylabel style={font=\color{white!15!black}},
-ylabel={$f'(g_c)/4$},
+ylabel={$f'(g_{\rm c})/4$},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
@@ -129,7 +129,7 @@ legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align
 0.891010101010101	1.00842963247942\\
 0.9	1.00849389558664\\
 };
-\addlegendentry{BES, $g_c=0.04 g$}
+\addlegendentry{BES, $g_{\rm c}=0.04\, g$}
 
 \addplot [color=black, dotted]
   table[row sep=crcr]{%
@@ -234,7 +234,7 @@ legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align
 3.96969696969697	1.0003680557605\\
 4	1.00036250028156\\
 };
-\addlegendentry{PT, $g_c=0.04 g$}
+\addlegendentry{PT, $g_{\rm c}=0.04\, g$}
 
 \addplot [color=mycolor1, draw=none, mark=*, mark options={solid, mycolor1}]
  plot [error bars/.cd, y dir = both, y explicit]
@@ -246,7 +246,7 @@ legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align
 3.2	1.01584969402834	0.0179456349012972	0.0179456349012972\\
 4	0.997785747894262	0.00371056177352531	0.00371056177352531\\
 };
-\addlegendentry{$Lm = 4$}
+\addlegendentry{$LM = 4$, $r=0$}
 
 \end{axis}
 \end{tikzpicture}%

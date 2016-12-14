@@ -6,7 +6,7 @@
 %
 \definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
 %
-\begin{tikzpicture}
+\begin{tikzpicture}[thick,scale=0.8, every node/.style={scale=1}]
 
 \begin{axis}[%
 width=4.521in,
@@ -36,7 +36,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 3.2	0.450561786349897	0.0143086619540424	0.0143086619540424\\
 4	0.499322608783213	0.0173236358422466	0.0173236358422466\\
 };
-\addlegendentry{$Lm = 4$}
+\addlegendentry{$LM = 4$, $r=0$}
 
 \addplot [color=black, dotted]
   table[row sep=crcr]{%
@@ -141,7 +141,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 3.96969696969697	0.48425572519084\\
 4	0.484375\\
 };
-\addlegendentry{PT, $g_c=0.04 g$}
+\addlegendentry{PT, $g_c=0.04 \,g$}
 
 \end{axis}
 \end{tikzpicture}%

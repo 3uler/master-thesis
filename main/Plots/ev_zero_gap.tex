@@ -4,7 +4,7 @@
 %  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
 %where you can also make suggestions and rate matlab2tikz.
 %
-\begin{tikzpicture}
+\begin{tikzpicture}[thick,scale=0.8, every node/.style={scale=1}]
 
 \begin{axis}[%
 width=4.521in,
@@ -13,12 +13,14 @@ at={(0.758in,0.481in)},
 scale only axis,
 xmin=0,
 xmax=0.13,
+xtick={0,0.041666666666666664,0.0625,0.08333333333333333,0.1,0.125},
+xticklabels={{0},{1/24},{1/16},{1/12},{1/10},{1/8}},
 xlabel style={font=\color{white!15!black}},
-xlabel={$1/N$},
+xlabel={$1/L$},
 ymin=0,
 ymax=14,
 ylabel style={font=\color{white!15!black}},
-ylabel={$<\lambda_{min}>/\sigma_{min}$},
+ylabel={$\langle \lambda_{\rm min}\rangle/\sigma_{\rm min}$},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
@@ -32,7 +34,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.0833333333333333	8.6120262021668	0.874072829704015	0.874072829704015\\
 0.0625	10.1236640025576	2.24580483798358	2.24580483798358\\
 };
-\addlegendentry{g = 30}
+\addlegendentry{$g = 30$}
 
 \addplot [color=black, draw=none, mark=o, mark options={solid, black}]
  plot [error bars/.cd, y dir = both, y explicit]
@@ -43,7 +45,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.0625	4.51214838498055	0.339023282750031	0.339023282750031\\
 0.0416666666666667	4.5353861107916	0.777440619874027	0.777440619874027\\
 };
-\addlegendentry{g = 10}
+\addlegendentry{$g = 10$}
 
 \end{axis}
 \end{tikzpicture}%
