@@ -39,15 +39,15 @@
 \contentsline {chapter}{\numberline {6}Simulations and observables}{55}{chapter.6}
 \contentsline {section}{\numberline {6.1}Implementation and the continuum limit}{55}{section.6.1}
 \contentsline {section}{\numberline {6.2}Simulation parameters}{56}{section.6.2}
-\contentsline {section}{\numberline {6.3}Observables}{62}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{63}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}The cusp action}{65}{subsection.6.3.2}
-\contentsline {chapter}{\numberline {7}Results}{71}{chapter.7}
-\contentsline {section}{\numberline {7.1}Mass of the x field}{71}{section.7.1}
-\contentsline {section}{\numberline {7.2}Cusp anomaly}{71}{section.7.2}
-\contentsline {section}{\numberline {7.3}Systematic errors and the Pfaffian sign}{74}{section.7.3}
+\contentsline {section}{\numberline {6.3}Observables}{59}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}The $\delimiter "426830A xx^{*}\delimiter "526930B $ correlator}{60}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}The cusp action}{62}{subsection.6.3.2}
+\contentsline {chapter}{\numberline {7}Results}{69}{chapter.7}
+\contentsline {section}{\numberline {7.1}Mass of the x field}{69}{section.7.1}
+\contentsline {section}{\numberline {7.2}Cusp anomaly}{69}{section.7.2}
+\contentsline {section}{\numberline {7.3}Systematic errors and the Pfaffian sign}{72}{section.7.3}
 \contentsline {chapter}{\numberline {8}Conclusion and outlook}{79}{chapter.8}
-\contentsline {chapter}{Appendices}{81}{section*.22}
+\contentsline {chapter}{Appendices}{81}{section*.24}
 \contentsline {chapter}{\numberline {A}Grassmann numbers}{83}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Grassmann algebra}{83}{section.a.A.1}
 \contentsline {section}{\numberline {A.2}Grassmann analysis}{84}{section.a.A.2}
@@ -58,5 +58,6 @@
 \contentsline {chapter}{\numberline {C}SO(6) matrices}{93}{Appendix.a.C}
 \contentsline {chapter}{\numberline {D}Discrete Fourier transform}{95}{Appendix.a.D}
 \contentsline {chapter}{\numberline {E}Discretised fermion matrix}{97}{Appendix.a.E}
-\contentsline {chapter}{Bibliography}{101}{chapter*.24}
+\contentsline {chapter}{\numberline {F}Simulation paramters}{101}{Appendix.a.F}
+\contentsline {chapter}{Bibliography}{105}{chapter*.26}
 \contentsfinish 
