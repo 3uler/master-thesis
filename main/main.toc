@@ -31,7 +31,7 @@
 \contentsline {subsection}{\numberline {5.1.2}Alternative field redefinition}{44}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Matrix properties}{46}{subsection.5.1.3}
 \contentsline {subsection}{\numberline {5.1.4}Pseudofermionic weight function}{47}{subsection.5.1.4}
-\contentsline {section}{\numberline {5.2}Discretizing the action}{48}{section.5.2}
+\contentsline {section}{\numberline {5.2}Discretising the action}{48}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Bosonic action}{48}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Wilson term}{49}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Fermionic operator}{51}{subsection.5.2.3}
@@ -58,6 +58,6 @@
 \contentsline {chapter}{\numberline {C}SO(6) matrices}{93}{Appendix.a.C}
 \contentsline {chapter}{\numberline {D}Discrete Fourier transform}{95}{Appendix.a.D}
 \contentsline {chapter}{\numberline {E}Discretised fermion matrix}{97}{Appendix.a.E}
-\contentsline {chapter}{\numberline {F}Simulation paramters}{101}{Appendix.a.F}
+\contentsline {chapter}{\numberline {F}Simulation parameters}{101}{Appendix.a.F}
 \contentsline {chapter}{Bibliography}{105}{chapter*.26}
 \contentsfinish 

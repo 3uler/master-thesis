@@ -233,7 +233,7 @@ Once more we want to study the continuum limit of the propagator for the massles
 \begin{equation}
 \left.\widetilde{D}_{D}^{-1}(p)\right\vert_{m=0} =  \dfrac{- \tfrac{i}{a}\sum_{\alpha=0}^{1} \gamma_{\alpha} \sin (p_{\alpha}a)}{ a^{-2}\sum_{\alpha=0}^{1} \sin^2 (p_{\alpha}a)  } \xrightarrow{a \rightarrow 0} \dfrac{-i \sum_{\alpha=0}^{1} \gamma_{\alpha} p_{\alpha} }{p^2}.
 \end{equation}
-Here again the propagator has the correct naive continuum limit but this time we face another problem. Since again $p_{\alpha}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. As a result in the numerical simulation it seems that there are in this case three additional fermions, which emerge only from the method of discretisation and are  non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who introduced a possible solution.  He suggested to add a term proportional to the discretised \names{Laplace} operator\cite{montvay_lattice}, which is known as a \names{Wilson} term. We can express it in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
+Here again the propagator has the correct naive continuum limit, but this time we face another problem. Since again $p_{\alpha}$ is in the domain $\left(-\tfrac{\pi}{a},\tfrac{\pi}{a}\right]$, there occur three other non-physical poles within the sine function at $p=(0,\pi/a)$, $p=(\pi/a,0)$ and $p=(\pi/a,\pi/a)$. As a result in the numerical simulation it seems that there are in this case three additional fermions which emerge only from the method of discretisation and are non-physical. This is obviously leading to distorted calculations and needs to be circumvented. That particular problem is known as fermion doubling and has been investigated extensively by \names{Wilson}, who introduced a possible solution.  He suggested to add a term proportional to the discretised \names{Laplace} operator\cite{montvay_lattice}, which is known as a \names{Wilson} term. We can express it in momentum space with the help of (\ref{momentum laplace}) and find\footnote{using the identity
 \begin{align*}
 \cos(2x)&=\cos^{2}(x) -\sin^{2}(x) \\
 \Leftrightarrow\quad \sin^{2}(x) &= \tfrac{1}{2}\left(1-\cos(2x)\right)
@@ -251,7 +251,7 @@ Since the \names{Laplace} operator is of order $\mathcal{O}(a^{0})$, we see that
 \end{equation}
 we find the new massless momentum space propagator
 \begin{equation}
-\left. \widetilde{D}_{W}^{-1}\right\vert_{m=0} = \dfrac{\mathds{1}\tfrac{1}{a}\sum_{\alpha=0}^{1}\left( 1- \cos(p_{\alpha}a)\right) - \tfrac{i}{a}\sum_{\alpha=0}^{1}\gamma_{\alpha} \sin(p_{\alpha}a) }{\left(\tfrac{1}{a}\sum_{\alpha=0}^{1}\left( 1- \cos(p_{\alpha}a)\right)\right)^{2} + \tfrac{1}{a^2}\sum_{\alpha=0}^{1}\sin^2(p_{\alpha}a) }.
+\left. \widetilde{D}_{W}^{-1}\right(p)\vert_{m=0} = \dfrac{\mathds{1}\tfrac{1}{a}\sum_{\alpha=0}^{1}\left( 1- \cos(p_{\alpha}a)\right) - \tfrac{i}{a}\sum_{\alpha=0}^{1}\gamma_{\alpha} \sin(p_{\alpha}a) }{\left(\tfrac{1}{a}\sum_{\alpha=0}^{1}\left( 1- \cos(p_{\alpha}a)\right)\right)^{2} + \tfrac{1}{a^2}\sum_{\alpha=0}^{1}\sin^2(p_{\alpha}a) }.
 \end{equation}
 Here we can convince ourselves, that there are no more additional poles in the domain of $p_{\alpha}$, since for the points where $p_{\alpha}=\pi/a$ the denominator does not vanish like before. Actually for these points the \names{Wilson}-term behaves like an additional mass term that is growing infinitely in the continuum limit and consequently decouples from the theory.
 %
@@ -266,7 +266,7 @@ Here we can convince ourselves, that there are no more additional poles in the d
 %
 %
 \section{Monte Carlo methods}
-Now after we know, how to discretise differential operators and act with them on bosonic and fermionic quantities, we are able to build a discretised Lagrangian as well. But what we really need is a method to perform the calculation of observables in the path integral formalism. In QFT in the continuum we calculate the expectation value of an observable $O$ via \cite{peskin}
+Now after we know how to discretise differential operators and act with them on bosonic and fermionic quantities we are able to build a discretised Lagrangian as well. But what we really need is a method to perform the calculation of observables in the path integral formalism. In QFT in the continuum we calculate the expectation value of an observable $O$ via \cite{peskin}
 \begin{equation}
 \left\langle O \right\rangle = \dfrac{1}{Z} \int \mathcal{D} \mathit{\phi}\, O(\mathit{\phi})\exp\left(-S\left[\mathit{\phi}\right]\right),
 \label{PI_continuum}
@@ -583,6 +583,6 @@ As discussed previously we want to calculate expectation values of observables $
 \end{equation}
 %
 %
-The feasibility of calculations like that via Monte Carlo methods is only guaranteed if the weight function $\rho(\phi)$ is non-negative. In the process of dealing with fermions it is sometimes necessary to introduce bosonic auxiliary fields by a \names{Hubbard-Stratonovich} (HS)  transformation\footnote{See Appendix \ref{sec: HS_trafo} for futher details on the HS transformation.} which might lead to a complex phase in the weight function. For fluctuations of this phase that are very close to the purely real spectrum, this can be corrected by a reweighting procedure. If nonetheless the phase is distributed on the whole complex spectrum where the reweighting tends to fail, then one is talking of a \textit{sign problem}. There are several approaches to fix this issue but none of them works as a general method to cure the sign problem. \\[1cm]
+The feasibility of calculations like that via Monte Carlo methods is only guaranteed if the weight function $\rho(\phi)$ is non-negative. In the process of dealing with fermions it is sometimes necessary to introduce bosonic auxiliary fields by a \names{Hubbard-Stratonovich} (HS)  transformation\footnote{See Appendix \ref{sec: HS_trafo} for further details on the HS transformation.} which might lead to a complex phase in the weight function. For fluctuations of this phase that are very close to the purely real spectrum, this can be corrected by a reweighting procedure. If nonetheless the phase is distributed on the whole complex spectrum where the reweighting tends to fail, then one is talking of a \textit{sign problem}. There are several approaches to fix this issue but none of them works as a general method to cure the sign problem. \\[1cm]
 %
 With this set of basic methods we are able to attempt the continuum model action from the previous chapter and apply a discretisation on the fields and operators. This process will be the subject of the next chapter.

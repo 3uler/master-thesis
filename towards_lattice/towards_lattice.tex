@@ -20,7 +20,7 @@ S^{\rm F}_{4} [\eta_{i},\eta^{i}] = g \int \dd t \dd s \, \left[-\frac{1}{z^{2}}
 \end{equation}
 %
 %
-In the path integral representation the \names{Euclidean} action contributes within an exponential $e^{-S_{\rm E}}$. By performing a naive \names{Hubbard-Statonovich} transformation on this exponential we can reduce the four-fermion contributions to quadratic \names{Yukawa} terms whereas we have to introduce 7 bosonic real auxiliary fields $\phi$ and $\phi^{N}$
+In the path integral representation the \names{Euclidean} action contributes within an exponential $e^{-S_{\rm E}}$. By performing a naive \names{Hubbard-Stratonovich} transformation on this exponential we can reduce the four-fermion contributions to quadratic \names{Yukawa} terms whereas we have to introduce 7 bosonic real auxiliary fields $\phi$ and $\phi^{N}$
 %
 %
 \begin{align}
@@ -41,7 +41,7 @@ Here we can notice that the second term appears to be complex, since the $SO(6)$
 \end{equation}
 %
 %
-where we have used (\ref{eq: SO6_id}). As discussed in section \ref{sec: sign_prob} this complex phase in the weight function is potentially leading to a non-treatable sign problem. We therefore chose to make a field redefinition that circumvents the appearance of a complex phase during the HS transformation.
+where we have used (\ref{eq: SO6_id}). As discussed in section \ref{sec: sign_prob} this complex phase in the weight function is potentially leading to a non-treatable sign problem. We therefore choose to make a field redefinition that circumvents the appearance of a complex phase during the HS transformation.
 %
 %
 %
@@ -132,7 +132,7 @@ where a single bosonic field was introduced like in the naive case. And further
 \end{equation}
 %
 %
-Here the collection of fields $\phi^{i}_{j}$ can be thought of as a complex hermitian matrix with 16 real free parameters. We find it convenient to rescale the field $\phi \to \phi / \sqrt{6}$, to get rid of the pre factor of 6 in (\ref{eq: HS_phi}). After reinserting the old fields for $\Sigma_{+}$ we can conclude that
+Here the collection of fields $\phi^{i}_{j}$ can be thought of as a complex \names{Hermitian} matrix with 16 real free parameters. We find it convenient to rescale the field $\phi \to \phi / \sqrt{6}$, to get rid of the pre factor of 6 in (\ref{eq: HS_phi}). After reinserting the old fields for $\Sigma_{+}$ we can conclude that
 %
 %
 \begin{equation}
@@ -226,7 +226,7 @@ It further possesses a global $U(1)$ and $SO(6)$ symmetry. The $U(1)$ symmetry m
 \end{equation}
 %
 %
-Therefore only fermions with complementary charges are allowed to couple in order to respect the $U(1)$ symmetry, and the blocks that lead to other couplings need to be zero. The $SO(6)$ symmetry requires the $4\times 4$ block structure and that each block is built from the $SO(6)$ invariant structures: $\mathds{1}_{4},\,\rho^{M}u^{M},\,\rho_{M}^{\dagger}u^{M}$. The fermion matrix obeys also another constraint which is reminiscent of the $\gamma_{5}-$hermiticity in lattice QCD \cite{montvay_lattice}
+Therefore only fermions with complementary charges are allowed to couple in order to respect the $U(1)$ symmetry, and the blocks that lead to other couplings need to be zero. The $SO(6)$ symmetry requires the $4\times 4$ block structure and that each block is built from the $SO(6)$ invariant structures: $\mathds{1}_{4},\,\rho^{M}u^{M},\,\rho_{M}^{\dagger}u^{M}$. The fermion matrix obeys also another constraint which is reminiscent of the $\gamma_{5}-$\names{Hermiticity} in lattice QCD \cite{montvay_lattice}
 %
 %
 \begin{equation}
@@ -235,7 +235,7 @@ Therefore only fermions with complementary charges are allowed to couple in orde
 \end{equation}
 %
 %
-where $\Gamma_{5}$ is the following unitary, antihermitian matrix
+where $\Gamma_{5}$ is the following unitary, anti-\names{Hermitian} matrix
 %
 %
 \begin{equation}
@@ -249,7 +249,7 @@ where $\Gamma_{5}$ is the following unitary, antihermitian matrix
 \end{equation}
 %
 %
-A general skew-symmetric block matrix $M$ that is $\Gamma_{5}$-hermitian needs to have the structure
+A general skew-symmetric block matrix $M$ that is $\Gamma_{5}$-\names{hermitian} needs to have the structure
 %
 %
 \begin{equation}
@@ -371,7 +371,7 @@ and $\xi$ is a collection of 16 complex bosonic scalar fields. But before we can
 %
 %
 %
-\section{Discretizing the action}
+\section{Discretising the action}
 In the previous steps we have constructed a \names{Lagrangian} fitting to our problem and modified terms to be able to apply a RHMC algorithm. To proceed with this task we need a discretised version of the bosonic action and the fermionic operator $\mathcal{O}_{\rm F}$.
 %
 %
@@ -416,7 +416,7 @@ where we applied a simple forward derivative to the $x,x^{*}$ and $z^{M}$ fields
 %
 %
 \subsection{Wilson term}
-Before discretizing the fermionic operator we have to think about the doubling problem arising through naively discretised first order derivatives, discussed in \autoref{sec: ferm_doubling}. The free fermionic operator (evaluated in the bosonic vacuum) represented in a momentum basis reads
+Before discretising the fermionic operator we have to think about the doubling problem arising through naively discretised first order derivatives, discussed in \autoref{sec: ferm_doubling}. The free fermionic operator (evaluated in the bosonic vacuum) represented in a momentum basis reads
 %
 %
 \begingroup
@@ -568,7 +568,7 @@ W_{\pm} = \frac{ra}{2z^{2}}\left(\hat{p}_{0}^{2} \pm i\hat{p}_{1}^{2}\right)\rho
 \end{equation}
 %
 %
-where an additional $1/z$ factor is present for the purpose of improved stability during simulations. From (\ref{eq: G5_herm_mat}) one can see that the added \names{Wilson} term respects the $\Gamma_{5}$-hermiticity and skew-symmetry which ensures the determinant to be real and positive.
+where an additional $1/z$ factor is present for the purpose of improved stability during simulations. From (\ref{eq: G5_herm_mat}) one can see that the added \names{Wilson} term respects the $\Gamma_{5}$-\names{Hermiticity} and skew-symmetry which ensures the determinant to be real and positive.
 %
 %
 %
@@ -647,7 +647,7 @@ where we refer the reader to Appendix \ref{app: disc_ferm} for a detailed deriva
 %
 %
 \section{Applying the RHMC algorithm}
-Since the current status is a realisation of discretised operators and fields that are also dimensionless, we can return to a discretised version of the equations (\ref{eq: Z_string2}-\ref{eq: S_xi}) and implement a RHMC algorithm based on HMC algorithm introduced in section \ref{sec: hmc_alg}. There we described the algorithm by means of an inverse hermitian operator in the pseudofermionic action
+Since the current status is a realisation of discretised operators and fields that are also dimensionless, we can return to a discretised version of the equations (\ref{eq: Z_string2}-\ref{eq: S_xi}) and implement a RHMC algorithm based on HMC algorithm introduced in section \ref{sec: hmc_alg}. There we described the algorithm by means of an inverse \names{Hermitian} operator in the pseudofermionic action
 %
 %
 \begin{equation}
